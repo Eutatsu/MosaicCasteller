@@ -63,7 +63,7 @@
         "name": "Castellers de Berga",
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Berga",
         "color_name": "Blau fosc[1]",
-        "color_code": "white"
+        "color_code": "#3e497f"
     },
     {
         "name": "Castellers de Caldes de Montbui",
@@ -140,14 +140,14 @@
     {
         "name": "Castellers de Mediona",
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Mediona",
-        "color_name": "Blau texà[1]",
-        "color_code": "white"
+        "color_name": "Unknown",
+        "color_code": "#FFFFFF"
     },
     {
         "name": "Castellers de Mollet",
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Mollet",
         "color_name": "Verd claret[1]",
-        "color_code": "white"
+        "color_code": "#91d6ac"
     },
     {
         "name": "Castellers de Montcada i Reixac",
@@ -171,7 +171,7 @@
         "name": "Castellers de Sant Cugat",
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Sant_Cugat",
         "color_name": "Verd Collserola[1]",
-        "color_code": "white"
+        "color_code": "#005c41"
     },
     {
         "name": "Castellers de Sant Feliu",
@@ -212,8 +212,8 @@
     {
         "name": "Castellers de Vilafranca",
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Vilafranca",
-        "color_name": "Color not found",
-        "color_code": "white"
+        "color_name": "Unknown",
+        "color_code": "#FFFFFF"
     },
     {
         "name": "Castellers del Poble Sec",
@@ -225,7 +225,7 @@
         "name": "Castellers del Prat de Llobregat",
         "url": "https://ca.wikipedia.org/wiki/Castellers_del_Prat_de_Llobregat",
         "color_name": "Blau pota blava[1]",
-        "color_code": "white"
+        "color_code": "#536aae"
     },
     {
         "name": "Castellers del Riberal",
@@ -254,8 +254,8 @@
     {
         "name": "Xiquets d'Alcover",
         "url": "https://ca.wikipedia.org/wiki/Xiquets_d%27Alcover",
-        "color_name": "Color not found",
-        "color_code": "white"
+        "color_name": "Unknown",
+        "color_code": "#FFFFFF"
     },
     {
         "name": "Colla de Castellers d'Esplugues",
@@ -303,7 +303,7 @@
         "name": "Encantats de Begues",
         "url": "https://ca.wikipedia.org/wiki/Encantats_de_Begues",
         "color_name": "Verd ampolla[1]",
-        "color_code": "white"
+        "color_code": "#048224"
     },
     {
         "name": "Esperxats de l'Estany",
@@ -357,7 +357,7 @@
         "name": "Nens del Vendrell",
         "url": "https://ca.wikipedia.org/wiki/Nens_del_Vendrell",
         "color_name": "Vermella[1]",
-        "color_code": "white"
+        "color_code": "#c43022"
     },
     {
         "name": "Nois de la Torre",
@@ -447,7 +447,7 @@
         "name": "Xiquets del Serrallo",
         "url": "https://ca.wikipedia.org/wiki/Xiquets_del_Serrallo",
         "color_name": "Blau marí[1]",
-        "color_code": "white"
+        "color_code": "#253271"
     },
     {
         "name": "Castellers de Gavà",
@@ -477,7 +477,7 @@
         "name": "Laietans de Gramenet",
         "url": "https://ca.wikipedia.org/wiki/Laietans_de_Gramenet",
         "color_name": "Verd gram[1]",
-        "color_code": "white"
+        "color_code": "#0b8e36"
     },
     {
         "name": "Manyacs de Parets",
@@ -489,7 +489,7 @@
         "name": "Vailets de Gelida",
         "url": "https://ca.wikipedia.org/wiki/Vailets_de_Gelida",
         "color_name": "Verd poma[1][2]",
-        "color_code": "white"
+        "color_code": "#cbffbd"
     },
     {
         "name": "Castellers de Sarrià",

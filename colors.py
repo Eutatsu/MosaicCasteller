@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import json
 
 RED = "\033[91m"
+RESET = "\033[0m" 
 
 # Load the JSON file containing colla names and URLs
 with open('colles_data.json', 'r', encoding='utf-8') as json_file:
@@ -31,9 +32,11 @@ for colla in colles_data:
             if fila_color:
                 valor_color = fila_color.find_next("td")
                 color = valor_color.text.strip()
-                casella_color = valor_color.find_next("span")
-                if casella_color and "style" in casella_color.attrs:
-                    style = casella_color["style"]
+
+                # Look for any element with a "style" attribute
+                style_element = valor_color.find(attrs={"style": True})
+                if style_element and "background-color" in style_element["style"]:
+                    style = style_element["style"]
                     start = style.find("background-color:")
                     if start != -1:
                         codi_color = style[start + len("background-color:"):].split(';')[0].strip()
@@ -46,34 +49,32 @@ for colla in colles_data:
                             "color_code": codi_color
                         })
                     else:
-                        print(f"{RED}  - Color code not found for {colla_name}, using default white.")
-                        # Append default color data when not found
+                        print(f"{RED}  - Color code not found{RESET}")
                         results.append({
                             "name": colla_name,
                             "url": colla_url,
-                            "color_name": color,
-                            "color_code": "white"  # Default color if no valid color code found
+                            "color_name": "Unknown",
+                            "color_code": "#FFFFFF"  # Fallback to white
                         })
                 else:
-                    print(f"{RED}  - Color box not found for {colla_name}, using default white.")
-                    # Append default color data if color box is not found
+                    print(f"{RED}  - No style attribute with background color found{RESET}")
                     results.append({
                         "name": colla_name,
                         "url": colla_url,
-                        "color_name": color,
-                        "color_code": "white"  # Default color if no color box found
+                        "color_name": "Unknown",
+                        "color_code": "#FFFFFF"  # Fallback to white
                     })
             else:
-                print(f"  - 'Color camisa' row not found for {colla_name}, using default white.")
-                # Append default color data if 'Color camisa' row is not found
+                print(f"{RED}  - 'Color camisa' row not found{RESET}")
                 results.append({
                     "name": colla_name,
                     "url": colla_url,
-                    "color_name": "Color not found",
-                    "color_code": "white"  # Default color when row is missing
+                    "color_name": "Unknown",
+                    "color_code": "#FFFFFF"  # Fallback to white
                 })
+
         else:
-            print(f"  - Infobox not found for {colla_name}, using default white.")
+            print(f"{RED}  - Infobox not found for {colla_name}, using default white.{RESET}")
             # Append default color data if infobox is not found
             results.append({
                 "name": colla_name,
