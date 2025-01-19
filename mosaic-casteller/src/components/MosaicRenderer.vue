@@ -15,13 +15,11 @@
             :style="{fontSize:text+'px'}">
             {{ colla.color_camisa }}
         </p>
-        <p v-if="perfil_color=='tritanopia'||perfil_color=='deuteranopia'||perfil_color=='monocrom'" 
-            :style="{fontSize:text+'px'}">
-            {{ colla.color_camisa }}
-        </p>
             <b-popover custom-class="text-center" :title=colla.nom :target="'colla-'+id+'-'+index" triggers="hover focus blur" placement="bottom" >
                 <p>
-                <strong>{{ colla.color_camisa }}</strong><br>
+
+                    
+                <strong>{{ colla.color_camisa }} </strong><br>
                     
                 <strong>Tipus:</strong> {{ formatDada(colla.tipus) }}<br>
                 <strong>Estat:</strong> {{ formatDada(colla.estat) }}<br>
@@ -37,7 +35,9 @@
                         Refundació:
                     </strong> {{ colla.refundacio }}<br>
                 </p>
-           
+
+                <a href="#"><font-awesome-icon icon="globe"/></a>
+                <a href="#"><font-awesome-icon icon="twitter"/></a>
                 
             </b-popover>
             
@@ -148,12 +148,6 @@ export default {
         perfilColor(colla){
             if (this.perfil_color==="default"){
                 return colla.codi_color;
-            }
-            else if (this.perfil_color==="deuteranopia"){
-                return colla.deuteranopia;
-            }
-            else if (this.perfil_color==="tritanopia"){
-                return colla.tritanopia;
             }
             else if (this.perfil_color==="monocrom"){
                 return "hsl(0,0%,"+colla.color_hsl[2]+"%)";

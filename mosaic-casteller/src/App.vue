@@ -9,24 +9,8 @@
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav >
-        
+      <b-navbar-nav>
         <b-nav-item to="./">Mosaic</b-nav-item>
-        <b-nav-item-dropdown right>
-          <!-- Using 'button-content' slot -->
-          <template #button-content>
-            Daltonisme
-          </template>
-         <b-dropdown-item to="/deuteranopia">Deuteranopia</b-dropdown-item>
-          <b-dropdown-item to="/tritanopia">Tritanopia</b-dropdown-item>
-          <b-dropdown-item to="/achromatopsia">Achromatopsia</b-dropdown-item>
-        </b-nav-item-dropdown>
-        
-        <b-nav-item to="/baixavisio">Baixa Visió</b-nav-item>
-        
-        <b-nav-item to="./cognitiu">Cognitiu</b-nav-item>
-        <b-nav-item to="/motriu">Motriu</b-nav-item>
-        
         <b-nav-item to="/about">Sobre el Mosaic</b-nav-item>
         <!--<b-nav-item ><router-link to="/hello">HelloWorld</router-link></b-nav-item>-->
       </b-navbar-nav>
@@ -62,26 +46,11 @@
       <h5>Referencies:</h5>
       <p>Dades extretes de <a href="https://ca.wikipedia.org/wiki/Llista_de_colles_castelleres">ca.wikipedia.org</a></p>
     </div>
-    <div class="col-sm d-flex">
-      <b-nav vertical class="text-white col-6">
+      <b-nav vertical class="text-white col-sm">
       <h6>Principal:</h6>
       <b-nav-item href="/">Mosaic</b-nav-item>
       <b-nav-item href="/about">Sobre el Mosaic</b-nav-item>
       </b-nav>
-      <div>
-      
-      <b-nav vertical class="text-white col-6 text-nowrap">
-        <h6>Simulacions d'accesibilitat:</h6>
-      <b-nav-item href="/deuteranopia">Deuteranopia</b-nav-item>
-      <b-nav-item href="/tritanopia">Tritanopia</b-nav-item>
-      <b-nav-item href="/protanopia">Protanopia</b-nav-item>
-      <b-nav-item href="/achromatopsia">Achromatopsia</b-nav-item>
-      <b-nav-item href="/baixavisio">Baixa Visió</b-nav-item>
-      <b-nav-item href="/cognitiu">Cognitiu</b-nav-item>
-      <b-nav-item href="/motriu">Motriu</b-nav-item>
-      </b-nav>
-    </div>
-    </div>
   </div>
     </footer>
     </div>

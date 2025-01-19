@@ -14,50 +14,13 @@ const routes = [
     name: 'mosaic',
     component: () => import('../views/Mosaic.vue')
 
-  },
-  {
-    path: '/deuteranopia',
-    name: 'deuteranopia',
-    component: () => import('../views/MosaicDeuteranopia.vue')
-
-  },
-  {
-    path: '/tritanopia',
-    name: 'tritanopia',
-    component: () => import('../views/MosaicTritanopia.vue')
-
-  },
-  {
-    path: '/achromatopsia',
-    name: 'achromatopsia',
-    component: () => import('../views/MosaicAchromatopsia.vue')
-
-  },
-  {
-    path: '/baixavisio',
-    name: 'baixavisio',
-    component: () => import('../views/MosaicBaixaVisió.vue')
-
-  },
-  {
-    path: '/cognitiu',
-    name: 'cognitiu',
-    component: () => import('../views/MosaicCognitiu.vue')
-
-  },
-
-  {
-    path: '/motriu',
-    name: 'motriu',
-    component: () => import('../views/MosaicMotriu.vue')
-
   }
 ]
 
 
 const router = new VueRouter({
   mode: "history",
-  base: '/WebDinPractica2/', 
+  base: '/MosaicCasteller/', 
   routes
   })
   
