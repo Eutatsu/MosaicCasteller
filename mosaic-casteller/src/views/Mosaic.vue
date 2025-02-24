@@ -181,7 +181,7 @@
 </template>
 
 <script>
-import dades from '../json/dades_colles_hsl.json'
+import dades from '../json/dades_colles_web.json'
 import MosaicRenderer from '@/components/MosaicRenderer.vue';
 export default{
         components:{

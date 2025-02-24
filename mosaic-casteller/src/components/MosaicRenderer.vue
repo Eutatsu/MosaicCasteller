@@ -36,8 +36,9 @@
                     </strong> {{ colla.refundacio }}<br>
                 </p>
 
-                <a href="#"><font-awesome-icon icon="globe"/></a>
-                <a href="#"><font-awesome-icon icon="twitter"/></a>
+                <h5 class="my-1">
+                <a class="mx-1" v-if="colla.web!==null" :href="'https://'+colla.web" target="_blank" alt="Lloc Web"><font-awesome-icon icon="globe"/></a>
+                <a  class="mx-1" :href="colla.url" target="_blank" alt="Article Wikipedia"><font-awesome-icon :icon="['fab', 'wikipedia-w']"/></a></h5>
                 
             </b-popover>
             

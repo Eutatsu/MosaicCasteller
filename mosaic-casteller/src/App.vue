@@ -40,7 +40,6 @@
       <div class="col-sm">
       <h5>Creat per:</h5>
       <p>Eudald Cardozo Vallhonrat<br><a href="https://www.instagram.com/eutatsu/">@eutatsu</a></p>
-      <p>David Garcia Aybar<br><a href="https://www.instagram.com/david_dga05/">@david_dga05</a></p>
     </div>
     <div class="col-sm">
       <h5>Referencies:</h5>
@@ -82,13 +81,25 @@ main{
 }
 
 a{
-  color:rgba(255, 255, 255, 0.60);
-  font-weight: bold;
+  color:rgba(255, 255, 255, 0.8) !important;
 }
 
 a:hover{
-  color:rgba(255, 255, 255, 0.80);
-  text-decoration: none;
+  color:rgba(255, 255, 255, 1) !important;
+}
+
+a.nav-link, footer a{
+  color:rgba(255, 255, 255, 1) !important;
+}
+
+.navbar-brand{
+  font-weight: bold;
+  color:rgba(255, 255, 255, 1) !important;
+}
+
+a.nav-link:hover, footer a:hover{
+  color:rgb(255, 255, 255);
+  text-decoration: underline;
 }
 
 .dropdown-item a{

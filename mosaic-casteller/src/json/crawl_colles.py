@@ -224,36 +224,33 @@ def compilar_info():
             fundacio="Desconegut"
             desaparicio=None
             refundacio=None
+            web=None
         else:
             print(f"Enllaç correcte, inciant recopilació de dades")
             try:
-                color_camisa, codi_color, fundacio, desaparicio, refundacio=crawl_info(url_colla)
+                color_camisa, codi_color,fundacio, desaparicio, refundacio, web=crawl_info(url_colla)
                 print("Return OK")
-                
             except:
-                print(f"{RED}CRAWL ERROR {RESET}")
+                print(f"{RED}COLOR CAMISA ERROR {RESET}")
                 color_camisa="Desconegut"
                 codi_color="#ffffff"
-                fundacio="Desconegut"
                 desaparicio=None
                 refundacio=None
-                
-
-            
-       # colla['color_camisa']=color_camisa
+                web=None
+        
+        #colla['color_camisa']=color_camisa
         print(f"{CYAN}Color: {colla['color_camisa']}{RESET}")
         #colla['codi_color']=codi_color 
         print(f"{CYAN}Codi: {colla['codi_color']}{RESET}")
-        colla["fundacio"]=fundacio
+        #colla["fundacio"]=fundacio
         print(f"{CYAN}Fundacio: {colla['fundacio']}{RESET}")
-        colla["desaparicio"]=desaparicio
+       # colla["desaparicio"]=desaparicio
         print(f"{CYAN}Desaparicio: {colla['desaparicio']}{RESET}")
-        colla["refundacio"]=refundacio
+       # colla["refundacio"]=refundacio
         print(f"{CYAN}Refundacio: {colla['refundacio']}{RESET}")
+        colla["web"]=web
+        print(f"{CYAN}Web: {colla['web']}{RESET}")
 
-    
-
-    
     dump()
     
 
@@ -270,6 +267,8 @@ def crawl_info(url_colla):
             fila_fundacio = infotaula.find("th", string="Creació")
             fila_desaparicio = infotaula.find("th", string="Data de dissolució o abolició")
             fila_refundacio = infotaula.find("th", string="Refundació")
+            fila_web = infotaula.find("th", string="Lloc web")
+            
             print("files ubicades")
             if fila_color:
                 color=fila_color.find_next("td")
@@ -313,6 +312,13 @@ def crawl_info(url_colla):
             print(f"Refundacio+{refundacio}")
             print("dates ok")
 
+            if fila_web:
+                print("Fila web OK")
+                web=fila_web.find_next('a').text.strip()
+            else:
+                print("colla sense lloc web")
+                web=None
+
         else:
             print(f"{RED}Infotaula no present, declarant valors desconeguts {RESET}")
             color_camisa="Desconegut"
@@ -329,7 +335,7 @@ def crawl_info(url_colla):
         refundacio=None
 
     print("Crawl OK")
-    return color_camisa,codi_color,fundacio,desaparicio,refundacio
+    return color_camisa,codi_color,fundacio,desaparicio,refundacio,web
 
 def hex2rgb(hex_value):
     h = hex_value.strip("#") 
@@ -422,7 +428,19 @@ def hex_a_hsv():
     #print(dades_colles)
     dump()
 
-
+def splice():
+    global dades_colles
+    nom_arxiu=input("Importar JSON:")
+    
+    with open(f'{nom_arxiu}', 'r', encoding='utf-8') as json_file:
+      dades_colles = json.load(json_file)
+      
+    eliminar=input("Dada a borrar:")
+    
+    for colla in dades_colles:
+        colla.pop(eliminar,None)
+    dump()
+    
 
 while True:
     print('Quin procés vols dur a terme?')
@@ -430,7 +448,8 @@ while True:
     print('[1] Compilar Informació')
     print('[2] Convetir HEX a HSV')
     print('[3] Convetir HEX a HSV')
-    print('[4] Sortir')
+    print('[4] Eliminar dada')
+    print('[5] Sortir')
 
     proces=input()
     try:
@@ -445,6 +464,8 @@ while True:
         if selec==3:
             hex_a_hls()
         if selec==4:
+            splice()
+        if selec==5:
             break
     except:
         print('Procés no valid')
