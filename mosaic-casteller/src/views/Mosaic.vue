@@ -11,6 +11,7 @@
                     <b-form-select-option value="color">Color</b-form-select-option>
                     <b-form-select-option value="nomcolor">Nom Color</b-form-select-option>
                     <b-form-select-option value="llum">Lluminositat</b-form-select-option>
+                    <b-form-select-option value="fundacio">Data de Fundació</b-form-select-option>
                     <!--<b-form-select-option value="default">Default</b-form-select-option>-->
                 </select>
                 </div>
@@ -218,6 +219,10 @@ export default{
             ordenarNomColor(){
                 this.dades_ordenades.sort((a,b)=>a.color_camisa.localeCompare(b.color_camisa))
             },
+            ordenarFundacio(){
+                this.dades_ordenades.sort((a,b)=>a.fundacio - b.fundacio)
+            },
+            
             
             ordenar(event){
                 const ordre = event.target.value
@@ -234,10 +239,13 @@ export default{
                 if (ordre=="llum"){
                     this.ordenarLlum()
                 }
+                if (ordre=="fundacio"){
+                    this.ordenarFundacio()     
+                }
                 if (ordre=="default"){
                     
-            this.dades_ordenades=[...this.dades]        
-                }
+                    this.dades_ordenades=[...this.dades]        
+                        }
             },
             
 
