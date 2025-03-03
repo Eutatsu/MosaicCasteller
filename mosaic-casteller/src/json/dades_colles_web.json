@@ -78,7 +78,7 @@
             45.0,
             33.5
         ],
-        "web": "brivalls.cat"
+        "web": "brivallsdecornudella.wordpress.com"
     },
     {
         "nom": "Capgrossos de Mataró",
@@ -281,7 +281,7 @@
             51,
             50
         ],
-        "fundacio": "2012[3]",
+        "fundacio": "2012",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -402,7 +402,7 @@
             52.1,
             41.8
         ],
-        "web": "castellersdecerdanyola.cat"
+        "web": "cerdanyola.cat/guia/entitat/entitats-de-cultura/castellers-de-cerdanyola-martinets"
     },
     {
         "nom": "Castellers de Cornellà",
@@ -429,7 +429,7 @@
             70.1,
             28.8
         ],
-        "web": "www.castellersdecornella.com"
+        "web": "castellersdecornella.cat"
     },
     {
         "nom": "Castellers de l'Alt Maresme",
@@ -456,7 +456,7 @@
             87.2,
             49.0
         ],
-        "web": "castellersaltmaresme.cat"
+        "web": null
     },
     {
         "nom": "Colla Castellera de l'Esquerra de l'Eixample",
@@ -483,7 +483,7 @@
             42.6,
             43.7
         ],
-        "web": "https://esquerdats.cat"
+        "web": "esquerdats.cat"
     },
     {
         "nom": "Castellers de la Sagrada Família",
@@ -659,7 +659,7 @@
             32,
             84
         ],
-        "fundacio": "1992[3]",
+        "fundacio": "1992",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -688,7 +688,7 @@
         ],
         "fundacio": "1991",
         "desaparicio": "1998",
-        "refundacio": "2013[3]",
+        "refundacio": "2013",
         "color_rgb": [
             200,
             13,
@@ -861,7 +861,7 @@
             96.5,
             44.9
         ],
-        "web": "castellersdesantpedor.cat"
+        "web": null
     },
     {
         "nom": "Castellers de Sants",
@@ -1050,7 +1050,7 @@
             33.3,
             45.3
         ],
-        "web": "http://www.airenou.cat"
+        "web": "www.airenou.cat"
     },
     {
         "nom": "Colla Castellera de Figueres",
@@ -1077,7 +1077,7 @@
             34.4,
             35.3
         ],
-        "web": "http://www.castellersdefigueres.cat"
+        "web": "castellersdefigueres.cat"
     },
     {
         "nom": "Colla Castellera de Sant Pere i Sant Pau",
@@ -1347,7 +1347,7 @@
             94.0,
             26.3
         ],
-        "web": "elsencantats.blogspot.com.es"
+        "web": "entitatsbegues.cat/elsencantats/"
     },
     {
         "nom": "Esperxats de l'Estany",
@@ -1617,7 +1617,7 @@
             47.0,
             57.1
         ],
-        "web": "http://noisdelatorre.cat"
+        "web": "somtradicio.com/nois-torre/"
     },
     {
         "nom": "Pallagos del Conflent",
@@ -1752,7 +1752,7 @@
             100.0,
             30.2
         ],
-        "web": "torraires.net"
+        "web": null
     },
     {
         "nom": "Xerrics d'Olot",
@@ -1887,7 +1887,7 @@
             62.2,
             29.0
         ],
-        "web": "xiquetsdecambrils.cat"
+        "web": "xiquetsdecambrils.carrd.co"
     },
     {
         "nom": "Xiquets de Reus",
@@ -2022,7 +2022,7 @@
             76.7,
             33.7
         ],
-        "web": null
+        "web": "castellersgava.wordpress.com/"
     },
     {
         "nom": "Castellers de Sant Adrià",
@@ -2076,7 +2076,7 @@
             51.0,
             30.4
         ],
-        "web": null
+        "web": "castellersdetortosa.cat"
     },
     {
         "nom": "Colla Castellera La Bisbal del Penedès",
@@ -2238,7 +2238,7 @@
             81.7,
             27.8
         ],
-        "web": null
+        "web": "castellersadroc.wordpress.com/"
     },
     {
         "nom": "Malfargats de Pallars",
@@ -2265,7 +2265,7 @@
             100.0,
             66.7
         ],
-        "web": null
+        "web": "tremp.cat/index_web.php?idwc=czoxOToibWFsZmFyZ2F0c2RlcGFsbGFycyI7"
     },
     {
         "nom": "Xiquets de Torredembarra",
@@ -2319,10 +2319,10 @@
             88.5,
             27.3
         ],
-        "web": null
+        "web": "cccerdanya.cat/"
     },
     {
-        "nom": "Castellers de la Selva",
+        "nom": "Guillats de la Selva",
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_la_Selva",
         "tipus": "convencional",
         "estat": "formacio",
@@ -2346,7 +2346,7 @@
             73.1,
             49.6
         ],
-        "web": null
+        "web": "www.culturascf.cat/ca/guillats-de-la-selva.html"
     },
     {
         "nom": "Colla Castellera de Vacarisses",
@@ -2427,7 +2427,7 @@
             96.3,
             31.8
         ],
-        "web": null
+        "web": "castellersbaixmontseny.home.blog/"
     },
     {
         "nom": "Castellers de Granollers",
@@ -2469,7 +2469,7 @@
             99
         ],
         "fundacio": "2009",
-        "desaparicio": null,
+        "desaparicio": "2014",
         "refundacio": null,
         "color_rgb": [
             253,
@@ -2481,7 +2481,7 @@
             98.4,
             50.0
         ],
-        "web": "www.sestalaies.cat"
+        "web": null
     },
     {
         "nom": "Angelets del Vallespir",
@@ -2886,7 +2886,7 @@
             95.3,
             50.2
         ],
-        "web": "http://www.laglobal.cat"
+        "web": "castellersdesalou.blogspot.com/"
     },
     {
         "nom": "Colla Castellera Nyerros de la Plana",
@@ -3210,7 +3210,7 @@
             34.8,
             43.9
         ],
-        "web": null
+        "web": "picapollsgavarresa.wordpress.com"
     },
     {
         "nom": "Vailets de l'Empordà",
@@ -3469,7 +3469,7 @@
         ],
         "fundacio": "2012, l'Ametlla de Mar",
         "desaparicio": "2018",
-        "refundacio": null,
+        "refundacio": 2025,
         "color_rgb": [
             137,
             170,
@@ -3480,7 +3480,7 @@
             55.3,
             70.2
         ],
-        "web": "losxicscaleros.cat"
+        "web": null
     },
     {
         "nom": "Arreplegats de la Zona Universitària",
@@ -3561,7 +3561,7 @@
             87.6,
             34.7
         ],
-        "web": "uvic.es…"
+        "web": "www.uvic.cat/uhub/collectius/emboirats"
     },
     {
         "nom": "Engrescats de la URL",
@@ -3588,7 +3588,7 @@
             99.1,
             54.7
         ],
-        "web": null
+        "web": "blogs.salleurl.edu/es/engrescats-url"
     },
     {
         "nom": "Ganàpies de la UAB",
@@ -3615,7 +3615,7 @@
             40.6,
             32.4
         ],
-        "web": "ganapies.cat"
+        "web": null
     },
     {
         "nom": "Grillats del CBL",
@@ -3642,7 +3642,7 @@
             58.9,
             28.6
         ],
-        "web": null
+        "web": "grillatscbl.wixsite.com/website"
     },
     {
         "nom": "Llunàtics de la UPC de Vilanova",
@@ -3669,7 +3669,7 @@
             81.2,
             25.1
         ],
-        "web": "llunaticsupcvilanova.cat"
+        "web": "llunaticsupcvilanova.wordpress.com/"
     },
     {
         "nom": "Marracos de la UdL",
@@ -3723,7 +3723,7 @@
             56.8,
             75.5
         ],
-        "web": "passerells.micd.tecnocampus.cat"
+        "web": "passerells.tecnocampus.cat/"
     },
     {
         "nom": "Pataquers de la URV",
@@ -3750,7 +3750,7 @@
             100.0,
             50.0
         ],
-        "web": null
+        "web": "sites.google.com/view/pataquersurv/inici"
     },
     {
         "nom": "Penjats del Campus de Manresa",
@@ -3777,7 +3777,7 @@
             94.0,
             45.5
         ],
-        "web": null
+        "web": "www.campusmanresa.cat/web/article/7469-colla-castellera-penjats-del-campus"
     },
     {
         "nom": "Trempats de la UPF",
@@ -3831,7 +3831,7 @@
             98.3,
             46.3
         ],
-        "web": null
+        "web": "www.xoriguers-udg.com/"
     },
     {
         "nom": "Gambirots de la UIB",
@@ -3845,9 +3845,9 @@
             18,
             95
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
-        "refundacio": null,
+        "fundacio": "2003",
+        "desaparicio": "2010",
+        "refundacio": "2024",
         "color_rgb": [
             198,
             214,
@@ -3940,7 +3940,7 @@
             96.9,
             62.5
         ],
-        "web": null
+        "web": "castellers.berlin/ca/"
     },
     {
         "nom": "Castellers de Lausanne",
@@ -4062,7 +4062,7 @@
             65,
             100
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2024",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -4075,7 +4075,7 @@
             100.0,
             67.5
         ],
-        "web": null
+        "web": "castellersestocolm.se"
     },
     {
         "nom": "Castellers de Sydney",
@@ -4156,7 +4156,7 @@
             66.2,
             54.7
         ],
-        "web": null
+        "web": "www.casalcatalatolosa.cat/activitats/castellers-de-tolosa/"
     },
     {
         "nom": "Castellers de Zürich",
@@ -4170,7 +4170,7 @@
             0,
             99
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2024",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -4183,7 +4183,7 @@
             0.0,
             99.6
         ],
-        "web": null
+        "web": "cczuric.cat/castellers/"
     },
     {
         "nom": "Castellers of London",
@@ -4210,7 +4210,7 @@
             80.0,
             45.1
         ],
-        "web": null
+        "web": "www.castellersoflondon.org.uk/"
     },
     {
         "nom": "Colla Castellera d'Edinburgh",
@@ -4237,7 +4237,7 @@
             100.0,
             25.1
         ],
-        "web": null
+        "web": "www.collacastelleraedinburgh.com/"
     },
     {
         "nom": "Colla Castellera de Madrid",
@@ -4264,7 +4264,7 @@
             100.0,
             39.2
         ],
-        "web": "cerclecatala-madrid.net"
+        "web": "collacastellerademadrid.net"
     },
     {
         "nom": "Euskal Herriko Casteller Taldea",
@@ -4278,7 +4278,7 @@
             56,
             35
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2024",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -4291,7 +4291,7 @@
             39.1,
             25.1
         ],
-        "web": null
+        "web": "euskalherrikocastellertaldea.web.app/"
     },
     {
         "nom": "Koales de Melbourne",
@@ -4326,13 +4326,13 @@
         "tipus": "internacional",
         "estat": "activa",
         "color_camisa": "Groc",
-        "codi_color": "#F9F20E",
+        "codi_color": "#ffd659",
         "color_hsv": [
             58,
             94,
             98
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2024",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -4345,7 +4345,7 @@
             95.1,
             51.6
         ],
-        "web": null
+        "web": "www.casal-catala.be/grups/colla-castellera/"
     },
     {
         "nom": "Mataresos de l'Alguer",
@@ -4399,7 +4399,7 @@
             38.8,
             28.8
         ],
-        "web": null
+        "web": "www.catalans.dk/"
     },
     {
         "nom": "Califòrnia Kids",
@@ -4440,8 +4440,8 @@
             100,
             98
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "2007",
+        "desaparicio": "Desconegut",
         "refundacio": null,
         "color_rgb": [
             250,
@@ -4453,12 +4453,12 @@
             100.0,
             49.0
         ],
-        "web": null
+        "web": "castellersdecerronavia.es.tl/"
     },
     {
-        "nom": "Castellers de la Usach",
+        "nom": "Castellers de la USACH",
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_la_Usach&action=edit&redlink=1",
-        "tipus": "internacional",
+        "tipus": "universitaria",
         "estat": "desapareguda",
         "color_camisa": "Blau",
         "codi_color": "#06429d",
@@ -4467,8 +4467,8 @@
             96,
             62
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "2008",
+        "desaparicio": "Desconegut",
         "refundacio": null,
         "color_rgb": [
             6,
@@ -4480,7 +4480,7 @@
             92.6,
             32.0
         ],
-        "web": null
+        "web": "castellerusach.wordpress.com/"
     },
     {
         "nom": "Castellers de Talca",
@@ -4630,7 +4630,7 @@
             80
         ],
         "fundacio": "juny 2013",
-        "desaparicio": null,
+        "desaparicio": "2018-2023",
         "refundacio": null,
         "color_rgb": [
             112,
@@ -4656,7 +4656,7 @@
             67,
             92
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2024",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -4669,6 +4669,6 @@
             78.8,
             61.2
         ],
-        "web": null
+        "web": "eebe.upc.edu/ca/lescola/associacions/content-associacions/descargolats_de_l_eebe"
     }
 ]
