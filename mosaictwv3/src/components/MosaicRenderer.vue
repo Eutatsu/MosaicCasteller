@@ -1,23 +1,53 @@
 <template>
-    <div id="mosaic" class="flex flex-wrap justify-items-center">
-        <div v-for="(colla,index) in filtrarDades" 
+    <div id="mosaic" class="flex flex-wrap justify-center">
+        <div
+        v-for="(colla,index) in filtrarDades" 
         :key="index"
         :class="casella" 
-        class="has-tooltip" 
         tabindex="0"
         :id="'colla-'+id+'-'+index"
         :style="{ 
             width:mida + 'px',
             height:mida + 'px', 
             backgroundColor: perfilColor(colla)
-            }">
-
+            }"
+        
+        >
             <p class="desconegut" v-if="seleccio=='desconeguts'" 
             :style="{fontSize:text+'px'}">
-            {{ colla.color_camisa }}
+                {{ colla.color_camisa }}
+            </p>
+
+            <img v-if="colla.patro?.length" :src="require('../assets/patrons/'+colla.patro)" style="width:100%;">
+            
            
-        </p>
-        
+            <tippy to="parent" content-tag="div" content-class="max-w-64"> 
+                <div class="bg-black/40 px-3 py-1 border-b border-white ">
+                <h2 class="text-base text-center"><strong>{{ colla.nom }}</strong><br></h2>
+            </div>
+            <div class="px-3 py-1 text-sm text-center">
+            <p>  
+                    <strong>{{ colla.color_camisa }}</strong><br>
+                    
+                    <strong>Localitat:</strong> {{ colla.localitat }}<br>
+                    <strong>Tipus:</strong> {{ formatDada(colla.tipus) }}<br>
+                    <strong>Estat:</strong> {{ formatDada(colla.estat) }}<br>
+                    <strong>Fundació:</strong> {{ colla.fundacio }}
+                </p>
+                <p v-if="colla.desaparicio!==null"><strong>
+                    Desaparició:
+                </strong> {{ colla.desaparicio }}<br>
+                </p>
+
+                <p v-if="colla.refundacio!==null"> <strong>
+                    Refundació:
+                </strong> {{ colla.refundacio }}<br>
+                </p>
+                <p class="my-1 text-xl">
+                <a class="mx-1" v-if="colla.web!==null" :href="'https://'+colla.web" target="_blank" alt="Lloc Web"><font-awesome-icon :icon="['fas','globe']"/></a>
+                <a  class="mx-1" :href="colla.url" target="_blank" alt="Article Wikipedia"><font-awesome-icon :icon="['fab', 'wikipedia-w']"/></a></p>
+            </div>
+            </tippy>
         </div>
     </div>
 </template>
@@ -153,7 +183,7 @@ export default {
 
 outline:3px solid rgba(190, 190, 190, 0.75);
 cursor: pointer;
-z-index: 99999;
+z-index: 999;
 position:relative
 
 }
@@ -162,34 +192,17 @@ position:relative
 
 outline:3px solid white;
 cursor: pointer;
-z-index: 99999;
+z-index: 999;
 position:relative
 
 }
 
-.popover p{margin-bottom:0px
+.tippy-box{
+    background-color:rgba(0, 0, 0, 0.5);
+    border-radius: 0px;
+    
 }
-
-.popover-body{
-color:white
+.tippy-content{
+    padding:0px;
 }
-
-
-.popover-header:before{
-display:none !important
-}
-.popover-header{
-color:white;
-background-color:rgba(42, 42, 42, 0.6);
-}
-
-.popover{
-background-color:rgba(42, 42, 42, 0.6);
-border-radius: 0px;
-}
-
-.popover .arrow{
-display:none
-}
-
 </style>

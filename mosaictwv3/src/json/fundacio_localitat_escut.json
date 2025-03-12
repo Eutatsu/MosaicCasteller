@@ -1,0 +1,776 @@
+[
+    {
+        "nom": "Al·lots de Llevant",
+        "fundacio": "1997",
+        "localitat": "Manacor",
+        "escut": "https://upload.wikimedia.org/wikipedia/ca/thumb/d/db/Logo_AdL.JPG/51px-Logo_AdL.JPG"
+    },
+    {
+        "nom": "Bordegassos de Vilanova",
+        "fundacio": "1972",
+        "localitat": "Vilanova i la Geltrú",
+        "escut": ""
+    },
+    {
+        "nom": "Brivalls de Cornudella",
+        "fundacio": "1976-1985, 2012",
+        "localitat": "Cornudella de Montsant",
+        "escut": ""
+    },
+    {
+        "nom": "Capgrossos de Mataró",
+        "fundacio": "1996",
+        "localitat": "Mataró",
+        "escut": ""
+    },
+    {
+        "nom": "Carallots de Sant Vicenç dels Horts",
+        "fundacio": "2012",
+        "localitat": "Sant Vicenç dels Horts",
+        "escut": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Escut_dels_Carallots_de_Sant_Vicen%C3%A7_dels_Horts.jpg/140px-Escut_dels_Carallots_de_Sant_Vicen%C3%A7_dels_Horts.jpg"
+    },
+    {
+        "nom": "Castellers d'Altafulla",
+        "fundacio": "1973-1988, 1995",
+        "localitat": "Altafulla",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers d'Andorra",
+        "fundacio": "2014",
+        "localitat": "Santa Coloma d'Andorra",
+        "escut": "https://upload.wikimedia.org/wikipedia/ca/thumb/0/01/Castellersandorra.png/140px-Castellersandorra.png"
+    },
+    {
+        "nom": "Castellers d'Esparreguera",
+        "fundacio": "1994",
+        "localitat": "Esparreguera",
+        "escut": "https://upload.wikimedia.org/wikipedia/ca/thumb/3/32/Esparraguera_logo.jpg/89px-Esparraguera_logo.jpg"
+    },
+    {
+        "nom": "Castellers de Badalona",
+        "fundacio": "1996",
+        "localitat": "Badalona",
+        "escut": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Escut_micacos.jpg/131px-Escut_micacos.jpg"
+    },
+    {
+        "nom": "Castellers de Barcelona",
+        "fundacio": "1969",
+        "localitat": "Barcelona",
+        "escut": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Escut_actual_dels_Castellers_de_Barcelona.svg/104px-Escut_actual_dels_Castellers_de_Barcelona.svg.png"
+    },
+    {
+        "nom": "Castellers de Berga",
+        "fundacio": "2012",
+        "localitat": "Berga",
+        "escut": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Escut_camisa_castellers_de_Berga.jpg/75px-Escut_camisa_castellers_de_Berga.jpg"
+    },
+    {
+        "nom": "Castellers de Caldes de Montbui",
+        "fundacio": "1996",
+        "localitat": "Caldes de Montbui",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Castellar del Vallès",
+        "fundacio": "2013",
+        "localitat": "Castellar del Vallès",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Castelldefels",
+        "fundacio": "1981",
+        "localitat": "Castelldefels",
+        "escut": "https://upload.wikimedia.org/wikipedia/ca/thumb/4/48/Escut-castellers-castelldefels.png/140px-Escut-castellers-castelldefels.png"
+    },
+    {
+        "nom": "Castellers de Cerdanyola",
+        "fundacio": "1998",
+        "localitat": "Cerdanyola del Vallès",
+        "escut": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Escut_dels_Castellers_de_Cerdanyola_camisa.jpg/135px-Escut_dels_Castellers_de_Cerdanyola_camisa.jpg"
+    },
+    {
+        "nom": "Castellers de Cornellà",
+        "fundacio": "1991",
+        "localitat": "Cornellà de Llobregat",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de l'Alt Maresme",
+        "fundacio": "2013",
+        "localitat": "Pineda de Mar",
+        "escut": ""
+    },
+    {
+        "nom": "Colla Castellera de l'Esquerra de l'Eixample",
+        "fundacio": "2018",
+        "localitat": "Barcelona (Esquerra de l'Eixample)",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de la Sagrada Família",
+        "fundacio": "2002",
+        "localitat": "Barcelona (Sagrada Família)",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de la Vila de Gràcia",
+        "fundacio": "1996",
+        "localitat": "Barcelona (Vila de Gràcia)",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de les Roquetes",
+        "fundacio": "2011",
+        "localitat": "Sant Pere de Ribes (Les Roquetes)",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Lleida",
+        "fundacio": "1995",
+        "localitat": "Lleida",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Mallorca",
+        "fundacio": "1995",
+        "localitat": "Palma",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Mediona",
+        "fundacio": "2017",
+        "localitat": "Mediona",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Mollet",
+        "fundacio": "1992",
+        "localitat": "Mollet del Vallès",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Montcada i Reixac",
+        "fundacio": "1991-1998, 2013",
+        "localitat": "Montcada i Reixac",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Rubí",
+        "fundacio": "1996",
+        "localitat": "Rubí",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Sabadell",
+        "fundacio": "1994",
+        "localitat": "Sabadell",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Sant Cugat",
+        "fundacio": "1996",
+        "localitat": "Sant Cugat del Vallès",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Sant Feliu",
+        "fundacio": "1996",
+        "localitat": "Sant Feliu de Llobregat",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Santa Coloma",
+        "fundacio": "1992",
+        "localitat": "Santa Coloma de Gramenet",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Santpedor",
+        "fundacio": "2013",
+        "localitat": "Santpedor",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Sants",
+        "fundacio": "1993",
+        "localitat": "Barcelona (Sants)",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Terrassa",
+        "fundacio": "1980",
+        "localitat": "Terrassa",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Viladecans",
+        "fundacio": "2013",
+        "localitat": "Viladecans",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Vilafranca",
+        "fundacio": "1948",
+        "localitat": "Vilafranca del Penedès",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers del Poble Sec",
+        "fundacio": "1998",
+        "localitat": "Barcelona (El Poble-sec)",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers del Prat de Llobregat",
+        "fundacio": "2014",
+        "localitat": "El Prat de Llobregat",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers del Riberal",
+        "fundacio": "1997",
+        "localitat": "Bao",
+        "escut": ""
+    },
+    {
+        "nom": "Colla Castellera de Figueres",
+        "fundacio": "1996",
+        "localitat": "Figueres",
+        "escut": ""
+    },
+    {
+        "nom": "Colla Castellera de Sant Pere i Sant Pau",
+        "fundacio": "1990",
+        "localitat": "Tarragona (Sant Pere i Sant Pau)",
+        "escut": ""
+    },
+    {
+        "nom": "Colla Jove de Castellers de Sitges",
+        "fundacio": "1993",
+        "localitat": "Sitges",
+        "escut": ""
+    },
+    {
+        "nom": "Colla Jove de l'Hospitalet",
+        "fundacio": "2000",
+        "localitat": "L'Hospitalet de Llobregat",
+        "escut": ""
+    },
+    {
+        "nom": "Colla Jove Xiquets de Tarragona",
+        "fundacio": "1979",
+        "localitat": "Tarragona",
+        "escut": ""
+    },
+    {
+        "nom": "Colla Jove Xiquets de Vilafranca",
+        "fundacio": "2010",
+        "localitat": "Vilafranca del Penedès",
+        "escut": ""
+    },
+    {
+        "nom": "Minyons de l'Arboç",
+        "fundacio": "1958-1985, 2002",
+        "localitat": "L'Arboç",
+        "escut": ""
+    },
+    {
+        "nom": "Minyons de Santa Cristina",
+        "fundacio": "2014",
+        "localitat": "Santa Cristina d'Aro",
+        "escut": ""
+    },
+    {
+        "nom": "Minyons de Terrassa",
+        "fundacio": "1979",
+        "localitat": "Terrassa",
+        "escut": ""
+    },
+    {
+        "nom": "Moixiganguers d'Igualada",
+        "fundacio": "2015",
+        "localitat": "Igualada",
+        "escut": ""
+    },
+    {
+        "nom": "Moixiganguers d'Igualada",
+        "fundacio": "1995",
+        "localitat": "Igualada",
+        "escut": "//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/LogoMoixis.jpg/129px-LogoMoixis.jpg"
+    },
+    {
+        "nom": "Nens del Vendrell",
+        "fundacio": "1926",
+        "localitat": "El Vendrell",
+        "escut": "//upload.wikimedia.org/wikipedia/commons/thumb/8/83/4de8_Nens_del_Vendrell-Concurs2010.jpg/90px-4de8_Nens_del_Vendrell-Concurs2010.jpg"
+    },
+    {
+        "nom": "Nois de la Torre",
+        "fundacio": "1975",
+        "localitat": "Torredembarra",
+        "escut": "//upload.wikimedia.org/wikipedia/ca/thumb/c/c5/Nois-de-la-torre-escut.jpg/102px-Nois-de-la-torre-escut.jpg"
+    },
+    {
+        "nom": "Pallagos del Conflent",
+        "fundacio": "2012",
+        "localitat": "Prada",
+        "escut": "//upload.wikimedia.org/wikipedia/ca/thumb/5/5f/Pallagos.jpeg/113px-Pallagos.jpeg"
+    },
+    {
+        "nom": "Sagals d'Osona",
+        "fundacio": "1997",
+        "localitat": "Vic",
+        "escut": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Escut_dels_Sagals_d%27Osona.jpg/113px-Escut_dels_Sagals_d%27Osona.jpg"
+    },
+    {
+        "nom": "Salats de Súria",
+        "fundacio": "2008",
+        "localitat": "Súria",
+        "escut": "//upload.wikimedia.org/wikipedia/ca/thumb/9/99/Salats_escut.jpg/113px-Salats_escut.jpg"
+    },
+    {
+        "nom": "Tirallongues de Manresa",
+        "fundacio": "1993",
+        "localitat": "Manresa",
+        "escut": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Tirallongues_de_Manresa_-_escut.jpg/119px-Tirallongues_de_Manresa_-_escut.jpg"
+    },
+    {
+        "nom": "Torraires de Montblanc",
+        "fundacio": "1994",
+        "localitat": "Montblanc",
+        "escut": ""
+    },
+    {
+        "nom": "Xerrics d'Olot",
+        "fundacio": "2001",
+        "localitat": "Olot",
+        "escut": ""
+    },
+    {
+        "nom": "Xicots de Vilafranca",
+        "fundacio": "1982",
+        "localitat": "Vilafranca del Penedès",
+        "escut": "//upload.wikimedia.org/wikipedia/ca/thumb/d/dc/Xicots_logo.png/140px-Xicots_logo.png"
+    },
+    {
+        "nom": "Xics de Granollers",
+        "fundacio": "1991",
+        "localitat": "Granollers",
+        "escut": ""
+    },
+    {
+        "nom": "Xiqüelos i Xiqüeles del Delta",
+        "fundacio": "2013",
+        "localitat": "Amposta, Deltebre",
+        "escut": "//upload.wikimedia.org/wikipedia/ca/thumb/5/53/Xiquelos_logo.jpeg/140px-Xiquelos_logo.jpeg"
+    },
+    {
+        "nom": "Xiquets de Cambrils",
+        "fundacio": "1993-2002, 2013",
+        "localitat": "Cambrils",
+        "escut": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Escut_Xiquets_de_Cambrils.png/126px-Escut_Xiquets_de_Cambrils.png"
+    },
+    {
+        "nom": "Xiquets de Reus",
+        "fundacio": "1981",
+        "localitat": "Reus",
+        "escut": ""
+    },
+    {
+        "nom": "Xiquets de Tarragona",
+        "fundacio": "1970",
+        "localitat": "Tarragona",
+        "escut": "//upload.wikimedia.org/wikipedia/commons/thumb/5/56/Escut_xiquets_d_tarragona_vector_v3.svg/122px-Escut_xiquets_d_tarragona_vector_v3.svg.png"
+    },
+    {
+        "nom": "Xiquets de Vila-seca",
+        "fundacio": "1991-1997, 2013",
+        "localitat": "Vila-seca",
+        "escut": ""
+    },
+    {
+        "nom": "Xiquets del Serrallo",
+        "fundacio": "1988",
+        "localitat": "Tarragona (El Serrallo)",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Gavà",
+        "fundacio": "1994-2004, 2013",
+        "localitat": "Gavà",
+        "escut": "//upload.wikimedia.org/wikipedia/ca/thumb/9/92/Logo_gava.jpg/110px-Logo_gava.jpg"
+    },
+    {
+        "nom": "Castellers de Sant Adrià",
+        "fundacio": "2013",
+        "localitat": "Sant Adrià de Besòs",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Tortosa",
+        "fundacio": "2015",
+        "localitat": "Tortosa",
+        "escut": ""
+    },
+    {
+        "nom": "Colla Castellera La Bisbal del Penedès",
+        "fundacio": "2015",
+        "localitat": "La Bisbal del Penedès",
+        "escut": ""
+    },
+    {
+        "nom": "Colla Castellera de Cerdanya",
+        "fundacio": "2018",
+        "localitat": "La Tor de Querol",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de la Selva",
+        "fundacio": "2018",
+        "localitat": "Santa Coloma de Farners",
+        "escut": ""
+    },
+    {
+        "nom": "Malfargats de Pallars",
+        "fundacio": "2018",
+        "localitat": "Sort, la Pobla de Segur",
+        "escut": ""
+    },
+    {
+        "nom": "Xiquets de Torredembarra",
+        "fundacio": "2018",
+        "localitat": "Torredembarra",
+        "escut": ""
+    },
+    {
+        "nom": "Grillats del CBL",
+        "fundacio": "2015",
+        "localitat": "Campus del Baix Llobregat",
+        "escut": ""
+    },
+    {
+        "nom": "Ganàpies de la UAB",
+        "fundacio": "1994",
+        "localitat": "Cerdanyola del Vallès",
+        "escut": ""
+    },
+    {
+        "nom": "Arreplegats de la Zona Universitària",
+        "fundacio": "1995",
+        "localitat": "Zona Universitària, Barcelona",
+        "escut": "//upload.wikimedia.org/wikipedia/ca/thumb/a/a8/Azu_escut.png/138px-Azu_escut.png"
+    },
+    {
+        "nom": "Xiquets de la Vila d'Alcover",
+        "fundacio": "1984",
+        "localitat": "Alcover",
+        "escut": ""
+    },
+    {
+        "nom": "Vailets de l'Empordà",
+        "fundacio": "2012",
+        "localitat": "Castelló d'Empúries",
+        "escut": ""
+    },
+    {
+        "nom": "Califòrnia Kids",
+        "fundacio": "2005",
+        "localitat": "Irvine, Califòrnia",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Berlin",
+        "fundacio": "2018",
+        "localitat": "Berlín",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Sydney",
+        "fundacio": "2016",
+        "localitat": "Sydney",
+        "escut": ""
+    },
+    {
+        "nom": "Colla Castellera Les Quatre Barres",
+        "fundacio": "1997",
+        "localitat": "Castelar, Morón, Gran Buenos Aires",
+        "escut": ""
+    },
+    {
+        "nom": "Koales de Melbourne",
+        "fundacio": "2014",
+        "localitat": "Melbourne",
+        "escut": ""
+    },
+    {
+        "nom": "Mannekes de Brussel·les",
+        "fundacio": "2024",
+        "localitat": "Brussel·les",
+        "escut": ""
+    },
+    {
+        "nom": "Mataresos de l'Alguer",
+        "fundacio": "2023",
+        "localitat": "L'Alguer",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Lausanne",
+        "fundacio": "2023",
+        "localitat": "Lausanne",
+        "escut": ""
+    },
+    {
+        "nom": "Xiquets de Hangzhou",
+        "fundacio": "2010",
+        "localitat": "Deqing",
+        "escut": ""
+    },
+    {
+        "nom": "Xiquets d'Alcover",
+        "fundacio": "2012",
+        "localitat": "Alcover",
+        "escut": ""
+    },
+    {
+        "nom": "Xiquets de l'Alster",
+        "fundacio": "2013",
+        "localitat": "Hamburg",
+        "escut": ""
+    },
+    {
+        "nom": "Xiquets de Gavà",
+        "fundacio": "(not found)",
+        "localitat": "Gavà",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Tokyo",
+        "fundacio": "2024",
+        "localitat": "Tòquio",
+        "escut": ""
+    },
+    {
+        "nom": "Xiquets de Mont-real",
+        "fundacio": "2007",
+        "localitat": "Mont-real",
+        "escut": ""
+    },
+    {
+        "nom": "Castellers de Terrassa",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Castellers de Vilafranca",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Castellers del Poble Sec",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Castellers del Prat de Llobregat",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Castellers del Prat",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Castellers del Riberal",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Colla Castellera de Figueres",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Colla Castellera de Sant Pere i Sant Pau",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Colla Castellera Jove de Barcelona",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Castellers d'Esplugues",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Colla Jove de Castellers de Sitges",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Colla Jove de l'Hospitalet",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Colla Jove Xiquets de Tarragona",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Colla Jove de Vilafranca",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Colla Joves Xiquets de Valls",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Colla Vella dels Xiquets de Valls",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Margeners de Guissona",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Marrecs de Salt",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Matossers de Molins de Rei",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Minyons de l'Arboç",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Minyons de Santa Cristina",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Minyons de Terrassa",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Moixiganguers d'Igualada",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Nens del Vendrell",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Nois de la Torre",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Sagals d'Osona",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Salats de Súria",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Tirallongues de Manresa",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Torraires de Montblanc",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Xerrics d'Olot",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Xicots de Vilafranca",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Xics de Granollers",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Xiquets de Reus",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Xiquets de Tarragona",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Les colles participants",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    },
+    {
+        "nom": "Xiquets del Serrallo",
+        "fundacio": "(not found)",
+        "localitat": "(not found)",
+        "escut": "(not found)"
+    }
+]

@@ -21,7 +21,7 @@
                 <div class="flex items-center col-span-6">
                 <label class="mida_rajoles text-nowrap" for="ordena">Mida tessel·les: </label>
                     <input class="w-full appearance-none bg-gray-200 h-2 rounded-full mx-1" type="range" v-model="mida">
-                    <input class="border-solid border-red-600 border-2 p-1 w-12 " :placeholder="mida" v-model="mida">
+                    <input class="border-solid border-red-600 border-2 p-1 w-10 text-right" :placeholder="mida" v-model="mida">
                     <p class="mb-0">px</p>
                 </div>
                 </div>
@@ -47,7 +47,7 @@
                 </div>
             </form>
         </div>
-        <div >  
+        <div class="mx-auto">  
             <div v-if="seccions_tipus==true && seccions_estat==false">
                 <div  v-if="tipus.includes('convencional')">
                 <h5 class="mt-3">Colles Convencionals</h5>
@@ -135,7 +135,7 @@
             </div>
 
             <!-- Mosaic per defecte -->
-            <div v-else-if="(seccions_estat==false&&seccions_tipus==false)||(seccions_estat==true&&seccions_tipus==true)">
+            <div class="mx-auto w-fit" v-else-if="(seccions_estat==false&&seccions_tipus==false)||(seccions_estat==true&&seccions_tipus==true)">
                 <MosaicRenderer
                     :llista="dades_ordenades"
                     :cerca="cerca"
@@ -165,7 +165,7 @@
     </div>
 </template>
 <script>
-import dades from '../json/dades_colles_web.json'
+import dades from '../json/dades_colles_localitats.json'
 import MosaicRenderer from '@/components/MosaicRenderer.vue';
 export default{
         components:{

@@ -24,7 +24,9 @@
             49.2,
             35.5
         ],
-        "web": "al-lotsdellevant.cat"
+        "web": "al-lotsdellevant.cat",
+        "localitat": "Manacor",
+        "escut": "https://upload.wikimedia.org/wikipedia/ca/thumb/d/db/Logo_AdL.JPG/51px-Logo_AdL.JPG"
     },
     {
         "nom": "Bordegassos de Vilanova",
@@ -51,7 +53,8 @@
             98.4,
             50.0
         ],
-        "web": "bordegassos.cat"
+        "web": "bordegassos.cat",
+        "localitat": "Vilanova i la Geltrú"
     },
     {
         "nom": "Brivalls de Cornudella",
@@ -65,7 +68,7 @@
             62,
             49
         ],
-        "fundacio": "1976",
+        "fundacio": "1976-1985, 2012",
         "desaparicio": "1985",
         "refundacio": "2012",
         "color_rgb": [
@@ -78,7 +81,8 @@
             45.0,
             33.5
         ],
-        "web": "brivalls.cat"
+        "web": "brivalls.cat",
+        "localitat": "Cornudella de Montsant"
     },
     {
         "nom": "Capgrossos de Mataró",
@@ -92,7 +96,7 @@
             77,
             55
         ],
-        "fundacio": "1996[4]",
+        "fundacio": "1996",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -105,7 +109,8 @@
             62.6,
             33.5
         ],
-        "web": "capgrossos.cat"
+        "web": "capgrossos.cat",
+        "localitat": "Mataró"
     },
     {
         "nom": "Carallots de Sant Vicenç dels Horts",
@@ -132,7 +137,9 @@
             85.7,
             50.6
         ],
-        "web": "carallots.cat"
+        "web": "carallots.cat",
+        "localitat": "Sant Vicenç dels Horts",
+        "escut": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Escut_dels_Carallots_de_Sant_Vicen%C3%A7_dels_Horts.jpg/140px-Escut_dels_Carallots_de_Sant_Vicen%C3%A7_dels_Horts.jpg"
     },
     {
         "nom": "Castellers d'Altafulla",
@@ -146,7 +153,7 @@
             57,
             53
         ],
-        "fundacio": "1973",
+        "fundacio": "1973-1988, 1995",
         "desaparicio": "1988",
         "refundacio": "1995",
         "color_rgb": [
@@ -159,7 +166,8 @@
             40.2,
             38.0
         ],
-        "web": "castellersaltafulla.cat"
+        "web": "castellersaltafulla.cat",
+        "localitat": "Altafulla"
     },
     {
         "nom": "Castellers d'Andorra",
@@ -186,7 +194,9 @@
             58.3,
             28.2
         ],
-        "web": "castellersandorra.com"
+        "web": "castellersandorra.com",
+        "localitat": "Santa Coloma d'Andorra",
+        "escut": "https://upload.wikimedia.org/wikipedia/ca/thumb/0/01/Castellersandorra.png/140px-Castellersandorra.png"
     },
     {
         "nom": "Castellers d'Esparreguera",
@@ -213,7 +223,9 @@
             75.7,
             35.5
         ],
-        "web": "castellersdesparreguera.cat"
+        "web": "castellersdesparreguera.cat",
+        "localitat": "Esparreguera",
+        "escut": "https://upload.wikimedia.org/wikipedia/ca/thumb/3/32/Esparraguera_logo.jpg/89px-Esparraguera_logo.jpg"
     },
     {
         "nom": "Castellers de Badalona",
@@ -227,7 +239,7 @@
             71,
             98
         ],
-        "fundacio": "1997",
+        "fundacio": "1996",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -240,7 +252,9 @@
             95.7,
             63.5
         ],
-        "web": "castellersdebadalona.cat"
+        "web": "castellersdebadalona.cat",
+        "localitat": "Badalona",
+        "escut": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Escut_micacos.jpg/131px-Escut_micacos.jpg"
     },
     {
         "nom": "Castellers de Barcelona",
@@ -267,7 +281,9 @@
             100.0,
             42.5
         ],
-        "web": "castellersdebarcelona.cat"
+        "web": "castellersdebarcelona.cat",
+        "localitat": "Barcelona",
+        "escut": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Escut_actual_dels_Castellers_de_Barcelona.svg/104px-Escut_actual_dels_Castellers_de_Barcelona.svg.png"
     },
     {
         "nom": "Castellers de Berga",
@@ -281,7 +297,7 @@
             51,
             50
         ],
-        "fundacio": "2012[3]",
+        "fundacio": "2012",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -294,7 +310,9 @@
             34.4,
             37.1
         ],
-        "web": "castellersdeberga.cat"
+        "web": "castellersdeberga.cat",
+        "localitat": "Berga",
+        "escut": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Escut_camisa_castellers_de_Berga.jpg/75px-Escut_camisa_castellers_de_Berga.jpg"
     },
     {
         "nom": "Castellers de Caldes de Montbui",
@@ -321,7 +339,8 @@
             96.0,
             19.4
         ],
-        "web": "castellersdecaldes.cat"
+        "web": "castellersdecaldes.cat",
+        "localitat": "Caldes de Montbui"
     },
     {
         "nom": "Castellers de Castellar del Vallès",
@@ -348,7 +367,8 @@
             71.1,
             31.2
         ],
-        "web": "capgirats.cat"
+        "web": "capgirats.cat",
+        "localitat": "Castellar del Vallès"
     },
     {
         "nom": "Castellers de Castelldefels",
@@ -375,7 +395,9 @@
             79.3,
             50.8
         ],
-        "web": "elsgrocs.cat"
+        "web": "elsgrocs.cat",
+        "localitat": "Castelldefels",
+        "escut": "https://upload.wikimedia.org/wikipedia/ca/thumb/4/48/Escut-castellers-castelldefels.png/140px-Escut-castellers-castelldefels.png"
     },
     {
         "nom": "Castellers de Cerdanyola",
@@ -402,7 +424,9 @@
             52.1,
             41.8
         ],
-        "web": "castellersdecerdanyola.cat"
+        "web": "castellersdecerdanyola.cat",
+        "localitat": "Cerdanyola del Vallès",
+        "escut": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Escut_dels_Castellers_de_Cerdanyola_camisa.jpg/135px-Escut_dels_Castellers_de_Cerdanyola_camisa.jpg"
     },
     {
         "nom": "Castellers de Cornellà",
@@ -429,7 +453,8 @@
             70.1,
             28.8
         ],
-        "web": "www.castellersdecornella.com"
+        "web": "www.castellersdecornella.com",
+        "localitat": "Cornellà de Llobregat"
     },
     {
         "nom": "Castellers de l'Alt Maresme",
@@ -456,7 +481,8 @@
             87.2,
             49.0
         ],
-        "web": "castellersaltmaresme.cat"
+        "web": "castellersaltmaresme.cat",
+        "localitat": "Pineda de Mar"
     },
     {
         "nom": "Colla Castellera de l'Esquerra de l'Eixample",
@@ -483,7 +509,8 @@
             42.6,
             43.7
         ],
-        "web": "https://esquerdats.cat"
+        "web": "https://esquerdats.cat",
+        "localitat": "Barcelona (Esquerra de l'Eixample)"
     },
     {
         "nom": "Castellers de la Sagrada Família",
@@ -510,7 +537,8 @@
             77.4,
             41.6
         ],
-        "web": "castellerssagradafamilia.cat"
+        "web": "castellerssagradafamilia.cat",
+        "localitat": "Barcelona (Sagrada Família)"
     },
     {
         "nom": "Castellers de la Vila de Gràcia",
@@ -537,7 +565,8 @@
             100.0,
             29.6
         ],
-        "web": "cvg.cat"
+        "web": "cvg.cat",
+        "localitat": "Barcelona (Vila de Gràcia)"
     },
     {
         "nom": "Castellers de les Roquetes",
@@ -564,7 +593,8 @@
             4.9,
             52.2
         ],
-        "web": null
+        "web": null,
+        "localitat": "Sant Pere de Ribes (Les Roquetes)"
     },
     {
         "nom": "Castellers de Lleida",
@@ -578,7 +608,7 @@
             83,
             55
         ],
-        "fundacio": "16 març 1995",
+        "fundacio": "1995",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -591,7 +621,8 @@
             71.6,
             31.8
         ],
-        "web": "castellersdelleida.cat"
+        "web": "castellersdelleida.cat",
+        "localitat": "Lleida"
     },
     {
         "nom": "Castellers de Mallorca",
@@ -605,7 +636,7 @@
             97,
             57
         ],
-        "fundacio": "1996",
+        "fundacio": "1995",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -618,7 +649,8 @@
             93.3,
             29.4
         ],
-        "web": "castellersdemallorca.com"
+        "web": "castellersdemallorca.com",
+        "localitat": "Palma"
     },
     {
         "nom": "Castellers de Mediona",
@@ -645,7 +677,8 @@
             89.7,
             34.1
         ],
-        "web": "castellersdemediona.cat"
+        "web": "castellersdemediona.cat",
+        "localitat": "Mediona"
     },
     {
         "nom": "Castellers de Mollet",
@@ -659,7 +692,7 @@
             32,
             84
         ],
-        "fundacio": "1992[3]",
+        "fundacio": "1992",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -672,7 +705,8 @@
             45.7,
             70.4
         ],
-        "web": "castellersdemollet.cat"
+        "web": "castellersdemollet.cat",
+        "localitat": "Mollet del Vallès"
     },
     {
         "nom": "Castellers de Montcada i Reixac",
@@ -686,7 +720,7 @@
             94,
             78
         ],
-        "fundacio": "1991",
+        "fundacio": "1991-1998, 2013",
         "desaparicio": "1998",
         "refundacio": "2013[3]",
         "color_rgb": [
@@ -699,7 +733,8 @@
             87.8,
             41.8
         ],
-        "web": "castellersdemontcadaireixac.cat"
+        "web": "castellersdemontcadaireixac.cat",
+        "localitat": "Montcada i Reixac"
     },
     {
         "nom": "Castellers de Rubí",
@@ -726,7 +761,8 @@
             86.6,
             46.7
         ],
-        "web": "castellersderubi.cat"
+        "web": "castellersderubi.cat",
+        "localitat": "Rubí"
     },
     {
         "nom": "Castellers de Sabadell",
@@ -753,7 +789,8 @@
             98.0,
             19.6
         ],
-        "web": "www.saballuts.cat"
+        "web": "www.saballuts.cat",
+        "localitat": "Sabadell"
     },
     {
         "nom": "Castellers de Sant Cugat",
@@ -780,7 +817,8 @@
             100.0,
             18.0
         ],
-        "web": "castellersdesantcugat.cat"
+        "web": "castellersdesantcugat.cat",
+        "localitat": "Sant Cugat del Vallès"
     },
     {
         "nom": "Castellers de Sant Feliu",
@@ -794,7 +832,7 @@
             79,
             86
         ],
-        "fundacio": "Gener del 1996",
+        "fundacio": "1996",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -807,7 +845,8 @@
             70.7,
             51.8
         ],
-        "web": "castellersdesantfeliu.cat"
+        "web": "castellersdesantfeliu.cat",
+        "localitat": "Sant Feliu de Llobregat"
     },
     {
         "nom": "Castellers de Santa Coloma",
@@ -821,7 +860,7 @@
             78,
             100
         ],
-        "fundacio": "1985",
+        "fundacio": "1992",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -834,7 +873,8 @@
             100.0,
             61.0
         ],
-        "web": "castellersdesantacoloma.cat/"
+        "web": "castellersdesantacoloma.cat/",
+        "localitat": "Santa Coloma de Gramenet"
     },
     {
         "nom": "Castellers de Santpedor",
@@ -861,7 +901,8 @@
             96.5,
             44.9
         ],
-        "web": "castellersdesantpedor.cat"
+        "web": "castellersdesantpedor.cat",
+        "localitat": "Santpedor"
     },
     {
         "nom": "Castellers de Sants",
@@ -888,7 +929,8 @@
             0.0,
             49.4
         ],
-        "web": "borinots.cat"
+        "web": "borinots.cat",
+        "localitat": "Barcelona (Sants)"
     },
     {
         "nom": "Castellers de Terrassa",
@@ -902,7 +944,7 @@
             100,
             90
         ],
-        "fundacio": "1980",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -915,7 +957,9 @@
             100.0,
             44.9
         ],
-        "web": "castellersdeterrassa.cat"
+        "web": "castellersdeterrassa.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Castellers de Viladecans",
@@ -929,7 +973,7 @@
             87,
             91
         ],
-        "fundacio": "2012",
+        "fundacio": "2013",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -942,7 +986,8 @@
             80.7,
             51.2
         ],
-        "web": "castellersdeviladecans.blogspot.com"
+        "web": "castellersdeviladecans.blogspot.com",
+        "localitat": "Viladecans"
     },
     {
         "nom": "Castellers de Vilafranca",
@@ -956,7 +1001,7 @@
             100,
             80
         ],
-        "fundacio": "1948",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -969,7 +1014,9 @@
             100.0,
             40.0
         ],
-        "web": "castellersdevilafranca.cat"
+        "web": "castellersdevilafranca.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Castellers del Poble Sec",
@@ -983,7 +1030,7 @@
             40,
             100
         ],
-        "fundacio": "1998",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -996,7 +1043,9 @@
             100.0,
             80.2
         ],
-        "web": "castellersdelpoblesec.cat"
+        "web": "castellersdelpoblesec.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Castellers del Prat de Llobregat",
@@ -1010,7 +1059,7 @@
             52,
             68
         ],
-        "fundacio": "2014",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1023,7 +1072,9 @@
             36.0,
             50.4
         ],
-        "web": "castellersdelprat.cat"
+        "web": "castellersdelprat.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Castellers del Riberal",
@@ -1037,7 +1088,7 @@
             50,
             60
         ],
-        "fundacio": "1996",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1050,7 +1101,9 @@
             33.3,
             45.3
         ],
-        "web": "http://www.airenou.cat"
+        "web": "http://www.airenou.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Colla Castellera de Figueres",
@@ -1064,7 +1117,7 @@
             51,
             47
         ],
-        "fundacio": "1996",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1077,7 +1130,9 @@
             34.4,
             35.3
         ],
-        "web": "http://www.castellersdefigueres.cat"
+        "web": "http://www.castellersdefigueres.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Colla Castellera de Sant Pere i Sant Pau",
@@ -1091,7 +1146,7 @@
             100,
             74
         ],
-        "fundacio": "1990",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1104,7 +1159,9 @@
             100.0,
             37.1
         ],
-        "web": "www.ccspisp.cat"
+        "web": "www.ccspisp.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Colla Castellera Jove de Barcelona",
@@ -1118,7 +1175,7 @@
             88,
             44
         ],
-        "fundacio": "2010, Barcelona",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1131,7 +1188,9 @@
             79.2,
             24.5
         ],
-        "web": "www.jovedebarcelona.cat"
+        "web": "www.jovedebarcelona.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Colla de Castellers d'Esplugues",
@@ -1172,7 +1231,7 @@
             61,
             33
         ],
-        "fundacio": "1993",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1185,7 +1244,9 @@
             44.3,
             22.5
         ],
-        "web": "jove-de-sitges.mailchimpsites.com/"
+        "web": "jove-de-sitges.mailchimpsites.com/",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Colla Jove de l'Hospitalet",
@@ -1199,7 +1260,7 @@
             98,
             21
         ],
-        "fundacio": "2000",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1212,7 +1273,9 @@
             96.4,
             10.8
         ],
-        "web": "www.collajovelh.cat"
+        "web": "www.collajovelh.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Colla Jove Xiquets de Tarragona",
@@ -1226,7 +1289,7 @@
             44,
             95
         ],
-        "fundacio": "1979",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1239,7 +1302,9 @@
             80.3,
             74.1
         ],
-        "web": "jovedetarragona.cat"
+        "web": "jovedetarragona.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Colla Jove Xiquets de Vilafranca",
@@ -1266,7 +1331,8 @@
             52.4,
             87.6
         ],
-        "web": "jovedevilafranca.org"
+        "web": "jovedevilafranca.org",
+        "localitat": "Vilafranca del Penedès"
     },
     {
         "nom": "Colla Joves Xiquets de Valls",
@@ -1280,7 +1346,7 @@
             91,
             84
         ],
-        "fundacio": "1813",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": "1971 (reorganització)",
         "color_rgb": [
@@ -1293,7 +1359,9 @@
             83.0,
             46.1
         ],
-        "web": "collajoves.cat"
+        "web": "collajoves.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Colla Vella dels Xiquets de Valls",
@@ -1307,7 +1375,7 @@
             46,
             84
         ],
-        "fundacio": "1791",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1320,7 +1388,9 @@
             55.1,
             65.1
         ],
-        "web": "collavella.cat"
+        "web": "collavella.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Encantats de Begues",
@@ -1388,7 +1458,7 @@
             62,
             47
         ],
-        "fundacio": "2007",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1401,7 +1471,9 @@
             44.9,
             32.7
         ],
-        "web": "margeners.cat"
+        "web": "margeners.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Marrecs de Salt",
@@ -1415,7 +1487,7 @@
             46,
             81
         ],
-        "fundacio": "1995",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1428,7 +1500,9 @@
             49.2,
             62.2
         ],
-        "web": "marrecs.cat"
+        "web": "marrecs.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Matossers de Molins de Rei",
@@ -1442,7 +1516,7 @@
             75,
             56
         ],
-        "fundacio": "2002",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1455,7 +1529,9 @@
             59.8,
             35.1
         ],
-        "web": "www.matossers.cat"
+        "web": "www.matossers.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Minyons de l'Arboç",
@@ -1469,7 +1545,7 @@
             94,
             85
         ],
-        "fundacio": "1958",
+        "fundacio": "(not found)",
         "desaparicio": "1985",
         "refundacio": "2002",
         "color_rgb": [
@@ -1482,7 +1558,9 @@
             87.9,
             45.3
         ],
-        "web": "minyonsdelarboc.cat"
+        "web": "minyonsdelarboc.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Minyons de Santa Cristina",
@@ -1496,7 +1574,7 @@
             76,
             75
         ],
-        "fundacio": "2014",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1509,7 +1587,9 @@
             61.9,
             46.3
         ],
-        "web": "minyonsdesantacristina.cat"
+        "web": "minyonsdesantacristina.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Minyons de Terrassa",
@@ -1523,7 +1603,7 @@
             20,
             83
         ],
-        "fundacio": "1979",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1536,7 +1616,9 @@
             32.8,
             74.9
         ],
-        "web": "minyons.cat"
+        "web": "minyons.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Moixiganguers d'Igualada",
@@ -1550,7 +1632,7 @@
             66,
             56
         ],
-        "fundacio": "1995",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1563,7 +1645,9 @@
             49.0,
             37.6
         ],
-        "web": "moixiganguers.cat"
+        "web": "moixiganguers.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Nens del Vendrell",
@@ -1577,7 +1661,7 @@
             83,
             77
         ],
-        "fundacio": "1926, el Vendrell",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1590,7 +1674,9 @@
             70.4,
             45.1
         ],
-        "web": "nensdelvendrell.cat"
+        "web": "nensdelvendrell.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Nois de la Torre",
@@ -1604,7 +1690,7 @@
             52,
             77
         ],
-        "fundacio": "1975 (1975)",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1617,7 +1703,9 @@
             47.0,
             57.1
         ],
-        "web": "http://noisdelatorre.cat"
+        "web": "http://noisdelatorre.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Pallagos del Conflent",
@@ -1644,7 +1732,9 @@
             67.1,
             32.2
         ],
-        "web": "pallagos.com"
+        "web": "pallagos.com",
+        "localitat": "Prada",
+        "escut": "//upload.wikimedia.org/wikipedia/ca/thumb/5/5f/Pallagos.jpeg/113px-Pallagos.jpeg"
     },
     {
         "nom": "Sagals d'Osona",
@@ -1658,7 +1748,7 @@
             100,
             95
         ],
-        "fundacio": "1997",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1671,7 +1761,9 @@
             100.0,
             47.6
         ],
-        "web": "www.sagals.cat"
+        "web": "www.sagals.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Salats de Súria",
@@ -1685,7 +1777,7 @@
             40,
             93
         ],
-        "fundacio": "2008",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1698,7 +1790,9 @@
             73.8,
             74.5
         ],
-        "web": "www.salats.cat"
+        "web": "www.salats.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Tirallongues de Manresa",
@@ -1712,7 +1806,7 @@
             39,
             89
         ],
-        "fundacio": "1993",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1725,7 +1819,10 @@
             62.5,
             71.8
         ],
-        "web": "tirallongues.cat"
+        "web": "tirallongues.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)",
+        "patro":"tirallongues.svg"
     },
     {
         "nom": "Torraires de Montblanc",
@@ -1739,7 +1836,7 @@
             100,
             60
         ],
-        "fundacio": "1849",
+        "fundacio": "(not found)",
         "desaparicio": "1920",
         "refundacio": "1994",
         "color_rgb": [
@@ -1752,7 +1849,9 @@
             100.0,
             30.2
         ],
-        "web": "torraires.net"
+        "web": "torraires.net",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Xerrics d'Olot",
@@ -1766,7 +1865,7 @@
             76,
             67
         ],
-        "fundacio": "2002",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1779,7 +1878,9 @@
             61.9,
             41.2
         ],
-        "web": "xerrics.cat"
+        "web": "xerrics.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Xicots de Vilafranca",
@@ -1793,7 +1894,7 @@
             91,
             84
         ],
-        "fundacio": "1982",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1806,7 +1907,9 @@
             83.8,
             45.9
         ],
-        "web": "xicotsvilafranca.cat"
+        "web": "xicotsvilafranca.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Xics de Granollers",
@@ -1820,7 +1923,7 @@
             84,
             39
         ],
-        "fundacio": "1991",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1833,7 +1936,9 @@
             72.2,
             22.5
         ],
-        "web": "xics.cat"
+        "web": "xics.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Xiqüelos i Xiqüeles del Delta",
@@ -1860,7 +1965,9 @@
             64.0,
             46.9
         ],
-        "web": "xiquelosixiquelesdeldelta.cat"
+        "web": "xiquelosixiquelesdeldelta.cat",
+        "localitat": "Amposta, Deltebre",
+        "escut": "//upload.wikimedia.org/wikipedia/ca/thumb/5/53/Xiquelos_logo.jpeg/140px-Xiquelos_logo.jpeg"
     },
     {
         "nom": "Xiquets de Cambrils",
@@ -1874,7 +1981,7 @@
             77,
             47
         ],
-        "fundacio": "1993",
+        "fundacio": "1993-2002, 2013",
         "desaparicio": "2001",
         "refundacio": "2013",
         "color_rgb": [
@@ -1887,7 +1994,9 @@
             62.2,
             29.0
         ],
-        "web": "xiquetsdecambrils.cat"
+        "web": "xiquetsdecambrils.cat",
+        "localitat": "Cambrils",
+        "escut": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Escut_Xiquets_de_Cambrils.png/126px-Escut_Xiquets_de_Cambrils.png"
     },
     {
         "nom": "Xiquets de Reus",
@@ -1901,7 +2010,7 @@
             86,
             66
         ],
-        "fundacio": "1981",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1914,7 +2023,9 @@
             75.9,
             37.5
         ],
-        "web": "xiquetsdereus.cat"
+        "web": "xiquetsdereus.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Xiquets de Tarragona",
@@ -1922,13 +2033,14 @@
         "tipus": "convencional",
         "estat": "activa",
         "color_camisa": "Vermell i blanc a ratlles",
+        "patro": "xiquetstarragona.svg",
         "codi_color": "#a23047",
         "color_hsv": [
             348,
             70,
             64
         ],
-        "fundacio": "1970",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1941,7 +2053,9 @@
             54.3,
             41.2
         ],
-        "web": "xiquetsdetarragona.cat"
+        "web": "xiquetsdetarragona.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Xiquets de Vila-seca",
@@ -1955,7 +2069,7 @@
             100,
             100
         ],
-        "fundacio": "2014",
+        "fundacio": "1991-1997, 2013",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1968,7 +2082,8 @@
             100.0,
             50.0
         ],
-        "web": "www.xiquetsdevila-seca.cat"
+        "web": "www.xiquetsdevila-seca.cat",
+        "localitat": "Vila-seca"
     },
     {
         "nom": "Xiquets del Serrallo",
@@ -1982,7 +2097,7 @@
             67,
             44
         ],
-        "fundacio": "1988",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -1995,7 +2110,9 @@
             50.7,
             29.4
         ],
-        "web": "xiquetsdelserrallo.cat"
+        "web": "xiquetsdelserrallo.cat",
+        "localitat": "(not found)",
+        "escut": "(not found)"
     },
     {
         "nom": "Castellers de Gavà",
@@ -2009,7 +2126,7 @@
             87,
             60
         ],
-        "fundacio": "1994",
+        "fundacio": "1994-2004, 2013",
         "desaparicio": "2004",
         "refundacio": "2012",
         "color_rgb": [
@@ -2022,7 +2139,9 @@
             76.7,
             33.7
         ],
-        "web": null
+        "web": null,
+        "localitat": "Gavà",
+        "escut": "//upload.wikimedia.org/wikipedia/ca/thumb/9/92/Logo_gava.jpg/110px-Logo_gava.jpg"
     },
     {
         "nom": "Castellers de Sant Adrià",
@@ -2036,7 +2155,7 @@
             84,
             60
         ],
-        "fundacio": "14 de maig de 2013",
+        "fundacio": "2013",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -2049,7 +2168,8 @@
             72.1,
             35.1
         ],
-        "web": "passadors.wordpress.com"
+        "web": "passadors.wordpress.com",
+        "localitat": "Sant Adrià de Besòs"
     },
     {
         "nom": "Castellers de Tortosa",
@@ -2063,7 +2183,7 @@
             68,
             46
         ],
-        "fundacio": "Febrer del 2015",
+        "fundacio": "2015",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -2076,7 +2196,8 @@
             51.0,
             30.4
         ],
-        "web": null
+        "web": null,
+        "localitat": "Tortosa"
     },
     {
         "nom": "Colla Castellera La Bisbal del Penedès",
@@ -2103,7 +2224,8 @@
             100.0,
             50.0
         ],
-        "web": "bousbisbal.wordpress.com"
+        "web": "bousbisbal.wordpress.com",
+        "localitat": "La Bisbal del Penedès"
     },
     {
         "nom": "Laietans de Gramenet",
@@ -2219,6 +2341,8 @@
         "tipus": "convencional",
         "estat": "activa",
         "color_camisa": "Quadres negres i liles",
+        
+        "patro":"adroc.svg",
         "codi_color": "#660d81",
         "color_hsv": [
             286,
@@ -2252,7 +2376,7 @@
             67,
             100
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2018",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -2265,7 +2389,8 @@
             100.0,
             66.7
         ],
-        "web": null
+        "web": null,
+        "localitat": "Sort, la Pobla de Segur"
     },
     {
         "nom": "Xiquets de Torredembarra",
@@ -2279,7 +2404,7 @@
             78,
             56
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2018",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -2292,7 +2417,8 @@
             64.6,
             34.3
         ],
-        "web": null
+        "web": null,
+        "localitat": "Torredembarra"
     },
     {
         "nom": "Colla Castellera de Cerdanya",
@@ -2306,7 +2432,7 @@
             94,
             51
         ],
-        "fundacio": "2019",
+        "fundacio": "2018",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -2319,7 +2445,8 @@
             88.5,
             27.3
         ],
-        "web": null
+        "web": null,
+        "localitat": "La Tor de Querol"
     },
     {
         "nom": "Castellers de la Selva",
@@ -2333,7 +2460,7 @@
             84,
             86
         ],
-        "fundacio": "2019",
+        "fundacio": "2018",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -2346,7 +2473,8 @@
             73.1,
             49.6
         ],
-        "web": null
+        "web": null,
+        "localitat": "Santa Coloma de Farners"
     },
     {
         "nom": "Colla Castellera de Vacarisses",
@@ -3237,7 +3365,8 @@
             49.5,
             81.4
         ],
-        "web": "www.vailetsdelemporda.cat"
+        "web": "www.vailetsdelemporda.cat",
+        "localitat": "Castelló d'Empúries"
     },
     {
         "nom": "Vailets de Ripollet",
@@ -3305,7 +3434,7 @@
             0,
             100
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "(not found)",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -3318,7 +3447,8 @@
             0.0,
             100.0
         ],
-        "web": null
+        "web": null,
+        "localitat": "Gavà"
     },
     {
         "nom": "Xiquets de Gràcia",
@@ -3413,7 +3543,7 @@
             77,
             45
         ],
-        "fundacio": "1984 color camisa grana",
+        "fundacio": "1984",
         "desaparicio": "2009",
         "refundacio": "2012 color camisa verd oliva",
         "color_rgb": [
@@ -3426,7 +3556,8 @@
             62.9,
             27.5
         ],
-        "web": null
+        "web": null,
+        "localitat": "Alcover"
     },
     {
         "nom": "Xiquets d'Alcover",
@@ -3440,7 +3571,7 @@
             55,
             59
         ],
-        "fundacio": "1984 color camisa grana",
+        "fundacio": "2012",
         "desaparicio": "2009",
         "refundacio": "2012 color camisa verd oliva",
         "color_rgb": [
@@ -3453,7 +3584,8 @@
             37.6,
             42.7
         ],
-        "web": null
+        "web": null,
+        "localitat": "Alcover"
     },
     {
         "nom": "Los Xics Caleros",
@@ -3494,7 +3626,7 @@
             90,
             66
         ],
-        "fundacio": "1995, Barcelona",
+        "fundacio": "1995",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -3507,7 +3639,9 @@
             77.8,
             37.1
         ],
-        "web": "arreplegats.cat"
+        "web": "arreplegats.cat",
+        "localitat": "Zona Universitària, Barcelona",
+        "escut": "//upload.wikimedia.org/wikipedia/ca/thumb/a/a8/Azu_escut.png/138px-Azu_escut.png"
     },
     {
         "nom": "Bergants del Campus de Terrassa",
@@ -3602,7 +3736,7 @@
             93,
             27
         ],
-        "fundacio": "1994, Universitat Autònoma de Barcelona",
+        "fundacio": "1994",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -3615,7 +3749,8 @@
             40.6,
             32.4
         ],
-        "web": "ganapies.cat"
+        "web": "ganapies.cat",
+        "localitat": "Cerdanyola del Vallès"
     },
     {
         "nom": "Grillats del CBL",
@@ -3629,7 +3764,7 @@
             74,
             45
         ],
-        "fundacio": "2015, Parc Mediterrani de la Tecnologia",
+        "fundacio": "2015",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -3642,7 +3777,8 @@
             58.9,
             28.6
         ],
-        "web": null
+        "web": null,
+        "localitat": "Campus del Baix Llobregat"
     },
     {
         "nom": "Llunàtics de la UPC de Vilanova",
@@ -3940,7 +4076,8 @@
             96.9,
             62.5
         ],
-        "web": null
+        "web": null,
+        "localitat": "Berlín"
     },
     {
         "nom": "Castellers de Lausanne",
@@ -3967,7 +4104,8 @@
             77.8,
             37.1
         ],
-        "web": "www.catalansasuissa.org/castellers/"
+        "web": "www.catalansasuissa.org/castellers/",
+        "localitat": "Lausanne"
     },
     {
         "nom": "Castellers de Lo Prado",
@@ -4102,7 +4240,8 @@
             93.8,
             55.7
         ],
-        "web": "sydneyhumantowers.com"
+        "web": "sydneyhumantowers.com",
+        "localitat": "Sydney"
     },
     {
         "nom": "Castellers de Tokyo",
@@ -4116,7 +4255,7 @@
             72,
             63
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2024",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -4129,7 +4268,8 @@
             56.9,
             40.0
         ],
-        "web": "gainful-country-5eb.notion.site/Castellers-de-Tokyo-121814d207aa80d994c5d2f3245f80a2"
+        "web": "gainful-country-5eb.notion.site/Castellers-de-Tokyo-121814d207aa80d994c5d2f3245f80a2",
+        "localitat": "Tòquio"
     },
     {
         "nom": "Castellers de Tolosa",
@@ -4318,7 +4458,8 @@
             96.2,
             20.4
         ],
-        "web": null
+        "web": null,
+        "localitat": "Melbourne"
     },
     {
         "nom": "Mannekes de Brussel·les",
@@ -4332,7 +4473,7 @@
             94,
             98
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2024",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -4345,7 +4486,8 @@
             95.1,
             51.6
         ],
-        "web": null
+        "web": null,
+        "localitat": "Brussel·les"
     },
     {
         "nom": "Mataresos de l'Alguer",
@@ -4372,7 +4514,8 @@
             99.0,
             62.4
         ],
-        "web": null
+        "web": null,
+        "localitat": "L'Alguer"
     },
     {
         "nom": "Xiquets de Copenhagen",
@@ -4413,7 +4556,7 @@
             100,
             100
         ],
-        "fundacio": "2004",
+        "fundacio": "2005",
         "desaparicio": "Desconegut",
         "refundacio": null,
         "color_rgb": [
@@ -4426,7 +4569,8 @@
             100.0,
             50.0
         ],
-        "web": null
+        "web": null,
+        "localitat": "Irvine, Califòrnia"
     },
     {
         "nom": "Castellers de Cerro Navia",
@@ -4615,7 +4759,8 @@
             55.1,
             65.1
         ],
-        "web": null
+        "web": null,
+        "localitat": "Deqing"
     },
     {
         "nom": "Xiquets de l'Alster",
@@ -4629,7 +4774,7 @@
             45,
             80
         ],
-        "fundacio": "juny 2013",
+        "fundacio": "2013",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
@@ -4642,7 +4787,8 @@
             46.7,
             61.8
         ],
-        "web": null
+        "web": null,
+        "localitat": "Hamburg"
     },
     {
         "nom": "Descargolats de l'EEBE",
@@ -4656,7 +4802,7 @@
             67,
             92
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2024",
         "desaparicio": null,
         "refundacio": null,
         "color_rgb": [
