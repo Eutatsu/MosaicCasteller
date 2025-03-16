@@ -45,6 +45,9 @@
                         <label><input type="checkbox" class="mx-1 accent-red-600" value="desapareguda" v-model="estat">Desaparegudes</label>
                     </div>
                 </div>
+                <div>
+                    <button class="bg-red-600 text-white px-3 py-2 font-bold"><font-awesome-icon :icon="['fas', 'eye']" /> Més Opcions</button>
+                </div>
             </form>
         </div>
         <div class="mx-auto">  

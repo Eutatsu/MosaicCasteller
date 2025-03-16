@@ -18,8 +18,8 @@
                 {{ colla.color_camisa }}
             </p>
 
-            <img v-if="colla.patro?.length" :src="require('../assets/patrons/'+colla.patro)" style="width:100%;">
-            
+           <!-- <img v-if="colla.patro?.length" :src="require('../assets/patrons/'+colla.patro)" style="width:100%;">
+            -->
            
             <tippy to="parent" content-tag="div" content-class="max-w-64"> 
                 <div class="bg-black/40 px-3 py-1 border-b border-white ">

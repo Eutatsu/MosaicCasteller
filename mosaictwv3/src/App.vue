@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="flex flex-col w-full">
     <nav class="bg-red-600 w-full">
       <div class="flex items-center justify-between p-3 p-3 mx-auto max-w-screen-xl">
       <div class="flex items-center">
@@ -16,14 +16,28 @@
       </ul></div>
   </div>
     </nav>
+    <main class="grow">
     <router-view/>
+  </main>
+    <footer class="bg-red-600 w-full">
+      <div class="grid grid-cols-3 items-center justify-between p-3 p-3 mx-auto max-w-screen-xl text-white text-center">
+        <div class="col-span-1">Creat per:<br>Eudald Cardozo Vallhonrat</div>
+        <div class="col-span-1">Informació extreta de ca.wikipedia.org</div>
+        <div class="col-span-1">Pàgines:</div>
+      </div>
+    </footer>
   </div>
 </template>
 
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+
+  min-height: 100vh;
+  display:flex;
+  grid-template-rows: auto 1fr auto;
 }
+
 
 nav button.router-link-exact-active {
   color: #42b983;
