@@ -168,7 +168,7 @@
     </div>
 </template>
 <script>
-import dades from '../json/dades_colles_localitats.json'
+import dades from '../json/reordenades_localitat.json'
 import MosaicRenderer from '@/components/MosaicRenderer.vue';
 export default{
         components:{

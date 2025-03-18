@@ -15,36 +15,41 @@ llistes = [
      "id":"Colles_castelleres_actuals",
      "tipus":"convencional",
      "estat":"activa",
-     "idx_nom":1},
+     "idx_nom":1,
+     "idx_localitat":2},
 
     {"llista":"convencionals_formacio",
      "heading":"h3",
      "id":"Colles_castelleres_en_formació",
      "tipus":"convencional",
      "estat":"formacio",
-     "idx_nom":0},
+     "idx_nom":0,
+     "idx_localitat":1},
 
     {"llista":"convencionals_desaparegudes",
      "heading":"h2",
      "id":"Colles_castelleres_desaparegudes",
      "tipus":"convencional",
      "estat":"desapareguda",
-     "idx_nom":0},
+     "idx_nom":0,
+     "idx_localitat":1},
 
     {"llista":"universitaries_actives",
      "heading":"h3",
      "id":"Colles_castelleres_universitàries",
      "tipus":"universitaria",
      "estat":"activa",
-     "idx_nom":1},
+     "idx_nom":1,
+     "idx_localitat":3},
 
     {"llista":"universitaries_desaparegudes",
      "heading":"dt",
      "id":None,
      "text":"Colles castelleres universitàries desaparegudes",
      "tipus":"universitaria",
-     "estat":"desapareguda",
-     "idx_nom":0},
+     "estat":"desap,areguda",
+     "idx_nom":0,
+     "idx_localitat":2},
 
      {"llista":"internacionals_actives",
      "heading":"h2",
@@ -52,7 +57,8 @@ llistes = [
      "tipus":"internacional",
      "estat":"activa",
      "idx_nom":0,
-     "idx_estat":3},
+     "idx_estat":3,
+     "idx_localitat":1},
 
      {"llista":"internacionals_desaparegudes",
      "heading":"h2",
@@ -60,7 +66,8 @@ llistes = [
      "tipus":"internacional",
      "estat":"desapareguda",
      "idx_nom":0,
-     "idx_estat":3}
+     "idx_estat":3,
+     "idx_localitat":1}
 ]
 
 dades_colles=[]
@@ -132,26 +139,32 @@ def crawl_internacionals(files,idx):
 def crawl_link(caselles):
     
     idx_nom=llistes[llista_activa]['idx_nom']
+    idx_localitat=llistes[llista_activa]['idx_localitat']
     link_colla=caselles[idx_nom].find('a')
+    localitat=caselles[idx_localitat]
     if link_colla:  
         print(f"Enllaç Ubicat")
         nom_colla = link_colla.text.strip()
         url_colla = "https://ca.wikipedia.org" + link_colla['href']
+        localitat_colla=localitat.text.strip()
     else:
         print("Enllaç no trobat, utilitzant text pla")
         nom_colla = caselles[idx_nom].text.strip()
         url_colla = "Nul"
+        localitat_colla="Nul"
     tipus_colla = llistes[llista_activa]['tipus']
     estat_colla = llistes[llista_activa]['estat']
     print(f"Nom Colla:{nom_colla}")
     print(f"Enllaç:{url_colla}")
     print(f"Tipus Colla: {tipus_colla}")
     print(f"Estat:{estat_colla}")
+    print(f"localitat:{localitat_colla}")
     dades_colles.append({
         'nom': nom_colla,
         'url': url_colla,
         'tipus':tipus_colla,
-        'estat':estat_colla
+        'estat':estat_colla,
+        'localitat':localitat_colla
     })
 
 def dump():
@@ -429,6 +442,15 @@ def hex_a_hsv():
     #print(dades_colles)
     dump()
 
+def import_json():
+    global dades_colles
+    nom_arxiu=input("Importar JSON:")
+    
+    with open(f'{nom_arxiu}', 'r', encoding='utf-8') as json_file:
+      dades_colles = json.load(json_file)
+    return
+
+
 def splice():
     global dades_colles
     nom_arxiu=input("Importar JSON:")
@@ -499,6 +521,30 @@ def combinar_dades():
 
     dump()    
 
+def llegir_dada():
+    global dades_colles
+    nom_arxiu=input("Importar JSON:")
+    
+    with open(f'{nom_arxiu}', 'r', encoding='utf-8') as json_file:
+      data = json.load(json_file)
+      
+    claus = input("Dades a llegir (separades per comes): ").split(",")
+    claus = [clau.strip() for clau in claus] # Remove extra spaces
+    
+    while len(dades_colles) < len(data):
+        dades_colles.append({})  
+
+    for i, colla in enumerate(data):
+        print(f"\n📌 Processant {colla.get('nom', f'Colla {i+1}')}:")
+        for clau in claus:
+            try:
+                dades_colles[i][clau]=colla[clau]
+                print(colla[clau])
+            except:
+                print('Dada no trobada')
+                dades_colles.append(None)
+    dump()
+
 while True:
     print('Quin procés vols dur a terme?')
     print('[0] Sortir')
@@ -509,7 +555,7 @@ while True:
     print('[5] Eliminar dada')
     print('[6] Importar CSV')
     print('[7] Combinar Dades')
-
+    print('[8] Llegir i Reorganitzar')
     proces=input()
     try:
         selec=int(proces)
@@ -530,6 +576,8 @@ while True:
             importarcsv()
         if selec==7:
             combinar_dades()
+        if selec==8:
+            llegir_dada()
     except:
         print('Procés no valid')
 

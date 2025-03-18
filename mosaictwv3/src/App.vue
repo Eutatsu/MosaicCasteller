@@ -8,11 +8,11 @@
       
       </div>
       <div><ul class="flex items-center text-base gap-1 font-bold text-white">
-        <li to="./" class="hover:bg-red-500 py-1 px-2 rounded"><button >Mosaic</button></li>
-        <li to="./" class="hover:bg-red-500 py-1 px-2 rounded"><button >Linia Temporal</button></li>
-        <li to="./" class="hover:bg-red-500 py-1 px-2 rounded"><button >Mapa</button></li>
-        <li to="./" class="hover:bg-red-500 py-1 px-2 rounded"><button >Llista</button></li>
-        <li to="/about" class="hover:bg-red-500 py-1 px-2 rounded"><button>Sobre el Mosaic</button></li>
+       <router-link  to="./"><li class="hover:bg-red-500 py-1 px-2 rounded"><button >Mosaic</button></li></router-link>
+       <router-link to="./"> <li class="hover:bg-red-500 py-1 px-2 rounded"><button >Linia Temporal</button></li></router-link>
+       <router-link to="./"> <li to="./" class="hover:bg-red-500 py-1 px-2 rounded"><button >Mapa</button></li></router-link>
+       <router-link to="/taula"><li  class="hover:bg-red-500 py-1 px-2 rounded"><button >Taula</button></li></router-link>
+       <router-link to="/about"> <li class="hover:bg-red-500 py-1 px-2 rounded"><button>Sobre el Mosaic</button></li></router-link>
       </ul></div>
   </div>
     </nav>
@@ -22,7 +22,7 @@
     <footer class="bg-red-600 w-full">
       <div class="grid grid-cols-3 items-center justify-between p-3 p-3 mx-auto max-w-screen-xl text-white text-center">
         <div class="col-span-1">Creat per:<br>Eudald Cardozo Vallhonrat</div>
-        <div class="col-span-1">Informació extreta de ca.wikipedia.org</div>
+        <div class="col-span-1">Informació extreta de <a href="https://ca.wikipedia.org/wiki/Llista_de_colles_castelleres" target="blank">ca.wikipedia.org</a></div>
         <div class="col-span-1">Pàgines:</div>
       </div>
     </footer>
