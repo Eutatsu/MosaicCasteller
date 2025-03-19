@@ -1,11 +1,11 @@
 <template>
     <div> 
         <div class="max-w-screen-lg mx-auto my-2">
-            <form id="opcions ">
-                <div  id="opcions-l1" class="grid justify-center grid-cols-12 my-1">
-                    <input v-model="cerca" class="border-solid border-red-600 border-2 col-span-3 p-1" placeholder="Cerca colles o colors...">
-                    <div class="col-span-6"></div>
-                    <div class="flex col-span-3 justify-end items-center">
+            <form id="opcions" class="mx-4">
+                <div  id="opcions-l1" class="grid justify-between grid-cols-12 my-1">
+                    <input v-model="cerca" class="border-solid border-red-600 border-2 my-2 lg:col-span-3 md:col-span-5 col-span-12 p-1" placeholder="Cerca colles o colors...">
+                    
+                    <div class="flex items-center justify-start col-end-auto">
                     <label class="text-nowrap " for="ordena">Ordena per: </label>
                     <select id="ordena" @change="ordenar($event)" class="border-red-600 border-2 bg-white p-2">
                         <option value="nom">Nom</option>
