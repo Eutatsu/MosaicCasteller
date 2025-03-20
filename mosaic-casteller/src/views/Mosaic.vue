@@ -4,7 +4,7 @@
         <form id="opcions" class="m-4">
             <div id="opcions-l1" class="d-flex justify-content-between flex-wrap">
                 <b-form-input v-model="cerca" class="col-lg-3 col-md-5 col-sm-12 mb-3 vermell-vora" placeholder="Cerca colles o colors..."></b-form-input>
-                <div class="d-flex algin-items-center mb-3">
+                <div class="d-flex algin-items-center mb-3 grow">
                 <label class="text-nowrap align-self-center m-0 " for="ordena">Ordena per: </label>
                 <select id="ordena" @change="ordenar($event)" class="form-control vermell-vora">
                     <b-form-select-option value="nom">Nom</b-form-select-option>
