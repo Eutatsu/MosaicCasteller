@@ -1,5 +1,9 @@
 <template>
     <div id="mosaic" class="flex flex-wrap justify-center">
+       <!-- <div :style="{ backgroundImage: `url(${escutsSprite})`, width:mida+'px', height:mida+'px',backgroundPosition:-mida+'px 0px' ,backgroundSize:mida*12+'px'}">
+    test test
+  </div>-->
+
         <div
         v-for="(colla,index) in filtrarDades" 
         :key="index"
@@ -9,10 +13,17 @@
         :style="{ 
             width:mida + 'px',
             height:mida + 'px', 
-            backgroundColor: perfilColor(colla)
-            }"
+            backgroundColor: perfilColor(colla),
+            ...(
+            colla.xy_escut?.length
+            ? {backgroundImage: `url(${escutsSprite})`, 
+            backgroundPosition: `${-mida*colla.xy_escut[0]}px ${-mida*colla.xy_escut[1]}px` ,
+            backgroundSize: mida*12+'px'}:{})}"
+        
+        
         
         >
+        <!--<img src="../assets/escuts/escuts_sprite.png" style="width:100%" class="overflow-hidden absolute">-->
             <p class="desconegut" v-if="seleccio=='desconeguts'" 
             :style="{fontSize:text+'px'}">
                 {{ colla.color_camisa }}
@@ -53,7 +64,13 @@
 </template>
 
 <script>
+import escutsSprite from '@/assets/escuts/escuts_sprite.png';
 export default {
+    data(){
+        return{
+    escutsSprite,
+        }
+    },
     name: 'MosaicRenderer',
     props:{
             llista: {

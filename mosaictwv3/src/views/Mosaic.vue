@@ -3,9 +3,9 @@
         <div class="max-w-screen-lg mx-auto my-2">
             <form id="opcions" class="mx-4">
                 <div  id="opcions-l1" class="grid justify-between grid-cols-12 my-1">
-                    <input v-model="cerca" class="border-solid border-red-600 border-2 my-2 lg:col-span-3 md:col-span-5 col-span-12 p-1" placeholder="Cerca colles o colors...">
+                    <input v-model="cerca" class="border-solid border-red-600 border-2 my-2 lg:col-span-4 md:col-span-5 col-span-12 p-1" placeholder="Cerca colles o colors...">
                     
-                    <div class="flex items-center justify-start col-end-auto">
+                    <div class="flex items-center  md:justify-end lg:col-span-8 md:col-span-7 col-span-12 justify-start ">
                     <label class="text-nowrap " for="ordena">Ordena per: </label>
                     <select id="ordena" @change="ordenar($event)" class="border-red-600 border-2 bg-white p-2">
                         <option value="nom">Nom</option>
@@ -17,33 +17,41 @@
             </div>
                 </div>
                 <div  id="opcions-l2" class="grid justify-center grid-cols-12 my-1">
-                    <h2 class="text-xl col-span-6">Visualització:</h2>
-                <div class="flex items-center col-span-6">
+                    <h2 class="text-xl md:col-span-6 col-span-12">Visualització:</h2>
+                <div class="inline-flex items-center md:col-span-6 col-span-12 flex-wrap">
                 <label class="mida_rajoles text-nowrap" for="ordena">Mida tessel·les: </label>
-                    <input class="w-full appearance-none bg-gray-200 h-2 rounded-full mx-1" type="range" v-model="mida">
-                    <input class="border-solid border-red-600 border-2 p-1 w-10 text-right" :placeholder="mida" v-model="mida">
+                    <div class="inline-flex items-center md:w-auto w-full grow">
+                    <input class="w-full appearance-none bg-gray-200 h-2 rounded-full mx-1 grow" type="range" v-model="mida">
+                    <input class="border-solid border-red-600 border-2 p-1 w-10 text-center" :placeholder="mida" v-model="mida">
                     <p class="mb-0">px</p>
+                    </div>
                 </div>
                 </div>
                 <div  id="opcions-l3" class="grid justify-center grid-cols-12 gap-3 my-1">
-                    <div class="col-span-6 flex justify-between items-center"><h3 class="text-lg">Tipus:</h3>
-                        <label><input type="checkbox" class="mx-1 accent-red-600" v-model="seccions_tipus" :value=true>Separa</label>
+                    <div class="col-span-6 grid grid-cols-12 justify-between items-center">
+                    <div class="flex items-center justify-between col-span-12 mx-2"><h3 class="text-lg">Tipus:</h3>
+                        <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600" v-model="seccions_tipus" :value=true>Separa</label>
                     </div>
-                    <div class="col-span-6 flex justify-between items-center"><h3 class="text-lg">Estat:</h3>
-                        <label><input type="checkbox" class="mx-1 accent-red-600" v-model="seccions_estat" :value=true>Separa</label>
+                        <div class="col-span-12 inline-flex gap-x-6 items-start flex-wrap md:flex-row flex-col mx-4">
+                        <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600" value="convencional" v-model="tipus">Convencionals</label>
+                        <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600" value="universitaria" v-model="tipus">Universitaries</label>
+                        <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600" value="internacional" v-model="tipus">Internacionals</label>
+                    </div>
+                    </div>
+                    <div class="col-span-6 grid grid-cols-12 justify-between items-center">
+                        <div class="flex items-center justify-between col-span-12 mx-2"><h3 class="text-lg">Estat:</h3>
+                        <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600" v-model="seccions_estat" :value=true>Separa</label>
+                    </div>
+                        <div class="col-span-12 inline-flex gap-x-6 items-start flex-wrap md:flex-row flex-col mx-4">
+                        <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" value="activa" v-model="estat">Actives</label>
+                        <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" value="formacio" v-model="estat">En formació</label>
+                        <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" value="desapareguda" v-model="estat">Desaparegudes</label>
+                    </div>
                     </div>
                 </div>
                 <div  id="opcions-l4" class="grid justify-center grid-cols-12 gap-3 my-1">
-                    <div class="col-span-6 flex gap-6 items-center">
-                        <label><input type="checkbox" class="mx-1 accent-red-600" value="convencional" v-model="tipus">Convencionals</label>
-                        <label><input type="checkbox" class="mx-1 accent-red-600" value="universitaria" v-model="tipus">Universitaries</label>
-                        <label><input type="checkbox" class="mx-1 accent-red-600" value="internacional" v-model="tipus">Internacionals</label>
-                    </div>
-                    <div class="col-span-6 flex gap-6 items-center">
-                        <label><input type="checkbox" class="mx-1 accent-red-600" value="activa" v-model="estat">Actives</label>
-                        <label><input type="checkbox" class="mx-1 accent-red-600" value="formacio" v-model="estat">En formació</label>
-                        <label><input type="checkbox" class="mx-1 accent-red-600" value="desapareguda" v-model="estat">Desaparegudes</label>
-                    </div>
+                    
+                    
                 </div>
                 <div>
                     <button class="bg-red-600 text-white px-3 py-2 font-bold"><font-awesome-icon :icon="['fas', 'eye']" /> Més Opcions</button>
@@ -184,7 +192,8 @@ export default{
                 estat: ["activa","formacio","desapareguda"],
                 seccions_tipus: false,
                 seccions_estat: false,
-                perfil_color:"default"
+                perfil_color:"default",
+                
                     }
                 
                 
@@ -196,8 +205,8 @@ export default{
                 this.dades_ordenades.sort((a,b)=>a.nom.localeCompare(b.nom))
             },
             ordenarColor(){
-                this.dades_ordenades.sort((a,b)=>a.color_hsv[0] - b.color_hsv[0])
-                this.dades_ordenades.sort((a,b)=>(a.color_hsv[1]<=10) - (b.color_hsv[1]<=10))
+                this.dades_ordenades.sort((a,b)=>a.color_hsl[0] - b.color_hsl[0])
+                this.dades_ordenades.sort((a,b)=>(a.color_hsl[1]<=10) - (b.color_hsl[1]<=10))
             },
             ordenarLlum(){
                 this.dades_ordenades.sort((a,b)=>a.color_hsl[2] - b.color_hsl[2])

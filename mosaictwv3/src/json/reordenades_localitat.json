@@ -20,7 +20,8 @@
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Al%C2%B7lots_de_Llevant",
         "web": "al-lotsdellevant.cat",
-        "localitat": "Manacor"
+        "localitat": "Manacor",
+        "xy_escut":[0,0]
     },
     {
         "nom": "Bordegassos de Vilanova",
@@ -43,7 +44,8 @@
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Bordegassos_de_Vilanova",
         "web": "bordegassos.cat",
-        "localitat": "Vilanova i la Geltrú"
+        "localitat": "Vilanova i la Geltrú",
+        "xy_escut":[2,0]
     },
     {
         "nom": "Brivalls de Cornudella",
@@ -66,7 +68,8 @@
         "refundacio": "2012",
         "url": "https://ca.wikipedia.org/wiki/Brivalls_de_Cornudella",
         "web": "brivallsdecornudella.wordpress.com",
-        "localitat": "Cornudella de Montsant"
+        "localitat": "Cornudella de Montsant",
+        "xy_escut":[3,0]
     },
     {
         "nom": "Capgrossos de Mataró",
@@ -89,7 +92,8 @@
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Capgrossos_de_Matar%C3%B3",
         "web": "capgrossos.cat",
-        "localitat": "Mataró"
+        "localitat": "Mataró",
+        "xy_escut":[10,4]
     },
     {
         "nom": "Carallots de Sant Vicenç dels Horts",
@@ -1491,7 +1495,7 @@
         "desaparicio": "1920",
         "refundacio": "1994",
         "url": "https://ca.wikipedia.org/wiki/Torraires_de_Montblanc",
-        "web": null,
+        "web": "usuaris.tinet.cat/torraire/",
         "localitat": "Montblanc"
     },
     {
@@ -3127,7 +3131,7 @@
         "localitat": "Vilanova i la Geltrú"
     },
     {
-        "nom": "Marracos de la UdL",
+        "nom": "Los Marracos de la UdL",
         "tipus": "universitaria",
         "estat": "activa",
         "color_camisa": "Gris boira",
@@ -3543,8 +3547,8 @@
         "nom": "Castellers de Zürich",
         "tipus": "internacional",
         "estat": "activa",
-        "color_camisa": "Blanc Provisional",
-        "codi_color": "#fefefe",
+        "color_camisa": "Lila",
+        "codi_color": "#aa9aef",
         "color_hsl": [
             0.0,
             0.0,

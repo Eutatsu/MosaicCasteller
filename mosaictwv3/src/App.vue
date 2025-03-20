@@ -8,11 +8,11 @@
       
       </div>
       <div><ul class="flex items-center text-base gap-1 font-bold text-white">
-       <router-link  to="./"><li class="hover:bg-red-500 py-1 px-2 rounded"><button >Mosaic</button></li></router-link>
-       <router-link to="./"> <li class="hover:bg-red-500 py-1 px-2 rounded"><button >Linia Temporal</button></li></router-link>
-       <router-link to="./"> <li to="./" class="hover:bg-red-500 py-1 px-2 rounded"><button >Mapa</button></li></router-link>
-       <router-link to="/taula"><li  class="hover:bg-red-500 py-1 px-2 rounded"><button >Taula</button></li></router-link>
-       <router-link to="/about"> <li class="hover:bg-red-500 py-1 px-2 rounded"><button>Sobre el Mosaic</button></li></router-link>
+       <router-link  to="./"><li class="hover:bg-red-500 py-1 px-2"><button >Mosaic</button></li></router-link>
+       <router-link to="./"> <li class="hover:bg-red-500 py-1 px-2"><button >Linia Temporal</button></li></router-link>
+       <router-link to="./"> <li to="./" class="hover:bg-red-500 py-1 px-2"><button >Mapa</button></li></router-link>
+       <router-link to="/taula"><li  class="hover:bg-red-500 py-1 px-2"><button >Taula</button></li></router-link>
+       <router-link to="/about"> <li class="hover:bg-red-500 py-1 px-2"><button>Sobre el Mosaic</button></li></router-link>
       </ul></div>
   </div>
     </nav>
