@@ -21,8 +21,15 @@
                     <a class="mx-1" v-if="value!==null" :href="'https://'+value" target="_blank" alt="Lloc Web">
                         <font-awesome-icon :icon="['fas','globe']"/></a>
                 </div>
-                <div v-else-if="key=='escut'">
-                   <img :src=value >
+                <div v-else-if="key=='xy_escut'" :style="key?.length
+            ? 
+            {
+                width:'100px',
+                height:'100px',
+                
+            backgroundImage: `url(${escutsSprite})`, 
+            backgroundPosition: `${-100*value[0]}% ${-100*value[1]}%` ,
+            backgroundSize: 100*12+'%'}:{}">
                 </div>
                 <div v-else>
                 {{ value }}
@@ -35,6 +42,7 @@
 <script>
 import { ref, computed, onMounted } from 'vue';
 import dades from '../json/reordenades_localitat.json'
+import escutsSprite from '@/assets/escuts/escuts_sprite.png';
 
 export default{
     setup(){
@@ -51,7 +59,8 @@ export default{
         return{
                 dades_ordenades,
                 titols,
-                ordenarNom
+                ordenarNom,
+                escutsSprite
             }
     }
 }

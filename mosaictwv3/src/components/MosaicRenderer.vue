@@ -15,7 +15,7 @@
             height:mida + 'px', 
             backgroundColor: perfilColor(colla),
             ...(
-            colla.xy_escut?.length
+            colla.xy_escut?.length&&escuts==true
             ? {backgroundImage: `url(${escutsSprite})`, 
             backgroundPosition: `${-mida*colla.xy_escut[0]}px ${-mida*colla.xy_escut[1]}px` ,
             backgroundSize: mida*12+'px'}:{})}"
@@ -24,7 +24,7 @@
         
         >
         <!--<img src="../assets/escuts/escuts_sprite.png" style="width:100%" class="overflow-hidden absolute">-->
-            <p class="desconegut" v-if="seleccio=='desconeguts'" 
+            <p class="desconegut text-center self-center my-auto justify-center flex" v-if="seleccio=='desconeguts'" 
             :style="{fontSize:text+'px'}">
                 {{ colla.color_camisa }}
             </p>
@@ -103,8 +103,12 @@ export default {
                 type:String,
                 default:"default",
                 required:false
+            },
+            escuts:{
+                type:Boolean,
+                default:false,
+                required:false
             }
-            
                 },
         computed:{
             casella() {

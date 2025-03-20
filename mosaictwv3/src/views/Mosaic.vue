@@ -21,7 +21,7 @@
                 <div class="inline-flex items-center md:col-span-6 col-span-12 flex-wrap">
                 <label class="mida_rajoles text-nowrap" for="ordena">Mida tessel·les: </label>
                     <div class="inline-flex items-center md:w-auto w-full grow">
-                    <input class="w-full appearance-none bg-gray-200 h-2 rounded-full mx-1 grow" type="range" v-model="mida">
+                    <input class="w-full appearance-none bg-gray-200 h-2 rounded-full mx-1 grow" type="range" min="5" max="200" v-model="mida">
                     <input class="border-solid border-red-600 border-2 p-1 w-10 text-center" :placeholder="mida" v-model="mida">
                     <p class="mb-0">px</p>
                     </div>
@@ -54,14 +54,18 @@
                     
                 </div>
                 <div>
-                    <button class="bg-red-600 text-white px-3 py-2 font-bold"><font-awesome-icon :icon="['fas', 'eye']" /> Més Opcions</button>
+                    <button class="bg-red-600 text-white px-3 py-2 font-bold">
+                        <font-awesome-icon :icon="['fas', 'eye']" /> Més Opcions
+                    </button>
+                    
+                    <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=false v-model="escuts">Mostra Escuts</label>
                 </div>
             </form>
         </div>
         <div class="mx-auto">  
             <div v-if="seccions_tipus==true && seccions_estat==false">
                 <div  v-if="tipus.includes('convencional')">
-                <h5 class="mt-3">Colles Convencionals</h5>
+                <h5 class="mt-3 text-2xl text-center">Colles Convencionals</h5>
                 <MosaicRenderer
                     :llista="dades_ordenades"
                     :cerca="cerca"
@@ -75,7 +79,7 @@
                 />
                 </div>
                 <div  v-if="tipus.includes('universitaria')">
-                <h5 class="mt-3">Colles Universitàries</h5>
+                <h5 class="mt-3 text-2xl text-center">Colles Universitàries</h5>
                 <MosaicRenderer
                     :llista="dades_ordenades"
                     :cerca="cerca"
@@ -88,7 +92,7 @@
                 />
                 </div>
                     <div  v-if="tipus.includes('internacional')">
-                    <h5 class="mt-3">Colles Internacionals</h5>
+                    <h5 class="mt-3 text-2xl text-center">Colles Internacionals</h5>
                     <MosaicRenderer
                         :llista="dades_ordenades"
                         :cerca="cerca"
@@ -105,7 +109,7 @@
         <!--Seccions segons Estat-->
             <div v-if="seccions_estat==true&&seccions_tipus==false">
                 <div  v-if="estat.includes('activa')">
-                <h5 class="mt-3">Colles Actives</h5>
+                <h5 class="mt-3 text-2xl text-center">Colles Actives</h5>
                     <MosaicRenderer
                         :llista="dades_ordenades"
                         :cerca="cerca"
@@ -118,7 +122,7 @@
                     />
                 </div>
                 <div  v-if="estat.includes('formacio')">
-                <h5 class="mt-3">Colles En formació</h5>
+                <h5 class="mt-3 text-2xl text-center">Colles En formació</h5>
                     <MosaicRenderer
                         :llista="dades_ordenades"
                         :cerca="cerca"
@@ -131,7 +135,7 @@
                     />
                 </div>
                 <div  v-if="estat.includes('desapareguda')">
-                    <h5 class="mt-3">Colles Desaparegudes</h5>
+                    <h5 class="mt-3 text-2xl text-center">Colles Desaparegudes</h5>
                     <MosaicRenderer
                         :llista="dades_ordenades"
                         :cerca="cerca"
@@ -156,11 +160,11 @@
                     id="coneguts"
                     :tipus="tipus"
                     :estat="estat"
-                    
+                    :escuts="escuts"
                 />  
             </div>
             <br>
-        <h5>Colles amb Colors Desconeguts:</h5>
+        <h5  class="mt-3 text-2xl text-center">Colles amb Colors Desconeguts:</h5>
         <MosaicRenderer
         id="desconeguts"
         :llista="dades_ordenades"
@@ -193,6 +197,7 @@ export default{
                 seccions_tipus: false,
                 seccions_estat: false,
                 perfil_color:"default",
+                escuts: false
                 
                     }
                 
