@@ -75,6 +75,7 @@
                     id="convencional"
                     :tipus="['convencional']"
                     :estat="estat"
+                    :escuts="escuts"
 
                 />
                 </div>
@@ -89,6 +90,7 @@
                     id="universitaria"
                     :tipus="['universitaria']"
                     :estat="estat"
+                    :escuts="escuts"
                 />
                 </div>
                     <div  v-if="tipus.includes('internacional')">
@@ -102,6 +104,7 @@
                         id="internacional"
                         :tipus="['internacional']"
                         :estat="estat"
+                    :escuts="escuts"
                     />
                 </div>
             </div>
@@ -119,6 +122,7 @@
                         id="activa"
                         :tipus="tipus"
                         :estat="['activa']"
+                    :escuts="escuts"
                     />
                 </div>
                 <div  v-if="estat.includes('formacio')">
@@ -132,6 +136,7 @@
                         id="formacio"
                         :tipus="tipus"
                         :estat="['formacio']"
+                    :escuts="escuts"
                     />
                 </div>
                 <div  v-if="estat.includes('desapareguda')">
@@ -145,6 +150,7 @@
                         id="desapareguda"
                         :tipus="tipus"
                         :estat="['desapareguda']"
+                    :escuts="escuts"
                         />
                 </div>
             </div>
@@ -174,6 +180,7 @@
         
         :tipus="tipus"
         :estat="estat"
+                    :escuts="escuts"
         />
             
         </div>
