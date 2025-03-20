@@ -12,10 +12,16 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
+import { faEarthAmericas } from '@fortawesome/free-solid-svg-icons'
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+import { faFire } from '@fortawesome/free-solid-svg-icons'
+import { faHouse } from '@fortawesome/free-solid-svg-icons'
+import { faSeedling } from '@fortawesome/free-solid-svg-icons'
+import { faWind } from '@fortawesome/free-solid-svg-icons'
 import { faWikipediaW } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faGlobe, faWikipediaW, faTwitter,faEye,faBars)
+library.add(faFire,faSeedling,faGlobe, faWikipediaW, faTwitter,faEye,faBars,faEarthAmericas,faGraduationCap,faWind,faHouse)
 const app = createApp(App)
 
 app.component('font-awesome-icon', FontAwesomeIcon)

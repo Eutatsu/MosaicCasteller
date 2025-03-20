@@ -32,10 +32,10 @@
                     <div class="flex items-center justify-between col-span-12 mx-2"><h3 class="text-lg">Tipus:</h3>
                         <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600" v-model="seccions_tipus" :value=true>Separa</label>
                     </div>
-                        <div class="col-span-12 inline-flex gap-x-6 items-start flex-wrap md:flex-row flex-col mx-4">
-                        <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600" value="convencional" v-model="tipus">Convencionals</label>
-                        <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600" value="universitaria" v-model="tipus">Universitaries</label>
-                        <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600" value="internacional" v-model="tipus">Internacionals</label>
+                        <div class="col-span-12 inline-flex gap-x-3 items-start flex-wrap md:flex-row flex-col ">
+                        <label class="inline-flex flex-nowrap items-center"><input type="checkbox" class="mx-1 accent-red-600" value="convencional" v-model="tipus"><font-awesome-icon class="text-xl mx-1 text-gray-500"  :icon="['fas', 'house']" />Convencionals</label>
+                        <label class="inline-flex flex-nowrap items-center"><input type="checkbox" class="mx-1 accent-red-600" value="universitaria" v-model="tipus"><font-awesome-icon class="text-xl mx-1 text-gray-500" :icon="['fas', 'graduation-cap']" />Universitaries</label>
+                        <label class="inline-flex flex-nowrap items-center"><input type="checkbox" class="mx-1 accent-red-600" value="internacional" v-model="tipus"><font-awesome-icon class="text-xl mx-1 text-gray-500"  :icon="['fas', 'earth-americas']" />Internacionals</label>
                     </div>
                     </div>
                     <div class="col-span-6 grid grid-cols-12 justify-between items-center">
@@ -43,9 +43,9 @@
                         <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600" v-model="seccions_estat" :value=true>Separa</label>
                     </div>
                         <div class="col-span-12 inline-flex gap-x-6 items-start flex-wrap md:flex-row flex-col mx-4">
-                        <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" value="activa" v-model="estat">Actives</label>
-                        <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" value="formacio" v-model="estat">En formació</label>
-                        <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" value="desapareguda" v-model="estat">Desaparegudes</label>
+                        <label class="inline-flex flex-nowrap items-center"><input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" value="activa" v-model="estat"><font-awesome-icon class="text-xl mx-1 text-gray-500"  :icon="['fas', 'fire']" />Actives</label>
+                        <label class="inline-flex flex-nowrap items-center "><input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" value="formacio" v-model="estat"><font-awesome-icon class="text-xl mx-1 text-gray-500"  :icon="['fas', 'seedling']" />En formació</label>
+                        <label class="inline-flex flex-nowrap items-center"><input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" value="desapareguda" v-model="estat"><font-awesome-icon class="text-xl mx-1 text-gray-500"  :icon="['fas', 'wind']" />Desaparegudes</label>
                     </div>
                     </div>
                 </div>
