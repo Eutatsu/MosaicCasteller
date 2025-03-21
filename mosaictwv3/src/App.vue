@@ -7,7 +7,9 @@
       <h1 class="text-white font-bold text-xl m-3 mr-5 text-nowrap">Mosaic Casteller</h1>
       
       </div></router-link>
-      <button @click="ObrirNav()" class="md:hidden text-3xl text-white justify-end px-4 py-2 hover:bg-red-500"><font-awesome-icon :icon="['fas', 'bars']" /> </button></div>
+      <button @click="ObrirNav()" class="md:hidden text-3xl text-white justify-end px-4 py-2 hover:bg-red-500">
+        <font-awesome-icon :icon="['fas', 'bars']" /> 
+      </button></div>
       <div  :class="open?'inline':'hidden'" class="md:inline"><ul class="flex md:flex-row flex-col md:items-center text-base gap-1 font-bold text-white mt-3 md:mt-0">
        <router-link  to="./"><li class="hover:bg-red-500 py-2 px-3 text-nowrap"><button >Mosaic</button></li></router-link>
        <router-link to="./"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap"><button >Linia Temporal</button></li></router-link>

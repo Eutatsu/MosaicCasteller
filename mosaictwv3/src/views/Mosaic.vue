@@ -1,7 +1,7 @@
 <template>
     <div> 
         <div class="max-w-screen-lg mx-auto my-2">
-            <form id="opcions" class="mx-4">
+            <div id="opcions" class="mx-4">
                 <div  id="opcions-l1" class="grid justify-between grid-cols-12 my-1">
                     <input v-model="cerca" class="border-solid border-red-600 border-2 my-2 lg:col-span-4 md:col-span-5 col-span-12 p-1" placeholder="Cerca colles o colors...">
                     
@@ -53,14 +53,26 @@
                     
                     
                 </div>
-                <div>
-                    <button class="bg-red-600 text-white px-3 py-2 font-bold">
+                <div class="flex-col flex justify-start gap-2">
+                    <button @click="MesOpcions()" href="#" class="bg-red-600 text-white px-3 py-2 font-bold w-fit">
                         <font-awesome-icon :icon="['fas', 'eye']" /> Més Opcions
                     </button>
-                    
-                    <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=false v-model="escuts">Mostra Escuts</label>
+                    <div :class="desplegar?'inline':'hidden'" class="mx-2 flex gap-x-6">
+                    <label  class="inline-flex flex-nowrap">
+                        <input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=false v-model="escuts">
+                        Mostra Escuts
+                    </label>
+                    <label  class="inline-flex flex-nowrap">
+                        <input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=true v-model="icones_tipus">
+                        Icones Tipus
+                    </label>
+                    <label  class="inline-flex flex-nowrap">
+                        <input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=true v-model="icones_estat">
+                        Icones Estat
+                    </label>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
         <div class="mx-auto">  
             <div v-if="seccions_tipus==true && seccions_estat==false">
@@ -76,6 +88,8 @@
                     :tipus="['convencional']"
                     :estat="estat"
                     :escuts="escuts"
+                    :icones_tipus="icones_tipus"
+                    :icones_estat="icones_estat"
 
                 />
                 </div>
@@ -91,6 +105,8 @@
                     :tipus="['universitaria']"
                     :estat="estat"
                     :escuts="escuts"
+                    :icones="icones"
+                    :icones_estat="icones_estat"
                 />
                 </div>
                     <div  v-if="tipus.includes('internacional')">
@@ -104,7 +120,9 @@
                         id="internacional"
                         :tipus="['internacional']"
                         :estat="estat"
-                    :escuts="escuts"
+                        :escuts="escuts"    
+                        :icones_tipus="icones_tipus"
+                        :icones_estat="icones_estat"
                     />
                 </div>
             </div>
@@ -122,7 +140,9 @@
                         id="activa"
                         :tipus="tipus"
                         :estat="['activa']"
-                    :escuts="escuts"
+                        :escuts="escuts"
+                        :icones_tipus="icones_tipus"
+                        :icones_estat="icones_estat"
                     />
                 </div>
                 <div  v-if="estat.includes('formacio')">
@@ -136,7 +156,9 @@
                         id="formacio"
                         :tipus="tipus"
                         :estat="['formacio']"
-                    :escuts="escuts"
+                        :escuts="escuts"
+                        :icones_tipus="icones_tipus"
+                        :icones_estat="icones_estat"
                     />
                 </div>
                 <div  v-if="estat.includes('desapareguda')">
@@ -150,7 +172,9 @@
                         id="desapareguda"
                         :tipus="tipus"
                         :estat="['desapareguda']"
-                    :escuts="escuts"
+                        :escuts="escuts"
+                        :icones_tipus="icones_tipus"
+                        :icones_estat="icones_estat"
                         />
                 </div>
             </div>
@@ -167,6 +191,8 @@
                     :tipus="tipus"
                     :estat="estat"
                     :escuts="escuts"
+                    :icones_tipus="icones_tipus"
+                    :icones_estat="icones_estat"
                 />  
             </div>
             <br>
@@ -180,18 +206,29 @@
         
         :tipus="tipus"
         :estat="estat"
-                    :escuts="escuts"
+        :escuts="escuts"
+        :icones_tipus="icones_tipus"
+        :icones_estat="icones_estat"
         />
             
         </div>
     </div>
 </template>
 <script>
+import {ref} from '@vue/reactivity'
 import dades from '../json/reordenades_localitat.json'
 import MosaicRenderer from '@/components/MosaicRenderer.vue';
 export default{
         components:{
             MosaicRenderer
+        },
+        setup(){
+            let desplegar=ref(false)
+
+            function MesOpcions(){
+                desplegar.value=!desplegar.value
+            }
+            return{desplegar,MesOpcions}
         },
         data(){
               return{
@@ -204,7 +241,9 @@ export default{
                 seccions_tipus: false,
                 seccions_estat: false,
                 perfil_color:"default",
-                escuts: false
+                escuts: false,
+                icones_tipus: true,
+                icones_estat: true,
                 
                     }
                 

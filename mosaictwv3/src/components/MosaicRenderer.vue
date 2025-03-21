@@ -5,6 +5,7 @@
   </div>-->
 
         <div
+        class="grid flex-col"
         v-for="(colla,index) in filtrarDades" 
         :key="index"
         :class="casella" 
@@ -24,11 +25,33 @@
         
         >
         <!--<img src="../assets/escuts/escuts_sprite.png" style="width:100%" class="overflow-hidden absolute">-->
-            <p class="desconegut text-center self-center my-auto justify-center flex" v-if="seleccio=='desconeguts'" 
-            :style="{fontSize:text+'px'}">
-                {{ colla.color_camisa }}
-            </p>
-
+        <div v-if="icones_tipus==true" class="my-1 justify-self-start  w-full" :class="colla.color_hsl[2]>=35 ? 'text-black/30':'text-white/40'">
+            <div class="flex justify-end">
+            <font-awesome-icon v-if="colla.tipus=='convencional'" class="mx-1" :icon="['fas', 'house']"/>
+            </div>
+            <div class="flex justify-end">
+            <font-awesome-icon v-if="colla.tipus=='universitaria'" class="mx-1" :icon="['fas', 'graduation-cap']"/>
+            </div>
+            <div class="flex justify-end">
+            <font-awesome-icon v-if="colla.tipus=='internacional'" class="mx-1" :icon="['fas', 'earth-americas']"/>
+            </div>
+        </div>  
+        <p class="place-self-center" 
+        v-if="seleccio=='desconeguts'" 
+        :style="{fontSize:text+'px'}">
+            {{ colla.color_camisa }}
+        </p>
+        <div v-if="icones_estat==true" class="my-1 justify-self-end place-self-end w-full" :class="colla.color_hsl[2]>=35 ? 'text-black/30':'text-white/40'">
+            <div class="flex justify-end">
+            <font-awesome-icon v-if="colla.estat=='activa'" class="mx-1" :icon="['fas', 'fire']"/>
+            </div>
+            <div class="flex justify-end">
+            <font-awesome-icon v-if="colla.estat=='formacio'" class="mx-1 " :icon="['fas', 'seedling']"/>
+            </div>
+            <div class="flex justify-end">
+            <font-awesome-icon v-if="colla.estat=='desapareguda'" class="mx-1 " :icon="['fas', 'wind']"/>
+            </div>
+        </div>
            <!-- <img v-if="colla.patro?.length" :src="require('../assets/patrons/'+colla.patro)" style="width:100%;">
             -->
            
@@ -36,6 +59,8 @@
                 <div class="bg-black/40 px-3 py-1 border-b border-white ">
                 <h2 class="text-base text-center"><strong>{{ colla.nom }}</strong><br></h2>
             </div>
+            <div class="flex flex-row justify-center">
+            
             <div class="px-3 py-1 text-sm text-center">
             <p>  
                     <strong>{{ colla.color_camisa }}</strong><br>
@@ -58,6 +83,7 @@
                 <a class="mx-1" v-if="colla.web!==null" :href="'https://'+colla.web" target="_blank" alt="Lloc Web"><font-awesome-icon :icon="['fas','globe']"/></a>
                 <a  class="mx-1" :href="colla.url" target="_blank" alt="Article Wikipedia"><font-awesome-icon :icon="['fab', 'wikipedia-w']"/></a></p>
             </div>
+        </div>
             </tippy>
         </div>
     </div>
@@ -107,6 +133,16 @@ export default {
             escuts:{
                 type:Boolean,
                 default:false,
+                required:false
+            },
+            icones_tipus:{
+                type:Boolean,
+                default:true,
+                required:false
+            },
+            icones_estat:{
+                type:Boolean,
+                default:true,
                 required:false
             }
                 },
