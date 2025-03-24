@@ -1,19 +1,11 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import PerfilColla from '../views/PlantillaColla.vue'
 
 const routes = [
   {
-    path: '/home',
-    name: 'home',
-    component: HomeView
-  },
-  {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import('../views/AboutView.vue')
   },{
     path: '/taula',
     name: 'taula',
@@ -30,14 +22,20 @@ const routes = [
     component: () => import('../views/LiniaTemporal.vue')
   },
   {
-    path:"/plantilla",
+    path:"/colla",
     name:"plantilla",
     component: () => import('../views/PlantillaColla.vue')
+  },
+  {
+    path:"/colla/:id",
+    name:"perfil-colla",
+    component: PerfilColla,
+    props:true
   }    
 ]
 
 const router = createRouter({
-  history: createWebHistory('/MosaicCasteller/'), // Equivalent to mode: "history"
+  history: createWebHashHistory('/MosaicCasteller/'), // Equivalent to mode: "history"
   routes
 });
 

@@ -41,7 +41,7 @@
 
 <script>
 import { ref, computed, onMounted } from 'vue';
-import dades from '../json/reordenades_localitat.json'
+import dades from '../json/dades_colles_id.json'
 import escutsSprite from '@/assets/escuts/escuts_sprite.png';
 
 export default{

@@ -57,8 +57,8 @@
            <img v-if="colla.patro?.length" :src="require('../assets/patrons/'+colla.patro)" style="width:100%;">
            
             <tippy :key="reRenderKey" to="parent" content-tag="div" content-class="w-fit"> 
-                <div class="bg-black/40 px-3 py-1 border-b border-white ">
-                <h2 class="text-base text-center max-w-64 justify-center"><strong>{{ colla.nom }}</strong><br></h2>
+                <div class="bg-black/40 px-3 py-2 border-b border-white ">
+                    <router-link :to="'/colla/'+colla.id"><h2 class="hover:underline text-base text-center max-w-64 justify-center"><strong>{{ colla.nom }}</strong><br></h2></router-link>
             </div>
             <div class="flex flex-row justify-center px-3 py-1">
                 <div class="my-auto" v-if="colla.xy_escut?.length" :style="{
