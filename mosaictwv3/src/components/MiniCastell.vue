@@ -3,7 +3,7 @@
         <img :src="img">
         <label><strong>Castell invalid</strong></label>
     </div>
-    <div v-else class="w-32 m-2 p-2 bg-white rounded-sm border-solid border-4 border-gray-200 hover:bg-gray-200 active:border-red-600 text-center">
+    <div v-else class="w-32 m-2 p-2 bg-white rounded-sm border-solid border-2 border-gray-200 hover:bg-gray-200 active:border-red-600 text-center">
        <div class="mb-2">
         <img class="brightness-0" v-if="tipus=='estructura'" :src="img">
         <div v-else class="flex items-end">
