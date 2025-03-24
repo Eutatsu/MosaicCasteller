@@ -6,6 +6,7 @@
 
         <div
         class="grid flex-col"
+        
         v-for="(colla,index) in filtrarDades" 
         :key="index"
         :class="casella" 
@@ -26,13 +27,13 @@
         >
         <!--<img src="../assets/escuts/escuts_sprite.png" style="width:100%" class="overflow-hidden absolute">-->
         <div v-if="icones_tipus==true" class="my-1 justify-self-start  w-full" :class="colla.color_hsl[2]>=35 ? 'text-black/30':'text-white/40'">
-            <div class="flex justify-end">
+            <div class="flex justify-end" title="Colla Convencional">
             <font-awesome-icon v-if="colla.tipus=='convencional'" class="mx-1" :icon="['fas', 'house']"/>
             </div>
-            <div class="flex justify-end">
+            <div class="flex justify-end" title="Colla Universitaria">
             <font-awesome-icon v-if="colla.tipus=='universitaria'" class="mx-1" :icon="['fas', 'graduation-cap']"/>
             </div>
-            <div class="flex justify-end">
+            <div class="flex justify-end" title="Colla Internacional">
             <font-awesome-icon v-if="colla.tipus=='internacional'" class="mx-1" :icon="['fas', 'earth-americas']"/>
             </div>
         </div>  
@@ -41,27 +42,35 @@
         :style="{fontSize:text+'px'}">
             {{ colla.color_camisa }}
         </p>
+        
         <div v-if="icones_estat==true" class="my-1 justify-self-end place-self-end w-full" :class="colla.color_hsl[2]>=35 ? 'text-black/30':'text-white/40'">
-            <div class="flex justify-end">
+            <div class="flex justify-end" title="Colla Activa">
             <font-awesome-icon v-if="colla.estat=='activa'" class="mx-1" :icon="['fas', 'fire']"/>
             </div>
-            <div class="flex justify-end">
+            <div class="flex justify-end" title="Colla en Formació">
             <font-awesome-icon v-if="colla.estat=='formacio'" class="mx-1 " :icon="['fas', 'seedling']"/>
             </div>
-            <div class="flex justify-end">
+            <div class="flex justify-end" title="Colla Desapareguda">
             <font-awesome-icon v-if="colla.estat=='desapareguda'" class="mx-1 " :icon="['fas', 'wind']"/>
             </div>
         </div>
-           <!-- <img v-if="colla.patro?.length" :src="require('../assets/patrons/'+colla.patro)" style="width:100%;">
-            -->
+           <img v-if="colla.patro?.length" :src="require('../assets/patrons/'+colla.patro)" style="width:100%;">
            
-            <tippy to="parent" content-tag="div" content-class="max-w-64"> 
+            <tippy :key="reRenderKey" to="parent" content-tag="div" content-class="w-fit"> 
                 <div class="bg-black/40 px-3 py-1 border-b border-white ">
-                <h2 class="text-base text-center"><strong>{{ colla.nom }}</strong><br></h2>
+                <h2 class="text-base text-center max-w-64 justify-center"><strong>{{ colla.nom }}</strong><br></h2>
             </div>
-            <div class="flex flex-row justify-center">
-            
-            <div class="px-3 py-1 text-sm text-center">
+            <div class="flex flex-row justify-center px-3 py-1">
+                <div class="my-auto" v-if="colla.xy_escut?.length" :style="{
+            width:'100px',
+            height: '100px',  
+            backgroundImage: `url(${escutsSprite})`, 
+            backgroundPosition: `${-100*colla.xy_escut[0]}px ${-100*colla.xy_escut[1]}px`,
+            backgroundSize: 100*12+'px'           
+        }
+               ">
+                </div>
+            <div class=" text-sm text-center max-w-40">
             <p>  
                     <strong>{{ colla.color_camisa }}</strong><br>
                     
@@ -80,8 +89,8 @@
                 </strong> {{ colla.refundacio }}<br>
                 </p>
                 <p class="my-1 text-xl">
-                <a class="mx-1" v-if="colla.web!==null" :href="'https://'+colla.web" target="_blank" alt="Lloc Web"><font-awesome-icon :icon="['fas','globe']"/></a>
-                <a  class="mx-1" :href="colla.url" target="_blank" alt="Article Wikipedia"><font-awesome-icon :icon="['fab', 'wikipedia-w']"/></a></p>
+                <a class="mx-1" title="Pàgina Web de la Colla" v-if="colla.web!==null" :href="'https://'+colla.web" target="_blank" alt="Lloc Web"><font-awesome-icon :icon="['fas','globe']"/></a>
+                <a  class="mx-1" title="Article Wikipedia de la Colla" :href="colla.url" target="_blank" alt="Article Wikipedia"><font-awesome-icon :icon="['fab', 'wikipedia-w']"/></a></p>
             </div>
         </div>
             </tippy>
@@ -144,6 +153,11 @@ export default {
                 type:Boolean,
                 default:true,
                 required:false
+            },
+            reRenderKey:{
+                type:Number,
+                required:false,
+                default:0
             }
                 },
         computed:{
@@ -162,6 +176,9 @@ export default {
                 this.eliminarAccents(colla.nom).includes(this.eliminarAccents(this.cerca)) 
                 ||
                 this.eliminarAccents(colla.color_camisa).includes(this.eliminarAccents(this.cerca))
+                ||
+                
+                this.eliminarAccents(colla.localitat || "").includes(this.eliminarAccents(this.cerca))
             )
             &&
             this.tipus.includes(colla.tipus)
@@ -222,7 +239,7 @@ export default {
             else{
                 return "ffffff"
             }
-
+            
         },
 
 

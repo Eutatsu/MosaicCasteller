@@ -20,8 +20,10 @@ import { faSeedling } from '@fortawesome/free-solid-svg-icons'
 import { faWind } from '@fortawesome/free-solid-svg-icons'
 import { faWikipediaW } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faCheck }  from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown }  from '@fortawesome/free-solid-svg-icons'
 
-library.add(faFire,faSeedling,faGlobe, faWikipediaW, faTwitter,faEye,faBars,faEarthAmericas,faGraduationCap,faWind,faHouse)
+library.add(faChevronDown, faCheck, faFire, faSeedling, faGlobe, faWikipediaW, faTwitter,faEye,faBars,faEarthAmericas,faGraduationCap,faWind,faHouse)
 const app = createApp(App)
 
 app.component('font-awesome-icon', FontAwesomeIcon)

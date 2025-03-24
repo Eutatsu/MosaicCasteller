@@ -1,5 +1,5 @@
 <template>
-    <table class="max-w-screen-lg text-center mx-auto">
+    <div class="w-fit max-w-screen-xl self-center mx-auto ">
         <tr>
             <th class=" text-white px-4 bg-red-600" v-for="(key, index) in titols" :key="index">
                 {{ key }}
@@ -36,7 +36,7 @@
             </div>
                </td>
             </tr>
-    </table>
+        </div>
 </template>
 
 <script>

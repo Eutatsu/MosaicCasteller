@@ -1983,7 +1983,7 @@
             13,
             129
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2017",
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_l%27Adroc",
@@ -2007,7 +2007,7 @@
             220,
             85
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2018",
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Malfargats_de_Pallars&action=edit&redlink=1",
@@ -2031,7 +2031,7 @@
             69,
             144
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2018",
         "desaparicio": null,
         "refundacio": null,
         "url": "Nul",
@@ -2102,7 +2102,7 @@
             45,
             1
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2019",
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Colla_Castellera_de_Vacarisses&action=edit&redlink=1",
@@ -2174,8 +2174,8 @@
             255,
             255
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "1982",
+        "desaparicio": "1982",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_Granollers&action=edit&redlink=1",
         "web": null,
@@ -2363,8 +2363,8 @@
             255,
             255
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "1996",
+        "desaparicio": "2002",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_Martorell&action=edit&redlink=1",
         "web": null,
@@ -2375,19 +2375,16 @@
         "tipus": "convencional",
         "estat": "desapareguda",
         "color_camisa": "Blau fort",
-        "codi_color": "#ffffff",
+        "codi_color": "#00008b",
         "color_hsl": [
-            0.0,
-            0.0,
-            100.0
+            
+            240, 100, 27
         ],
         "color_rgb": [
-            255,
-            255,
-            255
+            0, 0, 139
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "1978",
+        "desaparicio": "1982",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_Montmel%C3%B3&action=edit&redlink=1",
         "web": null,
@@ -2398,16 +2395,14 @@
         "tipus": "convencional",
         "estat": "desapareguda",
         "color_camisa": "Terra",
-        "codi_color": "#ffffff",
+        "codi_color": "#cc6600",
         "color_hsl": [
-            0.0,
-            0.0,
-            100.0
+            30, 
+            100,
+            40
         ],
         "color_rgb": [
-            255,
-            255,
-            255
+            204, 102, 0
         ],
         "fundacio": "1981",
         "desaparicio": "1985",
@@ -2444,16 +2439,13 @@
         "tipus": "convencional",
         "estat": "desapareguda",
         "color_camisa": "Blau marí",
-        "codi_color": "#ffffff",
+        "codi_color": "#000080",
         "color_hsl": [
-            0.0,
-            0.0,
-            100.0
+            240,
+            100,25
         ],
         "color_rgb": [
-            255,
-            255,
-            255
+            0, 0, 128
         ],
         "fundacio": "1971",
         "desaparicio": "1987",
@@ -2502,8 +2494,8 @@
             255,
             255
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "1986",
+        "desaparicio": "1986",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_del_Collell&action=edit&redlink=1",
         "web": null,
@@ -2514,16 +2506,14 @@
         "tipus": "convencional",
         "estat": "desapareguda",
         "color_camisa": "Gris fosc",
-        "codi_color": "#ffffff",
+        "codi_color": "#696969",
         "color_hsl": [
             0.0,
             0.0,
-            100.0
+            41.0
         ],
         "color_rgb": [
-            255,
-            255,
-            255
+            105, 105, 105
         ],
         "fundacio": "1994",
         "desaparicio": "2007",
@@ -2580,7 +2570,7 @@
         "xy_escut":[4,4]
     },
     {
-        "nom": "Colla dels Xiquets de Valls",
+        "nom": "Colla dels Xiquets de Valls (La Barreja)",
         "tipus": "convencional",
         "estat": "desapareguda",
         "color_camisa": "Vermell o rosat",
@@ -2618,8 +2608,8 @@
             255,
             255
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "1994",
+        "desaparicio": "1995",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Colla_Jove_de_Castellers_de_Cubelles&action=edit&redlink=1",
         "web": null,
@@ -2664,8 +2654,8 @@
             255,
             255
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "1974",
+        "desaparicio": "1975",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Colla_Jove_del_Vendrell&action=edit&redlink=1",
         "web": null,
@@ -2722,16 +2712,16 @@
         "tipus": "convencional",
         "estat": "desapareguda",
         "color_camisa": "Vermell",
-        "codi_color": "#ffffff",
+        "codi_color": "#ff0000",
         "color_hsl": [
             0.0,
-            0.0,
-            100.0
+            100,
+            50
         ],
         "color_rgb": [
             255,
-            255,
-            255
+            0,
+            0
         ],
         "fundacio": "1958",
         "desaparicio": "1963",
@@ -2779,8 +2769,8 @@
             255,
             255
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "2003",
+        "desaparicio": "2006",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Joves_des_Raiguer&action=edit&redlink=1",
         "web": null,
@@ -2802,8 +2792,8 @@
             255,
             255
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "1985",
+        "desaparicio": "1985",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Marrecs_del_Catllar&action=edit&redlink=1",
         "web": null,
@@ -2826,11 +2816,12 @@
             151
         ],
         "fundacio": "2014",
-        "desaparicio": "desembre 2023",
+        "desaparicio": "2023",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Picapolls_de_la_Gavarresa",
         "web": "picapollsgavarresa.wordpress.com",
-        "localitat": "Artés"
+        "localitat": "Artés",
+        "xy_escut":[2,9]
     },
     {
         "nom": "Vailets de l'Empordà",
@@ -2885,16 +2876,12 @@
         "tipus": "convencional",
         "estat": "desapareguda",
         "color_camisa": "Vermella amb una franja blanca horitzontal",
-        "codi_color": "#ffffff",
+        "codi_color": "#c10003",
         "color_hsl": [
-            0.0,
-            0.0,
-            100.0
+            359, 100, 38
         ],
         "color_rgb": [
-            255,
-            255,
-            255
+            193, 0, 3
         ],
         "fundacio": "1988",
         "desaparicio": "1989",
@@ -2919,8 +2906,8 @@
             255,
             255
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "1961",
+        "desaparicio": "1962",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Xiquets_de_Gav%C3%A0&action=edit&redlink=1",
         "web": null,
@@ -2988,8 +2975,8 @@
             255,
             255
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "1935",
+        "desaparicio": "Desconegut",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Xiquets_de_la_Bisbal&action=edit&redlink=1",
         "web": null,
@@ -3013,7 +3000,7 @@
         ],
         "fundacio": "1984",
         "desaparicio": "2009",
-        "refundacio": "2012",
+        "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xiquets_de_la_Vila_d%27Alcover",
         "web": null,
         "localitat": "Alcover"
@@ -3034,13 +3021,13 @@
             150,
             84
         ],
-        "fundacio": "1984",
-        "desaparicio": "2009",
-        "refundacio": "2012",
+        "fundacio": "2009",
+        "desaparicio": "2012",
+        "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xiquets_d%27Alcover",
         "web": null,
         "localitat": "Alcover",
-        "xy_escut":[10,5]
+        "xy_escut":[5,10]
     },
     {
         "nom": "Los Xics Caleros",
@@ -3381,7 +3368,7 @@
     {
         "nom": "Gambirots de la UIB",
         "tipus": "universitaria",
-        "estat": "activa",
+        "estat": "formacio",
         "color_camisa": "Blau fluix",
         "codi_color": "#c6d6f1",
         "color_hsl": [
@@ -3445,7 +3432,8 @@
         "desaparicio": "1992",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Minyeuetts_de_la_Salle",
-        "web": null
+        "web": null,
+        "localitat": "EUETT"
     },
     {
         "nom": "Castellers de Berlin",
@@ -3631,7 +3619,7 @@
             44,
             76
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2024",
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_Tokyo&action=edit&redlink=1",
@@ -3654,7 +3642,7 @@
             88,
             63
         ],
-        "fundacio": "Desconegut",
+        "fundacio": "2023",
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_Tolosa&action=edit&redlink=1",
@@ -3669,14 +3657,14 @@
         "color_camisa": "Lila",
         "codi_color": "#aa9aef",
         "color_hsl": [
-            0.0,
-            0.0,
-            99.6
+            251,
+            73,
+            77
         ],
         "color_rgb": [
-            254,
-            254,
-            254
+            170,
+            154,
+            239
         ],
         "fundacio": "2024",
         "desaparicio": null,
@@ -3946,7 +3934,8 @@
         "desaparicio": "Desconegut",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_la_Usach&action=edit&redlink=1",
-        "web": "castellerusach.wordpress.com/"
+        "web": "castellerusach.wordpress.com/",
+        "localitat":"Universidad de Santiago de Chile, Xile"
     },
     {
         "nom": "Castellers de Talca",
@@ -3964,8 +3953,8 @@
             255,
             255
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "2009",
+        "desaparicio": "Desconegut",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_Talca&action=edit&redlink=1",
         "web": null,
@@ -3987,15 +3976,15 @@
             255,
             255
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "2008",
+        "desaparicio": "Desconegut",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_do_Brasil&action=edit&redlink=1",
         "web": null,
         "localitat": "Capão Redondo, São Paulo"
     },
     {
-        "nom": "Colla Castellera de Castelar",
+        "nom": "Colla Castellera Les Quatre Barres",
         "tipus": "internacional",
         "estat": "desapareguda",
         "color_camisa": "Blau Cel",
@@ -4010,11 +3999,12 @@
             255,
             255
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "1997",
+        "desaparicio": "1998",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Colla_Castellera_Les_Quatre_Barres&action=edit&redlink=1",
-        "web": null
+        "web": null,
+        "localitat":"Castelar, Morón, Gran Buenos Aires, Argentina"
     },
     {
         "nom": "Colla Castellera del Casal Virolai de Querétaro",
@@ -4032,8 +4022,8 @@
             255,
             255
         ],
-        "fundacio": "Desconegut",
-        "desaparicio": null,
+        "fundacio": "1998",
+        "desaparicio": "1998",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Colla_Castellera_del_Casal_Virolai_de_Quer%C3%A9taro&action=edit&redlink=1",
         "web": null,
@@ -4080,7 +4070,7 @@
             186
         ],
         "fundacio": "2013",
-        "desaparicio": "2018-2023",
+        "desaparicio": "2018",
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xiquets_de_l%27Alster",
         "web": null,

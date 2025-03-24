@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 437.19 437.19">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M138.98,168.6v100h-50v-100h50ZM298.21,168.6v100h50v-100h-50ZM168.6,348.21h100v-50h-100v50ZM168.6,138.98h100v-50h-100v50Z"/>
+  <polygon class="cls-2" points="218.9 268.82 192.22 286.21 245.57 286.21 218.9 268.82"/>
+  <polygon class="cls-2" points="218.9 167.73 192.23 150.33 245.57 150.33 218.9 167.73"/>
+  <polygon class="cls-2" points="168.36 218.27 150.96 191.6 150.96 244.95 168.36 218.27"/>
+  <polygon class="cls-2" points="269.44 218.27 286.83 191.6 286.83 244.95 269.44 218.27"/>
+</svg>

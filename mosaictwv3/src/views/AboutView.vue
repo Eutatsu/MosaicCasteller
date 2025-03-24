@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-screen-lg mx-auto my-2">
+  <div class="max-w-screen-lg mx-auto my-2 px-3 md:px-0">
   <h2 class="text-2xl text-center">Sobre el Mosaic</h2>
     <p class="text-left py-2">El Mosaic Casteller és un experiment visual que recull dades sobre les diferents Colles Castelleres de Catalunya i més enllà, tant les actualment actives com les que han desaparegut per una raó o altra.
     Cada colla està representada per una tessel·la del color de la seva camisa. <br>

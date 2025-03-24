@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="flex flex-col w-full">
-    <nav class="bg-red-600 w-full">
+    <nav class="bg-red-600 w-full drop-shadow">
       <div class="flex md:flex-row flex-col  md:items-center justify-between p-3 p-3 mx-auto max-w-screen-xl">
       <div class="flex items-center justify-between"><router-link to="./" alt="Pagina d'inici"><div class="flex items-center">
       <img src="./assets/Mosaic-Logo-SF.png" width="60rem" class="">
@@ -11,11 +11,11 @@
         <font-awesome-icon :icon="['fas', 'bars']" /> 
       </button></div>
       <div  :class="open?'inline':'hidden'" class="md:inline"><ul class="flex md:flex-row flex-col md:items-center text-base gap-1 font-bold text-white mt-3 md:mt-0">
-       <router-link  to="./"><li class="hover:bg-red-500 py-2 px-3 text-nowrap"><button >Mosaic</button></li></router-link>
-       <router-link to="./"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap"><button >Linia Temporal</button></li></router-link>
-       <router-link to="./"> <li to="./" class="hover:bg-red-500 py-2 px-3 text-nowrap"><button >Mapa</button></li></router-link>
-       <router-link to="/taula"><li  class="hover:bg-red-500 py-2 px-3 text-nowrap"><button >Taula</button></li></router-link>
-       <router-link to="/about"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap"><button>Sobre el Mosaic</button></li></router-link>
+       <router-link  to="./"><li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Mosaic</button></li></router-link>
+       <router-link to="/liniatemporal"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Linia Temporal</button></li></router-link>
+       <router-link to="./"> <li to="./" class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Mapa</button></li></router-link>
+       <router-link to="/taula"><li  class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Taula</button></li></router-link>
+       <router-link to="/about"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button>Sobre el Mosaic</button></li></router-link>
       </ul></div>
   </div>
     </nav>
@@ -25,7 +25,13 @@
     <footer class="bg-red-600 w-full">
       <div class="grid md:grid-cols-3 grid-cols-1  justify-between p-5 mx-auto max-w-screen-xl text-white text-center gap-4">
         <div class="col-span-1"><h3 class="text-lg">Creat per:</h3>Eudald Cardozo Vallhonrat</div>
-        <div class="col-span-1"><h3 class="text-lg">Informació extreta de:</h3><a class="font-bold hover:underline" href="https://ca.wikipedia.org/wiki/Llista_de_colles_castelleres" target="blank">ca.wikipedia.org</a></div>
+        <div class="col-span-1 flex flex-col"><h3 class="text-lg">Informació extreta de:</h3>
+          <a class="font-bold hover:underline" href="https://ca.wikipedia.org/wiki/Llista_de_colles_castelleres" target="blank">ca.wikipedia.org</a>
+          <a class="font-bold hover:underline" href="https://castellscat.cat/ca/les-colles-llistat" target="blank">castellscat.cat</a>
+          <a class="font-bold hover:underline" href="http://www.portalcasteller.cat/v2/colles/" target="blank">portalcasteller.cat</a>
+          <a class="font-bold hover:underline" href="https://sigac.cat/colles" target="blank">sigac.cat</a>
+          
+        </div>
         <div class="col-span-1"><h3 class="text-lg">Pàgines:</h3> <ul class="flex flex-col  md:items-center text-base gap-1 text-white mt-3 md:mt-0">
        <router-link  to="./"><li class="py-1 px-3 "><button class="hover:underline">Mosaic</button></li></router-link>
        <router-link to="./"> <li class="py-1 px-3 "><button class="hover:underline">Linia Temporal</button></li></router-link>

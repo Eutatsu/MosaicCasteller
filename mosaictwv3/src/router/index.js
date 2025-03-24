@@ -24,6 +24,16 @@ const routes = [
     name: 'mosaic',
     component: () => import('../views/Mosaic.vue')
   },
+  {
+    path: '/liniatemporal',
+    name: 'liniatemporal',
+    component: () => import('../views/LiniaTemporal.vue')
+  },
+  {
+    path:"/plantilla",
+    name:"plantilla",
+    component: () => import('../views/PlantillaColla.vue')
+  }    
 ]
 
 const router = createRouter({

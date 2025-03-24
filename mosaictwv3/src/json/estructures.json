@@ -1,0 +1,205 @@
+{
+    "pilar": {
+        "notacio": "p",
+        "pom":{
+            "castellers":1,
+            "altura":1.20,
+            "pes":20,
+            "pisos":1,
+            "n":1
+        },
+        "tronc":{
+            "castellers":1,
+            "altura":1.40,
+            "pes":70
+        },
+        "tempsbase": 2,
+        "img":"pilar.svg",
+        "increment": 2.8
+    },
+    "torre": {
+        "notacio": "2",
+        "pom":{
+            "castellers":4,
+            "altura":2.50,
+            "pes":120,
+            "pisos":3,
+            "n":1
+        },
+        "tronc":{
+            "castellers":2,
+            "altura":1.40,
+            "pes":70
+        },
+        "tempsbase": 3,
+        "img":"2.svg",
+        "increment": 2.8
+    },
+    "tres": {
+        "notacio": "3",
+        "pom":{
+            "castellers":4,
+            "altura":2.50,
+            "pes":120,
+            "pisos":3,
+            "n":1
+        },
+        "tronc":{
+            "castellers":3,
+            "altura":1.40,
+            "pes":70
+        },
+        "tempsbase": 3,
+        "img":"3.svg",
+        "increment": 2.5
+    },
+    "quatre": {
+        "notacio": "4",
+        "pom":{
+            "castellers":4,
+            "altura":2.50,
+            "pes":120,
+            "pisos":3,
+            "n":1
+        },
+        "tronc":{
+            "castellers":4,
+            "altura":1.40,
+            "pes":70
+        },
+        "tempsbase": 3,
+        "img":"4.svg",
+        "increment": 2.5
+    },
+    "cinc": {
+        "notacio": "5",
+        "pom":{
+            "castellers":4,
+            "altura":2.50,
+            "pes":120,
+            "pisos":3,
+            "n":2
+        },
+        "tronc":{
+            "castellers":5,
+            "altura":1.40,
+            "pes":70
+        },
+        "tempsbase": 5,
+        "img":"5.svg",
+        "increment": 2.5
+    },
+    "sis": {
+        "notacio": "6",
+        "pom":{
+            "castellers":4,
+            "altura":2.50,
+            "pes":120,
+            "pisos":3,
+            "n":2
+        },
+        "tronc":{
+            "castellers":6,
+            "altura":1.40,
+            "pes":70
+        },
+        "tempsbase": 5,
+        "img":"6 (2+2+2).svg",
+        "increment": 2.5
+    },
+    "set": {
+        "notacio": "7",
+        "pom":{
+            "castellers":4,
+            "altura":2.50,
+            "pes":120,
+            "pisos":3,
+            "n":2
+        },
+        "tronc":{
+            "castellers":7,
+            "altura":1.40,
+            "pes":70
+        },
+        "tempsbase": 5,
+        "img":"7.svg",
+        "increment": 2.7
+    },
+    "vuit": {
+        "notacio": "8",
+        "pom":{
+            "castellers":4,
+            "altura":2.50,
+            "pes":120,
+            "pisos":3,
+            "n":3
+        },
+        "tronc":{
+            "castellers":8,
+            "altura":1.40,
+            "pes":70
+        },
+        "tempsbase": 5,
+        "img":"8(4+2+2).svg",
+        "increment": 2.7
+    },  
+    "nou": {
+        "notacio": "9",
+        "pom":{
+            "castellers":4,
+            "altura":2.50,
+            "pes":120,
+            "pisos":3,
+            "n":3
+        },
+        "tronc":{
+            "castellers":9,
+            "altura":1.40,
+            "pes":70
+        },
+        "tempsbase": 7,
+        "img":"9.svg",
+        "increment": 2.5
+    },
+
+    "deu":{
+        "notacio": "10",
+        "pom":{
+            "castellers":4,
+            "altura":2.50,
+            "pes":120,
+            "pisos":3,
+            "n":3
+        },
+        "tronc":{
+            "castellers":10,
+            "altura":1.40,
+            "pes":70
+        },
+        
+        "tempsbase": 7,
+        "img":"10.svg",
+        "increment": 2.5        
+    },
+
+    "dotze":{
+        "notacio": "12",
+        "pom":{
+            "castellers":4,
+            "altura":2.50,
+            "pes":120,
+            "pisos":3,
+            "n":3
+        },
+        "tronc":{
+            "castellers":12,
+            "altura":1.40,
+            "pes":70
+        },
+        
+        "tempsbase": 8,
+        "img":"12 (3+3+3+3).svg",
+        "increment": 2.5   
+        
+    }
+}
