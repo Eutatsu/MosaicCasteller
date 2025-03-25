@@ -7,14 +7,14 @@
                     
                     <div class="flex items-center  md:justify-end lg:col-span-8 md:col-span-7 col-span-12 justify-start ">
                     <label class="text-nowrap " for="ordena">Ordena per: </label>
-                    <select id="ordena" class="rounded-sm border-red-600 border-2 bg-white p-2">
-                        <option @click="ordenarNom()">Nom</option>
-                        <option @click="ordenarColor()" >Color</option>
-                        <option @click="ordenarNomColor()">Nom del Color</option>
-                        <option @click="ordenarLlum()">Lluminositat</option>
+                    <select id="ordena" @change="ordenar($event)" class="rounded-sm border-red-600 border-2 bg-white p-2">
+                        <option value="nom">Nom</option>
+                        <option value="color">Color</option>
+                        <option value="nomcolor">Nom del Color</option>
+                        <option value="llum">Lluminositat</option>
 
-                        <option @click="ordenarColorLlum()">Llum i Color</option>                
-                        <option @click="ordenarFundacio()">Data de Fundacio</option>
+                        <option value="colorllum">Llum i Color</option>                
+                        <option value="fundacio">Data de Fundacio</option>
                     <!--<b-form-select-option value="default">Default</b-form-select-option>-->
                 </select>
             </div>
@@ -50,7 +50,7 @@
                             <font-awesome-icon 
                             class="text-lg mr-1"
                             :class="tipus.includes('universitaria')?'text-red-600':'text-gray-500'"  :icon="['fas', 'graduation-cap']"/>Universitaries
-                            <font-awesome-icon v-if="tipus.includes('convencional')" :icon="['fas', 'check']" class="ml-1 text-red-600" /> </label>
+                            <font-awesome-icon v-if="tipus.includes('universitaria')" :icon="['fas', 'check']" class="ml-1 text-red-600" /> </label>
                             
                             <label class="inline-flex flex-nowrap items-center rounded-sm border-solid hover:bg-gray-200 hover:border-red-600 border-2 p-1 " 
                                 :class="tipus.includes('internacional')?'border-red-600 border-solid border-2':'border-white'">
@@ -58,7 +58,7 @@
                             <font-awesome-icon 
                             class="text-lg mr-1"
                             :class="tipus.includes('internacional')?'text-red-600':'text-gray-500'"  :icon="['fas', 'earth-americas']"/>Internacionals
-                            <font-awesome-icon v-if="tipus.includes('convencional')" :icon="['fas', 'check']" class="ml-1 text-red-600" /> </label>
+                            <font-awesome-icon v-if="tipus.includes('internacional')" :icon="['fas', 'check']" class="ml-1 text-red-600" /> </label>
                        
                     </div>
                     </div>
@@ -102,7 +102,8 @@
                 </div>
                 <div class="flex-col flex justify-start gap-2">
                     <button @click="MesOpcions()" class="bg-red-600 rounded-sm text-white px-3 py-2 font-bold w-fit hover:bg-red-500">
-                        <font-awesome-icon :icon="['fas', 'eye']" /> Més Opcions <font-awesome-icon :icon="['fas', 'chevron-down']" class="transition-all transition-500" :class="desplegar?'rotate-180':{}"/> 
+                        <font-awesome-icon :icon="['fas', 'eye']" /> Més Opcions 
+                        <font-awesome-icon :icon="['fas', 'chevron-down']" class="transition-all transition-1000" :class="desplegar?'rotate-180':{}"/> 
                     </button>
                     <div :class="desplegar?'inline':'hidden'" class="mx-2 flex gap-x-6">
                     <label  class="inline-flex flex-nowrap">
@@ -344,6 +345,32 @@ export default{
                 this.reRenderKey++
             },
             
+            ordenar(event){
+                const ordre = event.target.value
+                console.log(ordre)
+                if (ordre=="nom"){
+                    this.ordenarNom()
+                }
+                if (ordre=="color"){
+                    this.ordenarColor()
+                }
+                if (ordre=="colorllum"){
+                    this.ordenarColorLlum()
+                }
+                if (ordre=="nomcolor"){
+                    this.ordenarNomColor()
+                }
+                if (ordre=="llum"){
+                    this.ordenarLlum()
+                }
+                if (ordre=="fundacio"){
+                    this.ordenarFundacio()     
+                }
+                if (ordre=="default"){
+                    
+                    this.dades_ordenades=[...this.dades]        
+                        }
+            },
             
 
         },

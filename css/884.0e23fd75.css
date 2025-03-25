@@ -1,0 +1,1 @@
+.casella:hover{outline:3px solid hsla(0,0%,75%,.75)}.casella:focus,.casella:hover{cursor:pointer;z-index:999;position:relative}.casella:focus{outline:3px solid #fff}.tippy-box{background-color:rgba(0,0,0,.5);border-radius:0}.casella[data-v-4fe8f5ed],.casella[data-v-4fe8f5ed]:hover,.tippy-content{padding:0}

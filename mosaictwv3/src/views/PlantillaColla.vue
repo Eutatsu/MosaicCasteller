@@ -1,9 +1,10 @@
  <template>
     <div>
         <div class="w-full" :class="colla.color_hsl[2]>=50?'text-black':'text-white'" :style=" colla.codi_color!=='#ffffff'?{backgroundColor: colla.codi_color}:{backgroundColor:'#e0e0e0'}">
-            <div class="max-w-screen-lg flex mx-auto py-4 flex-row flex-wrap md:flex-nowrap justify-between">
+           
+            <div class="max-w-screen-lg mx-auto py-4 grid grid-cols-12">
                 
-                <div class="col-span-auto w-[200px] min-w-[200px] min-h-[200px] h-[200px]" :class="!colla.xy_escut?.length&&colla.color_hsl[2]>=50?'brightness-0 opacity-50':{}" :style="colla.xy_escut?.length?
+                <div class="ml-2 aspect-square  col-span-5 md:col-span-3" :class="!colla.xy_escut?.length&&colla.color_hsl[2]>=50?'brightness-0 opacity-50':{}" :style="colla.xy_escut?.length?
                     {
                         
                     backgroundImage: `url(${escutsSprite})`, 
@@ -14,9 +15,9 @@
                         backgroundSize:100+'%'}">
                 </div>
 
-                <div class="text-center self-center flex gap-3 place-self-end md:order-last shrink">
-                    <div>
-                    <div class="border-solid border-4 border-white w-24 h-24 drop-shadow flex items-center justify-center"
+                <div class=" col-span-7 md:order-last md:col-span-3 text-center self-center flex gap-3 p-2">
+                    <div class="flex flex-col justify-center items-center">
+                    <div class="border-solid border-4 border-white w-20 h-20 md:w-24 md:h-24 drop-shadow flex items-center justify-center"
                     :style=" colla.codi_color!=='#ffffff'?{backgroundColor: colla.codi_color}:{backgroundColor:'#e0e0e0'}">
                     <span v-if="colla.codi_color=='#ffffff'" class="text-6xl font-bold my-auto">?</span>
                     </div>
@@ -31,7 +32,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col px-4 grow w-full md:w-auto">
+                <div class="col-span-12 md:col-span-6 flex flex-col px-4">
                     <h1 class="text-2xl font-bold inline-flex items-center">{{ colla.nom }}
                         <span class="opacity-50 ml-2">
                         <div title="Colla Convencional">
@@ -72,9 +73,9 @@
 
             </div>
         </div>
-        <div class="max-w-screen-lg mx-auto py-4">
+        <div class="max-w-screen-lg md:mx-auto py-4 px-4 ">
             <h2 class="text-xl">Millors Castells:</h2>
-            <div class="flex">
+            <div class="flex flex-wrap">
             <MiniCastell castell="3d7"/>
             
             <MiniCastell castell="4d7"/>
