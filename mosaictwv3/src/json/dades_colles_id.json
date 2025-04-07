@@ -593,7 +593,8 @@
         "tipus": "convencional",
         "estat": "activa",
         "color_camisa": "Bordeus",
-        "codi_color": "#8b1733",
+        "pantone":"1955 C",
+        "codi_color": "#8a1538",
         "color_hsl": [
             345.5,
             71.6,
@@ -4701,5 +4702,26 @@
             6,
             6
         ]
+    },
+    {
+        "id":"castellers_del_llucanes",
+        "nom": "Castellers del Lluçanès",
+        "tipus": "convencional",
+        "estat": "formacio",
+        "color_camisa": "Verd Fosc",
+        "codi_color": "#19a15f",
+        "color_hsl": [
+            151, 73, 36
+        ],
+        "color_rgb": [
+            25, 161, 95
+        ],
+        "fundacio": "2024",
+        "desaparicio": null,
+        "refundacio": null,
+        "url": null,
+        "web": null,
+        "localitat": "Perafita",
+        "xy_escut":[0,0]
     }
 ]

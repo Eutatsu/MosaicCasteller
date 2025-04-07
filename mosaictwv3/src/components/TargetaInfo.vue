@@ -1,6 +1,7 @@
 <template>
     <div class="bg-black/40 px-3 py-2 border-b border-white ">
-        <router-link :to="'/colla/'+colla.id"><h2 class="hover:underline text-base text-center max-w-64 justify-center"><strong>{{ colla.nom }} <font-awesome-icon :icon="['fas', 'address-card']" class="opacity-70" /></strong><br></h2></router-link>
+        <router-link :to="'/colla/'+colla.id"><h2 class="hover:underline text-base text-center max-w-64 justify-center">
+            <strong>{{ colla.nom }} <font-awesome-icon :icon="['fas', 'address-card']" class="opacity-70" /></strong><br></h2></router-link>
         </div>
             <div class="flex flex-row justify-center px-3 py-1">
                 <div class="my-auto" v-if="colla.xy_escut?.length" :style="{

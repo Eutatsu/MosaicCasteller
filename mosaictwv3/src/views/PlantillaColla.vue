@@ -4,7 +4,8 @@
            
             <div class="max-w-screen-lg mx-auto py-4 grid grid-cols-12">
                 
-                <div class="ml-2 aspect-square  col-span-5 md:col-span-3" :class="!colla.xy_escut?.length&&colla.color_hsl[2]>=50?'brightness-0 opacity-50':{}" :style="colla.xy_escut?.length?
+                <div class="ml-2 aspect-square  col-span-5 md:col-span-3 mr-4" :class="!colla.xy_escut?.length&&colla.color_hsl[2]>=50?'brightness-0 opacity-50':{}" 
+                :style="colla.xy_escut?.length?
                     {
                         
                     backgroundImage: `url(${escutsSprite})`, 
@@ -15,7 +16,7 @@
                         backgroundSize:100+'%'}">
                 </div>
 
-                <div class=" col-span-7 md:order-last md:col-span-3 text-center self-center flex gap-3 p-2">
+                <div class=" col-span-7 justify-center md:order-last md:col-span-4 text-center self-center flex gap-3 p-2">
                     <div class="flex flex-col justify-center items-center">
                     <div class="border-solid border-4 border-white w-20 h-20 md:w-24 md:h-24 drop-shadow flex items-center justify-center"
                     :style=" colla.codi_color!=='#ffffff'?{backgroundColor: colla.codi_color}:{backgroundColor:'#e0e0e0'}">
@@ -23,8 +24,8 @@
                     </div>
                     <p class="py-2 font-bold max-w-24">{{ colla.color_camisa }}</p>
                         </div>
-                    <div class="text-left">
-                        <p><span class="font-bold">PANTONE:</span> </p>
+                    <div class="text-left lg:text-nowrap">
+                        <p><span class="font-bold">PANTONE:</span> <span v-if="colla.pantone?.length">{{ colla.pantone }}</span><span v-else>No especificat</span></p>
                         <p><span class="font-bold">HEX:</span> {{ colla.codi_color }}</p>
                         <p><span class="font-bold">RGB:</span> {{ colla.color_rgb[0] }}, {{ colla.color_rgb[1] }}, {{ colla.color_rgb[2] }}</p>
                         <p><span class="font-bold">HSL:</span> {{ colla.color_hsl[0] }}, {{ colla.color_hsl[1] }}%, {{ colla.color_hsl[2] }}%</p>
@@ -32,30 +33,38 @@
                     </div>
                 </div>
 
-                <div class="col-span-12 md:col-span-6 flex flex-col px-4">
-                    <h1 class="text-2xl font-bold inline-flex items-center">{{ colla.nom }}
-                        <span class="opacity-50 ml-2">
-                        <div title="Colla Convencional">
-                        <font-awesome-icon v-if="colla.tipus=='convencional'"  :icon="['fas', 'house']"/>
-                        </div>
-                        <div title="Colla Universitaria">
-                        <font-awesome-icon v-if="colla.tipus=='universitaria'" :icon="['fas', 'graduation-cap']"/>
-                        </div>
-                        <div  title="Colla Internacional">
-                        <font-awesome-icon v-if="colla.tipus=='internacional'" :icon="['fas', 'earth-americas']"/>
-                        </div>
-                    </span>
-                    <span class="opacity-50 ml-2">
-                        <div class="flex justify-end" title="Colla Activa">
-                        <font-awesome-icon v-if="colla.estat=='activa'" :icon="['fas', 'fire']"/>
-                        </div>
-                        <div class="flex justify-end" title="Colla en Formació">
-                        <font-awesome-icon v-if="colla.estat=='formacio'"  :icon="['fas', 'seedling']"/>
-                        </div>
-                        <div class="flex justify-end" title="Colla Desapareguda">
-                        <font-awesome-icon v-if="colla.estat=='desapareguda'" :icon="['fas', 'wind']"/>
-                        </div>
-                    </span>
+                <div class="col-span-12 md:col-span-5 flex flex-col px-4">
+                    <h1 class="text-2xl font-bold inline-flex items-center"><span>{{ colla.nom }}
+                        <span class="text-nowrap">
+                        <font-awesome-icon 
+                        class="opacity-50 "
+                        :title="
+                        colla.tipus=='convencional'?'Colla Convencional':
+                        colla.tipus=='universitaria'?'Colla Universitaria':
+                        colla.tipus=='internacional'?'Colla Internacional':
+                        {}
+                        " 
+
+                        :icon="colla.tipus=='convencional'?['fas', 'house']:
+                        colla.tipus=='universitaria'?['fas', 'graduation-cap']:
+                        colla.tipus=='internacional'?['fas', 'earth-americas']:
+                        {}
+                        "/>
+
+                        <font-awesome-icon 
+                        class="opacity-50 ml-2"
+                        :title="
+                        colla.estat=='activa'?'Colla Activa':
+                        colla.estat=='formacio'?'Colla en Formació':
+                        colla.estat=='desapareguda'?'Colla Desapareguda':
+                        {}
+                        " 
+
+                        :icon="colla.tipus=='convencional'?['fas', 'fire']:
+                        colla.tipus=='universitaria'?['fas', 'seedling']:
+                        colla.tipus=='internacional'?['fas', 'wind']:
+                        {}
+                        "/></span></span>
                     </h1>
                     <h2 class="text-lg ">{{ colla.localitat }}</h2>
                     <h2 class="text-lg  ">{{ colla.fundacio }} - 
@@ -74,7 +83,7 @@
             </div>
         </div>
         <div class="max-w-screen-lg md:mx-auto py-4 px-4 ">
-            <h2 class="text-xl">Millors Castells:</h2>
+            <h2 class="text-xl">Millors Castells (En construcció):</h2>
             <div class="flex flex-wrap">
             <MiniCastell castell="3d7"/>
             
@@ -83,7 +92,14 @@
             
             <MiniCastell castell="Td7"/>
             
-            <MiniCastell castell="Pd5"/>
+            <MiniCastell castell="2d5"/>    
+            <MiniCastell castell="Pd5"/>   
+            <MiniCastell castell="5d7"/>
+            
+            <MiniCastell castell="12d7"/>
+            <MiniCastell castell="2pd5"/>
+            <MiniCastell castell="Jd12fmpa"/>   
+            <MiniCastell castell="3d29"/> 
              </div>
         </div>
     </div>
@@ -130,7 +146,6 @@ setup(){
     const idx=Math.floor(Math.random()*173)
     
     //const idx=166
-    console.log(idx)
     return{
         dades,
         escutsSprite,
