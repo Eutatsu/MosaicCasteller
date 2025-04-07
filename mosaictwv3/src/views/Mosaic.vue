@@ -6,13 +6,12 @@
                     <input v-model="cerca" class="border-solid border-red-600 border-2 my-2 rounded-sm lg:col-span-4 md:col-span-5 col-span-12 p-1" placeholder="Cerca colles o colors...">
                     
                     <div class="flex items-center  md:justify-end lg:col-span-8 md:col-span-7 col-span-12 justify-start ">
-                    <label class="text-nowrap " for="ordena">Ordena per: </label>
-                    <select id="ordena" @change="ordenar($event)" class="rounded-sm border-red-600 border-2 bg-white p-2">
+                    <label class="text-nowrap " for="ordena">Ordena per:</label>
+                    <select id="ordena" @change="ordenar($event)" class="rounded-sm border-red-600 border-2 bg-white p-2 ml-2">
                         <option value="nom">Nom</option>
                         <option value="color">Color</option>
                         <option value="nomcolor">Nom del Color</option>
                         <option value="llum">Lluminositat</option>
-
                         <option value="colorllum">Llum i Color</option>                
                         <option value="fundacio">Data de Fundacio</option>
                     <!--<b-form-select-option value="default">Default</b-form-select-option>-->
@@ -26,7 +25,7 @@
                     <div class="inline-flex items-center md:w-auto w-full grow">
                     <input class="w-full appearance-none bg-gray-200 h-2 rounded-full mx-1 grow" type="range" min="5" max="200" v-model="mida">
                     <input class="border-solid border-red-600 border-2 p-1 w-10 text-center rounded-sm" :placeholder="mida" v-model="mida">
-                    <p class="mb-0">px</p>
+                    <p class="mb-0 ml-1">px</p>
                     </div>
                 </div>
                 </div>
@@ -129,7 +128,7 @@
         <div class="mx-auto">  
             <div v-if="seccions_tipus==true && seccions_estat==false">
                 <div  v-if="tipus.includes('convencional')">
-                <h5 class="mt-3 text-2xl text-center">Colles Convencionals</h5>
+                <h4 class="mt-3 text-2xl text-center">Colles Convencionals</h4>
                 <MosaicRenderer
                     :llista="dades_ordenades"
                     :cerca="cerca"
@@ -147,7 +146,7 @@
                 />
                 </div>
                 <div  v-if="tipus.includes('universitaria')">
-                <h5 class="mt-3 text-2xl text-center">Colles Universitàries</h5>
+                <h4 class="mt-3 text-2xl text-center">Colles Universitàries</h4>
                 <MosaicRenderer
                     :llista="dades_ordenades"
                     :cerca="cerca"
@@ -164,7 +163,7 @@
                 />
                 </div>
                     <div  v-if="tipus.includes('internacional')">
-                    <h5 class="mt-3 text-2xl text-center">Colles Internacionals</h5>
+                    <h4 class="mt-3 text-2xl text-center">Colles Internacionals</h4>
                     <MosaicRenderer
                         :llista="dades_ordenades"
                         :cerca="cerca"
@@ -185,7 +184,7 @@
         <!--Seccions segons Estat-->
             <div v-if="seccions_estat==true&&seccions_tipus==false">
                 <div  v-if="estat.includes('activa')">
-                <h5 class="mt-3 text-2xl text-center">Colles Actives</h5>
+                <h4 class="mt-3 text-2xl text-center">Colles Actives</h4>
                     <MosaicRenderer
                         :llista="dades_ordenades"
                         :cerca="cerca"
@@ -202,7 +201,7 @@
                     />
                 </div>
                 <div  v-if="estat.includes('formacio')">
-                <h5 class="mt-3 text-2xl text-center">Colles En formació</h5>
+                <h4 class="mt-3 text-2xl text-center">Colles en Formació</h4>
                     <MosaicRenderer
                         :llista="dades_ordenades"
                         :cerca="cerca"
@@ -219,7 +218,7 @@
                     />
                 </div>
                 <div  v-if="estat.includes('desapareguda')">
-                    <h5 class="mt-3 text-2xl text-center">Colles Desaparegudes</h5>
+                    <h4 class="mt-3 text-2xl text-center">Colles Desaparegudes</h4>
                     <MosaicRenderer
                         :llista="dades_ordenades"
                         :cerca="cerca"
@@ -255,7 +254,7 @@
                 />  
             </div>
             <br>
-        <h5  class="mt-3 text-2xl text-center">Colles amb Colors Desconeguts:</h5>
+        <h4  class="mt-3 text-2xl text-center">Colles amb Colors Desconeguts:</h4>
         <MosaicRenderer
         id="desconeguts"
         :llista="dades_ordenades"

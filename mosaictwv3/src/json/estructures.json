@@ -53,6 +53,24 @@
         "img":"3.svg",
         "increment": 2.5
     },
+    "tres_agulla": {
+        "notacio": "3",
+        "pom":{
+            "castellers":4,
+            "altura":2.50,
+            "pes":120,
+            "pisos":3,
+            "n":1
+        },
+        "tronc":{
+            "castellers":3,
+            "altura":1.40,
+            "pes":70
+        },
+        "tempsbase": 3,
+        "img":"3a.svg",
+        "increment": 2.5
+    },
     "quatre": {
         "notacio": "4",
         "pom":{
@@ -69,6 +87,24 @@
         },
         "tempsbase": 3,
         "img":"4.svg",
+        "increment": 2.5
+    },
+    "quatre_agulla": {
+        "notacio": "4",
+        "pom":{
+            "castellers":4,
+            "altura":2.50,
+            "pes":120,
+            "pisos":3,
+            "n":1
+        },
+        "tronc":{
+            "castellers":4,
+            "altura":1.40,
+            "pes":70
+        },
+        "tempsbase": 3,
+        "img":"4a.svg",
         "increment": 2.5
     },
     "cinc": {

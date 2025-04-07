@@ -1,9 +1,28 @@
 <template>
-    <div class="mx-auto px-2 max-w-screen-xl">
-       <div class="grid grid-cols-1 gap-1 my-1">
-        <div class="cols-span-1  inline-flex items-center"  v-for="(colla,index) in dades_ordenades" :key="index" >
+    <div class="mx-auto px-2 max-w-screen-lg">
+         <div  id="opcions-l1" class="grid justify-between grid-cols-12 my-1">
+                    <input v-model="cerca" class="border-solid border-red-600 border-2 my-2 rounded-sm lg:col-span-4 md:col-span-5 col-span-12 p-1" placeholder="Cerca colles o colors...">
+                    
+                    <div class="flex items-center  md:justify-end lg:col-span-8 md:col-span-7 col-span-12 justify-start ">
+                    <label class="text-nowrap " for="ordena">Ordena per:</label>
+                    <select id="ordena" @change="ordenar($event)" class="rounded-sm border-red-600 border-2 bg-white p-2 ml-2">
+                        <option value="nom">Nom</option>
+                        <option value="color">Color</option>
+                        <option value="nomcolor">Nom del Color</option>
+                        <option value="llum">Lluminositat</option>
+                        <option value="colorllum">Llum i Color</option>                
+                        <option value="fundacio">Data de Fundacio</option>
+                    <!--<b-form-select-option value="default">Default</b-form-select-option>-->
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="mx-auto px-2 max-w-screen-2xl h-full">
+       <div class="grid grid-cols-1 gap-1 my-1 overflow-y-auto  h-[50vh] pr-4">
+        <div class="w-0 relative text-right"><label>{{ origen }}</label></div>
+        <div class="cols-span-1  inline-flex items-center "  v-for="(colla,index) in dades_ordenades" :key="index" >
            
-           <div class="grow h-5 bg-gray-200 flex items-center hover:bg-gray-300" 
+           <div class="grow bg-gray-200 flex items-center hover:bg-gray-300" 
             ><div class="relative h-3 " 
             :style="{left:calculActivitat(colla.fundacio,colla.desaparicio).inici+'%', 
             width:calculActivitat(colla.fundacio,colla.desaparicio).activitat+'%',
@@ -14,11 +33,13 @@
             
             </div>
             <tippy :key="reRenderKey" to="parent" content-tag="div" content-class="w-fit"> 
-                <TargetaInfo :colla="colla"></TargetaInfo>
+                <TargetaInfo :colla="colla"/>
             </tippy>
             </div>
         </div>
        </div> 
+       <input class="w-full appearance-none bg-gray-200 h-2 rounded-full mx-1 grow" type="range" min="1791" max="2025" v-model="origen" @change="calculActivitat">
+      
     </div>
 </template>
 
@@ -35,6 +56,7 @@ export default({
 
     setup() {
         let reRenderKey=ref(0)
+        let origen=1900
         const dades_ordenades=ref([...dades]);
         const ordenarFundacio=()=>{
         
@@ -53,7 +75,7 @@ export default({
         }
         
         function calculActivitat(fundacio,desaparicio){
-            const origen=1791
+            
             let actualitat=2025
             let historia=actualitat-origen
             let activitat
@@ -90,19 +112,15 @@ export default({
             ordenarFundacio,
             calculActivitat,
             escutsSprite,
-            reRenderKey
+            reRenderKey,
+            origen
         }
     },
 })
 </script>
 
 <style>
-.tippy-box{
-    background-color:rgba(0, 0, 0, 0.5);
-    border-radius: 0px;
-    
-}
-.tippy-content{
-    padding:0px;
+html, body {
+  overflow: hidden;
 }
 </style>

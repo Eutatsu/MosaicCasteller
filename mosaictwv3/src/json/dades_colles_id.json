@@ -33,16 +33,17 @@
         "tipus": "convencional",
         "estat": "activa",
         "color_camisa": "Groc terrós",
-        "codi_color": "#fdc402",
+        "pantone":"116 U, 123 C",
+        "codi_color": "#FFC72C",
         "color_hsl": [
-            46.4,
-            98.4,
-            50.0
+            44,
+            100,
+            59
         ],
         "color_rgb": [
-            253,
-            196,
-            2
+            255,
+            199,
+            44
         ],
         "fundacio": "1972",
         "desaparicio": null,
@@ -425,16 +426,17 @@
         "tipus": "convencional",
         "estat": "activa",
         "color_camisa": "Lila",
-        "codi_color": "#58167d",
+        "pantone":"265 C",
+        "codi_color": "#9264CD",
         "color_hsl": [
-            278.4,
-            70.1,
-            28.8
+            266,
+            51,
+            60
         ],
         "color_rgb": [
-            88,
-            22,
-            125
+            146,
+            100,
+            205
         ],
         "fundacio": "1991",
         "desaparicio": null,
@@ -612,8 +614,8 @@
         "web": "castellersdelleida.cat",
         "localitat": "Lleida",
         "xy_escut": [
-            0,
-            0
+            6,
+            11
         ]
     },
     {
@@ -1209,17 +1211,18 @@
         "nom": "Colla Jove de Castellers de Sitges",
         "tipus": "convencional",
         "estat": "activa",
-        "color_camisa": "Vi - burdeus",
-        "codi_color": "#532033",
+        "color_camisa": "Vi",
+        "pantone":"7421 C",
+        "codi_color": "#691C32",
         "color_hsl": [
-            337.6,
-            44.3,
-            22.5
+            343,
+            58,
+            26
         ],
         "color_rgb": [
-            83,
-            32,
-            51
+            105,
+            28,
+            50
         ],
         "fundacio": "1993",
         "desaparicio": null,
@@ -2161,7 +2164,7 @@
         "nom": "Colla Castellera La Bisbal del Penedès",
         "tipus": "convencional",
         "estat": "activa",
-        "color_camisa": "Taronja",
+        "color_camisa": "Taronja albercoc",
         "codi_color": "#ff8000",
         "color_hsl": [
             30.1,
@@ -4722,6 +4725,6 @@
         "url": null,
         "web": null,
         "localitat": "Perafita",
-        "xy_escut":[0,0]
+        "xy_escut":[7,11]
     }
 ]

@@ -19,7 +19,7 @@
       </ul></div>
   </div>
     </nav>
-    <main class="grow">
+    <main class="grow ">
     <router-view/>
   </main>
     <footer class="bg-red-600 w-full">

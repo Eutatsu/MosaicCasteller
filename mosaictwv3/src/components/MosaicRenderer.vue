@@ -241,12 +241,4 @@ position:relative
 
 }
 
-.tippy-box{
-    background-color:rgba(0, 0, 0, 0.5);
-    border-radius: 0px;
-    
-}
-.tippy-content{
-    padding:0px;
-}
 </style>

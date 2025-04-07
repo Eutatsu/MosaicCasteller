@@ -31,7 +31,7 @@
         </div>
     </div>
     </div>
-        <label><strong>{{ castell }} Mods:{{ mods }}</strong></label>
+        <label><strong>{{ castell }}</strong></label>
     </div>
 </template>
 

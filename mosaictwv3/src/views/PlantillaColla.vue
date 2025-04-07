@@ -60,9 +60,9 @@
                         {}
                         " 
 
-                        :icon="colla.tipus=='convencional'?['fas', 'fire']:
-                        colla.tipus=='universitaria'?['fas', 'seedling']:
-                        colla.tipus=='internacional'?['fas', 'wind']:
+                        :icon="colla.estat=='activa'?['fas', 'fire']:
+                        colla.estat=='formacio'?['fas', 'seedling']:
+                        colla.estat=='desapareguda'?['fas', 'wind']:
                         {}
                         "/></span></span>
                     </h1>
@@ -83,8 +83,11 @@
             </div>
         </div>
         <div class="max-w-screen-lg md:mx-auto py-4 px-4 ">
-            <h2 class="text-xl">Millors Castells (En construcció):</h2>
+            <h2 class="text-xl font-bold">Estadístiques de la Colla (En construcció):</h2>
+            <h3 class="text-xl">Millors Castells:</h3>
             <div class="flex flex-wrap">
+            <MiniCastell castell="Jd12fmpa"/>   
+            <MiniCastell castell="3d29"/> 
             <MiniCastell castell="3d7"/>
             
             <MiniCastell castell="4d7"/>
@@ -98,8 +101,6 @@
             
             <MiniCastell castell="12d7"/>
             <MiniCastell castell="2pd5"/>
-            <MiniCastell castell="Jd12fmpa"/>   
-            <MiniCastell castell="3d29"/> 
              </div>
         </div>
     </div>
