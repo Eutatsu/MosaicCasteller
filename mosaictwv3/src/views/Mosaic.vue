@@ -274,8 +274,8 @@
     </div>
 </template>
 <script>
-import {ref} from '@vue/reactivity'
-import dades from '../json/dades_colles_id.json'
+import { ref, inject } from 'vue'
+
 import MosaicRenderer from '@/components/MosaicRenderer.vue';
 
 export default{
@@ -284,15 +284,14 @@ export default{
         },
         setup(){
             let desplegar=ref(false)
-
+            const dades = inject('dades')
             function MesOpcions(){
                 desplegar.value=!desplegar.value
             }
-            return{desplegar,MesOpcions}
+            return{desplegar,MesOpcions,dades}
         },
         data(){
               return{
-                dades,
                 dades_ordenades:[],
                 mida:"80",
                 cerca: '',

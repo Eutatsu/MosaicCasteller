@@ -64,17 +64,18 @@
 </template>
 
 <script>
-import escutsSprite from '@/assets/escuts/escuts_sprite.png';
+import { inject } from 'vue'
+
+
 import TargetaInfo from './TargetaInfo.vue'
 
 export default {
     components:{
         TargetaInfo
         },
-    data(){
-        return{
-    escutsSprite,
-        }
+    setup(){
+        const escutsSprite = inject('escutsSprite')
+        return{escutsSprite}
     },
     name: 'MosaicRenderer',
     props:{

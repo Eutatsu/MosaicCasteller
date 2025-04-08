@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import escutsSprite from '@/assets/escuts/escuts_sprite.png';
+import { inject } from 'vue'
 
 export default {
     name:'TargetaInfo',
@@ -50,12 +50,9 @@ export default {
             required: true
         }
     },
-    data(){
-    return{
-        escutsSprite,
-        }
-    },
     setup(){
+        
+        const escutsSprite = inject('escutsSprite')
         function formatDada(estat){
             const mapaFormats={
                 //Tipus
@@ -72,7 +69,8 @@ export default {
         }
         
     return{
-        formatDada
+        formatDada,
+        escutsSprite
     }
     }
 }

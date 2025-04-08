@@ -3,6 +3,11 @@ import PerfilColla from '../views/PlantillaColla.vue'
 
 const routes = [
   {
+    path: '/',
+    name: 'mosaic',
+    component: () => import('../views/Mosaic.vue')
+  },
+  {
     path: '/about',
     name: 'about',
     component: () => import('../views/AboutView.vue')
@@ -12,14 +17,14 @@ const routes = [
     component: () => import('../views/Taula.vue')
   },
   {
-    path: '/',
-    name: 'mosaic',
-    component: () => import('../views/Mosaic.vue')
-  },
-  {
     path: '/liniatemporal',
     name: 'liniatemporal',
     component: () => import('../views/LiniaTemporal.vue')
+  },
+  {
+    path:"/mapa",
+    name:"mapa",
+    component: () => import('../views/Mapa.vue')
   },
   {
     path:"/colla",
@@ -36,7 +41,12 @@ const routes = [
 
 const router = createRouter({
   history: createWebHashHistory('/MosaicCasteller/'), // Equivalent to mode: "history"
-  routes
+  routes,
+  
+  scrollBehavior() {
+    // always scroll to top
+    return { top: 0 }
+  }
 });
 
 export default router;

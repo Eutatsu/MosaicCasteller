@@ -2,7 +2,7 @@
   <div id="app" class="flex flex-col w-full">
     <nav class="bg-red-600 w-full drop-shadow">
       <div class="flex md:flex-row flex-col  md:items-center justify-between p-3 p-3 mx-auto max-w-screen-xl">
-      <div class="flex items-center justify-between"><router-link to="/" alt="Pagina d'inici"><div class="flex items-center">
+      <div class="flex items-center justify-between"><router-link to="/" alt="Pagina d'inici"><div class="flex items-center hover:bg-red-500">
       <img src="./assets/Mosaic-Logo-SF.png" width="60rem" class="">
       <h1 class="text-white font-bold text-xl m-3 mr-5 text-nowrap">Mosaic Casteller</h1>
       
@@ -13,7 +13,7 @@
       <div  :class="open?'inline':'hidden'" class="md:inline"><ul class="flex md:flex-row flex-col md:items-center text-base gap-1 font-bold text-white mt-3 md:mt-0">
        <router-link  to="/"><li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Mosaic</button></li></router-link>
        <router-link to="/liniatemporal"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Linia Temporal</button></li></router-link>
-       <router-link to="/"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Mapa</button></li></router-link>
+       <router-link to="/menu"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Mapa</button></li></router-link>
        <router-link to="/taula"><li  class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Taula</button></li></router-link>
        <router-link to="/about"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button>Sobre el Mosaic</button></li></router-link>
       </ul></div>

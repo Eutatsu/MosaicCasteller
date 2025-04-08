@@ -45,9 +45,7 @@
 </template>
 
 <script>
-import {onMounted, ref} from 'vue'
-import dades from '../json/dades_colles_id.json'
-import escutsSprite from '@/assets/escuts/escuts_sprite.png'
+import {onMounted, ref, inject} from 'vue'
 import TargetaInfo from '@/components/TargetaInfo.vue'
 
 export default({
@@ -58,7 +56,8 @@ export default({
     setup() {
         let reRenderKey=ref(0)
         let origen=1791
-
+        const dades = inject('dades')
+        const escutsSprite = inject('escutsSprite')
         const dades_ordenades=ref([...dades]);
         const ordenarFundacio=()=>{
         
@@ -99,7 +98,7 @@ export default({
                 historia,
                 activitat,
                 inici,
-                final
+                final,
             }
         }
         
@@ -110,6 +109,7 @@ export default({
             reRenderKey.value++
         })
         return{
+            dades,
             dades_ordenades,
             ordenarFundacio,
             calculActivitat,

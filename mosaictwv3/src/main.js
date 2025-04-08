@@ -6,6 +6,9 @@ import './assets/tailwind.css';
 import VueTippy from 'vue-tippy'
 import 'tippy.js/dist/tippy.css'
 
+import colles from '@/json/dades_colles_id.json'
+import escutsSprite from '@/assets/escuts/escuts_sprite.png'
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -29,6 +32,8 @@ const app = createApp(App)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 
+app.provide('dades', colles)
+app.provide('escutsSprite', escutsSprite)
 
 app.use(router)
 app.use(

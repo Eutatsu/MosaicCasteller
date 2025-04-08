@@ -107,27 +107,24 @@
  </template>
 
  <script>
-//import ref from 'vue'
-import dades from '../json/dades_colles_id.json';
-import escutsSprite from '@/assets/escuts/escuts_sprite.png';
+ import { inject,computed } from 'vue'
 import MiniCastell from '@/components/MiniCastell.vue';
 import escutDesconegut from '@/assets/escuts/escut_desconegut.svg'
 
 
 export default{
     props:['id'],
-    data(){
-        return{
-            colla: null
-        }
-    },
-    created(){
-        this.colla = dades.find(colla => colla.id === this.id);
-    },
     components:{
         MiniCastell
     },
-setup(){
+setup(props){
+    const dades = inject('dades')
+    const escutsSprite = inject('escutsSprite')
+
+    const colla = computed(() =>
+      dades.find(colla => colla.id === props.id)
+    )
+
     function formatDada(estat){
         const mapaFormats={
                 //Tipus
@@ -148,6 +145,7 @@ setup(){
     
     //const idx=166
     return{
+        colla,
         dades,
         escutsSprite,
         idx,

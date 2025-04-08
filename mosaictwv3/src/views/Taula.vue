@@ -41,12 +41,12 @@
 </template>
 
 <script>
-import { ref, computed, onMounted } from 'vue';
-import dades from '../json/dades_colles_id.json'
-import escutsSprite from '@/assets/escuts/escuts_sprite.png';
+import { ref, computed, onMounted, inject } from 'vue';
 
 export default{
     setup(){
+        const dades = inject('dades')
+        const escutsSprite = inject('escutsSprite')
         const dades_ordenades=ref([...dades])
         const titols=computed(()=>Object.keys(dades[0]))
 
@@ -61,7 +61,8 @@ export default{
                 dades_ordenades,
                 titols,
                 ordenarNom,
-                escutsSprite
+                escutsSprite,
+                dades,
             }
     }
 }
