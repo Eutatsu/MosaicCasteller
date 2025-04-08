@@ -1,5 +1,6 @@
 <template>
     <div class="w-fit self-center mx-auto ">
+        <h1 class="mt-4 text-xl text-center">!! Secció en construcció !!</h1>
         <tr>
             <th class=" text-white px-4 bg-red-600" v-for="(key, index) in titols" :key="index">
                 {{ key }}

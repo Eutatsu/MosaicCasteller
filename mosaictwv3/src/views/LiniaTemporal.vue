@@ -1,5 +1,6 @@
 <template>
     <div class="mx-auto px-2 max-w-screen-lg">
+        <h1 class="mt-4 text-xl text-center">!! Secció en construcció !!</h1>
          <div  id="opcions-l1" class="grid justify-between grid-cols-12 my-1">
                     <input v-model="cerca" class="border-solid border-red-600 border-2 my-2 rounded-sm lg:col-span-4 md:col-span-5 col-span-12 p-1" placeholder="Cerca colles o colors...">
                     
@@ -56,7 +57,8 @@ export default({
 
     setup() {
         let reRenderKey=ref(0)
-        let origen=1900
+        let origen=1791
+
         const dades_ordenades=ref([...dades]);
         const ordenarFundacio=()=>{
         
@@ -118,9 +120,3 @@ export default({
     },
 })
 </script>
-
-<style>
-html, body {
-  overflow: hidden;
-}
-</style>
