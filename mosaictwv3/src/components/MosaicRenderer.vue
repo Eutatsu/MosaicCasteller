@@ -54,7 +54,7 @@
             </div>
         </div>
     
-            <tippy to="parent" content-tag="div" content-class="w-fit"> 
+            <tippy :key=reRenderKey to="parent" content-tag="div" content-class="w-fit"> 
                 <TargetaInfo :colla="colla"></TargetaInfo>
             </tippy>
         </div>
