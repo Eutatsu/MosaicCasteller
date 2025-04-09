@@ -1784,6 +1784,7 @@
             173,
             228
         ],
+        "patro":["tirallongues_de_manresa.svg",5],
         "fundacio": "1993",
         "desaparicio": null,
         "refundacio": null,
@@ -2008,6 +2009,7 @@
             48,
             71
         ],
+        "patro":["xiquets_de_tarragona.svg",5],
         "fundacio": "1970",
         "desaparicio": null,
         "refundacio": null,
@@ -2316,6 +2318,7 @@
             13,
             129
         ],
+        "patro":["castellers_de_l_adroc.svg",60],
         "fundacio": "2017",
         "desaparicio": null,
         "refundacio": null,
@@ -2372,12 +2375,13 @@
             69,
             144
         ],
+        "patro":["xiquets_de_torredembarra.svg",5],
         "fundacio": "2018",
         "desaparicio": null,
         "refundacio": null,
-        "url": "Nul",
+        "url": null,
         "web": null,
-        "localitat": "Nul",
+        "localitat": "Torredembarra",
         "xy_escut": [
             0,
             11
@@ -3002,6 +3006,7 @@
             117,
             119
         ],
+        "patro":["colla_dels_xiquets_de_valls_la_barreja.svg",100],
         "fundacio": "1939",
         "desaparicio": "1947",
         "refundacio": null,
@@ -3038,7 +3043,7 @@
         "nom": "Colla Jove dels Castellers de Vilafranca",
         "tipus": "convencional",
         "estat": "desapareguda",
-        "color_camisa": "Gris",
+        "color_camisa": "Ratllada gris clar i blanc",
         "codi_color": "#c7bec1",
         "color_hsl": [
             340.0,
@@ -3050,6 +3055,7 @@
             190,
             193
         ],
+        "patro":["colla_jove_dels_castellers_de_vilafranca.svg",5],
         "fundacio": "1984",
         "desaparicio": "1985",
         "refundacio": null,
@@ -3331,6 +3337,7 @@
             0,
             3
         ],
+        "patro":["xicots_de_valls.svg",100],
         "fundacio": "1988",
         "desaparicio": "1989",
         "refundacio": null,
@@ -3507,6 +3514,7 @@
             170,
             221
         ],
+        "patro":["los_xics_caleros.svg",5],
         "fundacio": "2012",
         "desaparicio": "2018",
         "refundacio": 2025,

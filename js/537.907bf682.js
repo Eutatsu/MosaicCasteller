@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkmosaicasteller"]=self["webpackChunkmosaicasteller"]||[]).push([[537],{537:function(e,t,c){c.r(t),c.d(t,{default:function(){return l}});var n=c(6768);function r(e,t){return(0,n.uX)(),(0,n.CE)("div",null,t[0]||(t[0]=[(0,n.Lk)("h1",{class:"mt-4 text-xl text-center"},"!! Secció en construcció !!",-1)]))}var s=c(1241);const u={},a=(0,s.A)(u,[["render",r]]);var l=a}}]);
+//# sourceMappingURL=537.907bf682.js.map

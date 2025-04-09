@@ -11,11 +11,11 @@
         <font-awesome-icon :icon="['fas', 'bars']" /> 
       </button></div>
       <div  :class="open?'inline':'hidden'" class="md:inline"><ul class="flex md:flex-row flex-col md:items-center text-base gap-1 font-bold text-white mt-3 md:mt-0">
-       <router-link  to="/"><li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Mosaic</button></li></router-link>
-       <router-link to="/liniatemporal"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Linia Temporal</button></li></router-link>
-       <router-link to="/menu"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Mapa</button></li></router-link>
-       <router-link to="/taula"><li  class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Taula</button></li></router-link>
-       <router-link to="/about"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button>Sobre el Mosaic</button></li></router-link>
+       <router-link @click="ObrirNav()" to="/" ><li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Mosaic</button></li></router-link>
+       <router-link @click="ObrirNav()" to="/liniatemporal"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Linia Temporal</button></li></router-link>
+       <router-link @click="ObrirNav()" to="/mapa"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Mapa</button></li></router-link>
+       <router-link @click="ObrirNav()" to="/taula"><li  class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Taula</button></li></router-link>
+       <router-link @click="ObrirNav()" to="/about"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button>Sobre el Mosaic</button></li></router-link>
       </ul></div>
   </div>
     </nav>
@@ -87,6 +87,15 @@ input[type="range"]::-moz-range-thumb{
 .custom-control-input:checked ~ .custom-control-label::before{
     background-color:#dd1725;
     border-color:#dd1725
+}
+
+.tippy-box{
+    background-color:rgba(0, 0, 0, 0.5);
+    border-radius: 0px;
+    
+}
+.tippy-content{
+    padding: 0px;
 }
 
 </style>

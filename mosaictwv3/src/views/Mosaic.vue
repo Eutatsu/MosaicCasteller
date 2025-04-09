@@ -3,7 +3,7 @@
         <div class="max-w-screen-lg mx-auto my-2">
             <div id="opcions" class="mx-4">
                 <div  id="opcions-l1" class="grid justify-between grid-cols-12 my-1">
-                    <input v-model="cerca" class="border-solid border-red-600 border-2 my-2 rounded-sm lg:col-span-4 md:col-span-5 col-span-12 p-1" placeholder="Cerca colles o colors...">
+                    <input v-model="cerca" class="border-solid border-red-600 border-2 my-2 rounded-sm lg:col-span-4 md:col-span-5 col-span-12 p-1" placeholder="Cerca colles, colors o municipis...">
                     
                     <div class="flex items-center  md:justify-end lg:col-span-8 md:col-span-7 col-span-12 justify-start ">
                     <label class="text-nowrap " for="ordena">Ordena per:</label>
@@ -88,7 +88,7 @@
                             <input type="checkbox" class="hidden" value="desapareguda" v-model="estat">
                         <font-awesome-icon 
                         class="text-lg mr-1"
-                        :class="estat.includes('desapareguda')?'text-red-600':'text-gray-500'"  :icon="['fas', 'wind']" />Desaparegudes
+                        :class="estat.includes('desapareguda')?'text-red-600':'text-gray-500'"  :icon="['fas', 'cross']" />Desaparegudes
                         <font-awesome-icon v-if="estat.includes('desapareguda')" :icon="['fas', 'check']" class="ml-1 text-red-600" /> 
                     </label>
                         
@@ -128,8 +128,8 @@
         <div class="mx-auto">  
             <div v-if="seccions_tipus==true && seccions_estat==false">
                 <div  v-if="tipus.includes('convencional')">
-                <h4 class="mt-3 text-2xl text-center">Colles Convencionals</h4>
                 <MosaicRenderer
+                        titol="Colles Convencionals"
                     :llista="dades_ordenades"
                     :cerca="cerca"
                     :mida="mida"
@@ -146,8 +146,8 @@
                 />
                 </div>
                 <div  v-if="tipus.includes('universitaria')">
-                <h4 class="mt-3 text-2xl text-center">Colles Universitàries</h4>
                 <MosaicRenderer
+                        titol="Colles Universitàries"
                     :llista="dades_ordenades"
                     :cerca="cerca"
                     :mida="mida"
@@ -163,8 +163,8 @@
                 />
                 </div>
                     <div  v-if="tipus.includes('internacional')">
-                    <h4 class="mt-3 text-2xl text-center">Colles Internacionals</h4>
                     <MosaicRenderer
+                        titol="Colles Internacionals"
                         :llista="dades_ordenades"
                         :cerca="cerca"
                         :mida="mida"
@@ -184,8 +184,8 @@
         <!--Seccions segons Estat-->
             <div v-if="seccions_estat==true&&seccions_tipus==false">
                 <div  v-if="estat.includes('activa')">
-                <h4 class="mt-3 text-2xl text-center">Colles Actives</h4>
                     <MosaicRenderer
+                        titol="Colles Actives"
                         :llista="dades_ordenades"
                         :cerca="cerca"
                         :mida="mida"
@@ -201,8 +201,8 @@
                     />
                 </div>
                 <div  v-if="estat.includes('formacio')">
-                <h4 class="mt-3 text-2xl text-center">Colles en Formació</h4>
                     <MosaicRenderer
+                        titol="Colles en Formació"
                         :llista="dades_ordenades"
                         :cerca="cerca"
                         :mida="mida"
@@ -218,8 +218,8 @@
                     />
                 </div>
                 <div  v-if="estat.includes('desapareguda')">
-                    <h4 class="mt-3 text-2xl text-center">Colles Desaparegudes</h4>
                     <MosaicRenderer
+                        titol="Colles Desaparegudes"
                         :llista="dades_ordenades"
                         :cerca="cerca"
                         :mida="mida"
@@ -248,14 +248,15 @@
                     :tipus="tipus"
                     :estat="estat"
                     :escuts="escuts"
+                    :patrons="patrons"
                     :icones_tipus="icones_tipus"
                     :icones_estat="icones_estat"
                     :reRenderKey=reRenderKey
                 />  
             </div>
             <br>
-        <h4  class="mt-3 text-2xl text-center">Colles amb Colors Desconeguts:</h4>
         <MosaicRenderer
+        titol="Colles amb Colors Desconeguts"
         id="desconeguts"
         :llista="dades_ordenades"
         :cerca="cerca"
@@ -301,6 +302,7 @@ export default{
                 seccions_estat: false,
                 perfil_color:"default",
                 escuts: false,
+                patrons: false,
                 icones_tipus: true,
                 icones_estat: false,
                 

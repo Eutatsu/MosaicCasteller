@@ -1,11 +1,13 @@
 <template>
+    <h3 v-if="titol" class="mt-3 text-2xl text-center">{{titol + ' ('+filtrarDades.length+'):'}}</h3>
     <div id="mosaic" class="flex flex-wrap justify-center">
+        
        <!-- <div :style="{ backgroundImage: `url(${escutsSprite})`, width:mida+'px', height:mida+'px',backgroundPosition:-mida+'px 0px' ,backgroundSize:mida*12+'px'}">
     test test
   </div>-->
 
         <div
-        class="grid flex-col"
+        class="grid flex-col hover:drop-shadow focus:drop-shadow"
         
         v-for="(colla,index) in filtrarDades" 
         :key="index"
@@ -16,11 +18,8 @@
             width:mida + 'px',
             height:mida + 'px', 
             backgroundColor: perfilColor(colla),
-            ...(
-            colla.xy_escut?.length&&escuts==true
-            ? {backgroundImage: `url(${escutsSprite})`, 
-            backgroundPosition: `${-mida*colla.xy_escut[0]}px ${-mida*colla.xy_escut[1]}px` ,
-            backgroundSize: mida*12+'px'}:{})}"
+            ...backgroundStyles(colla)
+            }"
         
         
         
@@ -51,12 +50,11 @@
             <font-awesome-icon v-if="colla.estat=='formacio'" class="mx-1 " :icon="['fas', 'seedling']"/>
             </div>
             <div class="flex justify-end" title="Colla Desapareguda">
-            <font-awesome-icon v-if="colla.estat=='desapareguda'" class="mx-1 " :icon="['fas', 'wind']"/>
+            <font-awesome-icon v-if="colla.estat=='desapareguda'" class="mx-1 " :icon="['fas', 'cross']"/>
             </div>
         </div>
-           <img v-if="colla.patro?.length" :src="require('../assets/patrons/'+colla.patro)" style="width:100%;">
-           
-            <tippy :key="reRenderKey" to="parent" content-tag="div" content-class="w-fit"> 
+    
+            <tippy to="parent" content-tag="div" content-class="w-fit"> 
                 <TargetaInfo :colla="colla"></TargetaInfo>
             </tippy>
         </div>
@@ -73,12 +71,12 @@ export default {
     components:{
         TargetaInfo
         },
-    setup(){
-        const escutsSprite = inject('escutsSprite')
-        return{escutsSprite}
-    },
     name: 'MosaicRenderer',
     props:{
+            titol:{
+                type:String,
+                required:false
+            },
             llista: {
                 type: Array,
                 required:true
@@ -110,6 +108,11 @@ export default {
                 default:"default",
                 required:false
             },
+            patrons:{
+                type:Boolean,
+                default:false,
+                required:false
+            },
             escuts:{
                 type:Boolean,
                 default:false,
@@ -131,6 +134,37 @@ export default {
                 default:0
             }
                 },
+    setup(props){
+        const escutsSprite = inject('escutsSprite')
+        function backgroundStyles(colla){
+            const styles = {}
+            if (colla.patro?.length&&props.patrons==true){
+                if (colla.xy_escut?.length&&props.escuts==true){
+                    styles.backgroundImage= `url(${escutsSprite}), url(${require('../assets/patrons/' + colla.patro[0])})`, 
+                    styles.backgroundPosition= `${-props.mida*colla.xy_escut[0]}px ${-props.mida*colla.xy_escut[1]}px, center`,
+                    styles.backgroundSize= `${props.mida * 12}px, ${colla.patro[1]}%`
+                }
+                else {
+                    styles.backgroundImage= `url(${require('../assets/patrons/' + colla.patro[0])})`, 
+                    styles.backgroundPosition= `center`,
+                    styles.backgroundSize= `${colla.patro[1]}%`
+                }
+            }
+            else{
+                if (colla.xy_escut?.length&&props.escuts==true){
+                    styles.backgroundImage= `url(${escutsSprite})`, 
+                    styles.backgroundPosition= `${-props.mida*colla.xy_escut[0]}px ${-props.mida*colla.xy_escut[1]}px`,
+                    styles.backgroundSize= props.mida*12+'px'
+                }
+                
+            }
+            return styles
+        }
+    return{
+        escutsSprite,
+        backgroundStyles
+        }
+    },
         computed:{
             casella() {
                 if (this.$route.name === 'cognitiu') {

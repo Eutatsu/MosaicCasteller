@@ -4,7 +4,7 @@
            
             <div class="max-w-screen-lg mx-auto py-4 grid grid-cols-12">
                 
-                <div class="ml-2 aspect-square  col-span-5 md:col-span-3 mr-4" :class="!colla.xy_escut?.length&&colla.color_hsl[2]>=50?'brightness-0 opacity-50':{}" 
+                <div class="ml-2 aspect-square  col-span-6 md:col-span-3 mr-4" :class="!colla.xy_escut?.length&&colla.color_hsl[2]>=50?'brightness-0 opacity-50':{}" 
                 :style="colla.xy_escut?.length?
                     {
                         
@@ -16,15 +16,34 @@
                         backgroundSize:100+'%'}">
                 </div>
 
-                <div class=" col-span-7 justify-center md:order-last md:col-span-4 text-center self-center flex gap-3 p-2">
+                <div class=" col-span-6 justify-center md:order-last md:col-span-4 text-center self-center flex gap-3 p-2">
                     <div class="flex flex-col justify-center items-center">
-                    <div class="border-solid border-4 border-white w-20 h-20 md:w-24 md:h-24 drop-shadow flex items-center justify-center"
-                    :style=" colla.codi_color!=='#ffffff'?{backgroundColor: colla.codi_color}:{backgroundColor:'#e0e0e0'}">
+                    <div class="border-solid border-4 border-white size-24 drop-shadow flex items-center justify-center hover:drop-shadow-lg hover:animate-pulse cursor-pointer"
+                    :style=" 
+                        colla.patro?.length?{
+                            backgroundColor: colla.codi_color,
+                            backgroundImage: `url(${require('../assets/patrons/' + colla.patro[0])})`,
+                            backgroundPosition: `center`,
+                            backgroundSize: `${colla.patro[1]}%`
+                        }:
+                        colla.codi_color!=='#ffffff'?{backgroundColor: colla.codi_color}:
+            
+                        {backgroundColor:'#e0e0e0'}">
                     <span v-if="colla.codi_color=='#ffffff'" class="text-6xl font-bold my-auto">?</span>
+                    <tippy to="parent" content-tag="div" theme="light" content-class="rounded-sm"> 
+                        <div class="p-2 justify-center">
+                            <p class="py-1 font-bold text-base">{{ colla.color_camisa }}</p>
+                            <p><span class="font-bold">PANTONE:</span> <span v-if="colla.pantone?.length">{{ colla.pantone }}</span><span v-else>No especificat</span></p>
+                            <p><span class="font-bold">HEX:</span> {{ colla.codi_color }}</p>
+                            <p><span class="font-bold">RGB:</span> {{ colla.color_rgb[0] }}, {{ colla.color_rgb[1] }}, {{ colla.color_rgb[2] }}</p>
+                            <p><span class="font-bold">HSL:</span> {{ colla.color_hsl[0] }}, {{ colla.color_hsl[1] }}%, {{ colla.color_hsl[2] }}%</p>
+                            <p><span class="font-bold">CMYK:</span></p>
+                        </div>
+                    </tippy>
                     </div>
                     <p class="py-2 font-bold max-w-24">{{ colla.color_camisa }}</p>
                         </div>
-                    <div class="text-left lg:text-nowrap">
+                    <div class="text-left lg:text-nowrap text-sm hidden sm:block">
                         <p><span class="font-bold">PANTONE:</span> <span v-if="colla.pantone?.length">{{ colla.pantone }}</span><span v-else>No especificat</span></p>
                         <p><span class="font-bold">HEX:</span> {{ colla.codi_color }}</p>
                         <p><span class="font-bold">RGB:</span> {{ colla.color_rgb[0] }}, {{ colla.color_rgb[1] }}, {{ colla.color_rgb[2] }}</p>
@@ -62,7 +81,7 @@
 
                         :icon="colla.estat=='activa'?['fas', 'fire']:
                         colla.estat=='formacio'?['fas', 'seedling']:
-                        colla.estat=='desapareguda'?['fas', 'wind']:
+                        colla.estat=='desapareguda'?['fas', 'cross']:
                         {}
                         "/></span></span>
                     </h1>
@@ -85,7 +104,7 @@
         <div class="max-w-screen-lg md:mx-auto py-4 px-4 ">
             <h2 class="text-xl font-bold">Estadístiques de la Colla (En construcció):</h2>
             <h3 class="text-xl">Millors Castells:</h3>
-            <div class="flex flex-wrap">
+            <div class="flex flex-wrap hidden">
             <MiniCastell castell="Jd12fmpa"/>   
             <MiniCastell castell="3d29"/> 
             <MiniCastell castell="3d7"/>
@@ -155,3 +174,14 @@ setup(props){
 }}
 </script>
 
+<style>
+
+.tippy-box{
+    border-radius:  0.25rem !important; 
+    
+}
+.tippy-content{
+    padding:0px !important;
+}
+
+</style>
