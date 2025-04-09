@@ -262,7 +262,7 @@ export default {
 
 outline:3px solid rgba(190, 190, 190, 0.75);
 cursor: pointer;
-z-index: 999;
+z-index: 500;
 position:relative
 
 }
@@ -271,7 +271,7 @@ position:relative
 
 outline:3px solid white;
 cursor: pointer;
-z-index: 999;
+z-index: 500;
 position:relative
 
 }
