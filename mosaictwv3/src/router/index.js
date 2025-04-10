@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import PerfilColla from '../views/PlantillaColla.vue'
 
 const routes = [
@@ -40,7 +40,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory('/MosaicCasteller/'), // Equivalent to mode: "history"
+  history: createWebHistory('/MosaicCasteller/'), // Equivalent to mode: "history"
   routes,
   
   scrollBehavior() {
