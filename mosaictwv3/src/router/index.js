@@ -40,7 +40,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory('/MosaicCasteller/'), // Equivalent to mode: "history"
+  history: createWebHistory(), // Equivalent to mode: "history"
   routes,
   
   scrollBehavior() {
