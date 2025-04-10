@@ -12,9 +12,14 @@ const routes = [
     name: 'about',
     component: () => import('../views/AboutView.vue')
   },{
-    path: '/taula',
-    name: 'taula',
-    component: () => import('../views/Taula.vue')
+    path: '/tauladebug',
+    name: 'tauladebug',
+    component: () => import('../views/TaulaDebug.vue')
+  },
+  {
+    path: '/colles',
+    name: 'collas',
+    component: () => import('../views/Colles.vue')
   },
   {
     path: '/liniatemporal',
@@ -27,12 +32,7 @@ const routes = [
     component: () => import('../views/Mapa.vue')
   },
   {
-    path:"/colla",
-    name:"plantilla",
-    component: () => import('../views/PlantillaColla.vue')
-  },
-  {
-    path:"/colla/:id",
+    path:"/colles/:id",
     name:"perfil-colla",
     component: PerfilColla,
     props:true

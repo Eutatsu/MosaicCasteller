@@ -63,8 +63,6 @@
 
 <script>
 import { inject } from 'vue'
-
-
 import TargetaInfo from './TargetaInfo.vue'
 
 export default {
