@@ -7,7 +7,22 @@
   </div>-->
 
         <div
-        class="grid flex-col hover:drop-shadow focus:drop-shadow"
+        class="grid flex-col 
+        
+        hover:outline-gray-200/75
+        hover:drop-shadow-md 
+        hover:outline-solid 
+        hover:outline-[3px] 
+        hover:outline 
+        
+        
+        focus:outline-white
+        focus:drop-shadow-lg
+        focus:outline-solid
+        focus:oultine-[3px] 
+        focus:outline
+
+        transition-all"
         
         v-for="(colla,index) in filtrarDades" 
         :key="index"
@@ -255,21 +270,16 @@ export default {
 </script>
 
 <style>
-
+.castella{
+    outline-color:white
+}
 .casella:hover{
-
-outline:3px solid rgba(190, 190, 190, 0.75);
-cursor: pointer;
 z-index: 500;
 position:relative
-
 }
 
 .casella:focus{
-
-outline:3px solid white;
-cursor: pointer;
-z-index: 500;
+z-index: 700;
 position:relative
 
 }

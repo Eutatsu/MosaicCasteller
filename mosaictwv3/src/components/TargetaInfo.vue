@@ -1,10 +1,10 @@
 <template>
     <div class="bg-black/40 px-3 py-2 border-b border-white rounded-t-sm">
-        <router-link :to="'/colla/'+colla.id"><h2 class="hover:underline text-base text-center max-w-64 justify-center">
+        <router-link :to="'/colles/'+colla.id"><h2 class="hover:underline text-base text-center max-w-64 justify-center">
             <strong>{{ colla.nom }} <font-awesome-icon :icon="['fas', 'address-card']" class="opacity-70" /></strong><br></h2></router-link>
         </div>
             <div class="flex flex-row justify-center px-3 py-1">
-                <router-link :to="'/colla/'+colla.id"><div class="my-auto" v-if="colla.xy_escut?.length" :style="{
+                <router-link :to="'/colles/'+colla.id"><div class="my-auto" v-if="colla.xy_escut?.length" :style="{
                         width:'100px',
                         height: '100px',  
                         backgroundImage: `url(${escutsSprite})`, 

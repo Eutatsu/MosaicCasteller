@@ -15,7 +15,7 @@
        <router-link @click="ObrirNav()" to="/" ><li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Mosaic</button></li></router-link>
        <router-link @click="ObrirNav()" to="/liniatemporal"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Linia Temporal</button></li></router-link>
        <router-link @click="ObrirNav()" to="/mapa"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Mapa</button></li></router-link>
-       <router-link @click="ObrirNav()" to="/taula"><li  class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Taula</button></li></router-link>
+       <router-link @click="ObrirNav()" to="/colles"><li  class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button >Taula</button></li></router-link>
        <router-link @click="ObrirNav()" to="/about"> <li class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm"><button>Sobre el Mosaic</button></li></router-link>
       </ul>
     </div>

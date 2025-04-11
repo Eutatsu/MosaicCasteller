@@ -51,7 +51,7 @@ app.use(
         interactive: true,
         arrow:false,
         offset:[0,3],
-        zIndex:999,
+        zIndex:9999,
       }, // => Global default options * see all props
     }
   )
