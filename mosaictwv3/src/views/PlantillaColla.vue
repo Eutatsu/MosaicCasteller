@@ -55,35 +55,9 @@
                 <div class="col-span-12 md:col-span-5 flex flex-col px-4">
                     <h1 class="text-2xl font-bold inline-flex items-center"><span>{{ colla.nom }}
                         <span class="text-nowrap">
-                        <font-awesome-icon 
-                        class="opacity-50 "
-                        :title="
-                        colla.tipus=='convencional'?'Colla Convencional':
-                        colla.tipus=='universitaria'?'Colla Universitaria':
-                        colla.tipus=='internacional'?'Colla Internacional':
-                        {}
-                        " 
-
-                        :icon="colla.tipus=='convencional'?['fas', 'house']:
-                        colla.tipus=='universitaria'?['fas', 'graduation-cap']:
-                        colla.tipus=='internacional'?['fas', 'earth-americas']:
-                        {}
-                        "/>
-
-                        <font-awesome-icon 
-                        class="opacity-50 ml-2"
-                        :title="
-                        colla.estat=='activa'?'Colla Activa':
-                        colla.estat=='formacio'?'Colla en Formació':
-                        colla.estat=='desapareguda'?'Colla Desapareguda':
-                        {}
-                        " 
-
-                        :icon="colla.estat=='activa'?['fas', 'fire']:
-                        colla.estat=='formacio'?['fas', 'seedling']:
-                        colla.estat=='desapareguda'?['fas', 'cross']:
-                        {}
-                        "/></span></span>
+                            <IcoTipEst :colla="colla" dada="tipus" class=""/>
+                        <IcoTipEst :colla="colla" dada="estat" class="ml-2"/>
+                        </span></span>
                     </h1>
                     <h2 class="text-lg ">{{ colla.localitat }}</h2>
                     <h2 class="text-lg  ">{{ colla.fundacio }} - 
@@ -128,13 +102,15 @@
  <script>
  import { inject,computed } from 'vue'
 import MiniCastell from '@/components/MiniCastell.vue';
+import IcoTipEst from '@/components/IcoTipEst.vue';
 import escutDesconegut from '@/assets/escuts/escut_desconegut.svg'
 
 
 export default{
     props:['id'],
     components:{
-        MiniCastell
+        MiniCastell,
+        IcoTipEst
     },
 setup(props){
     const dades = inject('dades')

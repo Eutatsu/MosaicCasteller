@@ -7,6 +7,8 @@ import VueTippy from 'vue-tippy'
 import 'tippy.js/dist/tippy.css'
 import 'tippy.js/themes/light.css'
 
+import 'leaflet/dist/leaflet.css'
+
 import colles from '@/json/dades_colles_id.json'
 import escutsSprite from '@/assets/escuts/escuts_sprite.webp'
 
@@ -23,12 +25,16 @@ import { faFire } from '@fortawesome/free-solid-svg-icons'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import { faSeedling } from '@fortawesome/free-solid-svg-icons'
 import { faCross } from '@fortawesome/free-solid-svg-icons'
-import { faWikipediaW } from '@fortawesome/free-brands-svg-icons'
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faCheck }  from '@fortawesome/free-solid-svg-icons'
 import { faChevronDown }  from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope }  from '@fortawesome/free-solid-svg-icons'
 
-library.add(faAddressCard, faChevronDown, faCheck, faFire, faSeedling, faGlobe, faWikipediaW, faTwitter,faEye,faBars,faEarthAmericas,faGraduationCap,faCross,faHouse)
+
+import { faWikipediaW } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+
+library.add(faEnvelope,faInstagram,faAddressCard, faChevronDown, faCheck, faFire, faSeedling, faGlobe, faWikipediaW, faTwitter,faEye,faBars,faEarthAmericas,faGraduationCap,faCross,faHouse)
 const app = createApp(App)
 
 app.component('font-awesome-icon', FontAwesomeIcon)

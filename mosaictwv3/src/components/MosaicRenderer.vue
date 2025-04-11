@@ -70,7 +70,7 @@
         </div>
     
             <tippy :key=reRenderKey to="parent" content-tag="div" content-class="w-fit"> 
-                <TargetaInfo :colla="colla"></TargetaInfo>
+                <TargetaInfo  tabindex="1" :colla="colla"></TargetaInfo>
             </tippy>
         </div>
     </div>

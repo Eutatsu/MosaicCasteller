@@ -18,26 +18,58 @@
             </div>
         </div>
     </div>
-    <div class="mx-auto px-2 max-w-screen-2xl h-full">
+    <div class="mx-auto px-2 max-w-screen-2xl h-full ">
+       
+        
+      
+
+        <div class="grid grid-cols-1  pr-4">
+            <div class="cols-span-1 relative">
+                <div class="h-4 font-bold">
+                    <label class="absolute text-center text-xs" :style="{left:calculActivitat(origen,null).inici-0.8+'%'}">{{ origen }}</label>
+                    <label class="absolute text-center text-xs" :style="{left:calculActivitat(1800,null).inici-0.8+'%'}">1800</label>
+                    <label class="absolute text-center text-xs" :style="{left:calculActivitat(1900,null).inici-0.8+'%'}">1900</label>
+                    <label class="absolute text-center text-xs" :style="{left:calculActivitat(2000,null).inici-0.8+'%'}">2000</label>
+                    <label class="absolute text-center text-xs" :style="{left:calculActivitat(2025,null).inici-0.8+'%'}">2025</label>
+                </div>
+                <div class="h-0">
+                    <div class="absolute w-0 border border-gray-400/50 border-1 h-[51vh] z-[999]" :style="{left:calculActivitat(1800,null).inici+'%'}"></div>
+                </div>
+                <div class="h-0">
+                   <div class="absolute w-0 border border-gray-400/50 border-1 h-[51vh] z-[999]" :style="{left:calculActivitat(1900,null).inici+'%'}"></div>
+                </div>
+                <div class="h-0">
+                  <div class="absolute w-0 border border-gray-400/50 border-1 h-[51vh] z-[999]" :style="{left:calculActivitat(2000,null).inici+'%'}"></div>
+                </div>
+                <div class="h-0">
+                  <div class="absolute w-0 border border-gray-400/50 border-1 h-[51vh] z-[999]" :style="{left:calculActivitat(2000,null).inici+'%'}"></div>
+                </div>
+                <div class="opacity-20 h-0">
+                <div v-for="(colla,index) in dades_ordenades" :key="index"
+                class="absolute w-0 border-gray-400 border-l-[1px] h-[51vh] z-[999]" 
+                :style="{left:calculActivitat(colla.fundacio,colla.desaparicio).inici+'%'}"></div>
+            </div>
+            </div>
+        </div>
+
        <div class="grid grid-cols-1 gap-1 my-1 overflow-y-auto  h-[50vh] pr-4">
-        <div class="w-0 relative text-right"><label>{{ origen }}</label></div>
-        <div class="cols-span-1  inline-flex items-center "  v-for="(colla,index) in dades_ordenades" :key="index" >
-           
-           <div class="grow bg-gray-200 flex items-center hover:bg-gray-300" 
-            ><div class="relative h-3 " 
+        
+        
+        <div v-for="(colla,index) in dades_ordenades" :key="index"  class="cols-span-1 inline-flex items-center h-fit bg-gray-200 flex hover:bg-gray-300 rounded-sm"  >
+           <div class="relative h-3 rounded-sm" 
             :style="{left:calculActivitat(colla.fundacio,colla.desaparicio).inici+'%', 
             width:calculActivitat(colla.fundacio,colla.desaparicio).activitat+'%',
             ...(colla.codi_color=='#ffffff'?
             {backgroundColor:'#000000'}:
             {backgroundColor:colla.codi_color})}">
-
-            
             </div>
             <tippy :key="reRenderKey" to="parent" content-tag="div" content-class="w-fit"> 
                 <TargetaInfo :colla="colla"/>
             </tippy>
-            </div>
+            <div class="hidden absolute h-[50vh] outline outline-black outline-1" :style="{left:calculActivitat(colla.fundacio,colla.desaparicio).inici+'%'}"></div>
+        
         </div>
+           
        </div> 
        <input class="w-full appearance-none bg-gray-200 h-2 rounded-full mx-1 grow" type="range" min="1791" max="2025" v-model="origen" @change="calculActivitat">
       
@@ -60,6 +92,7 @@ export default({
         const escutsSprite = inject('escutsSprite')
         const dades_ordenades=ref([...dades]);
         const ordenarFundacio=()=>{
+            
         
             dades_ordenades.value.sort((a,b)=>{
                 const numA=Number(a.fundacio)||0

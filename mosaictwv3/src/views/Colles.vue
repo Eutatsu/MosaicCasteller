@@ -1,9 +1,9 @@
 <template>
     <div class="grid grid-cols-12 gap-2 p-2">
-        <router-link :to="'/colles/'+colla.id" v-for="(colla,index) in dades" :key="index" class="2xl:col-span-2 lg:col-span-3 md:col-span-4 xs:col-span-6 col-span-12  drop-shadow hover:drop-shadow-lg rounded-sm bg-white flex flex-row">
+        <div v-for="(colla,index) in dades" :key="index" class="2xl:col-span-2 lg:col-span-3 md:col-span-4 xs:col-span-6 col-span-12  drop-shadow hover:drop-shadow-lg rounded-sm bg-white hover:bg-gray-100 flex flex-row">
             <div class="flex flex-row justify-center p-1">
            <div class="flex flex-col">
-            <div class=" justify-center cursor-pointer"
+            <router-link :to="'/colles/'+colla.id"  class=" justify-center cursor-pointer"
                     style="width:100px; height:100px"
                     :style=" 
                         colla.patro?.length?{
@@ -30,7 +30,7 @@
                         }">
                 </div>
                 
-                </div>
+                </router-link>
                 <div class="text-xs flex flex-col gap-y-1 w-[100px]">
                 
                             <p class="py-1 font-bold text-sm">{{ colla.color_camisa }}</p>
@@ -71,39 +71,14 @@
             </div>
             </div>
             <div class="py-2 text-sm flex flex-col gap-1">
+                <router-link :to="'/colles/'+colla.id">
             <h2 class="hover:underline max-w-64">
             <strong>{{ colla.nom }}</strong>
             <span class="text-nowrap text-base ml-2">
-                        <font-awesome-icon 
-                        class="opacity-50 "
-                        :title="
-                        colla.tipus=='convencional'?'Colla Convencional':
-                        colla.tipus=='universitaria'?'Colla Universitaria':
-                        colla.tipus=='internacional'?'Colla Internacional':
-                        {}
-                        " 
-
-                        :icon="colla.tipus=='convencional'?['fas', 'house']:
-                        colla.tipus=='universitaria'?['fas', 'graduation-cap']:
-                        colla.tipus=='internacional'?['fas', 'earth-americas']:
-                        {}
-                        "/>
-
-                        <font-awesome-icon 
-                        class="opacity-50 ml-2"
-                        :title="
-                        colla.estat=='activa'?'Colla Activa':
-                        colla.estat=='formacio'?'Colla en Formació':
-                        colla.estat=='desapareguda'?'Colla Desapareguda':
-                        {}
-                        " 
-
-                        :icon="colla.estat=='activa'?['fas', 'fire']:
-                        colla.estat=='formacio'?['fas', 'seedling']:
-                        colla.estat=='desapareguda'?['fas', 'cross']:
-                        {}
-                        "/>
-            </span></h2>
+                        <IcoTipEst :colla="colla" dada="tipus" class=""/>
+                        <IcoTipEst :colla="colla" dada="estat" class="ml-2"/>
+                        
+            </span></h2></router-link>
             
             <h3 >Colla {{ colla.tipus+' '+ colla.estat}}</h3>
             <h3 ><strong>Localitat: </strong>{{ colla.localitat }}</h3>
@@ -125,7 +100,7 @@
     
             
         
-        </router-link>
+    </div>
             
     </div>
 </template>
@@ -133,8 +108,12 @@
 <script>
 import {inject} from 'vue'
 import escutDesconegut from '@/assets/escuts/escut_desconegut.svg'
+import IcoTipEst from '@/components/IcoTipEst.vue'
 
 export default{
+    components:{
+        IcoTipEst
+    },
     setup(){
         const dades = inject('dades')
         const escutsSprite = inject('escutsSprite')

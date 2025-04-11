@@ -18,7 +18,7 @@ const routes = [
   },
   {
     path: '/colles',
-    name: 'collas',
+    name: 'colles',
     component: () => import('../views/Colles.vue')
   },
   {
@@ -36,6 +36,11 @@ const routes = [
     name:"perfil-colla",
     component: PerfilColla,
     props:true
+  }  ,
+  {
+    path:"/jocs/enigmosaic",
+    name:"enigmosaic",
+    component: () => import('../views/EnigMosaic.vue')
   }    
 ]
 
