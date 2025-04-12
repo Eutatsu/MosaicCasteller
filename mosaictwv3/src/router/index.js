@@ -38,9 +38,9 @@ const routes = [
     props:true
   }  ,
   {
-    path:"/jocs/enigmosaic",
-    name:"enigmosaic",
-    component: () => import('../views/EnigMosaic.vue')
+    path:"/jocs/trobacolla",
+    name:"trobacolla",
+    component: () => import('../views/TrobaColla.vue')
   }    
 ]
 

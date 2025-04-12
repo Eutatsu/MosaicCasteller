@@ -31,7 +31,7 @@
                 </div>
                 
                 </router-link>
-                <div class="text-xs flex flex-col gap-y-1 w-[100px]">
+                <div class="text-xs flex flex-col gap-y-1 w-[100px] bg-gray-200 mt-1 p-1 rounded-sm drop-shadow">
                 
                             <p class="py-1 font-bold text-sm">{{ colla.color_camisa }}</p>
                             <p v-if="colla.patro?.length"><strong>Patró especial:</strong>Sí</p>
@@ -70,7 +70,7 @@
                 </div>
             </div>
             </div>
-            <div class="py-2 text-sm flex flex-col gap-1">
+            <div class="py-2 px-1 text-sm flex flex-col gap-1">
                 <router-link :to="'/colles/'+colla.id">
             <h2 class="hover:underline max-w-64">
             <strong>{{ colla.nom }}</strong>

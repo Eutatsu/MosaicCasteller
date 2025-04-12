@@ -87,7 +87,7 @@ export default({
 
     setup() {
         let reRenderKey=ref(0)
-        let origen=1791
+        let origen=ref(1791)
         const dades = inject('dades')
         const escutsSprite = inject('escutsSprite')
         const dades_ordenades=ref([...dades]);
@@ -111,9 +111,9 @@ export default({
         function calculActivitat(fundacio,desaparicio){
             
             let actualitat=2025
-            let historia=actualitat-origen
+            let historia=actualitat-origen.value
             let activitat
-            let inici=((fundacio-origen)/historia)*100
+            let inici=((fundacio-origen.value)/historia)*100
             let final
             if(desaparicio!==null){
                 final=desaparicio-actualitat

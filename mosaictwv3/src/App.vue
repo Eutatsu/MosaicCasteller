@@ -12,9 +12,19 @@
       </button></div>
       <div  :class="open?'inline':'hidden'" class="md:inline transition-all">
         <ul class="flex md:flex-row flex-col md:items-center text-base gap-1 font-bold text-white mt-3 md:mt-0">
-        <router-link v-for="(page,index) in pages" :key="index"  @click="ObrirNav()" :to="page.link" class="group hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm transition-all " :class="page.classes" >
+        <router-link v-for="(page,index) in pages.slice(0, 4)" :key="index"  @click="ObrirNav()" :to="page.link" class="group hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm transition-all ">
           <li >
             <button class="group-hover:underline ">{{page.name}}</button></li>
+          </router-link>
+          <router-link @click="ObrirNav()" :to="pages[4].link" 
+          class="group hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm transition-all bg-white hover:text-white text-red-600 rounded-sm drop-shadow'">
+          <li class="flex">
+            <button class="group-hover:underline ">{{pages[4].name}} </button><span class="text-xs self.start"> NOU</span></li>
+          </router-link>
+          <router-link @click="ObrirNav()" :to="pages[5].link" 
+          class="group hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm transition-all ">
+          <li >
+            <button class="group-hover:underline ">{{pages[5].name}}</button></li>
           </router-link>
       </ul>
     </div>
@@ -58,12 +68,12 @@ export default{
   setup(){
     let open=ref(false)
     let pages=[
-      { name:'Mosaic',link:'/', classes:''},
-      { name:'Colles',link:'/colles', classes:''},
-      { name:'Linia Temporal',link:'/liniatemporal', classes:''},
-      { name:'Mapa',link:'/mapa', classes:''},
-      { name:'Jocs',link:'/jocs/enigmosaic', classes:'bg-white hover:text-white text-red-600 rounded-sm drop-shadow'},
-      { name:'Sobre el Mosaic',link:'/about', classes:''}]
+      { name:'Mosaic',link:'/'},
+      { name:'Colles',link:'/colles'},
+      { name:'Linia Temporal',link:'/liniatemporal'},
+      { name:'Mapa',link:'/mapa'},
+      { name:'Jocs',link:'/jocs/trobacolla'},
+      { name:'Sobre el Mosaic',link:'/about'}]
 
 
     function ObrirNav(){
@@ -77,7 +87,7 @@ export default{
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Aileron , Helvetica, Arial, sans-serif;
 
   min-height: 100vh;
   display:flex;

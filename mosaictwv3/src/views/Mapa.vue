@@ -1,8 +1,8 @@
 <template>
-    <h1 class="mt-4 text-xl text-center">!! Secció en construcció !!</h1>
+    <h1 class="mt-4 text-xl text-center ">!! Secció en construcció !!</h1>
 
     
-  <div id="map" class="w-full h-96"></div>
+  <div id="map" class="w-full  min-h-[80vh]" style="height:80vh"></div>
 
 </template>
 
