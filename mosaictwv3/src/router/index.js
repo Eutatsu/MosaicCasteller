@@ -41,7 +41,12 @@ const routes = [
     path:"/jocs/trobacolla",
     name:"trobacolla",
     component: () => import('../views/TrobaColla.vue')
-  }    
+  },
+  {
+    path:"/404",
+    name:"404",
+    component: () => import('../views/404.vue')
+  }       
 ]
 
 const router = createRouter({

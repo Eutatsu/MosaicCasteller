@@ -45,17 +45,18 @@
             <a href="https://x.com/eutatsu" target="blank"><font-awesome-icon :icon="['fab','twitter']"/></a>
           </div>
         </div>
-        <div class="col-span-1 flex flex-col"><h3 class="text-lg">Informació extreta de:</h3>
-          <a class="font-bold hover:underline" href="https://ca.wikipedia.org/wiki/Llista_de_colles_castelleres" target="blank">ca.wikipedia.org</a>
-          <a class="font-bold hover:underline" href="https://castellscat.cat/ca/les-colles-llistat" target="blank">castellscat.cat</a>
-          <a class="font-bold hover:underline" href="http://www.portalcasteller.cat/v2/colles/" target="blank">portalcasteller.cat</a>
-          <a class="font-bold hover:underline" href="https://sigac.cat/colles" target="blank">sigac.cat</a>
-          
+        <div class="col-span-1 flex flex-col"><h3 class="text-base">Informació extreta de:</h3>
+          <ul class="text-sm flex flex-col">
+          <a class="hover:underline hover:bg-red-500" href="https://ca.wikipedia.org/wiki/Llista_de_colles_castelleres" target="blank">ca.wikipedia.org</a>
+          <a class="hover:underline hover:bg-red-500" href="https://castellscat.cat/ca/les-colles-llistat" target="blank">castellscat.cat</a>
+          <a class="hover:underline hover:bg-red-500" href="http://www.portalcasteller.cat/v2/colles/" target="blank">portalcasteller.cat</a>
+          <a class="hover:underline hover:bg-red-500" href="https://sigac.cat/colles" target="blank">sigac.cat</a>
+        </ul>
         </div>
-        <div class="col-span-1"><h3 class="text-lg">Pàgines:</h3> <ul class="flex flex-col md:items-center text-base gap-1 text-white mt-3 md:mt-0">
-          <router-link v-for="(page,index) in pages" :key="index"  @click="ObrirNav()" :to="page.link"><li class="py-1 px-3 "><button class="hover:underline">{{page.name}}</button></li></router-link>
+       <!-- <div class="col-span-1"><h3 class="text-base">Pàgines:</h3> <ul class="flex flex-col md:items-center text-sm text-white mt-3 md:mt-0">
+          <router-link v-for="(page,index) in pages" :key="index"  @click="ObrirNav()" :to="page.link" class="group hover:bg-red-500" ><li class="py-1 px-3 "><button class="group-hover:underline ">{{page.name}}</button></li></router-link>
           
-      </ul></div>
+      </ul></div>-->
       </div>
     </footer>
   </div>
