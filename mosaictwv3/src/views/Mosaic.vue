@@ -2,8 +2,8 @@
     <div> 
         <div class="max-w-screen-lg mx-auto my-2">
             <div id="opcions" class="mx-4">
-                <div  id="opcions-l1" class="grid justify-between grid-cols-12 my-1">
-                    <input v-model="cerca" class="border-solid border-red-600 border-2 my-2 rounded-sm lg:col-span-4 md:col-span-5 col-span-12 p-1" placeholder="Cerca colles, colors o municipis...">
+                <div  id="opcions-l1" class="grid justify-between grid-cols-12 my-2 items-center rounded-sm drop-shadow bg-white p-1 gap-y-2">
+                    <input v-model="cerca" class="border-solid border-red-600 border-2 rounded-sm lg:col-span-4 md:col-span-5 col-span-12 p-1 py-2" placeholder="Cerca colles, colors o municipis...">
                     
                     <div class="flex items-center  md:justify-end lg:col-span-8 md:col-span-7 col-span-12 justify-start ">
                     <label class="text-nowrap " for="ordena">Ordena per:</label>
@@ -18,8 +18,8 @@
                 </select>
             </div>
                 </div>
-                <div  id="opcions-l2" class="grid justify-center grid-cols-12 my-1">
-                    <h2 class="text-xl md:col-span-6 col-span-12">Visualització ({{ dades_ordenades.length }} Colles):</h2>
+                <div  id="opcions-l2" class="grid justify-center grid-cols-12 my-1 items-center rounded-sm drop-shadow bg-white px-2 py-1">
+                    <h2 class="text-xl md:col-span-6 col-span-12">Visualització ({{ filtrarDades(cerca).length }} Colles):</h2>
                 <div class="inline-flex items-center md:col-span-6 col-span-12 flex-wrap">
                 <label class="mida_rajoles text-nowrap" for="ordena">Mida tessel·les: </label>
                     <div class="inline-flex items-center md:w-auto w-full grow">
@@ -29,95 +29,121 @@
                     </div>
                 </div>
                 </div>
-                <div  id="opcions-l3" class="grid justify-center grid-cols-12 gap-3 my-1">
-                    <div class="col-span-6 grid grid-cols-12 justify-between items-center">
-                    <div class="flex items-center justify-between col-span-12 mx-2"><h3 class="text-lg">Tipus:</h3>
+                <div  id="opcions-l3" class="grid justify-center grid-cols-12 gap-2 my-2">
+                    <div class="col-span-6 grid grid-cols-12 justify-between items-center rounded-sm drop-shadow bg-white p-2">
+                    <div class="flex items-center justify-between col-span-12 mb-1"><h3 class="text-lg">Tipus:</h3>
                         <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600" v-model="seccions_tipus" :value=true>Separa</label>
                     </div>
-                        <div class="col-span-12 inline-flex gap-x-3 gap-y-2 items-start flex-wrap md:flex-row flex-col ">
-                            <label class="inline-flex flex-nowrap items-center rounded-sm border-solid hover:bg-gray-200 hover:border-red-600 border-2 p-1 " 
-                                :class="tipus.includes('convencional')?'border-red-600 border-solid border-2':'border-white'">
-                                <input type="checkbox" class="hidden" value="convencional" v-model="tipus">
-                            <font-awesome-icon 
-                            class="text-lg mr-1"
-                            :class="tipus.includes('convencional')?'text-red-600':'text-gray-500'"  :icon="['fas', 'house']" />Convencionals
-                            <font-awesome-icon v-if="tipus.includes('convencional')" :icon="['fas', 'check']" class="ml-1 text-red-600" /> </label>
+                        <div class="col-span-12 inline-flex gap-x-1 gap-y-2 items-start flex-wrap md:flex-row flex-col text-sm">
+                            <button  class="inline-flex items-center group md:flex-1 justify-right hover:bg-gray-200 hover:drop-shadow w-full" 
                             
-                            <label class="inline-flex flex-nowrap items-center rounded-sm border-solid hover:bg-gray-200 hover:border-red-600 border-2 p-1 " 
-                                :class="tipus.includes('universitaria')?'border-red-600 border-solid border-2':'border-white'">
-                                <input type="checkbox" class="hidden" value="universitaria" v-model="tipus">
+                            v-for="value in ['convencional','universitaria','internacional']"
+                            :key="value"
+                            @click="toggleArray(tipus,value)"
+                            :value="value">
                             <font-awesome-icon 
-                            class="text-lg mr-1"
-                            :class="tipus.includes('universitaria')?'text-red-600':'text-gray-500'"  :icon="['fas', 'graduation-cap']"/>Universitaries
-                            <font-awesome-icon v-if="tipus.includes('universitaria')" :icon="['fas', 'check']" class="ml-1 text-red-600" /> </label>
+                            class="
+                            drop-shadow
+                            text-lg 
+                            aspect-square 
+                            inline-flex 
+                            flex-nowrap 
+                            items-center 
+                            rounded-sm 
+                            border-solid 
+                            bg-gray-200 
+                            border-2 p-1 
+                            justify-center mr-1"
+                            :class="tipus.includes(value)?
+                            'border-red-600 group-hover:border-red-500 bg-red-600 border-solid border-2 text-white group-hover:border-red-500 group-hover:bg-red-500':
+                            'text-gray-500  group-hover:border-red-600'"  
+                            :icon="
+                            value=='convencional'?['fas', 'house']:
+                            value=='universitaria'?['fas', 'graduation-cap']:
+                            value=='internacional'?['fas', 'earth-americas']:
+                            {}
+                            "/>
+                            <span>{{formatBotons(value)}}</span>
+                            <font-awesome-icon v-if="tipus.includes(value)" :icon="['fas', 'check']" class="ml-1 text-white-600" /> 
+                            </button>
                             
-                            <label class="inline-flex flex-nowrap items-center rounded-sm border-solid hover:bg-gray-200 hover:border-red-600 border-2 p-1 " 
-                                :class="tipus.includes('internacional')?'border-red-600 border-solid border-2':'border-white'">
-                                <input type="checkbox" class="hidden" value="internacional" v-model="tipus">
-                            <font-awesome-icon 
-                            class="text-lg mr-1"
-                            :class="tipus.includes('internacional')?'text-red-600':'text-gray-500'"  :icon="['fas', 'earth-americas']"/>Internacionals
-                            <font-awesome-icon v-if="tipus.includes('internacional')" :icon="['fas', 'check']" class="ml-1 text-red-600" /> </label>
+                           
                        
                     </div>
                     </div>
-                    <div class="col-span-6 grid grid-cols-12 justify-between items-center">
-                        <div class="flex items-center justify-between col-span-12 mx-2"><h3 class="text-lg">Estat:</h3>
+                    <div class="col-span-6 grid grid-cols-12 justify-between items-center rounded-sm drop-shadow bg-white p-2">
+                        <div class="flex items-center justify-between col-span-12 mb-1"><h3 class="text-lg">Estat:</h3>
                         <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600" v-model="seccions_estat" :value=true>Separa</label>
                     </div>
-                        <div class="col-span-12 inline-flex gap-x-3 gap-y-2 items-start flex-wrap md:flex-row flex-col mx-4">
+                    <div class="col-span-12 inline-flex gap-x-1 gap-y-2 items-start flex-wrap md:flex-row flex-col text-sm">
 
-                        <label class="rounded-sm inline-flex flex-nowrap items-center border-solid hover:bg-gray-200 hover:border-red-600 border-2 p-1 " 
-                            :class="estat.includes('activa')?'border-red-600 border-solid border-2':'border-white'">
-                            <input type="checkbox" class="hidden" value="activa" v-model="estat">
-                        <font-awesome-icon 
-                        class="text-lg mr-1"
-                        :class="estat.includes('activa')?'text-red-600':'text-gray-500'"  :icon="['fas', 'fire']" />Actives
-                        <font-awesome-icon v-if="estat.includes('activa')" :icon="['fas', 'check']" class="ml-1 text-red-600" /> </label>
-                        
-                        <label class="rounded-sm inline-flex flex-nowrap text-norawp items-center border-solid hover:bg-gray-200 hover:border-red-600 border-2 p-1 " 
-                            :class="estat.includes('formacio')?'border-red-600 border-solid border-2':'border-white'">
-                            <input type="checkbox" class="hidden" value="formacio" v-model="estat">
-                        <font-awesome-icon 
-                        class="text-lg mr-1"
-                        :class="estat.includes('formacio')?'text-red-600':'text-gray-500'"  :icon="['fas', 'seedling']" />En formació
-                        <font-awesome-icon v-if="estat.includes('formacio')" :icon="['fas', 'check']" class="ml-1 text-red-600" /> </label>
-                        
-                        <label class="rounded-sm inline-flex flex-nowrap items-center border-solid hover:bg-gray-200 hover:border-red-600 border-2 p-1 " 
-                            :class="estat.includes('desapareguda')?'border-red-600 border-solid border-2':'border-white'">
-                            <input type="checkbox" class="hidden" value="desapareguda" v-model="estat">
-                        <font-awesome-icon 
-                        class="text-lg mr-1"
-                        :class="estat.includes('desapareguda')?'text-red-600':'text-gray-500'"  :icon="['fas', 'cross']" />Desaparegudes
-                        <font-awesome-icon v-if="estat.includes('desapareguda')" :icon="['fas', 'check']" class="ml-1 text-red-600" /> 
-                    </label>
+                        <button  class="inline-flex items-center group md:flex-1 w-full justify-right hover:bg-gray-200 hover:drop-shadow" 
+                            
+                            v-for="value in ['activa','formacio','desapareguda']"
+                            :key="value"
+                            @click="toggleArray(estat,value)"
+                            :value="value">
+                            <font-awesome-icon 
+                            class="
+                            drop-shadow
+                            text-lg 
+                            aspect-square 
+                            inline-flex 
+                            flex-nowrap 
+                            items-center 
+                            rounded-sm 
+                            border-solid 
+                            bg-gray-200 
+                            border-2 p-1 
+                            justify-center mr-1"
+                            :class="estat.includes(value)?
+                            'border-red-600 group-hover:border-red-500 bg-red-600 border-solid border-2 text-white group-hover:border-red-500 group-hover:bg-red-500':
+                            'text-gray-500  group-hover:border-red-600'"  
+                            :icon="
+                            value=='activa'?['fas', 'fire']:
+                            value=='formacio'?['fas', 'seedling']:
+                            value=='desapareguda'?['fas', 'cross']:
+                            {}
+                            " />
+                            <span class="text-nowrap">{{formatBotons(value)}}</span>
+                            
+                            <font-awesome-icon v-if="estat.includes(value)" :icon="['fas', 'check']" class="ml-1 text-white-600" /> 
+                            </button>
+                            
                         
                     </div>
                     </div>
                 </div>
-                <div  id="opcions-l4" class="grid justify-center grid-cols-12 gap-3 my-1">
-                    
-                    
-                </div>
-                <div class="flex-col flex justify-start gap-2">
-                    <button @click="MesOpcions()" class="bg-red-600 rounded-sm text-white px-3 py-2 font-bold w-fit hover:bg-red-500">
+                <div class="flex-col flex justify-start gap-2 rounded-sm drop-shadow bg-white p-1">
+                    <button @click="desplegar=!desplegar" class="bg-red-600 rounded-sm text-white px-3 py-2 font-bold w-fit hover:bg-red-500">
                         <font-awesome-icon :icon="['fas', 'eye']" /> Més Opcions 
                         <font-awesome-icon :icon="['fas', 'chevron-down']" class="transition-all transition-1000" :class="desplegar?'rotate-180':{}"/> 
                     </button>
-                    <div :class="desplegar?'inline':'hidden'" class="mx-2 flex gap-x-6">
-                    <label  class="inline-flex flex-nowrap">
+                    <div :class="desplegar?'inline':'hidden'" class="mx-2 flex gap-x-6 items-start flex-wrap text-nowrap">
+                        <label  class="inline-flex flex-nowrap items-center hover:bg-gray-200 p-1 rounded-sm flex-1">
+                        <input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=false v-model="nom_color">
+                        Nom del color
+                    </label>
+                    <label   class="inline-flex flex-nowrap items-center hover:bg-gray-200 p-1 rounded-sm flex-1">
                         <input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=false v-model="escuts">
                         Mostra Escuts
                     </label>
-                    <label  class="inline-flex flex-nowrap">
+                   
+                    <label   class="inline-flex flex-nowrap items-center hover:bg-gray-200 p-1 rounded-sm flex-1">
                         <input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=true v-model="icones_tipus">
                         Icones Tipus
                     </label>
-                    <label  class="inline-flex flex-nowrap">
-                        <input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=false v-model="icones_estat">
-                        Icones Estat
-                    </label>
-                    <label  class="inline-flex flex-nowrap">
+                    <div class="flex flex-col hover:bg-gray-200 p-1 rounded-sm flex-1">
+                        <label   class="inline-flex flex-nowrap items-center ">
+                            <input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=false v-model="icones_estat">
+                            Icones Estat
+                        </label>
+                            <label  class="inline-flex flex-nowrap text-sm items-center hover:bg-white p-1 rounded-sm">
+                                <input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=false v-model="nomes_desparegudes">
+                                Només Desparegudes
+                            </label>
+                    </div>
+                    <label   class="inline-flex flex-nowrap items-center hover:bg-gray-200 p-1 rounded-sm flex-1">
                         <input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=false v-model="patrons">
                         Patrons Especials
                     </label>
@@ -141,7 +167,6 @@
                     :escuts="escuts"
                     :icones_tipus="icones_tipus"
                     :icones_estat="icones_estat"
-                    :reRenderKey=reRenderKey
 
                 />
                 </div>
@@ -159,7 +184,6 @@
                     :escuts="escuts"
                     :icones="icones_tipus"
                     :icones_estat="icones_estat"
-                    :reRenderKey=reRenderKey
                 />
                 </div>
                     <div  v-if="tipus.includes('internacional')">
@@ -176,7 +200,6 @@
                         :escuts="escuts"    
                         :icones_tipus="icones_tipus"
                         :icones_estat="icones_estat"
-                        :reRenderKey=reRenderKey
                     />
                 </div>
             </div>
@@ -197,7 +220,6 @@
                         :escuts="escuts"
                         :icones_tipus="icones_tipus"
                         :icones_estat="icones_estat"
-                        :reRenderKey=reRenderKey
                     />
                 </div>
                 <div  v-if="estat.includes('formacio')">
@@ -214,7 +236,6 @@
                         :escuts="escuts"
                         :icones_tipus="icones_tipus"
                         :icones_estat="icones_estat"
-                        :reRenderKey=reRenderKey
                     />
                 </div>
                 <div  v-if="estat.includes('desapareguda')">
@@ -231,7 +252,6 @@
                         :escuts="escuts"
                         :icones_tipus="icones_tipus"
                         :icones_estat="icones_estat"
-                        :reRenderKey=reRenderKey
                         />
                 </div>
             </div>
@@ -239,8 +259,7 @@
             <!-- Mosaic per defecte -->
             <div class="mx-auto w-fit" v-else-if="(seccions_estat==false&&seccions_tipus==false)||(seccions_estat==true&&seccions_tipus==true)">
                 <MosaicRenderer
-                    :llista="dades_ordenades"
-                    :cerca="cerca"
+                    :llista="filtrarDades(cerca)"
                     :mida="mida"
                     seleccio="coneguts"
                     
@@ -251,15 +270,15 @@
                     :patrons="patrons"
                     :icones_tipus="icones_tipus"
                     :icones_estat="icones_estat"
-                    :reRenderKey=reRenderKey
+                    :nomes_desparegudes="nomes_desparegudes"
+                    :nom_color="nom_color"
                 />  
             </div>
             <br>
         <MosaicRenderer
         titol="Colles amb Colors Desconeguts"
         id="desconeguts"
-        :llista="dades_ordenades"
-        :cerca="cerca"
+        :llista="filtrarDades(cerca)"
         :mida="mida"
         seleccio="desconeguts"
         
@@ -268,7 +287,6 @@
         :escuts="escuts"
         :icones_tipus="icones_tipus"
         :icones_estat="icones_estat"
-        :reRenderKey=reRenderKey
         />
             
         </div>
@@ -284,30 +302,33 @@ export default{
             MosaicRenderer
         },
         setup(){
-            //Dades
+            //Dades i control mosaic
             const dades = inject('dades')
             let dades_ordenades=ref(dades.sort((a,b)=>a.nom.localeCompare(b.nom)))
+            
             let mida = ref("80")
             let cerca=ref("")
+
             let tipus=ref(["convencional","universitaria","internacional"])
             let estat=ref(["activa","formacio","desapareguda"])
+
             let seccions_tipus=ref(false)
             let seccions_estat=ref(false)
+
             let perfil_color=ref('default')
             let escuts=ref(false)
             let patrons=ref(false)
             let icones_tipus=ref(true)
             let icones_estat=ref(false)
-            let reRenderKey=ref(0)
+            let nomes_desparegudes=ref(true)
+            let nom_color=ref(false)
             
             function ordenarNom(){
                  dades_ordenades.value.sort((a,b)=>a.nom.localeCompare(b.nom))
-                 reRenderKey.value++
             }
             function ordenarColor(){
                  dades_ordenades.value.sort((a,b)=>a.color_hsl[0] - b.color_hsl[0])
                  dades_ordenades.value.sort((a,b)=>(a.color_hsl[1]<=10) - (b.color_hsl[1]<=10))
-                 reRenderKey.value++
             }
 
             function ordenarColorLlum(){
@@ -318,21 +339,17 @@ export default{
                     
                 }
                  dades_ordenades.value.sort((a,b)=>(a.color_hsl[1]<=10) - (b.color_hsl[1]<=10))
-                 reRenderKey.value++
             }
 
             function ordenarLlum(){
                  dades_ordenades.value.sort((a,b)=>a.color_hsl[2] - b.color_hsl[2])
-                 reRenderKey.value++
             }
 
             function ordenarNomColor(){
                  dades_ordenades.value.sort((a,b)=>a.color_camisa.localeCompare(b.color_camisa))
-                 reRenderKey.value++
             }
             function ordenarFundacio(){
                  dades_ordenades.value.sort((a,b)=>(Number(a.fundacio)||0) - (Number(b.fundacio)||0))
-                 reRenderKey.value++
             }
 
             function ordenar(ordre){
@@ -363,18 +380,58 @@ export default{
                         }
             }
 
+            //Cerca
+            function  eliminarAccents(str){
+            return String(str).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            }
+
+            function filtrarDades(cerca){
+            let filtrat=dades_ordenades.value.filter(colla=>
+                eliminarAccents(colla.nom|| "").includes(eliminarAccents(cerca)) ||
+                eliminarAccents(colla.color_camisa|| "").includes(eliminarAccents(cerca)) ||
+                eliminarAccents(colla.localitat || "").includes(eliminarAccents(cerca))||
+                eliminarAccents(colla.fundacio || "").includes(eliminarAccents(cerca))
+                
+            )
+            return filtrat
+            
+        }
             //Altres
             let desplegar=ref(false)
-            function MesOpcions(){
-                desplegar.value=!desplegar.value
+            function toggleArray(array,valor){
+                const index = array.indexOf(valor)
+                if (index > -1) {
+                    array.splice(index, 1) 
+                } else {
+                    array.push(valor) 
+              } 
             }
+
+            function formatBotons(valor){
+                const mapaFormats={
+                //Tipus
+                convencional:"Convencionals",
+                universitaria:"Universitàries",
+                internacional:"Internacionals",
+
+                //Estats
+                activa:"Actives",
+                formacio:"En formació",
+                desapareguda:"Desaparegudes"
+            };
+            return mapaFormats[valor]|| "Desconegut"
+            }
+
             return{
                 desplegar,
-                MesOpcions,
-
+                toggleArray,
+                formatBotons,
                 
                 dades,
                 dades_ordenades,
+                filtrarDades,
+                eliminarAccents,
+
                 mida,
                 cerca,
                 tipus,
@@ -384,10 +441,13 @@ export default{
                 perfil_color,
                 escuts,
                 patrons,
+
                 icones_tipus,
                 icones_estat,
-                ordenar,
-                reRenderKey
+                nomes_desparegudes,
+                nom_color,
+
+                ordenar
 
             }
 

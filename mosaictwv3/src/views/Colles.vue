@@ -9,9 +9,83 @@
                 @focus="obreLlista=true"
                 @blur="obreLlista=false"
                 >
+                <div class="col-span-6 grid grid-cols-12 justify-between items-center rounded-sm drop-shadow bg-white p-2">
+                    <div class="col-span-12 inline-flex gap-x-1 gap-y-2 items-start flex-wrap md:flex-row flex-col text-sm">
+                            <button  class="inline-flex items-center group md:flex-1 justify-right hover:bg-gray-200 hover:drop-shadow w-full" 
+                            
+                            v-for="value in ['convencional','universitaria','internacional']"
+                            :key="value"
+                            @click="toggleArray(tipus,value)"
+                            :value="value">
+                            <font-awesome-icon 
+                            class="
+                            drop-shadow
+                            text-lg 
+                            aspect-square 
+                            inline-flex 
+                            flex-nowrap 
+                            items-center 
+                            rounded-sm 
+                            border-solid 
+                            bg-gray-200 
+                            border-2 p-1 
+                            justify-center mr-1"
+                            :class="tipus.includes(value)?
+                            'border-red-600 group-hover:border-red-500 bg-red-600 border-solid border-2 text-white group-hover:border-red-500 group-hover:bg-red-500':
+                            'text-gray-500  group-hover:border-red-600'"  
+                            :icon="
+                            value=='convencional'?['fas', 'house']:
+                            value=='universitaria'?['fas', 'graduation-cap']:
+                            value=='internacional'?['fas', 'earth-americas']:
+                            {}
+                            "/>
+                            <span>{{formatBotons(value)}}</span>
+                            <font-awesome-icon v-if="tipus.includes(value)" :icon="['fas', 'check']" class="ml-1 text-white-600" /> 
+                            </button>
+                            
+                           
+                       
+                    </div>
+                    <div class="col-span-12 inline-flex gap-x-1 gap-y-2 items-start flex-wrap md:flex-row flex-col text-sm">
+
+                        <button  class="inline-flex items-center group md:flex-1 w-full justify-right hover:bg-gray-200 hover:drop-shadow" 
+                            
+                            v-for="value in ['activa','formacio','desapareguda']"
+                            :key="value"
+                            @click="toggleArray(estat,value)"
+                            :value="value">
+                            <font-awesome-icon 
+                            class="
+                            drop-shadow
+                            text-lg 
+                            aspect-square 
+                            inline-flex 
+                            flex-nowrap 
+                            items-center 
+                            rounded-sm 
+                            border-solid 
+                            bg-gray-200 
+                            border-2 p-1 
+                            justify-center mr-1"
+                            :class="estat.includes(value)?
+                            'border-red-600 group-hover:border-red-500 bg-red-600 border-solid border-2 text-white group-hover:border-red-500 group-hover:bg-red-500':
+                            'text-gray-500  group-hover:border-red-600'"  
+                            :icon="
+                            value=='activa'?['fas', 'fire']:
+                            value=='formacio'?['fas', 'seedling']:
+                            value=='desapareguda'?['fas', 'cross']:
+                            {}
+                            " />
+                            <span class="text-nowrap">{{formatBotons(value)}}</span>
+                            
+                            <font-awesome-icon v-if="estat.includes(value)" :icon="['fas', 'check']" class="ml-1 text-white-600" /> 
+                            </button>
+                            
+
+                        </div>
+                </div>
                 
-                
-                <div class="relative h-0 w-full">
+                <!--<div class="relative h-0 w-full">
             <ul class="absolute w-full bg-white drop-shadow rounded-sm max-h-96 overflow-y-auto p-1 z-[999]"
             :class="obreLlista==true?'inline':'hidden'"
             >
@@ -22,16 +96,16 @@
                <div class="flex flex-col md:flex-row md:items-center">
                <span>{{ colla.nom }}</span>
                <span class="font-normal text-sm mr-2 md:ml-2">{{colla.localitat}} / {{ colla.fundacio }} / 
-                <IcoTipEst  :key=reRenderKey :colla="colla" dada="tipus" class=""/> / <IcoTipEst :key=reRenderKey :colla="colla" dada="estat" class=""/></span>
+                <IcoTipEst  :key="'estat'+colla.id" :colla="colla" dada="tipus" class=""/> / <IcoTipEst :key="'estat'+colla.id" :colla="colla" dada="estat" class=""/></span>
             </div>
         </li>
-            </ul>
-        </div>
+            </ul
+        </div>>-->
         </div>
     </div>
 
     <div class="grid grid-cols-12 gap-2 p-2">
-        <div v-for="(colla,index) in dades" :key="index" class="2xl:col-span-2 lg:col-span-3 md:col-span-4 xs:col-span-6 col-span-12  drop-shadow hover:drop-shadow-lg rounded-sm bg-white hover:bg-gray-100 flex flex-row">
+        <div v-for="(colla,index) in filtrarDades(cerca)" :key="index" class="2xl:col-span-2 lg:col-span-3 md:col-span-4 xs:col-span-6 col-span-12  drop-shadow hover:drop-shadow-lg rounded-sm bg-white hover:bg-gray-100 flex flex-row">
             <div class="flex flex-row justify-center p-1">
            <div class="flex flex-col">
             <router-link :to="'/colles/'+colla.id"  class=" justify-center cursor-pointer"
@@ -106,15 +180,17 @@
             <h2 class="hover:underline max-w-64 text-base">
             <strong>{{ colla.nom }}</strong>
             <span class="text-nowrap text-base ml-2">
-                        <IcoTipEst :colla="colla" dada="tipus" class=""/>
-                        <IcoTipEst :colla="colla" dada="estat" class="ml-2"/>
+                        <IcoTipEst :key="colla.id" :colla="colla" dada="tipus" class=""/>
+                        <IcoTipEst :key="colla.id" :colla="colla" dada="estat" class="ml-2"/>
                         
             </span></h2></router-link>
             
             <h3 >Colla {{ formatDada(colla.tipus)+' '+ formatDada(colla.estat)}}</h3>
             <h3 ><strong>Localitat: </strong>{{ colla.localitat }}</h3>
             <h3 ><strong>Fundació: </strong>{{ colla.fundacio }}</h3>
-            <h3 v-if="colla.desaparicio?.length"><strong>Desaparició: </strong>{{ colla.desaparicio }}</h3>
+            <h3 v-if="colla.estat=='desapareguda'"><strong>Desaparició: </strong>
+                <span v-if="colla.desaparicio!==-1">{{ colla.desaparicio }}</span>
+                <span v-else>Desconegut</span></h3>
             <h3 v-if="colla.refundacio?.length"><strong>Refundació: </strong>{{ colla.refundacio }}</h3>
             <div><a class="" v-if="colla.url!==null" 
             :href="colla.url" target="_blank" title="Article Wikipedia">
@@ -153,6 +229,34 @@ export default{
         let cerca=ref("")
         let obreLlista=ref(false)
 
+        //Botons
+        let tipus=ref(["convencional","universitaria","internacional"])
+        let estat=ref(["activa","formacio","desapareguda"])
+        function formatBotons(valor){
+                const mapaFormats={
+                //Tipus
+                convencional:"Convencionals",
+                universitaria:"Universitàries",
+                internacional:"Internacionals",
+
+                //Estats
+                activa:"Actives",
+                formacio:"En formació",
+                desapareguda:"Desaparegudes"
+            };
+            return mapaFormats[valor]|| "Desconegut"
+        }
+        function toggleArray(array,valor){
+            console.log('trying array '+array)
+                const index = array.indexOf(valor)
+                if (index > -1) {
+                    array.splice(index, 1) 
+                } else {
+                    array.push(valor) 
+              } 
+            }
+
+        //Ordre Dades
         dades.sort((a,b)=>a.nom.localeCompare(b.nom))
         function selecciona(colla){
             
@@ -177,13 +281,15 @@ export default{
 
         function filtrarDades(cerca){
             let filtrat=dades.filter(colla=>
-                eliminarAccents(colla.nom|| "").includes(eliminarAccents(cerca)) ||
+               ( eliminarAccents(colla.nom|| "").includes(eliminarAccents(cerca)) ||
                 eliminarAccents(colla.color_camisa|| "").includes(eliminarAccents(cerca)) ||
                 eliminarAccents(colla.localitat || "").includes(eliminarAccents(cerca))||
-                eliminarAccents(colla.fundacio || "").includes(eliminarAccents(cerca))
-                
+                eliminarAccents(colla.fundacio || "").includes(eliminarAccents(cerca)))&&
+
+                tipus.value.includes(colla.tipus)&&
+                estat.value.includes(colla.estat)
             )
-            this.reRenderKey++
+            
             return filtrat
             
         }
@@ -204,7 +310,12 @@ export default{
             selecciona,
             formatDada,
             obreLlista,
-            cerca
+            cerca,
+
+            tipus,
+            estat,
+            formatBotons,
+            toggleArray
         }
     }
 }

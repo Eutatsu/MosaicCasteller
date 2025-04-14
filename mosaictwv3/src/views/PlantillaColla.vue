@@ -64,8 +64,9 @@
                     </h1>
                     <h2 class="text-lg ">{{ colla.localitat }}</h2>
                     <h2 class="text-lg  ">{{ colla.fundacio }} - 
-                        <span v-if="colla.desaparicio==null">Actualitat</span>  
-                        <span v-else>{{ colla.desaparicio }}</span> </h2>   
+                        <span v-if="colla.estat=='activa'">Actualitat</span>  
+                        <span v-else> <span v-if="colla.desaparicio!==-1">{{ colla.desaparicio }}</span>
+                        <span v-else>Desconegut</span></span> </h2>   
                     
                     <h2 class="text-lg  ">Colla {{ formatDada(colla.tipus) +' '+ formatDada(colla.estat)}}</h2>
                         <p class="my-1 text-xl /70">

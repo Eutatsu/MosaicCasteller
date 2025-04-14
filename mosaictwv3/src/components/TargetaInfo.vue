@@ -23,9 +23,11 @@
                         <strong>Estat:</strong> {{ formatDada(colla.estat) }}<br>
                         <strong>Fundació:</strong> {{ colla.fundacio }}
                     </p>
-                    <p v-if="colla.desaparicio!==null"><strong>
+                    <p v-if="colla.estat=='desapareguda'"><strong>
                         Desaparició:
-                    </strong> {{ colla.desaparicio }}<br>
+                    </strong>
+                    <span v-if="colla.desaparicio!==-1">{{ colla.desaparicio }}</span>
+                    <span v-else>Desconegut</span><br>
                     </p>
 
                     <p v-if="colla.refundacio!==null"> <strong>

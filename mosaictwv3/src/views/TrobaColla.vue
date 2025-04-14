@@ -1,6 +1,6 @@
 <template>
     <div class=" mx-auto max-w-screen-lg flex flex-col justify-center h-full min-h-[80vh] px-2 md:px-0 items-center">
-        <div class="w-full justify-self-start mt-4"><img :src=TrobaCollaLogo width="40%" class="mx-auto">
+        <div class="w-full justify-self-start mt-10"><img :src=TrobaCollaLogo width="100%" class="mx-auto w-4/5 md:w-1/2" alt="Trobacolla">
             <div class="text-center mt-8"><p>L'enigma casteller inspirat en el clàssic modern <a class="text-red-600 hover:text-red-400 underline" 
                 href="https://www.nytimes.com/games/wordle/index.html"
                 target="blank">Wordle!</a> (o <a class="text-red-600 hover:text-red-400 underline" 

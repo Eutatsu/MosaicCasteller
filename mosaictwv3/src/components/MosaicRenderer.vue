@@ -29,7 +29,8 @@
         focus:outline
 
         transition"
-        
+        :class="colla.color_hsl[2]>=40 ? 'text-black':'text-white'"
+
         v-for="(colla,index) in filtrarDades()" 
         :key="index"
         tabindex="0"
@@ -45,36 +46,28 @@
         
         >
         <!--<img src="../assets/escuts/escuts_sprite.png" style="width:100%" class="overflow-hidden absolute">-->
-        <div v-if="icones_tipus==true" class="my-1 justify-self-start  w-full" :class="colla.color_hsl[2]>=35 ? 'text-black/30':'text-white/40'">
-            <div class="flex justify-end" title="Colla Convencional">
-            <font-awesome-icon v-if="colla.tipus=='convencional'" class="mx-1" :icon="['fas', 'house']"/>
-            </div>
-            <div class="flex justify-end" title="Colla Universitaria">
-            <font-awesome-icon v-if="colla.tipus=='universitaria'" class="mx-1" :icon="['fas', 'graduation-cap']"/>
-            </div>
-            <div class="flex justify-end" title="Colla Internacional">
-            <font-awesome-icon v-if="colla.tipus=='internacional'" class="mx-1" :icon="['fas', 'earth-americas']"/>
-            </div>
+        <div class="absolute flex flex-col h-full w-full justify-between items-end px-1 opacity-60 overflow-hidden"
+        :class="midaIcones">
+        <div v-if="icones_tipus==true" class="">
+            <IcoTipEst :colla="colla" dada="tipus" />
         </div>  
-        <p class="place-self-center" 
-        v-if="seleccio=='desconeguts'" 
-        :style="{fontSize:text+'px'}">
+        
+        <div v-if="(icones_estat==false&&nomes_desparegudes==true)&&colla.estat=='desapareguda'" class="h-full flex items-end" 
+        >
+           <IcoTipEst :colla="colla" dada="estat" />
+        </div>
+
+        <div v-if="icones_estat==true" class="h-full flex items-end" >
+           <IcoTipEst :colla="colla" dada="estat" />
+        </div>
+        </div>
+
+        <p class="place-self-center truncate w-full text-center font-bold opacity-80 px-1" 
+        v-if="seleccio=='desconeguts'||nom_color==true" 
+        :style="{fontSize:(mida/6)+'px'}">
             {{ colla.color_camisa }}
         </p>
-        
-        <div v-if="icones_estat==true" class="my-1 justify-self-end place-self-end w-full" :class="colla.color_hsl[2]>=35 ? 'text-black/30':'text-white/40'">
-            <div class="flex justify-end" title="Colla Activa">
-            <font-awesome-icon v-if="colla.estat=='activa'" class="mx-1" :icon="['fas', 'fire']"/>
-            </div>
-            <div class="flex justify-end" title="Colla en Formació">
-            <font-awesome-icon v-if="colla.estat=='formacio'" class="mx-1 " :icon="['fas', 'seedling']"/>
-            </div>
-            <div class="flex justify-end" title="Colla Desapareguda">
-            <font-awesome-icon v-if="colla.estat=='desapareguda'" class="mx-1 " :icon="['fas', 'cross']"/>
-            </div>
-        </div>
-    
-            <tippy :key=reRenderKey to="parent" content-tag="div" content-class="w-fit"> 
+            <tippy :key=colla.id to="parent" content-tag="div" content-class="w-fit"> 
                 <TargetaInfo :colla="colla"></TargetaInfo>
             </tippy>
         </div>
@@ -84,10 +77,12 @@
 <script>
 import { inject,computed } from 'vue'
 import TargetaInfo from './TargetaInfo.vue'
+import IcoTipEst from './IcoTipEst.vue'
 
 export default {
     components:{
-        TargetaInfo
+        TargetaInfo,
+        IcoTipEst
         },
     name: 'MosaicRenderer',
     props:{
@@ -98,10 +93,6 @@ export default {
             llista: {
                 type: Array,
                 required:true
-            },
-            cerca: {
-                type: String,
-                default:""
             },
             mida:{
                 type: String,
@@ -146,17 +137,38 @@ export default {
                 default:true,
                 required:false
             },
-            reRenderKey:{
-                type:Number,
-                required:false,
-                default:0
+            nom_color:{
+                type:Boolean,
+                default:true,
+                required:false
+            },
+            nomes_desparegudes:{
+                type:Boolean,
+                default:true,
+                required:false
             }
                 },
     setup(props){
-        let text=computed(()=>{
-            return props.mida/5
-        }
-    )
+    
+//icones
+        const midaIcones = computed(()=>{
+            if(props.mida>=50&&props.mida<=120){
+                return 'text-lg'
+            }
+            else if(props.mida>120){
+                return 'text-2xl'
+            }
+            else if(props.mida<50&&props.mida>40){
+                return 'text-sm'
+            }
+            else if(props.mida<40){
+                return 'hidden'
+            }
+            else {
+                return 'hidden'
+            }
+        })
+
 //escuts i patrons
         const escutsSprite = inject('escutsSprite')
         function backgroundStyles(colla){
@@ -184,17 +196,10 @@ export default {
             return styles
         }
 //cerca i dades
-        function eliminarAccents(str){
-            return String(str).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-            }
 
         function  filtrarDades(){
             return  props.llista.filter(colla=>
-            (
-                eliminarAccents(colla.nom).includes(eliminarAccents(props.cerca))||
-                eliminarAccents(colla.color_camisa).includes(eliminarAccents(props.cerca))||
-                eliminarAccents(colla.localitat || "").includes(eliminarAccents(props.cerca))
-            )&&
+            
             props.tipus.includes(colla.tipus)&&
             props.estat.includes(colla.estat)&&
             (
@@ -241,11 +246,10 @@ export default {
     return{
         escutsSprite,
         backgroundStyles,
-        eliminarAccents,
         filtrarDades,
-        text,
         formatDada,
         perfilColor,
+        midaIcones
         }
     },
 }

@@ -16,7 +16,7 @@
             135,
             133
         ],
-        "fundacio": "1997",
+        "fundacio": 1997,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Al%C2%B7lots_de_Llevant",
@@ -45,7 +45,7 @@
             199,
             44
         ],
-        "fundacio": "1972",
+        "fundacio": 1972,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Bordegassos_de_Vilanova",
@@ -73,9 +73,9 @@
             49,
             124
         ],
-        "fundacio": "1976",
-        "desaparicio": "1985",
-        "refundacio": "2012",
+        "fundacio": 1976,
+        "desaparicio": 1985,
+        "refundacio": 2012,
         "url": "https://ca.wikipedia.org/wiki/Brivalls_de_Cornudella",
         "web": "brivallsdecornudella.wordpress.com",
         "localitat": "Cornudella de Montsant",
@@ -101,7 +101,7 @@
             65,
             139
         ],
-        "fundacio": "1996",
+        "fundacio": 1996,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Capgrossos_de_Matar%C3%B3",
@@ -129,7 +129,7 @@
             119,
             21
         ],
-        "fundacio": "2012",
+        "fundacio": 2012,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Carallots_de_Sant_Vicen%C3%A7_dels_Horts",
@@ -157,9 +157,9 @@
             58,
             136
         ],
-        "fundacio": "1973",
-        "desaparicio": "1988",
-        "refundacio": "1995",
+        "fundacio": 1973,
+        "desaparicio": 1988,
+        "refundacio": 1995,
         "url": "https://ca.wikipedia.org/wiki/Castellers_d%27Altafulla",
         "web": "castellersaltafulla.cat",
         "localitat": "Altafulla",
@@ -185,7 +185,7 @@
             30,
             53
         ],
-        "fundacio": "2014",
+        "fundacio": 2014,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_d%27Andorra",
@@ -213,7 +213,7 @@
             22,
             29
         ],
-        "fundacio": "1994",
+        "fundacio": 1994,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_d%27Esparreguera",
@@ -241,7 +241,7 @@
             190,
             73
         ],
-        "fundacio": "1997",
+        "fundacio": 1997,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Badalona",
@@ -269,7 +269,7 @@
             0,
             29
         ],
-        "fundacio": "1969",
+        "fundacio": 1969,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Barcelona",
@@ -297,7 +297,7 @@
             73,
             127
         ],
-        "fundacio": "2012",
+        "fundacio": 2012,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Berga",
@@ -325,7 +325,7 @@
             96,
             97
         ],
-        "fundacio": "1996",
+        "fundacio": 1996,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Caldes_de_Montbui",
@@ -353,7 +353,7 @@
             23,
             26
         ],
-        "fundacio": "2013",
+        "fundacio": 2013,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Castellar_del_Vall%C3%A8s",
@@ -381,7 +381,7 @@
             208,
             30
         ],
-        "fundacio": "1981",
+        "fundacio": 1981,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Castelldefels",
@@ -409,7 +409,7 @@
             162,
             138
         ],
-        "fundacio": "1998",
+        "fundacio": 1998,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Cerdanyola",
@@ -438,7 +438,7 @@
             100,
             205
         ],
-        "fundacio": "1991",
+        "fundacio": 1991,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Cornell%C3%A0",
@@ -466,7 +466,7 @@
             16,
             51
         ],
-        "fundacio": "2013",
+        "fundacio": 2013,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_l%27Alt_Maresme",
@@ -494,7 +494,7 @@
             64,
             159
         ],
-        "fundacio": "2018",
+        "fundacio": 2018,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Castellera_de_l%27Esquerra_de_l%27Eixample",
@@ -522,7 +522,7 @@
             188,
             156
         ],
-        "fundacio": "2002",
+        "fundacio":  2002,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_la_Sagrada_Fam%C3%ADlia",
@@ -550,7 +550,7 @@
             62,
             151
         ],
-        "fundacio": "1996",
+        "fundacio":  1996,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_la_Vila_de_Gr%C3%A0cia",
@@ -578,7 +578,7 @@
             130,
             139
         ],
-        "fundacio": "2011",
+        "fundacio":  2011,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_les_Roquetes",
@@ -607,7 +607,7 @@
             23,
             51
         ],
-        "fundacio": "1995",
+        "fundacio":  1995,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Lleida",
@@ -635,7 +635,7 @@
             19,
             5
         ],
-        "fundacio": "1996",
+        "fundacio":  1996,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Mallorca",
@@ -663,7 +663,7 @@
             103,
             165
         ],
-        "fundacio": "2017",
+        "fundacio":  2017,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Mediona",
@@ -691,7 +691,7 @@
             214,
             172
         ],
-        "fundacio": "1992",
+        "fundacio":  1992,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Mollet",
@@ -719,9 +719,9 @@
             13,
             15
         ],
-        "fundacio": "1991",
-        "desaparicio": "1998",
-        "refundacio": "2013",
+        "fundacio":  1991,
+        "desaparicio":  1998,
+        "refundacio":  2013,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Montcada_i_Reixac",
         "web": "castellersdemontcadaireixac.cat",
         "localitat": "Montcada i Reixac",
@@ -747,7 +747,7 @@
             16,
             34
         ],
-        "fundacio": "1996",
+        "fundacio":  1996,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Rub%C3%AD",
@@ -775,7 +775,7 @@
             99,
             84
         ],
-        "fundacio": "1994",
+        "fundacio":  1994,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Sabadell",
@@ -803,7 +803,7 @@
             92,
             65
         ],
-        "fundacio": "1996",
+        "fundacio":  1996,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Sant_Cugat",
@@ -831,7 +831,7 @@
             45,
             134
         ],
-        "fundacio": "1996",
+        "fundacio":  1996,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Sant_Feliu",
@@ -859,7 +859,7 @@
             182,
             255
         ],
-        "fundacio": "1985",
+        "fundacio":  1985,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Santa_Coloma",
@@ -887,7 +887,7 @@
             174,
             4
         ],
-        "fundacio": "2013",
+        "fundacio":  2013,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Santpedor",
@@ -915,7 +915,7 @@
             126,
             126
         ],
-        "fundacio": "1993",
+        "fundacio":  1993,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Sants",
@@ -943,7 +943,7 @@
             184,
             229
         ],
-        "fundacio": "1980",
+        "fundacio":  1980,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Terrassa",
@@ -971,7 +971,7 @@
             231,
             30
         ],
-        "fundacio": "2012",
+        "fundacio":  2012,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Viladecans",
@@ -999,7 +999,7 @@
             204,
             153
         ],
-        "fundacio": "1948",
+        "fundacio":  1948,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Vilafranca",
@@ -1027,7 +1027,7 @@
             206,
             255
         ],
-        "fundacio": "1998",
+        "fundacio":  1998,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_del_Poble_Sec",
@@ -1055,7 +1055,7 @@
             106,
             174
         ],
-        "fundacio": "2014",
+        "fundacio":  2014,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_del_Prat_de_Llobregat",
@@ -1083,7 +1083,7 @@
             154,
             100
         ],
-        "fundacio": "1996",
+        "fundacio":  1996,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_del_Riberal",
@@ -1111,7 +1111,7 @@
             59,
             121
         ],
-        "fundacio": "1996",
+        "fundacio":  1996,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Castellera_de_Figueres",
@@ -1139,7 +1139,7 @@
             189,
             162
         ],
-        "fundacio": "1990",
+        "fundacio":  1990,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Castellera_de_Sant_Pere_i_Sant_Pau",
@@ -1167,7 +1167,7 @@
             13,
             23
         ],
-        "fundacio": "2010",
+        "fundacio":  2010,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Castellera_Jove_de_Barcelona",
@@ -1195,7 +1195,7 @@
             84,
             155
         ],
-        "fundacio": "1994",
+        "fundacio":  1994,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_de_Castellers_d%27Esplugues",
@@ -1224,7 +1224,7 @@
             28,
             50
         ],
-        "fundacio": "1993",
+        "fundacio":  1993,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Jove_de_Castellers_de_Sitges",
@@ -1252,7 +1252,7 @@
             54,
             36
         ],
-        "fundacio": "2000",
+        "fundacio":  2000,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Jove_de_l%27Hospitalet",
@@ -1280,7 +1280,7 @@
             136,
             242
         ],
-        "fundacio": "1979",
+        "fundacio":  1979,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Jove_Xiquets_de_Tarragona",
@@ -1308,8 +1308,8 @@
             214,
             240
         ],
-        "fundacio": "2010",
-        "desaparicio": null,
+        "fundacio":  2010,
+        "desaparicio": -1,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Jove_Xiquets_de_Vilafranca",
         "web": "jovedevilafranca.org",
@@ -1336,7 +1336,7 @@
             20,
             24
         ],
-        "fundacio": "1813",
+        "fundacio":  1813,
         "desaparicio": null,
         "refundacio": "1971 (reorganització)",
         "url": "https://ca.wikipedia.org/wiki/Colla_Joves_Xiquets_de_Valls",
@@ -1364,7 +1364,7 @@
             117,
             119
         ],
-        "fundacio": "1791",
+        "fundacio":  1791,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Vella_dels_Xiquets_de_Valls",
@@ -1392,7 +1392,7 @@
             130,
             36
         ],
-        "fundacio": "2012",
+        "fundacio":  2012,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Encantats_de_Begues",
@@ -1420,7 +1420,7 @@
             138,
             135
         ],
-        "fundacio": "2012",
+        "fundacio":  2012,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Esperxats_de_l%27Estany",
@@ -1448,7 +1448,7 @@
             74,
             46
         ],
-        "fundacio": "2007",
+        "fundacio":  2007,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Margeners_de_Guissona",
@@ -1476,7 +1476,7 @@
             147,
             206
         ],
-        "fundacio": "1995",
+        "fundacio":  1995,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Marrecs_de_Salt",
@@ -1504,7 +1504,7 @@
             90,
             36
         ],
-        "fundacio": "2002",
+        "fundacio":  2002,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Matossers_de_Molins_de_Rei",
@@ -1532,9 +1532,9 @@
             14,
             33
         ],
-        "fundacio": "1958",
-        "desaparicio": "1985",
-        "refundacio": "2002",
+        "fundacio":  1958,
+        "desaparicio":  1985,
+        "refundacio":  2002,
         "url": "https://ca.wikipedia.org/wiki/Minyons_de_l%27Arbo%C3%A7",
         "web": "minyonsdelarboc.cat",
         "localitat": "L'Arboç",
@@ -1560,7 +1560,7 @@
             191,
             45
         ],
-        "fundacio": "2014",
+        "fundacio":  2014,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Minyons_de_Santa_Cristina",
@@ -1588,7 +1588,7 @@
             170,
             212
         ],
-        "fundacio": "1979",
+        "fundacio":  1979,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Minyons_de_Terrassa",
@@ -1616,7 +1616,7 @@
             49,
             137
         ],
-        "fundacio": "1995",
+        "fundacio":  1995,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Moixiganguers_d%27Igualada",
@@ -1644,7 +1644,7 @@
             48,
             34
         ],
-        "fundacio": "1926",
+        "fundacio":  1926,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Nens_del_Vendrell",
@@ -1672,7 +1672,7 @@
             150,
             197
         ],
-        "fundacio": "1975",
+        "fundacio":  1975,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Nois_de_la_Torre",
@@ -1700,7 +1700,7 @@
             27,
             62
         ],
-        "fundacio": "2012",
+        "fundacio":  2012,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Pallagos_del_Conflent",
@@ -1728,7 +1728,7 @@
             99,
             0
         ],
-        "fundacio": "1997",
+        "fundacio":  1997,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Sagals_d%27Osona",
@@ -1756,7 +1756,7 @@
             167,
             142
         ],
-        "fundacio": "2008",
+        "fundacio":  2008,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Salats_de_S%C3%BAria",
@@ -1785,7 +1785,7 @@
             228
         ],
         "patro":["tirallongues_de_manresa.svg",5],
-        "fundacio": "1993",
+        "fundacio":  1993,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Tirallongues_de_Manresa",
@@ -1813,9 +1813,9 @@
             0,
             0
         ],
-        "fundacio": "1849",
-        "desaparicio": "1920",
-        "refundacio": "1994",
+        "fundacio":  1849,
+        "desaparicio":  1920,
+        "refundacio":  1994,
         "url": "https://ca.wikipedia.org/wiki/Torraires_de_Montblanc",
         "web": "usuaris.tinet.cat/torraire/",
         "localitat": "Montblanc",
@@ -1841,7 +1841,7 @@
             40,
             40
         ],
-        "fundacio": "2002",
+        "fundacio":  2002,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xerrics_d%27Olot",
@@ -1869,7 +1869,7 @@
             19,
             23
         ],
-        "fundacio": "1982",
+        "fundacio":  1982,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xicots_de_Vilafranca",
@@ -1897,7 +1897,7 @@
             16,
             70
         ],
-        "fundacio": "1991",
+        "fundacio":  1991,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xics_de_Granollers",
@@ -1925,7 +1925,7 @@
             114,
             196
         ],
-        "fundacio": "2013",
+        "fundacio":  2013,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xiq%C3%BCelos_i_Xiq%C3%BCeles_del_Delta",
@@ -1953,9 +1953,9 @@
             29,
             28
         ],
-        "fundacio": "1993",
-        "desaparicio": "2001",
-        "refundacio": "2013",
+        "fundacio":  1993,
+        "desaparicio":  2001,
+        "refundacio":  2013,
         "url": "https://ca.wikipedia.org/wiki/Xiquets_de_Cambrils",
         "web": "xiquetsdecambrils.carrd.co",
         "localitat": "Cambrils",
@@ -1981,7 +1981,7 @@
             92,
             23
         ],
-        "fundacio": "1981",
+        "fundacio":  1981,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xiquets_de_Reus",
@@ -2010,7 +2010,7 @@
             71
         ],
         "patro":["xiquets_de_tarragona.svg",5],
-        "fundacio": "1970",
+        "fundacio":  1970,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xiquets_de_Tarragona",
@@ -2038,7 +2038,7 @@
             204,
             255
         ],
-        "fundacio": "2014",
+        "fundacio":  2014,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xiquets_de_Vila-seca",
@@ -2066,7 +2066,7 @@
             50,
             113
         ],
-        "fundacio": "1988",
+        "fundacio":  1988,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xiquets_del_Serrallo",
@@ -2094,9 +2094,9 @@
             73,
             152
         ],
-        "fundacio": "1994",
-        "desaparicio": "2004",
-        "refundacio": "2012",
+        "fundacio":  1994,
+        "desaparicio":  2004,
+        "refundacio":  2012,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Gav%C3%A0",
         "web": "castellersgava.wordpress.com/",
         "localitat": "Gavà",
@@ -2122,7 +2122,7 @@
             25,
             64
         ],
-        "fundacio": "2013",
+        "fundacio":  2013,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Sant_Adri%C3%A0",
@@ -2150,7 +2150,7 @@
             38,
             44
         ],
-        "fundacio": "2015",
+        "fundacio":  2015,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Tortosa",
@@ -2178,7 +2178,7 @@
             128,
             0
         ],
-        "fundacio": "2015",
+        "fundacio":  2015,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Castellera_La_Bisbal_del_Pened%C3%A8s",
@@ -2206,7 +2206,7 @@
             142,
             54
         ],
-        "fundacio": "2013",
+        "fundacio":  2013,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Laietans_de_Gramenet",
@@ -2234,7 +2234,7 @@
             20,
             132
         ],
-        "fundacio": "2015",
+        "fundacio":  2015,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Manyacs_de_Parets",
@@ -2262,9 +2262,9 @@
             255,
             189
         ],
-        "fundacio": "1985",
-        "desaparicio": "2000",
-        "refundacio": "2011",
+        "fundacio":  1985,
+        "desaparicio":  2000,
+        "refundacio":  2011,
         "url": "https://ca.wikipedia.org/wiki/Vailets_de_Gelida",
         "web": "vailetsdegelida.blogspot.com.es",
         "localitat": "Gelida",
@@ -2290,9 +2290,9 @@
             39,
             51
         ],
-        "fundacio": "1999",
-        "desaparicio": "2005",
-        "refundacio": "2016",
+        "fundacio":  1999,
+        "desaparicio":  2005,
+        "refundacio":  2016,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Sarri%C3%A0",
         "web": "www.castellersdesarria.cat/",
         "localitat": "Barcelona (Sarrià)",
@@ -2319,7 +2319,7 @@
             129
         ],
         "patro":["castellers_de_l_adroc.svg",60],
-        "fundacio": "2017",
+        "fundacio":  2017,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_l%27Adroc",
@@ -2347,7 +2347,7 @@
             220,
             85
         ],
-        "fundacio": "2018",
+        "fundacio":  2018,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Malfargats_de_Pallars&action=edit&redlink=1",
@@ -2376,7 +2376,7 @@
             144
         ],
         "patro":["xiquets_de_torredembarra.svg",5],
-        "fundacio": "2018",
+        "fundacio":  2018,
         "desaparicio": null,
         "refundacio": null,
         "url": null,
@@ -2404,7 +2404,7 @@
             125,
             131
         ],
-        "fundacio": "2019",
+        "fundacio":  2019,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Castellera_de_Cerdanya",
@@ -2432,7 +2432,7 @@
             45,
             34
         ],
-        "fundacio": "2019",
+        "fundacio":  2019,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_la_Selva",
@@ -2459,7 +2459,7 @@
             45,
             1
         ],
-        "fundacio": "2019",
+        "fundacio":  2019,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Colla_Castellera_de_Vacarisses&action=edit&redlink=1",
@@ -2487,7 +2487,7 @@
             120,
             172
         ],
-        "fundacio": "2019",
+        "fundacio":  2019,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_del_Foix_de_Cubelles",
@@ -2515,7 +2515,7 @@
             152,
             159
         ],
-        "fundacio": "2019",
+        "fundacio":  2019,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Castellera_del_Baix_Montseny",
@@ -2543,8 +2543,8 @@
             35,
             108
         ],
-        "fundacio": "1982",
-        "desaparicio": "1982",
+        "fundacio":  1982,
+        "desaparicio":  1982,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_Granollers&action=edit&redlink=1",
         "web": null,
@@ -2567,8 +2567,8 @@
             196,
             2
         ],
-        "fundacio": "2009",
-        "desaparicio": "2014",
+        "fundacio":  2009,
+        "desaparicio":  2014,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Ses_Talaies_de_Formentera",
         "web": null,
@@ -2595,8 +2595,8 @@
             113,
             232
         ],
-        "fundacio": "2001",
-        "desaparicio": "2019",
+        "fundacio":  2001,
+        "desaparicio":  2019,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Angelets_del_Vallespir",
         "web": null,
@@ -2623,8 +2623,8 @@
             226,
             0
         ],
-        "fundacio": "2010",
-        "desaparicio": "2016",
+        "fundacio":  2010,
+        "desaparicio":  2016,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Solsona",
         "web": null,
@@ -2651,8 +2651,8 @@
             51,
             60
         ],
-        "fundacio": "1974",
-        "desaparicio": "1980",
+        "fundacio":  1974,
+        "desaparicio":  1980,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_la_Roca",
         "web": null,
@@ -2675,8 +2675,8 @@
             146,
             0
         ],
-        "fundacio": "1995",
-        "desaparicio": "2002",
+        "fundacio":  1995,
+        "desaparicio":  2002,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_l%27Albera",
         "web": null,
@@ -2703,8 +2703,8 @@
             140,
             112
         ],
-        "fundacio": "2015",
-        "desaparicio": "2022",
+        "fundacio":  2015,
+        "desaparicio":  2022,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_les_Gavarres",
         "web": null,
@@ -2731,8 +2731,8 @@
             105,
             48
         ],
-        "fundacio": "1996",
-        "desaparicio": "2005",
+        "fundacio":  1996,
+        "desaparicio":  2005,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_l%27Hospitalet",
         "web": null,
@@ -2759,8 +2759,8 @@
             2,
             64
         ],
-        "fundacio": "1996",
-        "desaparicio": "2002",
+        "fundacio":  1996,
+        "desaparicio":  2002,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_Martorell&action=edit&redlink=1",
         "web": null,
@@ -2783,8 +2783,8 @@
             0,
             139
         ],
-        "fundacio": "1978",
-        "desaparicio": "1982",
+        "fundacio":  1978,
+        "desaparicio":  1982,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_Montmel%C3%B3&action=edit&redlink=1",
         "web": null,
@@ -2803,8 +2803,8 @@
         "color_rgb": [
             150, 75, 0
         ],
-        "fundacio": "1981",
-        "desaparicio": "1985",
+        "fundacio":  1981,
+        "desaparicio":  1985,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Ribes",
         "web": null,
@@ -2827,8 +2827,8 @@
             36,
             36
         ],
-        "fundacio": "1996",
-        "desaparicio": "2006",
+        "fundacio":  1996,
+        "desaparicio":  2006,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Sant_Andreu_de_la_Barca",
         "web": null,
@@ -2855,8 +2855,8 @@
             0,
             128
         ],
-        "fundacio": "1971",
-        "desaparicio": "1987",
+        "fundacio":  1971,
+        "desaparicio":  1987,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Sitges",
         "web": null,
@@ -2879,8 +2879,8 @@
             73,
             178
         ],
-        "fundacio": "1972",
-        "desaparicio": "1983",
+        "fundacio":  1972,
+        "desaparicio":  1983,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Vilanova_-_Colla_de_Mar",
         "web": null,
@@ -2907,8 +2907,8 @@
             255,
             255
         ],
-        "fundacio": "1986",
-        "desaparicio": "1986",
+        "fundacio":  1986,
+        "desaparicio":  1986,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_del_Collell&action=edit&redlink=1",
         "web": null,
@@ -2928,8 +2928,8 @@
         ],
         "color_rgb": [158, 158, 158
         ],
-        "fundacio": "1994",
-        "desaparicio": "2007",
+        "fundacio":  1994,
+        "desaparicio":  2007,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Castellera_de_Sant_Boi",
         "web": null,
@@ -2953,8 +2953,8 @@
             121,
             249
         ],
-        "fundacio": "2009",
-        "desaparicio": "2013",
+        "fundacio":  2009,
+        "desaparicio":  2013,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Castellera_La_Global_de_Salou",
         "web": "castellersdesalou.blogspot.com/",
@@ -2978,8 +2978,8 @@
             204,
             204
         ],
-        "fundacio": "1998",
-        "desaparicio": "2022",
+        "fundacio":  1998,
+        "desaparicio":  2022,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Castellera_Nyerros_de_la_Plana",
         "web": "nyerrosdelaplanamanlleu.blogspot.com.es",
@@ -3007,8 +3007,8 @@
             119
         ],
         "patro":["colla_dels_xiquets_de_valls_la_barreja.svg",100],
-        "fundacio": "1939",
-        "desaparicio": "1947",
+        "fundacio":  1939,
+        "desaparicio":  1947,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_dels_Xiquets_de_Valls",
         "web": null,
@@ -3031,8 +3031,8 @@
             255,
             255
         ],
-        "fundacio": "1994",
-        "desaparicio": "1995",
+        "fundacio":  1994,
+        "desaparicio":  1995,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Colla_Jove_de_Castellers_de_Cubelles&action=edit&redlink=1",
         "web": null,
@@ -3056,8 +3056,8 @@
             193
         ],
         "patro":["colla_jove_dels_castellers_de_vilafranca.svg",5],
-        "fundacio": "1984",
-        "desaparicio": "1985",
+        "fundacio":  1984,
+        "desaparicio":  1985,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Jove_dels_Castellers_de_Vilafranca",
         "web": null,
@@ -3080,8 +3080,8 @@
             180,
             223
         ],
-        "fundacio": "1974",
-        "desaparicio": "1975",
+        "fundacio":  1974,
+        "desaparicio":  1975,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Colla_Jove_del_Vendrell&action=edit&redlink=1",
         "web": null,
@@ -3104,8 +3104,8 @@
             182,
             193
         ],
-        "fundacio": "1982",
-        "desaparicio": "1994",
+        "fundacio":  1982,
+        "desaparicio":  1994,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Jove_de_Vilanova",
         "web": null,
@@ -3128,8 +3128,8 @@
             180,
             223
         ],
-        "fundacio": "1993",
-        "desaparicio": "2004",
+        "fundacio":  1993,
+        "desaparicio":  2004,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Nova_del_Vendrell",
         "web": null,
@@ -3153,8 +3153,8 @@
             13,
             28
         ],
-        "fundacio": "1958",
-        "desaparicio": "1963",
+        "fundacio":  1958,
+        "desaparicio":  1963,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Cos_de_Castellers_de_Ballets_de_Catalunya",
         "web": null,
@@ -3177,8 +3177,8 @@
             40,
             132
         ],
-        "fundacio": "1991",
-        "desaparicio": "2005",
+        "fundacio":  1991,
+        "desaparicio":  2005,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Ganxets_de_Reus",
         "web": null,
@@ -3205,8 +3205,8 @@
             29,
             111
         ],
-        "fundacio": "2003",
-        "desaparicio": "2006",
+        "fundacio":  2003,
+        "desaparicio":  2006,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Joves_des_Raiguer&action=edit&redlink=1",
         "web": null,
@@ -3229,8 +3229,8 @@
             137,
             181
         ],
-        "fundacio": "1985",
-        "desaparicio": "1985",
+        "fundacio":  1985,
+        "desaparicio":  1985,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Marrecs_del_Catllar&action=edit&redlink=1",
         "web": null,
@@ -3253,8 +3253,8 @@
             73,
             151
         ],
-        "fundacio": "2014",
-        "desaparicio": "2023",
+        "fundacio":  2014,
+        "desaparicio":  2023,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Picapolls_de_la_Gavarresa",
         "web": "picapollsgavarresa.wordpress.com",
@@ -3281,8 +3281,8 @@
             197,
             231
         ],
-        "fundacio": "2012",
-        "desaparicio": "2022",
+        "fundacio":  2012,
+        "desaparicio":  2022,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Vailets_de_l%27Empord%C3%A0",
         "web": "www.vailetsdelemporda.cat",
@@ -3309,8 +3309,8 @@
             171,
             58
         ],
-        "fundacio": "1996",
-        "desaparicio": "2007",
+        "fundacio":  1996,
+        "desaparicio":  2007,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Vailets_de_Ripollet",
         "web": null,
@@ -3338,8 +3338,8 @@
             3
         ],
         "patro":["xicots_de_valls.svg",100],
-        "fundacio": "1988",
-        "desaparicio": "1989",
+        "fundacio":  1988,
+        "desaparicio":  1989,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xicots_de_Valls",
         "web": null,
@@ -3362,8 +3362,8 @@
             73,
             152
         ],
-        "fundacio": "1961",
-        "desaparicio": "1962",
+        "fundacio":  1961,
+        "desaparicio":  1962,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Xiquets_de_Gav%C3%A0&action=edit&redlink=1",
         "web": null,
@@ -3386,8 +3386,8 @@
             255,
             255
         ],
-        "fundacio": "1880",
-        "desaparicio": "1936",
+        "fundacio":  1880,
+        "desaparicio":  1936,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xiquets_de_Gr%C3%A0cia",
         "web": null,
@@ -3410,8 +3410,8 @@
             73,
             152
         ],
-        "fundacio": "1947",
-        "desaparicio": "1950",
+        "fundacio":  1947,
+        "desaparicio":  1950,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xiquets_de_l%27Erampruny%C3%A0",
         "web": null,
@@ -3434,8 +3434,8 @@
             255,
             255
         ],
-        "fundacio": "1935",
-        "desaparicio": "Desconegut",
+        "fundacio":  1935,
+        "desaparicio": -1,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Xiquets_de_la_Bisbal&action=edit&redlink=1",
         "web": null,
@@ -3458,8 +3458,8 @@
             26,
             51
         ],
-        "fundacio": "1984",
-        "desaparicio": "2009",
+        "fundacio":  1984,
+        "desaparicio":  2009,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xiquets_de_la_Vila_d%27Alcover",
         "web": null,
@@ -3486,8 +3486,8 @@
             150,
             84
         ],
-        "fundacio": "2009",
-        "desaparicio": "2012",
+        "fundacio":  2012,
+        "desaparicio":  2019,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xiquets_d%27Alcover",
         "web": null,
@@ -3515,8 +3515,8 @@
             221
         ],
         "patro":["los_xics_caleros.svg",5],
-        "fundacio": "2012",
-        "desaparicio": "2018",
+        "fundacio":  2012,
+        "desaparicio":  2018,
         "refundacio": 2025,
         "url": "https://ca.wikipedia.org/wiki/Los_Xics_Caleros",
         "web": null,
@@ -3543,7 +3543,7 @@
             168,
             132
         ],
-        "fundacio": "1995",
+        "fundacio":  1995,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Arreplegats_de_la_Zona_Universit%C3%A0ria",
@@ -3571,7 +3571,7 @@
             218,
             73
         ],
-        "fundacio": "2013",
+        "fundacio":  2013,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Bergants_del_Campus_de_Terrassa",
@@ -3599,7 +3599,7 @@
             11,
             15
         ],
-        "fundacio": "2003",
+        "fundacio":  2003,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Emboirats_de_la_UVIC",
@@ -3627,7 +3627,7 @@
             221,
             25
         ],
-        "fundacio": "2013",
+        "fundacio":  2013,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Engrescats_de_la_URL",
@@ -3655,7 +3655,7 @@
             101,
             116
         ],
-        "fundacio": "1994",
+        "fundacio":  1994,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Gan%C3%A0pies_de_la_UAB",
@@ -3683,7 +3683,7 @@
             30,
             56
         ],
-        "fundacio": "2015",
+        "fundacio":  2015,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Grillats_del_CBL",
@@ -3711,7 +3711,7 @@
             19,
             116
         ],
-        "fundacio": "2013",
+        "fundacio":  2013,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Llun%C3%A0tics_de_la_UPC_de_Vilanova",
@@ -3739,7 +3739,7 @@
             138,
             146
         ],
-        "fundacio": "2001",
+        "fundacio":  2001,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Marracos_de_la_UdL",
@@ -3767,7 +3767,7 @@
             157,
             228
         ],
-        "fundacio": "2011",
+        "fundacio":  2011,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Passerells_del_Tecnocampus",
@@ -3795,7 +3795,7 @@
             128,
             0
         ],
-        "fundacio": "2007",
+        "fundacio":  2007,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Pataquers_de_la_URV",
@@ -3823,7 +3823,7 @@
             7,
             21
         ],
-        "fundacio": "2013",
+        "fundacio":  2013,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Penjats_del_Campus_de_Manresa",
@@ -3851,7 +3851,7 @@
             110,
             83
         ],
-        "fundacio": "2014",
+        "fundacio":  2014,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Trempats_de_la_UPF",
@@ -3879,7 +3879,7 @@
             177,
             234
         ],
-        "fundacio": "1998",
+        "fundacio":  1998,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xoriguers_de_la_UdG",
@@ -3907,9 +3907,9 @@
             214,
             241
         ],
-        "fundacio": "2003",
-        "desaparicio": "2010",
-        "refundacio": "2024",
+        "fundacio":  2003,
+        "desaparicio":  2010,
+        "refundacio":  2024,
         "url": "https://ca.wikipedia.org/wiki/Gambirots_de_la_UIB",
         "web": null,
         "localitat": "Palma, Mallorca",
@@ -3931,8 +3931,8 @@
         "color_rgb": [
             135, 98, 204
         ],
-        "fundacio": "2008",
-        "desaparicio": "2011",
+        "fundacio":  2008,
+        "desaparicio":  2011,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Mangoners_de_la_Universitat_de_Perpiny%C3%A0",
         "web": null,
@@ -3956,8 +3956,8 @@
             107,
             33
         ],
-        "fundacio": "2013",
-        "desaparicio": "2019",
+        "fundacio":  2013,
+        "desaparicio":  2019,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Mangoners_de_la_Universitat_de_Perpiny%C3%A0",
         "web": null,
@@ -3981,8 +3981,8 @@
             254,
             254
         ],
-        "fundacio": "1991",
-        "desaparicio": "1992",
+        "fundacio":  1991,
+        "desaparicio":  1992,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Minyeuetts_de_la_Salle",
         "web": null,
@@ -4005,7 +4005,7 @@
             191,
             67
         ],
-        "fundacio": "2018",
+        "fundacio":  2018,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Berlin",
@@ -4033,7 +4033,7 @@
             168,
             80
         ],
-        "fundacio": "2023",
+        "fundacio":  2023,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Lausanne",
@@ -4061,7 +4061,7 @@
             165,
             168
         ],
-        "fundacio": "2007",
+        "fundacio":  2007,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Lo_Prado",
@@ -4089,7 +4089,7 @@
             173,
             140
         ],
-        "fundacio": "2007",
+        "fundacio":  2007,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Mont-real",
@@ -4117,7 +4117,7 @@
             108,
             176
         ],
-        "fundacio": "2015",
+        "fundacio":  2015,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Par%C3%ADs",
@@ -4145,7 +4145,7 @@
             222,
             89
         ],
-        "fundacio": "2024",
+        "fundacio":  2024,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_d%27Estocolm&action=edit&redlink=1",
@@ -4173,7 +4173,7 @@
             198,
             36
         ],
-        "fundacio": "2016",
+        "fundacio":  2016,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Sydney",
@@ -4201,7 +4201,7 @@
             44,
             76
         ],
-        "fundacio": "2024",
+        "fundacio":  2024,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_Tokyo&action=edit&redlink=1",
@@ -4225,7 +4225,7 @@
             88,
             63
         ],
-        "fundacio": "2023",
+        "fundacio":  2023,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_Tolosa&action=edit&redlink=1",
@@ -4253,7 +4253,7 @@
             154,
             239
         ],
-        "fundacio": "2024",
+        "fundacio":  2024,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_Z%C3%BCrich&action=edit&redlink=1",
@@ -4281,7 +4281,7 @@
             24,
             23
         ],
-        "fundacio": "2015",
+        "fundacio":  2015,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_of_London",
@@ -4309,7 +4309,7 @@
             0,
             128
         ],
-        "fundacio": "2016",
+        "fundacio":  2016,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Colla_Castellera_d%27Edinburgh",
@@ -4337,7 +4337,7 @@
             0,
             0
         ],
-        "fundacio": "2017",
+        "fundacio":  2017,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Castellers_de_Madrid",
@@ -4365,7 +4365,7 @@
             39,
             68
         ],
-        "fundacio": "2024",
+        "fundacio":  2024,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Euskal_Herriko_Casteller_Taldea&action=edit&redlink=1",
@@ -4393,7 +4393,7 @@
             56,
             102
         ],
-        "fundacio": "2014",
+        "fundacio":  2014,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Koales_de_Melbourne",
@@ -4421,7 +4421,7 @@
             242,
             14
         ],
-        "fundacio": "2024",
+        "fundacio":  2024,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Mannekes_de_Brussel%C2%B7les",
@@ -4449,7 +4449,7 @@
             64,
             64
         ],
-        "fundacio": "2023",
+        "fundacio":  2023,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Mataresos_de_l%27Alguer",
@@ -4477,7 +4477,7 @@
             58,
             102
         ],
-        "fundacio": "2014",
+        "fundacio":  2014,
         "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xiquets_Copenhagen",
@@ -4505,8 +4505,8 @@
             102,
             0
         ],
-        "fundacio": "2004",
-        "desaparicio": "Desconegut",
+        "fundacio":  2004,
+        "desaparicio": -1,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Calif%C3%B2rnia_Kids",
         "web": null,
@@ -4533,8 +4533,8 @@
             1,
             0
         ],
-        "fundacio": "2007",
-        "desaparicio": "Desconegut",
+        "fundacio":  2007,
+        "desaparicio": -1,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_Cerro_Navia&action=edit&redlink=1",
         "web": "castellersdecerronavia.es.tl/",
@@ -4561,8 +4561,8 @@
             66,
             157
         ],
-        "fundacio": "2008",
-        "desaparicio": "Desconegut",
+        "fundacio":  2008,
+        "desaparicio": -1,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_la_Usach&action=edit&redlink=1",
         "web": "castellerusach.wordpress.com/",
@@ -4585,8 +4585,8 @@
             29,
             60
         ],
-        "fundacio": "2009",
-        "desaparicio": "Desconegut",
+        "fundacio":  2009,
+        "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_de_Talca&action=edit&redlink=1",
         "web": null,
@@ -4609,8 +4609,8 @@
             149,
             62
         ],
-        "fundacio": "2008",
-        "desaparicio": "Desconegut",
+        "fundacio":  2008,
+        "desaparicio": null,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Castellers_do_Brasil&action=edit&redlink=1",
         "web": null,
@@ -4633,8 +4633,8 @@
             175,
             224
         ],
-        "fundacio": "1997",
-        "desaparicio": "1998",
+        "fundacio":  1997,
+        "desaparicio":  1998,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Colla_Castellera_Les_Quatre_Barres&action=edit&redlink=1",
         "web": null,
@@ -4658,8 +4658,8 @@
             73,
             137
         ],
-        "fundacio": "1998",
-        "desaparicio": "1998",
+        "fundacio":  1998,
+        "desaparicio":  1998,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/w/index.php?title=Colla_Castellera_del_Casal_Virolai_de_Quer%C3%A9taro&action=edit&redlink=1",
         "web": null,
@@ -4683,8 +4683,8 @@
             117,
             119
         ],
-        "fundacio": "2010",
-        "desaparicio": "2020",
+        "fundacio":  2010,
+        "desaparicio":  2020,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xiquets_de_Hangzhou",
         "web": null,
@@ -4711,8 +4711,8 @@
             203,
             186
         ],
-        "fundacio": "2013",
-        "desaparicio": "2018",
+        "fundacio":  2013,
+        "desaparicio":  2018,
         "refundacio": null,
         "url": "https://ca.wikipedia.org/wiki/Xiquets_de_l%27Alster",
         "web": null,
@@ -4739,7 +4739,7 @@
             78,
             151
         ],
-        "fundacio": "2024",
+        "fundacio":  2024,
         "desaparicio": null,
         "refundacio": null,
         "url": "Nul",
@@ -4763,7 +4763,7 @@
         "color_rgb": [
             25, 161, 95
         ],
-        "fundacio": "2024",
+        "fundacio":  2024,
         "desaparicio": null,
         "refundacio": null,
         "url": null,
