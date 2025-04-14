@@ -1,5 +1,5 @@
 <template>
-    <h3 v-if="titol" class="mt-3 text-2xl text-center">{{titol + ' ('+filtrarDades.length+'):'}}</h3>
+    <h3 v-if="titol" class="mt-3 text-2xl text-center">{{titol + ' ('+filtrarDades().length+'):'}}{{  }}</h3>
     <div id="mosaic" class="flex flex-wrap justify-center">
         
        <!-- <div :style="{ backgroundImage: `url(${escutsSprite})`, width:mida+'px', height:mida+'px',backgroundPosition:-mida+'px 0px' ,backgroundSize:mida*12+'px'}">
@@ -7,8 +7,14 @@
   </div>-->
 
         <div
-        class="grid flex-col 
+        class="
+        relative
+        grid flex-col 
+        outline-white
         
+        z-[500]
+        hover:z-[700]
+
         hover:outline-gray-200/75
         hover:drop-shadow-md 
         hover:outline-solid 
@@ -22,11 +28,10 @@
         focus:oultine-[3px] 
         focus:outline
 
-        transition-all"
+        transition"
         
-        v-for="(colla,index) in filtrarDades" 
+        v-for="(colla,index) in filtrarDades()" 
         :key="index"
-        :class="casella" 
         tabindex="0"
         :id="'colla-'+id+'-'+index"
         :style="{ 
@@ -70,14 +75,14 @@
         </div>
     
             <tippy :key=reRenderKey to="parent" content-tag="div" content-class="w-fit"> 
-                <TargetaInfo  tabindex="1" :colla="colla"></TargetaInfo>
+                <TargetaInfo :colla="colla"></TargetaInfo>
             </tippy>
         </div>
     </div>
 </template>
 
 <script>
-import { inject } from 'vue'
+import { inject,computed } from 'vue'
 import TargetaInfo from './TargetaInfo.vue'
 
 export default {
@@ -148,6 +153,11 @@ export default {
             }
                 },
     setup(props){
+        let text=computed(()=>{
+            return props.mida/5
+        }
+    )
+//escuts i patrons
         const escutsSprite = inject('escutsSprite')
         function backgroundStyles(colla){
             const styles = {}
@@ -173,64 +183,33 @@ export default {
             }
             return styles
         }
-    return{
-        escutsSprite,
-        backgroundStyles
-        }
-    },
-        computed:{
-            casella() {
-                if (this.$route.name === 'cognitiu') {
-                    return 'casella grow'; 
-                }
-                else{
-                return 'casella';} 
-    },
-        
+//cerca i dades
+        function eliminarAccents(str){
+            return String(str).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            }
 
-        filtrarDades(){
-            return this.llista.filter(colla=>
+        function  filtrarDades(){
+            return  props.llista.filter(colla=>
             (
-                this.eliminarAccents(colla.nom).includes(this.eliminarAccents(this.cerca)) 
-                ||
-                this.eliminarAccents(colla.color_camisa).includes(this.eliminarAccents(this.cerca))
-                ||
-                
-                this.eliminarAccents(colla.localitat || "").includes(this.eliminarAccents(this.cerca))
-            )
-            &&
-            this.tipus.includes(colla.tipus)
-            &&
-            this.estat.includes(colla.estat)
-            &&(
+                eliminarAccents(colla.nom).includes(eliminarAccents(props.cerca))||
+                eliminarAccents(colla.color_camisa).includes(eliminarAccents(props.cerca))||
+                eliminarAccents(colla.localitat || "").includes(eliminarAccents(props.cerca))
+            )&&
+            props.tipus.includes(colla.tipus)&&
+            props.estat.includes(colla.estat)&&
+            (
                 (
-                colla.codi_color!=="#ffffff" 
-                && 
-                this.seleccio=="coneguts"
-            )
-            ||(
+                colla.codi_color!=="#ffffff"&& 
+                props.seleccio=="coneguts"
+            )||
+            (
                 (colla.codi_color=="#ffffff"||colla.color_camisa=="Desconegut")
                 && 
-                this.seleccio=="desconeguts")
+                props.seleccio=="desconeguts")
             )
             )
-            
-        },
-
-        
-        
-        
-        text(){
-            return this.mida/5
         }
-    },
-    methods:{
-
-        eliminarAccents(str){
-                return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-            },
-            
-        formatDada(estat){
+       function formatDada(estat){
             const mapaFormats={
                 //Tipus
                 convencional:"Convencional",
@@ -243,45 +222,31 @@ export default {
                 desapareguda:"Desapareguda"
             };
             return mapaFormats[estat]|| "Desconegut"
-        },
-        perfilColor(colla){
-            if (this.perfil_color==="default"){
+        }
+
+        function perfilColor(colla){
+            if (props.perfil_color==="default"){
                 return colla.codi_color;
             }
-            else if (this.perfil_color==="monocrom"){
+            else if (props.perfil_color==="monocrom"){
                 return "hsl(0,0%,"+colla.color_hsl[2]+"%)";
             }
-            else if (this.perfil_color==="hsl"){
+            else if (props.perfil_color==="hsl"){
                 return "hsl("+colla.color_hsl[0]+","+colla.color_hsl[1]+"%,"+colla.color_hsl[2]+"%)";
             }
             else{
                 return "ffffff"
             }
-            
-        },
-
-
-
-
-        },
-            
-    
+        }
+    return{
+        escutsSprite,
+        backgroundStyles,
+        eliminarAccents,
+        filtrarDades,
+        text,
+        formatDada,
+        perfilColor,
+        }
+    },
 }
 </script>
-
-<style>
-.castella{
-    outline-color:white
-}
-.casella:hover{
-z-index: 500;
-position:relative
-}
-
-.casella:focus{
-z-index: 700;
-position:relative
-
-}
-
-</style>

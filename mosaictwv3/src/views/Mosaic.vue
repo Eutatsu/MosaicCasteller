@@ -7,7 +7,7 @@
                     
                     <div class="flex items-center  md:justify-end lg:col-span-8 md:col-span-7 col-span-12 justify-start ">
                     <label class="text-nowrap " for="ordena">Ordena per:</label>
-                    <select id="ordena" @change="ordenar($event)" class="rounded-sm border-red-600 border-2 bg-white p-2 ml-2">
+                    <select id="ordena" @change="ordenar($event.target.value)" class="rounded-sm border-red-600 border-2 bg-white p-2 ml-2">
                         <option value="nom">Nom</option>
                         <option value="color">Color</option>
                         <option value="nomcolor">Nom del Color</option>
@@ -157,7 +157,7 @@
                     :tipus="['universitaria']"
                     :estat="estat"
                     :escuts="escuts"
-                    :icones="icones"
+                    :icones="icones_tipus"
                     :icones_estat="icones_estat"
                     :reRenderKey=reRenderKey
                 />
@@ -284,101 +284,115 @@ export default{
             MosaicRenderer
         },
         setup(){
-            let desplegar=ref(false)
+            //Dades
             const dades = inject('dades')
-            function MesOpcions(){
-                desplegar.value=!desplegar.value
-            }
-            return{desplegar,MesOpcions,dades}
-        },
-        data(){
-              return{
-                dades_ordenades:[],
-                mida:"80",
-                cerca: '',
-                tipus: ["convencional","universitaria","internacional"],
-                estat: ["activa","formacio","desapareguda"],
-                seccions_tipus: false,
-                seccions_estat: false,
-                perfil_color:"default",
-                escuts: false,
-                patrons: false,
-                icones_tipus: true,
-                icones_estat: false,
-                
-                    }
-                
-                
-                },
-        
-        methods:{
+            let dades_ordenades=ref(dades.sort((a,b)=>a.nom.localeCompare(b.nom)))
+            let mida = ref("80")
+            let cerca=ref("")
+            let tipus=ref(["convencional","universitaria","internacional"])
+            let estat=ref(["activa","formacio","desapareguda"])
+            let seccions_tipus=ref(false)
+            let seccions_estat=ref(false)
+            let perfil_color=ref('default')
+            let escuts=ref(false)
+            let patrons=ref(false)
+            let icones_tipus=ref(true)
+            let icones_estat=ref(false)
+            let reRenderKey=ref(0)
             
-            ordenarNom(){
-                this.dades_ordenades.sort((a,b)=>a.nom.localeCompare(b.nom))
-                this.reRenderKey++
-            },
-            ordenarColor(){
-                this.dades_ordenades.sort((a,b)=>a.color_hsl[0] - b.color_hsl[0])
-                this.dades_ordenades.sort((a,b)=>(a.color_hsl[1]<=10) - (b.color_hsl[1]<=10))
-                this.reRenderKey++
-            },
-            ordenarColorLlum(){
-                this.dades_ordenades.sort((a,b)=>a.color_hsl[2] - b.color_hsl[2])
+            function ordenarNom(){
+                 dades_ordenades.value.sort((a,b)=>a.nom.localeCompare(b.nom))
+                 reRenderKey.value++
+            }
+            function ordenarColor(){
+                 dades_ordenades.value.sort((a,b)=>a.color_hsl[0] - b.color_hsl[0])
+                 dades_ordenades.value.sort((a,b)=>(a.color_hsl[1]<=10) - (b.color_hsl[1]<=10))
+                 reRenderKey.value++
+            }
+
+            function ordenarColorLlum(){
+                 dades_ordenades.value.sort((a,b)=>a.color_hsl[2] - b.color_hsl[2])
                 let step=360/15
                 for(let i=0;(step)*i<=360;i++){
-                    this.dades_ordenades.sort((a,b)=>(a.color_hsl[0]<=step*(i+1)&&a.color_hsl[0]>=step*i) - (b.color_hsl[0]<=step*(i+1)&&a.color_hsl[0]>=step*i))
+                     dades_ordenades.value.sort((a,b)=>(a.color_hsl[0]<=step*(i+1)&&a.color_hsl[0]>=step*i) - (b.color_hsl[0]<=step*(i+1)&&a.color_hsl[0]>=step*i))
                     
                 }
-                this.dades_ordenades.sort((a,b)=>(a.color_hsl[1]<=10) - (b.color_hsl[1]<=10))
-                this.reRenderKey++
-            },
-            ordenarLlum(){
-                this.dades_ordenades.sort((a,b)=>a.color_hsl[2] - b.color_hsl[2])
-                this.reRenderKey++
-            },
-            ordenarNomColor(){
-                this.dades_ordenades.sort((a,b)=>a.color_camisa.localeCompare(b.color_camisa))
-                this.reRenderKey++
-            },
-            ordenarFundacio(){
-                this.dades_ordenades.sort((a,b)=>(Number(a.fundacio)||0) - (Number(b.fundacio)||0))
-                this.reRenderKey++
-            },
-            
-            ordenar(event){
-                const ordre = event.target.value
+                 dades_ordenades.value.sort((a,b)=>(a.color_hsl[1]<=10) - (b.color_hsl[1]<=10))
+                 reRenderKey.value++
+            }
+
+            function ordenarLlum(){
+                 dades_ordenades.value.sort((a,b)=>a.color_hsl[2] - b.color_hsl[2])
+                 reRenderKey.value++
+            }
+
+            function ordenarNomColor(){
+                 dades_ordenades.value.sort((a,b)=>a.color_camisa.localeCompare(b.color_camisa))
+                 reRenderKey.value++
+            }
+            function ordenarFundacio(){
+                 dades_ordenades.value.sort((a,b)=>(Number(a.fundacio)||0) - (Number(b.fundacio)||0))
+                 reRenderKey.value++
+            }
+
+            function ordenar(ordre){
+                
                 console.log(ordre)
+                
                 if (ordre=="nom"){
-                    this.ordenarNom()
+                    ordenarNom()
                 }
                 if (ordre=="color"){
-                    this.ordenarColor()
+                   ordenarColor()
                 }
                 if (ordre=="colorllum"){
-                    this.ordenarColorLlum()
+                    ordenarColorLlum()
                 }
                 if (ordre=="nomcolor"){
-                    this.ordenarNomColor()
+                    ordenarNomColor()
                 }
                 if (ordre=="llum"){
-                    this.ordenarLlum()
+                    ordenarLlum()
                 }
                 if (ordre=="fundacio"){
-                    this.ordenarFundacio()     
+                    ordenarFundacio()     
                 }
                 if (ordre=="default"){
                     
-                    this.dades_ordenades=[...this.dades]        
+                    dades_ordenades.value=[...dades]        
                         }
-            },
-            
+            }
 
-        },
-        created(){
+            //Altres
+            let desplegar=ref(false)
+            function MesOpcions(){
+                desplegar.value=!desplegar.value
+            }
+            return{
+                desplegar,
+                MesOpcions,
+
+                
+                dades,
+                dades_ordenades,
+                mida,
+                cerca,
+                tipus,
+                estat,
+                seccions_tipus,
+                seccions_estat,
+                perfil_color,
+                escuts,
+                patrons,
+                icones_tipus,
+                icones_estat,
+                ordenar,
+                reRenderKey
+
+            }
+
             
-            this.dades_ordenades=[...this.dades]
-            this.ordenarNom()
-            },
+        }
             }
 </script>
 

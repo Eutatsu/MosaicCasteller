@@ -1,6 +1,7 @@
 <template>
-    <font-awesome-icon v-if="dada=='tipus'"
-    class="opacity-50"
+    <span v-if="dada=='tipus'">
+    <font-awesome-icon
+    class="opacity-50 hover:opacity-70"
     :title="
     colla.tipus=='convencional'?'Colla Convencional':
     colla.tipus=='universitaria'?'Colla Universitaria':
@@ -13,9 +14,12 @@
     colla.tipus=='internacional'?['fas', 'earth-americas']:
     {}
     "/>
-
-    <font-awesome-icon v-else-if="dada=='estat'"
-    class="opacity-50"
+    <tippy v-if="tippy==true"  to="parent" placement="top" trigger="click focusin" theme="light" content-tag="div" content-class="w-fit p-2 rounded-sm text-center" >
+        Colla {{ formatDada(colla.tipus) }}</tippy>
+    </span>
+<span v-else-if="dada=='estat'">
+    <font-awesome-icon
+    class="opacity-50 hover:opacity-70"
     :title="
     colla.estat=='activa'?'Colla Activa':
     colla.estat=='formacio'?'Colla en Formació':
@@ -28,6 +32,9 @@
     colla.estat=='desapareguda'?['fas', 'cross']:
     {}
     "/>
+    <tippy v-if="tippy==true" to="parent" placement="top" trigger="click focusin" theme="light" content-tag="div" content-class="w-fit p-2 rounded-sm text-center" >
+        Colla {{ formatDada(colla.estat) }}</tippy>
+    </span>
 </template>
 
 <script>
@@ -42,6 +49,30 @@ export default{
             type: String,
             required: true,
             default:'tipus'
+        },
+        tippy:{
+            type:Boolean,
+            required:false,
+            default:true
+        }
+    },
+    setup(){
+        function formatDada(estat){
+            const mapaFormats={
+                //Tipus
+                convencional:"convencional",
+                universitaria:"universitària",
+                internacional:"internacional",
+
+                //Estats
+                activa:"activa",
+                formacio:"en formació",
+                desapareguda:"desapareguda"
+            };
+            return mapaFormats[estat]|| "Desconegut"
+        }
+        return{
+            formatDada
         }
     }
 }

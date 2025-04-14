@@ -1,34 +1,34 @@
 <template>
-    <div class=" mx-auto max-w-screen-lg flex flex-col justify-center h-full min-h-[80vh]">
+    <div class=" mx-auto max-w-screen-lg flex flex-col justify-center h-full min-h-[80vh] px-2 md:px-0 items-center">
         <div class="w-full justify-self-start mt-4"><img :src=TrobaCollaLogo width="40%" class="mx-auto">
             <div class="text-center mt-8"><p>L'enigma casteller inspirat en el clàssic modern <a class="text-red-600 hover:text-red-400 underline" 
                 href="https://www.nytimes.com/games/wordle/index.html"
                 target="blank">Wordle!</a> (o <a class="text-red-600 hover:text-red-400 underline" 
                 href="https://jocs.ara.cat/trobamot"
-                target="blank">Trobamot!</a>)</p>
+                target="blank">Trobamot</a>)</p>
             <p>Selecciona una colla de la llista per començar a endevinar!</p></div>
         </div>
        
-        <div class=" flex flex-col justify-center h-full">
-            <div class="flex justify-center gap-2 mb-1 text-center font-bold text-white">
-            <div class="hidden md:flex w-24 bg-red-600 rounded-sm flex items-center justify-center drop-shadow hover:drop-shadow-lg">
-                Colla
-            </div>
-            <div class="w-16 md:w-24 text-sm md:text-base bg-red-600 rounded-sm flex items-center justify-center drop-shadow hover:drop-shadow-lg">
-                Camisa
-            </div>
-            <div class="w-16 md:w-24 bg-red-600 text-sm md:text-base rounded-sm flex items-center justify-center drop-shadow hover:drop-shadow-lg">
-                Fundació
-            </div>
-            <div class="w-16 md:w-24 bg-red-600 text-sm md:text-base rounded-sm flex items-center justify-center drop-shadow hover:drop-shadow-lg">
-                Tipus
-            </div>
-            <div class="w-16 md:w-24 bg-red-600 text-sm md:text-base rounded-sm flex items-center justify-center drop-shadow hover:drop-shadow-lg">
-                Estat
-            </div>
-            <div class="w-16 md:w-24  bg-red-600 text-sm md:text-base rounded-sm flex items-center justify-center drop-shadow hover:drop-shadow-lg">
-                Població
-            </div>
+        <div class=" flex flex-col justify-center h-full w-full md:max-w-screen-sm">
+            <div class="flex justify-center gap-2 px-2 mb-1 text-center font-bold text-white">
+                <div class="hidden md:flex flex-1  bg-red-600 rounded-sm flex items-center justify-center drop-shadow hover:drop-shadow-lg">
+                    Colla
+                </div>
+                <div class="flex-1 text-sm md:text-base bg-red-600 rounded-sm flex items-center justify-center drop-shadow hover:drop-shadow-lg">
+                    Camisa
+                </div>
+                <div class="flex-1  bg-red-600 text-sm md:text-base rounded-sm flex items-center justify-center drop-shadow hover:drop-shadow-lg">
+                    Fundació
+                </div>
+                <div class="flex-1  bg-red-600 text-sm md:text-base rounded-sm flex items-center justify-center drop-shadow hover:drop-shadow-lg">
+                    Tipus
+                </div>
+                <div class="flex-1  bg-red-600 text-sm md:text-base rounded-sm flex items-center justify-center drop-shadow hover:drop-shadow-lg">
+                    Estat
+                </div>
+                <div class="flex-1  bg-red-600 text-sm md:text-base rounded-sm flex items-center justify-center drop-shadow hover:drop-shadow-lg">
+                    Població
+                </div>
         </div>
         <FilaEnigma v-if="intents.length==0"/>
         <FilaEnigma  v-for="(colla,index) in intents" :key="index" :colla="colla" :solucio="solucio"/>
@@ -60,7 +60,11 @@
                  v-for="(colla,index) in filtrarDades(cerca)" :key="index"
                 @mousedown.prevent="selecciona(colla)"
                > <div :style="{backgroundColor:colla.codi_color}" class="aspect-square h-5 border-solid border border-1 mr-1"></div>
-               {{ colla.nom }}<span class="font-normal text-sm ml-2">{{colla.localitat}} / {{ colla.fundacio }} / <IcoTipEst  :key=reRenderKey :colla="colla" dada="tipus" class=""/> / <IcoTipEst :key=reRenderKey :colla="colla" dada="estat" class=""/></span></li>
+               <div class="flex flex-col md:flex-row md:items-center ">
+               <span>{{ colla.nom }}</span>
+               <span class="font-normal text-sm mr-2 md:ml-2">{{colla.localitat}} / {{ colla.fundacio }} / 
+                <IcoTipEst :tippy=false :key="'estat'+colla.id" :colla="colla" dada="tipus" class=""/> / <IcoTipEst :tippy=false :key="'estat'+colla.id" :colla="colla" dada="estat" class=""/></span>
+            </div></li>
             </ul>
         </div>
         </div>
@@ -86,11 +90,11 @@ export default{
     setup(){
 
         const dades = inject('dades')
-        let solucio = dades[Math.floor(Math.random()*dades.length)]
+        let solucio = ref(dades[Math.floor(Math.random()*dades.length)])
         let seleccio=ref("")
         let cerca=ref("")
-        let intents=ref([])
         let obreLlista=ref(false)
+        let intents=ref([])
         let error=ref(false)
 
         function selecciona(colla){
@@ -98,8 +102,8 @@ export default{
             cerca.value=colla.nom
             seleccio.value=colla
         }
-            dades.sort((a,b)=>a.nom.localeCompare(b.nom))
-    
+        dades.sort((a,b)=>a.nom.localeCompare(b.nom))
+        
 
         function endevina(colla){
             if(seleccio.value!==""){
@@ -116,34 +120,37 @@ export default{
 
         function correcte(){
             if(intents.value.length!==0){
-            if(intents.value[intents.value.length-1].id==solucio.id){
+            if(intents.value[intents.value.length-1].id==solucio.value.id){
             return true}
             else{
                 return false
             }}
         }
         function reinicia(){
+            
+            solucio.value = dades[Math.floor(Math.random()*dades.length)]
              intents.value = []
-             solucio.value = dades[Math.floor(Math.random()*dades.length)]
     }
+
+    function eliminarAccents(str){
+            return String(str).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            }
 
         function filtrarDades(cerca){
             let filtrat=dades.filter(colla=>
                 eliminarAccents(colla.nom|| "").includes(eliminarAccents(cerca)) ||
                 eliminarAccents(colla.color_camisa|| "").includes(eliminarAccents(cerca)) ||
                 eliminarAccents(colla.localitat || "").includes(eliminarAccents(cerca))||
-                eliminarAccents(colla.fundacio || "").includes(eliminarAccents(cerca))
+                eliminarAccents(colla.fundacio || "").includes(eliminarAccents(cerca))||
+                eliminarAccents(colla.tipus || "").includes(eliminarAccents(cerca))||
+                eliminarAccents(colla.estat || "").includes(eliminarAccents(cerca))
                 
             )
-            this.reRenderKey++
             return filtrat
             
         }
         
-        function  eliminarAccents(str){
-            return String(str).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-            }
-
+      
         return{dades,
             solucio,
             cerca,

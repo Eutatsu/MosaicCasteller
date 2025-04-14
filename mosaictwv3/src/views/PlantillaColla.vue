@@ -1,7 +1,10 @@
  <template>
     <div>
         <div class="w-full" :class="colla.color_hsl[2]>=50?'text-black':'text-white'" :style=" colla.codi_color!=='#ffffff'?{backgroundColor: colla.codi_color}:{backgroundColor:'#e0e0e0'}">
-           
+            <div class="max-w-screen-lg mx-auto py-4 flex gap-4 items-center">
+                <span class="hover:underline"><router-link to="/colles">Colles</router-link>
+                </span><span class="text-lg">></span>
+                <span class="hover:underline"><router-link :to="'/colles/'+colla.id" >{{ colla.nom }}</router-link></span></div>
             <div class="max-w-screen-lg mx-auto py-4 grid grid-cols-12">
                 
                 <div class="ml-2 aspect-square  col-span-6 md:col-span-3 mr-4" :class="!colla.xy_escut?.length&&colla.color_hsl[2]>=50?'brightness-0 opacity-50':{}" 
