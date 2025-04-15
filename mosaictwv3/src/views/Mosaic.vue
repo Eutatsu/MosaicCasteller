@@ -151,7 +151,7 @@
                 </div>
             </div>
         </div>
-        <div class="mx-auto">  
+        <div class="mx-auto mb-8">  
             <div v-if="seccions_tipus==true && seccions_estat==false">
                 <div  v-if="tipus.includes('convencional')">
                 <MosaicRenderer

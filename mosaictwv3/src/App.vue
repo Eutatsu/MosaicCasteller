@@ -49,9 +49,9 @@
   </main>
     <footer class="bg-red-600 w-full">
       <div class="flex justify-center justify-between p-5 mx-auto max-w-screen-xl text-white text-center gap-4">
-        <div class="hidden md:block md:flex-1"></div>
-        <div class="flex-1"><h3 class="text-sm">Creat per:</h3>
-          <a href="https://linktr.ee/eutatsu" ><img :src=LogoEutatsu width="100%" class="mx-auto w-12 mt-2 opacity-80 hover:opacity-100" alt="Enllaços Eutatsu"></a>
+        <!--<div class="hidden md:block md:flex-1"></div>-->
+        <div class="flex-1 justify-center flex flex-col items-center"><h3 class="text-sm">Creat per:</h3>
+         <a href="https://linktr.ee/eutatsu" class="mx-auto justify-center mt-2"><img :src=LogoEutatsu width="100%" class="w-12 opacity-80 hover:opacity-100" alt="Enllaços Eutatsu"></a>
           <p><strong>Eudald Cardozo i Vallhonrat</strong></p>
           <a href="https://linktr.ee/eutatsu" class="opacity-80 hover:opacity-100 hover:underline" >@eutatsu</a>
           <div class="text-2xl flex gap-2 justify-center mt-2">
