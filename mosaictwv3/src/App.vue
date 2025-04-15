@@ -49,9 +49,10 @@
   </main>
     <footer class="bg-red-600 w-full">
       <div class="flex justify-center justify-between p-5 mx-auto max-w-screen-xl text-white text-center gap-4">
+        <div class="hidden md:block md:flex-1"></div>
         <div class="flex-1"><h3 class="text-sm">Creat per:</h3>
           <a href="https://linktr.ee/eutatsu" ><img :src=LogoEutatsu width="100%" class="mx-auto w-12 mt-2 opacity-80 hover:opacity-100" alt="Enllaços Eutatsu"></a>
-          <p><strong>Eudald Cardozo Vallhonrat</strong></p>
+          <p><strong>Eudald Cardozo i Vallhonrat</strong></p>
           <a href="https://linktr.ee/eutatsu" class="opacity-80 hover:opacity-100 hover:underline" >@eutatsu</a>
           <div class="text-2xl flex gap-2 justify-center mt-2">
             <a href="mailto:eudald.ca.va@gmail.com" target="blank" class="opacity-80 hover:opacity-100 "><font-awesome-icon :icon="['fas','envelope']"/></a>
@@ -60,15 +61,18 @@
             <a href="https://instagram.com/eutatsu" target="blank" class="opacity-80 hover:opacity-100 "><font-awesome-icon :icon="['fab','instagram']"/></a>
             <a href="https://x.com/eutatsu" target="blank" class="opacity-80 hover:opacity-100 "><font-awesome-icon :icon="['fab','twitter']"/></a>
           </div>
-        </div><!--
-        <div class="col-span-1 flex flex-col"><h3 class="text-base">Informació extreta de:</h3>
-          <ul class="text-sm flex flex-col">
+        </div>
+        <!--
+        <div class="flex-1"><h3 class="text-sm mb-2">Origen de les dades:</h3>
+          <ul class="text-sm flex flex-col justify-center items-center mx-auto gap-2">
           <a class="hover:underline hover:bg-red-500" href="https://ca.wikipedia.org/wiki/Llista_de_colles_castelleres" target="blank">ca.wikipedia.org</a>
           <a class="hover:underline hover:bg-red-500" href="https://castellscat.cat/ca/les-colles-llistat" target="blank">castellscat.cat</a>
-          <a class="hover:underline hover:bg-red-500" href="http://www.portalcasteller.cat/v2/colles/" target="blank">portalcasteller.cat</a>
           <a class="hover:underline hover:bg-red-500" href="https://sigac.cat/colles" target="blank">sigac.cat</a>
+          <a class="hover:underline hover:bg-red-500" href="http://www.portalcasteller.cat/v2/colles/" target="blank">portalcasteller.cat</a>
+          <a class="hover:underline hover:bg-red-500" href="https://castell.manies.cat" target="blank">castell.manies.cat</a>
+          <p>Més informació a: <router-link class="hover:underline font-bold" to="/about">Sobre el mosaic</router-link></p>
         </ul>
-        </div>-->
+      </div>-->
        <!-- <div class="col-span-1"><h3 class="text-base">Pàgines:</h3> <ul class="flex flex-col md:items-center text-sm text-white mt-3 md:mt-0">
           <router-link v-for="(page,index) in pages" :key="index"  @click="ObrirNav()" :to="page.link" class="group hover:bg-red-500" ><li class="py-1 px-3 "><button class="group-hover:underline ">{{page.name}}</button></li></router-link>
           

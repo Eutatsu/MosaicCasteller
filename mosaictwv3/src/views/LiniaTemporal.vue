@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <div class="mx-auto px-2 max-w-screen-2xl h-full ">
+    <div class="mx-auto px-2 max-w-screen-2xl h-[80vh] ">
        
         
       
@@ -33,26 +33,26 @@
                     <label class="absolute text-center text-xs" :style="{left:calculActivitat(2025,null).inici-0.8+'%'}">2025</label>
                 </div>
                 <div class="h-0">
-                    <div class="absolute w-0 border border-gray-400/50 border-1 h-[51vh] z-[999]" :style="{left:calculActivitat(1800,null).inici+'%'}"></div>
+                    <div class="absolute w-0 border border-gray-400/50 border-1 h-[71vh] z-[999]" :style="{left:calculActivitat(1800,null).inici+'%'}"></div>
                 </div>
                 <div class="h-0">
-                   <div class="absolute w-0 border border-gray-400/50 border-1 h-[51vh] z-[999]" :style="{left:calculActivitat(1900,null).inici+'%'}"></div>
+                   <div class="absolute w-0 border border-gray-400/50 border-1 h-[71vh] z-[999]" :style="{left:calculActivitat(1900,null).inici+'%'}"></div>
                 </div>
                 <div class="h-0">
-                  <div class="absolute w-0 border border-gray-400/50 border-1 h-[51vh] z-[999]" :style="{left:calculActivitat(2000,null).inici+'%'}"></div>
+                  <div class="absolute w-0 border border-gray-400/50 border-1 h-[71vh] z-[999]" :style="{left:calculActivitat(2000,null).inici+'%'}"></div>
                 </div>
                 <div class="h-0">
-                  <div class="absolute w-0 border border-gray-400/50 border-1 h-[51vh] z-[999]" :style="{left:calculActivitat(2025,null).inici+'%'}"></div>
+                  <div class="absolute w-0 border border-gray-400/50 border-1 h-[71vh] z-[999]" :style="{left:calculActivitat(2025,null).inici+'%'}"></div>
                 </div>
                 <div class="opacity-20 h-0">
                 <div v-for="(colla,index) in filtrarDades(cerca)" :key="index"
-                class="absolute w-0 border-gray-400 border-l-[1px] h-[51vh] z-[999]" 
+                class="absolute w-0 border-gray-400 border-l-[1px] h-[71vh] z-[999]" 
                 :style="{left:calculActivitat(colla.fundacio,colla.desaparicio).inici+'%'}"></div>
             </div>
             </div>
         </div>
 
-       <div class="grid grid-cols-1 gap-1 my-1 overflow-y-auto  h-[50vh] pr-4">
+       <div class="grid grid-cols-1 gap-1 my-1 overflow-y-auto  h-[70vh] pr-4">
         
         
         <div v-for="(colla,index) in filtrarDades(cerca)" :key="index" class="relative cols-span-1 inline-flex items-center h-4 bg-gray-200 flex hover:bg-gray-300 rounded-sm"  >

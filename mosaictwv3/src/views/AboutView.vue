@@ -8,7 +8,7 @@
      <p> El Mosaic agrupa totes aquestes identitats en una obra que representa la totalitat del panorama i la historia del món casteller, utilitzant diferents visualitzacions amb les que l’usuari pot interactuar, jugar i aprendre sobre les colles.
      </p>
   <h3  class="text-lg font-bold text-red-600">Investigació</h3>
-    <p>Al Mosaic s’inclouen més de 170 colles, aquelles autòctones de municipis dels països catalans, les potents colles universitàries, i les que s’han establert fora de la nació d’origen dels castells. <br>
+    <p>Aquest projecte inclou més de 170 colles, aquelles autòctones de municipis dels països catalans, les potents colles universitàries, i les que s’han establert fora de la nació d’origen dels castells. <br>
       Apareixen també colles històriques, aquelles que durant la historia castellera han desaparegut, s’han reformat en colles noves, o han patit escissions.</p>
     <p>La llista de colles incloses te varies fonts. Principalment, la llista de membres en ple dret de la 
       <a class="text-red-600 hover:text-red-400 underline" href="https://castellscat.cat/ca/les-colles-llistat" target="blank">Coordinadora de les Colles Castelleres de Catalunya</a>
@@ -43,7 +43,7 @@
 
     <h3  class="text-lg font-bold text-red-600 mt-2">Eudald Cardozo i Vallhonrat</h3>
       <p>Soc estudiant de Disseny Digital i Tecnologies Creatives a la Universitat de Lleida.<br>
-        Tot i ser de sang <SpanColla colla="minyons_de_terrassa" text="Minyona"/>, el meu interès profund pel món casteller no va arribar fins que vaig apuntar-me a <SpanColla colla="los_marracos_de_la_udl"/> a l’entrar a la Universitat. 
+        Tot i ser de sang <SpanColla colla="minyons_de_terrassa" text="minyona"/>, el meu interès profund pel món casteller no va arribar fins que vaig apuntar-me a <SpanColla colla="los_marracos_de_la_udl"/> a l’entrar a la Universitat. 
         Combinant aquesta afició amb la meva línia de treball, ganes d’augmentar habilitats i compartir les meves idees amb el món, estic desenvolupant aquesta pàgina, que va començar com a un simple treball de classe.</p>
     <p>Mica en mica vaig construint un portal actualitzat i modern on trobar tota la informació sobre colles castelleres. <br>
       L’abast real del projecte encara està per definir, però penso que la Viquipèdia ja se’ns queda petita per a un món casteller en expansió.</p>
