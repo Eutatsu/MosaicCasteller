@@ -1,41 +1,62 @@
 <template>
-  <div class="max-w-screen-lg mx-auto my-2 px-3 md:px-0">
-  <h2 class="text-2xl text-center">Sobre el Mosaic</h2>
-    <p class="text-left py-2">El Mosaic Casteller és un experiment visual que recull dades sobre les diferents Colles Castelleres de Catalunya i més enllà, tant les actualment actives com les que han desaparegut per una raó o altra.
-    Cada colla està representada per una tessel·la del color de la seva camisa. <br>
-    La camisa d'un casteller és l'element principal de la seva identitat castellera, cada membre de la colla se sent unit amb els seus companys a través del color de la camisa.
-    El Mosaic és una recopilació de totes aquestes identitats, unint-les en una obra que representa la totalitat del món casteller, i permetent a l'usuari jugar amb els colors i aprendre sobre les colles.
+  <div class="max-w-screen-md mx-auto my-6 px-4 md:px-0 text-left flex flex-col gap-3">
+  <h2 class="text-xl font-bold text-red-600">Sobre el Mosaic</h2>
+    <p>El Mosaic Casteller comença com a un experiment visual, com una manera de visualitzar el món casteller d'una sola mirada.<br>
+      En ell es recullen les dades de totes Colles Castelleres del present, del passat, de Catalunya i de fora de l’àmbit Cultural Català. </p>
+      <p>Cada colla està representada per una tessel·la del color de la seva camisa. <br>
+        La camisa d’un casteller el seu principal símbol d’identitat, els integrants d’una colla se senten units amb els seus companys a través del color que vesteixen.</p>
+     <p> El Mosaic agrupa totes aquestes identitats en una obra que representa la totalitat del panorama i la historia del món casteller, utilitzant diferents visualitzacions amb les que l’usuari pot interactuar, jugar i aprendre sobre les colles.
+     </p>
+  <h3  class="text-lg font-bold text-red-600">Investigació</h3>
+    <p>Al Mosaic s’inclouen més de 170 colles, aquelles autòctones de municipis dels països catalans, les potents colles universitàries, i les que s’han establert fora de la nació d’origen dels castells. <br>
+      Apareixen també colles històriques, aquelles que durant la historia castellera han desaparegut, s’han reformat en colles noves, o han patit escissions.</p>
+    <p>La llista de colles incloses te varies fonts. Principalment, la llista de membres en ple dret de la 
+      <a class="text-red-600 hover:text-red-400 underline" href="https://castellscat.cat/ca/les-colles-llistat" target="blank">Coordinadora de les Colles Castelleres de Catalunya</a>
+       i la <a class="text-red-600 hover:text-red-400  underline" href="https://castellscat.cat/ca/base-de-dades" target="blank">Base de Dades </a>d'aquesta, 
+       en la que apareixen també les no-mebres i les històriques.<br>
+       També s'han referenciat projectes de catalogació similars com <a class="text-red-600 hover:text-red-400  underline" href="https://castell.manies.cat" target="blank">castell.manies.cat</a>, 
+    el <a class="text-red-600 hover:text-red-400  underline" href="https://sigac.cat" target="blank">SiGAC</a>, 
+    <a class="text-red-600 hover:text-red-400  underline" href="https://portalcasteller.cat" target="blank">Portal Casteller</a> o l'article
+    <a class="text-red-600 hover:text-red-400  underline" href="https://ca.wikipedia.org/wiki/Llista_de_colles_castelleres" target="_blank" rel="noopener noreferrer">Llista de Colles Castelleres</a> de Viquipèdia.
     </p>
-  <h3  class="text-xl text-center">Investigació</h3>
-    <p class="text-left  py-2">
-    Al mosaic s'inclouen més de 150 colles, des de les colles convencionals de municipis catalans actuals fins a colles internacionals desaparegudes anys enrere.
-    La llista de colles s'ha extret de la <a class="text-red-600 hover:text-red-400 font-bold underline" href="https://ca.wikipedia.org/wiki/Llista_de_colles_castelleres" target="_blank" rel="noopener noreferrer">Llista de Colles Castelleres</a> de Viquipèdia, per tant, s'han inclòs colles de les quals no es té completa certesa de tots els seus detalls o de la fiabilitat de la informació, és per això que aquest projecte
-    ha esdevingut també una tasca de recerca i investigació.</p>
-    <p class="text-left  py-2">
-    La succinta vigència d'algunes de les colles esmentades a la llista fa que trobar documentació o qualsevol mena de material sigui tot un treball arqueològic.
-    És per això que al peu de la pàgina apareixen totes les colles de les quals no s'ha trobat una referència precisa del color, o en casos ni tan sols el nom amb el que es referia a aquest.
-    Aquests requadres provisionals omplen buits i demanen ser pintats amb el color que els pertoca, completar el Mosaic presenta un emocionant repte, recopilar tota la informació necessària per poder completar el puzle i admirar el quadre sencer del món casteller.
-    </p>
-    <p class="text-left  py-2">
-    Un exemple d'investigació és el de California Kids, una colla internacional i universitària de la Universitat de Califòrnia, fundada entre el 2003 i el 2004 i desapareguda pocs anys després per incompliments amb els requisits de seguretat dels EUA.
-    Encara queden detalls que s'han de complementar sobre aquesta colla, com la data de dissolució o trobar una imatge de l'escut d'alta resolució, però rebuscant els anhels de
-    l'internet es pot trobar una antiga web dels <a class="text-red-600 hover:text-red-400 font-bold underline"  href="http://web.archive.org/web/20070906004806/http://www.california-kids.org:80/" target="_blank" rel="noopener noreferrer">California Kids arxivada</a>, d'on s'ha extret el color.
-
+    <p>Algunes d’aquestes colles posseeixen molt poca documentació, i la seva antiguitat o succinta vigència fa que completar-ne el perfil sigui tot un treball 
+      arqueològic. </p>
+    <p>
+      Al peu de la pàgina d’inici apareixen les colles de les que encara no es te una referencia prou precisa del color. Aquests requadres provisionals demanen 
+      a crits ser pintats amb la identitat que els pertoca, convertint el Mosaic en un emocionant puzle a completar, per poder observar la totalitat del mon 
+      casteller en colors. </p>
+    <p>
+      Aquest és un repte que vull plantejar a tot el món casteller, per tant animo a consultar la llista d’informació extraviada, i si tens qualsevol dada, per mínima que sigui, que contribuir al Mosaic, a fer-la arribar a 
+      <a class="text-red-600 hover:text-red-400 underline" href="mailto:eudald.ca.va@gmail.com" target="blank">eudald.ca.va.@gmail.com</a>.
     </p>
     
-  <div class="relative w-1/2 mx-auto" style="padding-top: 37.5%">
-  <iframe class="absolute inset-0 w-full h-full mx-auto" src="https://www.youtube.com/embed/T3IznB09Liw?si=SdwvPelo6eVzUzjg&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-    <br>
-  <h3 class="text-xl text-center"> Precisió de les dades</h3>
-    <p class="text-left  py-2">
-    En la majoria de casos, com ja s'ha esmentat, les dades, principalment el codi de color de cada colla, està extret del seu article de Viquipèdia, per a d'altres, però, s'han buscat publicacions i referències oficials d'on s'ha extret un color el més acurat possible.
-    Aquest pretendria ser un dels altres objectius del mosaic, servir com a base de dades on es puguin trobar codis i referències de colors precises per a cada colla.
-    <br> A la <a class="text-red-600 hover:text-red-400 font-bold underline"  href="https://castellscat.cat/ca/les-colles-llistat" target="_blank" rel="noopener noreferrer">web de la Coordinadora de les Colles Castelleres de Catalunya</a>, algunes colles, com per exemple Bordegassos de Vilanova, tenen estipulat el codi Pantone exacte del seu color de camisa, però d'altres simplement el descriuen com a "Blau".
-    Seria molt interessant poder llistar tots els colors de colles amb un sistema estandarditzat, per un element tan essencial de les colles com és la seva camisa identificativa, sovint l'ús d'aquest color en xarxes, cartells o inclòs en les camises mateixes, és inconsistent.
-    </p>
-    <p class="text-left  py-2">
-    Per ara, el Mosaic inclou només informació bàsica sobre cada colla, la visió, però, és poder reunir moltes més dades i complementar les funcions de la pàgina amb elles, de manera que es converteixi en un base de dades i un punt de referència del món casteller.
-  </p>
+  <h3  class="text-lg font-bold text-red-600 mt-2">Investigació</h3>
+    <p>
+      L’origen del codi de color de la majoria de colles és del seu article de Viquipèdia, cosa que fa que la seva fiabilitat es pugui posar en dubte. D’altres estan extrets de llocs web o publicacions oficials.  </p>
+    <p>
+      Un altre dels objectius del Mosaic Casteller és augmentar la estandardització de les identitats castelleres, i servir com a punt de referencia on trobar dades 
+      precises sobre el color de cada una. A la web de la <a class="text-red-600 hover:text-red-400 underline" href="https://castellscat.cat/ca/les-colles-llistat" target="blank">CCCC</a>, hi ha colles, com és l’exemple de <SpanColla colla="bordegassos_de_vilanova" text="Bordegassos" />, que tenen estipulat un codi Pantone precís del seu color 
+      Groc Terrós, la gran majoria, però, nomes presenten un nom genèric com “Blau”.</p>
+      <p>Altres fonts, com el <a class="text-red-600 hover:text-red-400  underline" href="https://barometreestrella.blogspot.com" target="blank">Baròmetre</a>
+      o <a class="text-red-600 hover:text-red-400  underline" href="https://portalcasteller.cat" target="blank">Portal Casteller</a>, fan servir colors genèrics que no mostren de manera precisa el color identificatiu de cada colla.</p>
+      <p>Per un símbol tant essencial per les colles com es la seva camisa, sovint l'ús d'aquest color en xarxes, cartells o inclòs en les pròpies camises, és inconsistent.</p>
+
+    <h3  class="text-lg font-bold text-red-600 mt-2">Eudald Cardozo i Vallhonrat</h3>
+      <p>Soc estudiant de Disseny Digital i Tecnologies Creatives a la Universitat de Lleida.<br>
+        Tot i ser de sang <SpanColla colla="minyons_de_terrassa" text="Minyona"/>, el meu interès profund pel món casteller no va arribar fins que vaig apuntar-me a <SpanColla colla="los_marracos_de_la_udl"/> a l’entrar a la Universitat. 
+        Combinant aquesta afició amb la meva línia de treball, ganes d’augmentar habilitats i compartir les meves idees amb el món, estic desenvolupant aquesta pàgina, que va començar com a un simple treball de classe.</p>
+    <p>Mica en mica vaig construint un portal actualitzat i modern on trobar tota la informació sobre colles castelleres. <br>
+      L’abast real del projecte encara està per definir, però penso que la Viquipèdia ja se’ns queda petita per a un món casteller en expansió.</p>
   </div>
 </template>
+
+<script>
+import SpanColla from '@/components/SpanColla.vue';
+
+export default({
+  components:{
+    SpanColla
+  }
+})
+
+</script>

@@ -56,7 +56,7 @@
         
         
         <div v-for="(colla,index) in filtrarDades(cerca)" :key="index" class="relative cols-span-1 inline-flex items-center h-4 bg-gray-200 flex hover:bg-gray-300 rounded-sm"  >
-           
+           <!--
             <div v-if="succesores.includes(colla.id)" class="h-full">
                 <div v-for="(collaS,index) in muntarSuccesores(succesores)" :key="index"  class="absolute rounded-sm h-full justify-right inline-flex items-start text-xs text-nowrap font-bold text-white gap-2" 
             :style="{
@@ -73,8 +73,8 @@
             </tippy>
             </div>
             </div>
-
-           <div v-else class="absolute rounded-sm h-full justify-right inline-flex items-start text-xs text-nowrap font-bold text-white gap-2" 
+-->
+           <div class="transition-all absolute rounded-sm h-full justify-right inline-flex items-start text-xs text-nowrap font-bold text-white gap-2" 
             :style="{
             left:calculActivitat(colla.fundacio,colla.desaparicio).inici+'%', 
             width:calculActivitat(colla.fundacio,colla.desaparicio).activitat+'%',

@@ -25,7 +25,7 @@
                             inline-flex 
                             flex-nowrap 
                             items-center 
-                            rounded-sm 
+                            rounded-sm  
                             border-solid 
                             bg-gray-200 
                             border-2 p-1 

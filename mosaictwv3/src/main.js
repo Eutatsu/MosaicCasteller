@@ -28,13 +28,14 @@ import { faCross } from '@fortawesome/free-solid-svg-icons'
 import { faCheck }  from '@fortawesome/free-solid-svg-icons'
 import { faChevronDown }  from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope }  from '@fortawesome/free-solid-svg-icons'
+import { faLink }  from '@fortawesome/free-solid-svg-icons'
 
 
 import { faWikipediaW } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faEnvelope,faInstagram,faAddressCard, faChevronDown, faCheck, faFire, faSeedling, faGlobe, faWikipediaW, faTwitter,faEye,faBars,faEarthAmericas,faGraduationCap,faCross,faHouse)
+library.add(faLink, faEnvelope,faInstagram,faAddressCard, faChevronDown, faCheck, faFire, faSeedling, faGlobe, faWikipediaW, faTwitter,faEye,faBars,faEarthAmericas,faGraduationCap,faCross,faHouse)
 const app = createApp(App)
 
 app.component('font-awesome-icon', FontAwesomeIcon)

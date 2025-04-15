@@ -48,16 +48,19 @@
     <router-view/>
   </main>
     <footer class="bg-red-600 w-full">
-      <div class="grid md:grid-cols-3 grid-cols-1  justify-between p-5 mx-auto max-w-screen-xl text-white text-center gap-4">
-        <div class="col-span-1"><h3 class="text-lg">Creat per:</h3>
-          <p>Eudald Cardozo Vallhonrat</p>
-          <a href="https://instagram.com/eutatsu">@eutatsu</a>
-          <div class="text-2xl opacity-70 flex gap-2 justify-center mt-2">
-            <a href="https://eudald.ca.va@gmail.com" target="blank"><font-awesome-icon :icon="['fas','envelope']"/></a>
-            <a href="https://instagram.com/eutatsu" target="blank"><font-awesome-icon :icon="['fab','instagram']"/></a>
-            <a href="https://x.com/eutatsu" target="blank"><font-awesome-icon :icon="['fab','twitter']"/></a>
+      <div class="flex justify-center justify-between p-5 mx-auto max-w-screen-xl text-white text-center gap-4">
+        <div class="flex-1"><h3 class="text-sm">Creat per:</h3>
+          <a href="https://linktr.ee/eutatsu" ><img :src=LogoEutatsu width="100%" class="mx-auto w-12 mt-2 opacity-80 hover:opacity-100" alt="Enllaços Eutatsu"></a>
+          <p><strong>Eudald Cardozo Vallhonrat</strong></p>
+          <a href="https://linktr.ee/eutatsu" class="opacity-80 hover:opacity-100 hover:underline" >@eutatsu</a>
+          <div class="text-2xl flex gap-2 justify-center mt-2">
+            <a href="mailto:eudald.ca.va@gmail.com" target="blank" class="opacity-80 hover:opacity-100 "><font-awesome-icon :icon="['fas','envelope']"/></a>
+            
+            <a href="https://linktr.ee/eutatsu" target="blank" class="opacity-80 hover:opacity-100 "><font-awesome-icon :icon="['fas','link']"/></a>
+            <a href="https://instagram.com/eutatsu" target="blank" class="opacity-80 hover:opacity-100 "><font-awesome-icon :icon="['fab','instagram']"/></a>
+            <a href="https://x.com/eutatsu" target="blank" class="opacity-80 hover:opacity-100 "><font-awesome-icon :icon="['fab','twitter']"/></a>
           </div>
-        </div>
+        </div><!--
         <div class="col-span-1 flex flex-col"><h3 class="text-base">Informació extreta de:</h3>
           <ul class="text-sm flex flex-col">
           <a class="hover:underline hover:bg-red-500" href="https://ca.wikipedia.org/wiki/Llista_de_colles_castelleres" target="blank">ca.wikipedia.org</a>
@@ -65,7 +68,7 @@
           <a class="hover:underline hover:bg-red-500" href="http://www.portalcasteller.cat/v2/colles/" target="blank">portalcasteller.cat</a>
           <a class="hover:underline hover:bg-red-500" href="https://sigac.cat/colles" target="blank">sigac.cat</a>
         </ul>
-        </div>
+        </div>-->
        <!-- <div class="col-span-1"><h3 class="text-base">Pàgines:</h3> <ul class="flex flex-col md:items-center text-sm text-white mt-3 md:mt-0">
           <router-link v-for="(page,index) in pages" :key="index"  @click="ObrirNav()" :to="page.link" class="group hover:bg-red-500" ><li class="py-1 px-3 "><button class="group-hover:underline ">{{page.name}}</button></li></router-link>
           
@@ -77,6 +80,7 @@
 
 <script>
 import {ref} from '@vue/reactivity'
+import LogoEutatsu from '@/assets/logo_eutatsu.png'
 
 export default{
   setup(){
@@ -100,7 +104,8 @@ export default{
       ObrirNav,
       pages,
       desplegaJocs,
-      jocs
+      jocs,
+      LogoEutatsu
     }
   }
 }
