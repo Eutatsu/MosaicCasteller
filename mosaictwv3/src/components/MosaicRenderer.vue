@@ -49,16 +49,16 @@
         <div class="absolute flex flex-col h-full w-full justify-between items-end px-1 opacity-60 overflow-hidden"
         :class="midaIcones">
         <div v-if="icones_tipus==true" class="">
-            <IcoTipEst :colla="colla" dada="tipus" />
+            <IcoTipEst :colla="colla" dada="tipus"  :key=colla.id />
         </div>  
         
         <div v-if="(icones_estat==false&&nomes_desparegudes==true)&&colla.estat=='desapareguda'" class="h-full flex items-end" 
         >
-           <IcoTipEst :colla="colla" dada="estat" />
+           <IcoTipEst :key=colla.id  :colla="colla" dada="estat" />
         </div>
 
         <div v-if="icones_estat==true" class="h-full flex items-end" >
-           <IcoTipEst :colla="colla" dada="estat" />
+           <IcoTipEst :key=colla.id  :colla="colla" dada="estat" />
         </div>
         </div>
 

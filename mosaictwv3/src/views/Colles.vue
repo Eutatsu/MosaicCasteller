@@ -199,9 +199,11 @@
         <div><a class="" v-if="colla.web!==null" 
             :href="'https://'+colla.web" target="_blank" title="Lloc Web">
             <strong>Lloc Web: </strong><font-awesome-icon class="text-base" :icon="['fas','globe']"/></a></div>
+        
+            <div  v-for="(value,key) in colla"  :key=key ><p v-if="!ignoreKeys.includes(key)"><strong>{{key}}</strong>: {{ value }}</p>
+           
         </div>        
                 
-           <div  v-for="(value,key) in colla"  :key=key ><p v-if="!ignoreKeys.includes(key)"><strong>{{key}}</strong>: {{ value }}</p>
            
         </div>
     

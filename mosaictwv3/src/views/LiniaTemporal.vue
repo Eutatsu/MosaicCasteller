@@ -7,16 +7,92 @@
                     <div class="flex items-center  md:justify-end lg:col-span-8 md:col-span-7 col-span-12 justify-start ">
                     <label class="text-nowrap " for="ordena">Ordena per:</label>
                     <select id="ordena" @change="ordenar($event.target.value)" class="rounded-sm border-red-600 border-2 bg-white p-2 ml-2">
+                                     
+                        <option value="fundacio">Data de Fundacio</option>
                         <option value="nom">Nom</option>
                         <option value="color">Color</option>
                         <option value="nomcolor">Nom del Color</option>
                         <option value="llum">Lluminositat</option>
-                        <option value="colorllum">Llum i Color</option>                
-                        <option value="fundacio">Data de Fundacio</option>
+                        <option value="colorllum">Llum i Color</option>   
                     <!--<b-form-select-option value="default">Default</b-form-select-option>-->
                 </select>
             </div>
         </div>
+        <div class="col-span-6 grid grid-cols-12 justify-between items-center rounded-sm drop-shadow bg-white p-2">
+                    <div class="col-span-12 inline-flex gap-x-1 gap-y-2 items-start flex-wrap md:flex-row flex-col text-sm">
+                            <button  class="inline-flex items-center group md:flex-1 justify-right hover:bg-gray-200 hover:drop-shadow w-full" 
+                            
+                            v-for="value in ['convencional','universitaria','internacional']"
+                            :key="value"
+                            @click="toggleArray(tipus,value)"
+                            :value="value">
+                            <font-awesome-icon 
+                            class="
+                            drop-shadow
+                            text-lg 
+                            aspect-square 
+                            inline-flex 
+                            flex-nowrap 
+                            items-center 
+                            rounded-sm  
+                            border-solid 
+                            bg-gray-200 
+                            border-2 p-1 
+                            justify-center mr-1"
+                            :class="tipus.includes(value)?
+                            'border-red-600 group-hover:border-red-500 bg-red-600 border-solid border-2 text-white group-hover:border-red-500 group-hover:bg-red-500':
+                            'text-gray-500  group-hover:border-red-600'"  
+                            :icon="
+                            value=='convencional'?['fas', 'house']:
+                            value=='universitaria'?['fas', 'graduation-cap']:
+                            value=='internacional'?['fas', 'earth-americas']:
+                            {}
+                            "/>
+                            <span>{{formatBotons(value)}}</span>
+                            <font-awesome-icon v-if="tipus.includes(value)" :icon="['fas', 'check']" class="ml-1 text-white-600" /> 
+                            </button>
+                            
+                           
+                       
+                    </div>
+                    <div class="col-span-12 inline-flex gap-x-1 gap-y-2 items-start flex-wrap md:flex-row flex-col text-sm">
+
+                        <button  class="inline-flex items-center group md:flex-1 w-full justify-right hover:bg-gray-200 hover:drop-shadow" 
+                            
+                            v-for="value in ['activa','formacio','desapareguda']"
+                            :key="value"
+                            @click="toggleArray(estat,value)"
+                            :value="value">
+                            <font-awesome-icon 
+                            class="
+                            drop-shadow
+                            text-lg 
+                            aspect-square 
+                            inline-flex 
+                            flex-nowrap 
+                            items-center 
+                            rounded-sm 
+                            border-solid 
+                            bg-gray-200 
+                            border-2 p-1 
+                            justify-center mr-1"
+                            :class="estat.includes(value)?
+                            'border-red-600 group-hover:border-red-500 bg-red-600 border-solid border-2 text-white group-hover:border-red-500 group-hover:bg-red-500':
+                            'text-gray-500  group-hover:border-red-600'"  
+                            :icon="
+                            value=='activa'?['fas', 'fire']:
+                            value=='formacio'?['fas', 'seedling']:
+                            value=='desapareguda'?['fas', 'cross']:
+                            {}
+                            " />
+                            <span class="text-nowrap">{{formatBotons(value)}}</span>
+                            
+                            <font-awesome-icon v-if="estat.includes(value)" :icon="['fas', 'check']" class="ml-1 text-white-600" /> 
+                            </button>
+                            
+
+                        </div>
+                </div>
     </div>
     <div class="mx-auto px-2 max-w-screen-2xl h-[80vh] ">
        
@@ -52,11 +128,12 @@
             </div>
         </div>
 
-       <div class="grid grid-cols-1 gap-1 my-1 overflow-y-auto  h-[70vh] pr-4">
-        
-        
-        <div v-for="(colla,index) in filtrarDades(cerca)" :key="index" class="relative cols-span-1 inline-flex items-center h-4 bg-gray-200 flex hover:bg-gray-300 rounded-sm"  >
-           <!--
+
+        <div class="grid grid-cols-1 my-1 overflow-y-auto overflow-x-hidden h-[70vh] pr-4 content-start gap-1">
+        <Timeline v-for="(colla,index) in filtrarDades(cerca)" :key="index" :colla="colla" :origen="parseInt(origen)" class=""/>
+    
+       <!-- <div v-for="(colla,index) in filtrarDades(cerca)" :key="index" class="relative cols-span-1 inline-flex items-center h-4 bg-gray-200 flex hover:bg-gray-300 rounded-sm"  >
+           
             <div v-if="succesores.includes(colla.id)" class="h-full">
                 <div v-for="(collaS,index) in muntarSuccesores(succesores)" :key="index"  class="absolute rounded-sm h-full justify-right inline-flex items-start text-xs text-nowrap font-bold text-white gap-2" 
             :style="{
@@ -73,7 +150,6 @@
             </tippy>
             </div>
             </div>
--->
            <div class="transition-all absolute rounded-sm h-full justify-right inline-flex items-start text-xs text-nowrap font-bold text-white gap-2" 
             :style="{
             left:calculActivitat(colla.fundacio,colla.desaparicio).inici+'%', 
@@ -85,7 +161,7 @@
                 <span  class="drop-shadow"
                >{{ colla.nom }}</span>
             </div>
-<!--
+
             <div class="absolute rounded-sm justify-right inline-flex items-start text-xs text-nowrap font-bold text-white gap-2" 
             :style="{
             left:calculActivitat( filtrarDades(cerca)[5].fundacio,filtrarDades(cerca)[5].desaparicio).inici+'%', 
@@ -96,11 +172,11 @@
             {backgroundColor:filtrarDades(cerca)[5].codi_color})}">
                 <span  class="drop-shadow"
                >{{ filtrarDades(cerca)[5].nom }}</span>
-            </div>-->
+            </div>
             <tippy :key="colla.id" to="parent" content-tag="div" content-class="w-fit"> 
                 <TargetaInfo :colla="colla"/>
             </tippy>
-        </div>
+        </div>-->
            
        </div> 
        <input class="w-full appearance-none bg-gray-200 h-2 rounded-full mx-1 grow" type="range" min="1791" max="2024" v-model="origen" @change="calculActivitat">
@@ -110,36 +186,61 @@
 
 <script>
 import {onMounted, ref, inject} from 'vue'
-import TargetaInfo from '@/components/TargetaInfo.vue'
+import Timeline from '@/components/TimelineMultiple.vue'
 
 export default({
     components:{
-        TargetaInfo
+        Timeline
         },
 
     setup() {
         let cerca=ref("")
 
-        let origen=ref(1900)
-        
+        let origen=ref(1791)
+        const actualitat=new Date().getFullYear()
+
+
         const dades = inject('dades')
         const escutsSprite = inject('escutsSprite')
         const dades_ordenades=ref([...dades]);
-        const succesores=['xiquets_de_la_vila_d_alcover','xiquets_d_alcover']
 
         //Succesores
-        function muntarSuccesores(array){
-            let continuacio=[]
-            for (let i = 0; i<array.length; i++){
-                const trobat = dades.find(c => c.id === array[i])
-                if (trobat) {
-                    continuacio.push(trobat)
-                }
-            }
-        console.log(continuacio)
-            return continuacio
-            
+
+        function matchId(id){
+            const colla = dades.find(c=>c.id === id)
+            if(colla){
+            return colla
         }
+            else{
+                return null
+            }
+        }
+
+        //Botons Filtres
+        let tipus=ref(["convencional","universitaria","internacional"])
+        let estat=ref(["activa","formacio","desapareguda"])
+        function formatBotons(valor){
+                const mapaFormats={
+                //Tipus
+                convencional:"Convencionals",
+                universitaria:"Universitàries",
+                internacional:"Internacionals",
+
+                //Estats
+                activa:"Actives",
+                formacio:"En formació",
+                desapareguda:"Desaparegudes"
+            };
+            return mapaFormats[valor]|| "Desconegut"
+        }
+        function toggleArray(array,valor){
+                const index = array.indexOf(valor)
+                if (index > -1) {
+                    array.splice(index, 1) 
+                } else {
+                    array.push(valor) 
+              } 
+            }
 
          //ordre
             function ordenarNom(){
@@ -168,12 +269,17 @@ export default({
                  dades_ordenades.value.sort((a,b)=>a.color_camisa.localeCompare(b.color_camisa))
             }
             function ordenarFundacio(){
-                 dades_ordenades.value.sort((a,b)=>(Number(a.fundacio)||0) - (Number(b.fundacio)||0))
+                for (let i=0;i<dades_ordenades.value.length;i++){
+                    let colla = dades_ordenades.value[i]
+                colla.fundacio_real = Math.min(
+                colla.fundacio,
+                ...(colla.predecesores || []).map(c => c.fundacio)
+                )}
+                 dades_ordenades.value.sort((a,b)=>(Number(a.fundacio_real)||0) - (Number(b.fundacio_real)||0))
             }
 
             function ordenar(ordre){
                 
-                console.log(ordre)
                 
                 if (ordre=="nom"){
                     ordenarNom()
@@ -200,7 +306,6 @@ export default({
             }
         
         function calculActivitat(fundacio,desaparicio){
-            let actualitat=2025
             let historia=actualitat-origen.value
             let activitat
             let fundacioVar=fundacio
@@ -232,6 +337,7 @@ export default({
             }
         }
         
+        
         //Cerca
         function  eliminarAccents(str){
             return String(str).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -239,12 +345,15 @@ export default({
 
         function filtrarDades(cerca){
             let filtrat=dades_ordenades.value.filter(colla=>
-                eliminarAccents(colla.nom|| "").includes(eliminarAccents(cerca)) ||
+               ( eliminarAccents(colla.nom|| "").includes(eliminarAccents(cerca)) ||
                 eliminarAccents(colla.color_camisa|| "").includes(eliminarAccents(cerca)) ||
                 eliminarAccents(colla.localitat || "").includes(eliminarAccents(cerca))||
-                eliminarAccents(colla.fundacio || "").includes(eliminarAccents(cerca))
-                
+                eliminarAccents(colla.fundacio || "").includes(eliminarAccents(cerca)))&&
+
+                tipus.value.includes(colla.tipus)&&
+                estat.value.includes(colla.estat)
             )
+            
             return filtrat
             
         }
@@ -253,7 +362,6 @@ export default({
 
         onMounted(()=>{
             ordenarFundacio()
-            calculActivitat(1990,2025)
         })
         return{
             dades,
@@ -266,8 +374,12 @@ export default({
             filtrarDades,
             cerca,
             ordenar,
-            succesores,
-            muntarSuccesores
+            matchId,
+            
+            tipus,
+            estat,
+            formatBotons,
+            toggleArray
         }
     },
 })

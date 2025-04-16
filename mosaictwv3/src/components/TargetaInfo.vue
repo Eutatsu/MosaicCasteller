@@ -30,10 +30,7 @@
                     <span v-else>Desconegut</span><br>
                     </p>
 
-                    <p v-if="colla.refundacio!==null"> <strong>
-                        Refundació:
-                    </strong> {{ colla.refundacio }}<br>
-                    </p>
+                    
 
                     <p class="my-1 text-xl">
                     <a class="mx-1" title="Pàgina Web de la Colla" v-if="colla.web!==null" :href="'https://'+colla.web" target="_blank" alt="Lloc Web"><font-awesome-icon :icon="['fas','globe']"/></a>

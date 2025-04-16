@@ -63,7 +63,7 @@
                         </span></span>
                     </h1>
                     <h2 class="text-lg ">{{ colla.localitat }}</h2>
-                    <h2 class="text-lg  ">{{ colla.fundacio }} - 
+                    <h2 class="text-lg  ">{{ fundacio_real }} - 
                         <span v-if="colla.estat=='activa'">Actualitat</span>  
                         <span v-else> <span v-if="colla.desaparicio!==-1">{{ colla.desaparicio }}</span>
                         <span v-else>Desconegut</span></span> </h2>   
@@ -79,7 +79,17 @@
 
             </div>
         </div>
+        
         <div class="max-w-screen-lg md:mx-auto py-4 px-4 ">
+            <div>
+            <h2 class="text-xl font-bold">Evolució:</h2>
+            <div class="font-bold justify-between inline-flex w-full">
+                    <label class="text-center text-xs">{{ fundacio_real }}</label>
+                    <label class="text-center text-xs">2025</label>
+                </div>
+            <Timeline :colla="colla" :origen="fundacio_real"/>
+        </div>
+
             <h2 class="text-xl font-bold">Estadístiques de la Colla (En construcció):</h2>
             <h3 class="text-xl">Millors Castells:</h3>
             <div class="flex flex-wrap hidden">
@@ -108,13 +118,15 @@
 import MiniCastell from '@/components/MiniCastell.vue';
 import IcoTipEst from '@/components/IcoTipEst.vue';
 import escutDesconegut from '@/assets/escuts/escut_desconegut.svg'
+import Timeline from '@/components/TimelineMultiple.vue';
 
 
 export default{
     props:['id'],
     components:{
         MiniCastell,
-        IcoTipEst
+        IcoTipEst,
+        Timeline
     },
 setup(props){
     const dades = inject('dades')
@@ -123,6 +135,13 @@ setup(props){
     const colla = computed(() =>
       dades.find(colla => colla.id === props.id)
     )
+
+    const fundacio_real =computed(()=>
+    Math.min(
+                colla.value.fundacio,
+                ...(colla.value.predecesores || []).map(c => c.fundacio)
+                )
+)
 
     function formatDada(estat){
         const mapaFormats={
@@ -149,7 +168,8 @@ setup(props){
         escutsSprite,
         idx,
         formatDada,
-        escutDesconegut
+        escutDesconegut,
+        fundacio_real
     }
 }}
 </script>

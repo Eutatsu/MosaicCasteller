@@ -7,7 +7,7 @@
         La camisa d’un casteller el seu principal símbol d’identitat, els integrants d’una colla se senten units amb els seus companys a través del color que vesteixen.</p>
      <p> El Mosaic agrupa totes aquestes identitats en una obra que representa la totalitat del panorama i la historia del món casteller, utilitzant diferents visualitzacions amb les que l’usuari pot interactuar, jugar i aprendre sobre les colles.
      </p>
-  <h3  class="text-lg font-bold text-red-600">Investigació</h3>
+  <h3  class="text-lg font-bold text-red-600 mt-4">Investigació</h3>
     <p>Aquest projecte inclou més de 170 colles, aquelles autòctones de municipis dels països catalans, les potents colles universitàries, i les que s’han establert fora de la nació d’origen dels castells. <br>
       Apareixen també colles històriques, aquelles que durant la historia castellera han desaparegut, s’han reformat en colles noves, o han patit escissions.</p>
     <p>La llista de colles incloses te varies fonts. Principalment, la llista de membres en ple dret de la 
@@ -30,7 +30,7 @@
       <a class="text-red-600 hover:text-red-400 underline" href="mailto:eudald.ca.va@gmail.com" target="blank">eudald.ca.va.@gmail.com</a>.
     </p>
     
-  <h3  class="text-lg font-bold text-red-600 mt-2">Investigació</h3>
+  <h3  class="text-lg font-bold text-red-600 mt-4">Precisió de les dades</h3>
     <p>
       L’origen del codi de color de la majoria de colles és del seu article de Viquipèdia, cosa que fa que la seva fiabilitat es pugui posar en dubte. D’altres estan extrets de llocs web o publicacions oficials.  </p>
     <p>
@@ -41,7 +41,7 @@
       o <a class="text-red-600 hover:text-red-400  underline" href="https://portalcasteller.cat" target="blank">Portal Casteller</a>, fan servir colors genèrics que no mostren de manera precisa el color identificatiu de cada colla.</p>
       <p>Per un símbol tant essencial per les colles com es la seva camisa, sovint l'ús d'aquest color en xarxes, cartells o inclòs en les pròpies camises, és inconsistent.</p>
 
-    <h3  class="text-lg font-bold text-red-600 mt-2">Eudald Cardozo i Vallhonrat</h3>
+    <h3  class="text-lg font-bold text-red-600 mt-4">Eudald Cardozo i Vallhonrat</h3>
       <p>Soc estudiant de Disseny Digital i Tecnologies Creatives a la Universitat de Lleida.<br>
         Tot i ser de sang <SpanColla colla="minyons_de_terrassa" text="minyona"/>, el meu interès profund pel món casteller no va arribar fins que vaig apuntar-me a <SpanColla colla="los_marracos_de_la_udl"/> a l’entrar a la Universitat. 
         Combinant aquesta afició amb la meva línia de treball, ganes d’augmentar habilitats i compartir les meves idees amb el món, estic desenvolupant aquesta pàgina, que va començar com a un simple treball de classe.</p>
