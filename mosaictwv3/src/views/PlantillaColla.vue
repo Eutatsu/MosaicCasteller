@@ -1,10 +1,18 @@
  <template>
     <div>
         <div class="w-full" :class="colla.color_hsl[2]>=50?'text-black':'text-white'" :style=" colla.codi_color!=='#ffffff'?{backgroundColor: colla.codi_color}:{backgroundColor:'#e0e0e0'}">
-            <div class="max-w-screen-lg mx-auto py-4 flex gap-4 items-center">
-                <span class="hover:underline"><router-link to="/colles">Colles</router-link>
-                </span><span class="text-lg">></span>
-                <span class="hover:underline"><router-link :to="'/colles/'+colla.id" >{{ colla.nom }}</router-link></span></div>
+            <div class="max-w-screen-lg mx-auto py-4 flex gap-4 items-center text-sm">
+                <span class="hover:underline">
+                    <router-link to="/colles">Colles</router-link>
+                </span><font-awesome-icon class="" :icon="['fas','chevron-right']"/>
+                <span class="hover:underline">
+                    <router-link :to="'/colles?tipus='+colla.tipus">{{formatBotons(colla.tipus)}}</router-link>
+                </span><font-awesome-icon class="" :icon="['fas','chevron-right']"/>
+                <span class="hover:underline">
+                    <router-link :to="'/colles?tipus='+colla.tipus+'&estat='+colla.estat">{{formatBotons(colla.estat)}}</router-link>
+                </span><font-awesome-icon class="" :icon="['fas','chevron-right']"/>
+                <span class="hover:underline">
+                    <router-link :to="'/colles/'+colla.id" >{{ colla.nom }}</router-link></span></div>
             <div class="max-w-screen-lg mx-auto py-4 grid grid-cols-12">
                 
                 <div class="ml-2 aspect-square  col-span-6 md:col-span-3 mr-4" :class="!colla.xy_escut?.length&&colla.color_hsl[2]>=50?'brightness-0 opacity-50':{}" 
@@ -63,7 +71,7 @@
                         </span></span>
                     </h1>
                     <h2 class="text-lg ">{{ colla.localitat }}</h2>
-                    <h2 class="text-lg  ">{{ fundacio_real }} - 
+                    <h2 class="text-lg  ">{{ fundacio_original }} - 
                         <span v-if="colla.estat=='activa'">Actualitat</span>  
                         <span v-else> <span v-if="colla.desaparicio!==-1">{{ colla.desaparicio }}</span>
                         <span v-else>Desconegut</span></span> </h2>   
@@ -84,10 +92,10 @@
             <div>
             <h2 class="text-xl font-bold">Evolució:</h2>
             <div class="font-bold justify-between inline-flex w-full">
-                    <label class="text-center text-xs">{{ fundacio_real }}</label>
+                    <label class="text-center text-xs">{{ fundacio_original }}</label>
                     <label class="text-center text-xs">2025</label>
                 </div>
-            <Timeline :colla="colla" :origen="fundacio_real"/>
+            <Timeline :colla="colla" :origen="fundacio_original"/>
         </div>
 
             <h2 class="text-xl font-bold">Estadístiques de la Colla (En construcció):</h2>
@@ -114,11 +122,11 @@
  </template>
 
  <script>
- import { inject,computed } from 'vue'
+ import { inject,computed,onMounted } from 'vue'
 import MiniCastell from '@/components/MiniCastell.vue';
 import IcoTipEst from '@/components/IcoTipEst.vue';
 import escutDesconegut from '@/assets/escuts/escut_desconegut.svg'
-import Timeline from '@/components/TimelineMultiple.vue';
+import Timeline from '@/components/Timeline.vue';
 
 
 export default{
@@ -136,7 +144,11 @@ setup(props){
       dades.find(colla => colla.id === props.id)
     )
 
-    const fundacio_real =computed(()=>
+    onMounted(()=>{
+            document.title = colla.value.nom + ' - Mosaic Casteller'
+    })
+
+    const fundacio_original =computed(()=>
     Math.min(
                 colla.value.fundacio,
                 ...(colla.value.predecesores || []).map(c => c.fundacio)
@@ -159,6 +171,21 @@ setup(props){
             return mapaFormats[estat]|| "Desconegut"
             }
 
+            function formatBotons(valor){
+                const mapaFormats={
+                //Tipus
+                convencional:"Convencionals",
+                universitaria:"Universitàries",
+                internacional:"Internacionals",
+
+                //Estats
+                activa:"Actives",
+                formacio:"En formació",
+                desapareguda:"Desaparegudes"
+            };
+            return mapaFormats[valor]|| "Desconegut"
+        }
+        
     const idx=Math.floor(Math.random()*173)
     
     //const idx=166
@@ -168,8 +195,9 @@ setup(props){
         escutsSprite,
         idx,
         formatDada,
+        formatBotons,
         escutDesconegut,
-        fundacio_real
+        fundacio_original
     }
 }}
 </script>

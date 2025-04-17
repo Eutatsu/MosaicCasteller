@@ -1613,30 +1613,6 @@
         ],
         "predecesores":[
             {
-                "id": "colla_vella_dels_xiquets_de_valls_1930",
-                "nom": "Colla Vella dels Xiquets de Valls (1930)",
-                "tipus": "convencional",
-                "estat": "desapareguda",
-                "color_camisa": "Rosa",
-                "codi_color": "#d77577",
-                "color_hsl": [
-                    358.8,
-                    55.1,
-                    65.1
-                ],
-                "color_rgb": [
-                    215,
-                    117,
-                    119
-                ],
-                "fundacio":  1930,
-                "desaparicio": 1936,
-                
-                "url": "https://ca.wikipedia.org/wiki/Colla_Vella_dels_Xiquets_de_Valls",
-                "web": null,
-                "localitat": "Valls"
-            },
-            {
                 "id": "colla_dels_pagesos",
                 "nom": "Colla dels Pagesos/Colla de a Muixerra/Colla Vella dels Xiquets de Valls",
                 "tipus": "convencional",
@@ -1659,7 +1635,32 @@
                 "url": "https://ca.wikipedia.org/wiki/Colla_Vella_dels_Xiquets_de_Valls",
                 "web": null,
                 "localitat": "Valls"
+            },
+            {
+                "id": "colla_vella_dels_xiquets_de_valls_1930",
+                "nom": "Colla Vella dels Xiquets de Valls (1930)",
+                "tipus": "convencional",
+                "estat": "desapareguda",
+                "color_camisa": "Rosa",
+                "codi_color": "#d77577",
+                "color_hsl": [
+                    358.8,
+                    55.1,
+                    65.1
+                ],
+                "color_rgb": [
+                    215,
+                    117,
+                    119
+                ],
+                "fundacio":  1930,
+                "desaparicio": 1936,
+                
+                "url": "https://ca.wikipedia.org/wiki/Colla_Vella_dels_Xiquets_de_Valls",
+                "web": null,
+                "localitat": "Valls"
             }
+            
         ]
     },
     

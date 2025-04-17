@@ -1,14 +1,14 @@
 <template>
     <router-link :to="'/colles/'+collaIdx.id" class="text-red-600 hover:text-red-400 hover:underline inline-flex items-baseline">
-        <div :style="{backgroundColor:collaIdx.codi_color}" class="aspect-square h-4 border-solid border border-1 mr-1 self-center"></div>
+        <div :style="{backgroundColor:collaIdx.codi_color}" class="aspect-square h-4 border-solid border border-1 mr-0.5 self-center"></div>
         {{ textAlt() }}
         <IcoTipEst v-if="icones==true" :colla="collaIdx" dada="tipus" class="ml-1"/>
         <IcoTipEst v-if="icones==true" :colla="collaIdx" dada="estat" class="ml-1"/>
         
         <tippy to="parent" content-tag="div" content-class="w-fit"> 
                 <TargetaInfo :colla="collaIdx"/>
-            </tippy>
-        </router-link>
+        </tippy>
+    </router-link>
 </template>
 
 <script>

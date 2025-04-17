@@ -1,25 +1,27 @@
 <template>
     <div> 
-        <div class="max-w-screen-lg mx-auto my-2">
-            <div id="opcions" class="mx-4">
-                <div  id="opcions-l1" class="grid justify-between grid-cols-12 my-2 items-center rounded-sm drop-shadow bg-white p-1 gap-y-2">
-                    <input v-model="cerca" class="border-solid border-red-600 border-2 rounded-sm lg:col-span-4 md:col-span-5 col-span-12 p-1 py-2" placeholder="Cerca colles, colors o municipis...">
+        
+        <div class="max-w-screen-lg mx-auto my-4 px-2 lg:px-0 flex flex-col gap-y-2">
+            <div  id="opcions-l1" class="md:inline-flex flex flex-col md:flex-row w-full gap-x-4 gap-y-2 grid-cols-12 items-left rounded-sm drop-shadow bg-white p-2">
+                    <input v-model="cerca" class="grow border-solid border-red-600 border-2 rounded-sm lg:col-span-4 md:col-span-5 col-span-12 p-1.5" placeholder="Cerca colles, colors o municipis...">
                     
-                    <div class="flex items-center  md:justify-end lg:col-span-8 md:col-span-7 col-span-12 justify-start ">
+                    <div class="flex items-center  justify-end lg:col-span-8 md:col-span-7 col-span-12  ">
                     <label class="text-nowrap " for="ordena">Ordena per:</label>
                     <select id="ordena" @change="ordenar($event.target.value)" class="rounded-sm border-red-600 border-2 bg-white p-2 ml-2">
+                        
+                        
                         <option value="nom">Nom</option>
                         <option value="color">Color</option>
-                        <option value="nomcolor">Nom del Color</option>
-                        <option value="llum">Lluminositat</option>
-                        <option value="colorllum">Llum i Color</option>                
                         <option value="fundacio">Data de Fundacio</option>
+                        <option value="llum">Lluminositat</option>
+                        <option value="nomcolor">Nom del Color</option>
+                        <option value="colorllum">Llum i Color</option>   
                     <!--<b-form-select-option value="default">Default</b-form-select-option>-->
                 </select>
             </div>
                 </div>
-                <div  id="opcions-l2" class="grid justify-center grid-cols-12 my-1 items-center rounded-sm drop-shadow bg-white px-2 py-1">
-                    <h2 class="text-xl md:col-span-6 col-span-12">Visualització ({{ filtrarDades(cerca).length }} Colles):</h2>
+                <div  class="grid justify-center grid-cols-12 items-center rounded-sm drop-shadow bg-white px-2 py-1">
+                    <h2 class="text-xl md:col-span-6 col-span-12">Visualització: ({{ filtrarDades(cerca).length }} Colles)</h2>
                 <div class="inline-flex items-center md:col-span-6 col-span-12 flex-wrap">
                 <label class="mida_rajoles text-nowrap" for="ordena">Mida tessel·les: </label>
                     <div class="inline-flex items-center md:w-auto w-full grow">
@@ -29,7 +31,7 @@
                     </div>
                 </div>
                 </div>
-                <div  id="opcions-l3" class="grid justify-center grid-cols-12 gap-2 my-2">
+                <div  id="opcions-l3" class="grid justify-center grid-cols-12 gap-2">
                     <div class="col-span-6 grid grid-cols-12 justify-between items-center rounded-sm drop-shadow bg-white p-2">
                     <div class="flex items-center justify-between col-span-12 mb-1"><h3 class="text-lg">Tipus:</h3>
                         <label class="inline-flex flex-nowrap"><input type="checkbox" class="mx-1 accent-red-600" v-model="seccions_tipus" :value=true>Separa</label>
@@ -114,21 +116,21 @@
                     </div>
                     </div>
                 </div>
-                <div class="flex-col flex justify-start gap-2 rounded-sm drop-shadow bg-white p-1">
+                <div class="flex-col flex justify-start gap-2 rounded-sm drop-shadow bg-white p-2">
                     <button @click="desplegar=!desplegar" class="bg-red-600 rounded-sm text-white px-3 py-2 font-bold w-fit hover:bg-red-500">
                         <font-awesome-icon :icon="['fas', 'eye']" /> Més Opcions 
                         <font-awesome-icon :icon="['fas', 'chevron-down']" class="transition-all transition-1000" :class="desplegar?'rotate-180':{}"/> 
                     </button>
                     <div :class="desplegar?'inline':'hidden'" class="mx-2 flex gap-x-6 items-start flex-wrap text-nowrap">
-                        <label  class="inline-flex flex-nowrap items-center hover:bg-gray-200 p-1 rounded-sm flex-1">
-                        <input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=false v-model="nom_color">
-                        Nom del color
-                    </label>
+                        
                     <label   class="inline-flex flex-nowrap items-center hover:bg-gray-200 p-1 rounded-sm flex-1">
                         <input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=false v-model="escuts">
                         Mostra Escuts
                     </label>
-                   
+                    <label  class="inline-flex flex-nowrap items-center hover:bg-gray-200 p-1 rounded-sm flex-1">
+                        <input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=false v-model="nom_color">
+                        Nom del color
+                    </label>
                     <label   class="inline-flex flex-nowrap items-center hover:bg-gray-200 p-1 rounded-sm flex-1">
                         <input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=true v-model="icones_tipus">
                         Icones Tipus
@@ -149,7 +151,7 @@
                     </label>
                     </div>
                 </div>
-            </div>
+            
         </div>
         <div class="mx-auto mb-8">  
             <div v-if="seccions_tipus==true && seccions_estat==false">

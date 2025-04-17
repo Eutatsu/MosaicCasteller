@@ -42,7 +42,10 @@
         v-if="colla!==null||solucio!==null"
         class="flex-1 aspect-square rounded-sm flex items-center justify-center drop-shadow hover:drop-shadow-lg"
         :class="aproximaAnys()">
-            <span class="text-black font-bold">{{ colla.fundacio }}</span>
+            <span class="text-black font-bold">{{ colla.fundacio }}
+            <span v-if="colla.fundacio<solucio.fundacio" title="fundacio posterior">▲
+            </span>
+            <span v-else-if="colla.fundacio>solucio.fundacio" title="fundacio anterior">▼</span></span>
         </div>
     </Transition>
         <Transition

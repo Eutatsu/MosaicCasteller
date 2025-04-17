@@ -1,6 +1,10 @@
-<template>
-    <div class="relative w-full inline-flex items-center h-5 bg-gray-200 flex hover:bg-gray-300 rounded-sm" >
-           <div class=" absolute rounded-sm h-full justify-right inline-flex items-center text-xs text-nowrap font-bold text-white gap-2" 
+<template >
+    <div :class="calculActivitat(colla.fundacio,colla.desaparicio).activitat==0?'hidden':compacte==false?'inline-flex h-5':'inline-flex h-2'" 
+    class="relative w-full items-center bg-gray-200 flex hover:bg-gray-300 rounded-sm">
+        <div v-if="colla.predecesores?.length" class="items-center inline-flex">
+        <div v-for="(colla,index) in colla.predecesores" :key="index" 
+        :title="colla.nom"
+        class="transition-all absolute rounded-sm h-full inline-flex items-center text-xs text-nowrap font-bold text-white" 
             :style="{
             left:calculActivitat(colla.fundacio,colla.desaparicio).inici+'%', 
             width:calculActivitat(colla.fundacio,colla.desaparicio).activitat+'%',
@@ -8,21 +12,34 @@
             ...(colla.codi_color=='#ffffff'?
             {backgroundColor:'#000000'}:
             {backgroundColor:colla.codi_color})}">
-                <span  class="drop-shadow ml-1"
+                <span v-if="compacte==false" class="drop-shadow ml-1 truncate"
                >{{ colla.nom }}</span>
+            
+        </div>
+    </div>
+    <div class="transition-all absolute rounded-sm h-full justify-right inline-flex items-center text-xs text-nowrap font-bold text-white" 
+            :title="colla.nom"
+            :style="{
+            left:calculActivitat(colla.fundacio,colla.desaparicio).inici+'%', 
+            width:calculActivitat(colla.fundacio,colla.desaparicio).activitat+'%',
+            
+            ...(colla.codi_color=='#ffffff'?
+            {backgroundColor:'#000000'}:
+            {backgroundColor:colla.codi_color})}">
+                <span v-if="compacte==false" class="drop-shadow ml-1 truncate"
+                >{{ colla.nom }}</span>
             </div>
-            <tippy :key="colla.id" to="parent" content-tag="div" content-class="w-fit"> 
+            <tippy :key="colla" to="parent" content-tag="div" content-class="w-fit"> 
                 <TargetaInfo :colla="colla"/>
             </tippy>
-        </div>
+    </div>
 </template>
 
 <script>
-//import {ref,inject} from 'vue'
 import TargetaInfo from './TargetaInfo.vue';
 
 export default{
-    name:'Timeline',
+    name:'TimelineMultiple',
     props:{
         colla:{
             type:Object,
@@ -32,6 +49,11 @@ export default{
             type:Number,
             required:false,
             default:1791
+        },
+        compacte:{
+            type:Boolean,
+            required:false,
+            default:false
         }
 
     },
@@ -39,7 +61,8 @@ export default{
         TargetaInfo
     },
     setup(props){
-        const actualitat=new Date().getFullYear()
+        const actualitat=new Date().getFullYear()+1
+
 
         function calculActivitat(fundacio,desaparicio){
             let historia=actualitat-props.origen
@@ -73,7 +96,7 @@ export default{
             }
         }
         return {
-            calculActivitat
+            calculActivitat,
         }
     }
 }

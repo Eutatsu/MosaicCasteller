@@ -1,12 +1,12 @@
 <template>
     <div v-if="colles==null">
-    <div class="bg-black/40 px-3 pt-2 border-b border-white rounded-t-sm">
+    <div class="bg-black/40 px-3 py-2 border-b border-white rounded-t-sm">
         <router-link  
        :to="'/colles/'+colla.id"><h2 class="hover:underline text-base text-center max-w-64 justify-center">
             <strong>{{ colla.nom }} <font-awesome-icon :icon="['fas', 'address-card']" class="opacity-70" /></strong><br></h2></router-link>
         </div>
             <div class="flex flex-row justify-center px-3 py-1">
-                <router-link :to="'/colles/'+colla.id" class=" hover:bg-white/20 h-fit"><div class="my-auto" v-if="colla.xy_escut?.length" :style="{
+                <router-link :to="'/colles/'+colla.id"><div class="my-auto" v-if="colla.xy_escut?.length" :style="{
                         width:'100px',
                         height: '100px',  
                         backgroundImage: `url(${escutsSprite})`, 
@@ -42,11 +42,11 @@
 <div v-else-if="colles">
     <div class="bg-black/40 px-3 py-2 border-b border-white rounded-t-sm">
         <router-link  
-       :to="'/colles/'+colla.id"><h2 class="hover:underline text-base text-center max-w-64 justify-center">
+       :to="'/colles/'+colles[mostra].id"><h2 class="hover:underline text-base text-center max-w-64 justify-center">
             <strong>{{ colles[mostra].nom }} <font-awesome-icon :icon="['fas', 'address-card']" class="opacity-70" /></strong><br></h2></router-link>
         </div>
             <div class="flex flex-row justify-center px-3 py-1">
-                <router-link :to="'/colles/'+colles[mostra].id" class=" hover:bg-white/20 h-fit"><div class="my-auto" v-if="colles[mostra].xy_escut?.length" :style="{
+                <router-link :to="'/colles/'+colles[mostra].id"><div class="my-auto" v-if="colles[mostra].xy_escut?.length" :style="{
                         width:'100px',
                         height: '100px',  
                         backgroundImage: `url(${escutsSprite})`, 
@@ -77,20 +77,12 @@
                     <a class="mx-1" title="Pàgina Web de la Colla" v-if="colles[mostra].web!==null" :href="'https://'+colles[mostra].web" target="_blank" alt="Lloc Web"><font-awesome-icon :icon="['fas','globe']"/></a>
                     <a class="mx-1" title="Article Wikipedia de la Colla" :href="colles[mostra].url" target="_blank" alt="Article Wikipedia"><font-awesome-icon :icon="['fab', 'wikipedia-w']"/></a></p>
         </div>
-       
-
     </div>
-    <div class="flex mx-auto justify-center gap-1  px-3 pb-2">
-            <button v-for="(colla,index) in colles" :key="index" class="flex flex-col items-center hover:bg-white/20 p-1 rounded-sm" @mousedown.prevent="mostra=index">
-            <div :style="{backgroundColor:colla.codi_color}" class="aspect-square h-6 border-solid border border-1 self-center" :title="colla.nom"></div>
-            <span class="text-xs font-bold">{{ colla.fundacio }}</span>
-        </button>
-        </div>
 </div>
 </template>
 
 <script>
-import { ref,inject,computed,onMounted } from 'vue'
+import { ref,inject,computed } from 'vue'
 
 export default {
     name:'TargetaInfo',
@@ -100,14 +92,14 @@ export default {
             required: true
         }
     },
-    setup(props){
+    setup(){
         const escutsSprite = inject('escutsSprite')
         let mostra = ref(0)
         const colles = computed(()=>{
             const muntat = []
-            if (Array.isArray(props.colla.predecesores)){
-                muntat.push(...props.colla.predecesores)
-                muntat.push(props.colla)
+            if (Array.isArray(colla.predecesores)){
+                muntat.push(...colla.predecesores)
+                muntat.push(colla)
                 
                 return muntat
             }
@@ -116,8 +108,7 @@ export default {
             }
         })
 
-        if (colles.value!==null) mostra.value=colles.value.length-1
-        
+        if (colles) mostra=ref(colles.value[colles.length-1])
 
 
         function formatDada(estat){
@@ -134,16 +125,12 @@ export default {
             };
             return mapaFormats[estat]|| "Desconegut"
         }
-
-        onMounted(()=>{
-            
-        }
-    )
         
     return{
         formatDada,
         escutsSprite,
         colles,
+        seleccionada,
         mostra
     }
     }

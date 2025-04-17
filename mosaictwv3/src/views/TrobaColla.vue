@@ -44,7 +44,7 @@
            
             
             >
-                <input v-model="cerca" @change="filtrarDades(cerca)" placeholder="Quina colla es...?" tabindex="0" 
+                <input v-model="cerca" @change="filtrarDades(cerca)" placeholder="Filtra per colla, color, municipi, any, tipus o estat..." tabindex="0" 
                 class=" w-full rounded-sm border-red-600 border-2 bg-white p-2"
                 @focus="obreLlista=true"
                 @blur="obreLlista=false"

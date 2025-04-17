@@ -1,10 +1,10 @@
+
 <template>
-    <div class="mx-auto px-2 max-w-screen-lg">
-        <h1 class="mt-4 text-xl text-center">!! Secció en construcció !!</h1>
-         <div  id="opcions-l1" class="grid justify-between grid-cols-12 my-1">
-            <input v-model="cerca" class="border-solid border-red-600 border-2 rounded-sm lg:col-span-4 md:col-span-5 col-span-12 p-1 py-2" placeholder="Cerca colles, colors o municipis...">
+    <div class="mx-auto max-w-screen-lg px-2 md:px-0 flex flex-col gap-y-2">
+        <div  id="opcions-l1" class="md:inline-flex flex flex-col md:flex-row w-full gap-x-4 gap-y-2 grid-cols-12 items-left rounded-sm drop-shadow bg-white p-2 mt-4">
+                    <input v-model="cerca" class="grow border-solid border-red-600 border-2 rounded-sm lg:col-span-4 md:col-span-5 col-span-12 p-1.5" placeholder="Cerca colles, colors o municipis...">
                     
-                    <div class="flex items-center  md:justify-end lg:col-span-8 md:col-span-7 col-span-12 justify-start ">
+                    <div class="flex items-center  justify-end lg:col-span-8 md:col-span-7 col-span-12  ">
                     <label class="text-nowrap " for="ordena">Ordena per:</label>
                     <select id="ordena" @change="ordenar($event.target.value)" class="rounded-sm border-red-600 border-2 bg-white p-2 ml-2">
                                      
@@ -17,9 +17,18 @@
                     <!--<b-form-select-option value="default">Default</b-form-select-option>-->
                 </select>
             </div>
-        </div>
-        <div class="col-span-6 grid grid-cols-12 justify-between items-center rounded-sm drop-shadow bg-white p-2">
-                    <div class="col-span-12 inline-flex gap-x-1 gap-y-2 items-start flex-wrap md:flex-row flex-col text-sm">
+                </div>
+
+        <div class="w-full inline-flex rounded-sm drop-shadow bg-white p-2">
+            <label class="inline-flex flex-nowrap items-center hover:bg-gray-200 rounded-sm">
+                        <input type="checkbox" class="mx-1 accent-red-600 inline-flex flex-nowrap" :value=false v-model="compacte">
+                        Vista compacta
+                    </label></div>
+                    <div class="grid grid-cols-12 justify-between items-center gap-2">
+                    <div class="col-span-6 rounded-sm drop-shadow bg-white p-2">
+                    <h3 class="text-lg pb-2">Tipus:</h3>
+                    <div class="flex gap-x-1 gap-y-2 items-start flex-wrap lg:flex-row flex-col text-sm">
+                       
                             <button  class="inline-flex items-center group md:flex-1 justify-right hover:bg-gray-200 hover:drop-shadow w-full" 
                             
                             v-for="value in ['convencional','universitaria','internacional']"
@@ -51,11 +60,11 @@
                             <span>{{formatBotons(value)}}</span>
                             <font-awesome-icon v-if="tipus.includes(value)" :icon="['fas', 'check']" class="ml-1 text-white-600" /> 
                             </button>
-                            
-                           
-                       
+                        </div>
                     </div>
-                    <div class="col-span-12 inline-flex gap-x-1 gap-y-2 items-start flex-wrap md:flex-row flex-col text-sm">
+                    <div class="col-span-6 rounded-sm drop-shadow bg-white p-2">
+                        <h3 class="text-lg pb-2">Estat:</h3>
+                    <div class="flex gap-x-1 gap-y-2 items-start flex-wrap lg:flex-row flex-col text-sm ">
 
                         <button  class="inline-flex items-center group md:flex-1 w-full justify-right hover:bg-gray-200 hover:drop-shadow" 
                             
@@ -92,14 +101,24 @@
                             
 
                         </div>
-                </div>
-    </div>
-    <div class="mx-auto px-2 max-w-screen-2xl h-[80vh] ">
-       
-        
-      
+                    </div>
+                    </div>
+                    
+                <div class=" rounded-sm drop-shadow bg-white p-2 mb-2 inline-flex items-center w-full flex-wrap">
 
-        <div class="grid grid-cols-1  pr-4">
+                    <label class="text-nowrap mr-1 text-left md:w-auto w-full">A partir de l'any: </label>
+                <input class="border-solid border-red-600 border-2 p-1 w-14 text-center rounded-sm" :placeholder="origen" v-model="origen">
+                    
+                        <input class="appearance-none bg-gray-200 h-2 rounded-full mx-1 grow"
+                        type="range" min="1791" max="2024" v-model="origen">
+                    
+      
+            </div>
+    </div>
+    <Suspense>
+        <template #default>
+    <div class="mx-auto px-2 max-w-screen-2xl h-[80vh] ">
+        <div class="grid grid-cols-1 pr-4">
             <div class="cols-span-1 relative">
                 <div class="h-4 font-bold">
                     <label class="absolute text-center text-xs" :style="{left:calculActivitat(origen,null).inici-0.8+'%'}">{{ origen }}</label>
@@ -128,65 +147,25 @@
             </div>
         </div>
 
+        <div class="transition-all grid grid-cols-1 my-1 overflow-y-auto overflow-x-hidden h-[70vh] pr-4 content-start"
+        :class="compacte==true?'gap-0.5':'gap-1'">
+        <Timeline v-for="(colla,index) in filtrarDades(cerca)" :key="index" :colla="colla" :origen="parseInt(origen)" class="" :compacte=compacte />
+            </div> 
+        </div>
+    </template>
+    <template #fallback>
+        <div class="mx-auto px-2 max-w-screen-2xl ">
+            <div v-for="index in 20" :key="index" class="w-full animate-pulse bg-gray-300 rounded-sm">
 
-        <div class="grid grid-cols-1 my-1 overflow-y-auto overflow-x-hidden h-[70vh] pr-4 content-start gap-1">
-        <Timeline v-for="(colla,index) in filtrarDades(cerca)" :key="index" :colla="colla" :origen="parseInt(origen)" class=""/>
-    
-       <!-- <div v-for="(colla,index) in filtrarDades(cerca)" :key="index" class="relative cols-span-1 inline-flex items-center h-4 bg-gray-200 flex hover:bg-gray-300 rounded-sm"  >
-           
-            <div v-if="succesores.includes(colla.id)" class="h-full">
-                <div v-for="(collaS,index) in muntarSuccesores(succesores)" :key="index"  class="absolute rounded-sm h-full justify-right inline-flex items-start text-xs text-nowrap font-bold text-white gap-2" 
-            :style="{
-            left:calculActivitat(collaS.fundacio,collaS.desaparicio).inici+'%', 
-            width:calculActivitat(collaS.fundacio,collaS.desaparicio).activitat+'%',
-            
-            ...(collaS.codi_color=='#ffffff'?
-            {backgroundColor:'#000000'}:
-            {backgroundColor:collaS.codi_color})}">
-                <span  class="drop-shadow"
-               >{{ collaS.nom }}</span>
-               <tippy :key="collaS.id" to="parent" content-tag="div" content-class="w-fit"> 
-                <TargetaInfo :colla="collaS"/>
-            </tippy>
             </div>
-            </div>
-           <div class="transition-all absolute rounded-sm h-full justify-right inline-flex items-start text-xs text-nowrap font-bold text-white gap-2" 
-            :style="{
-            left:calculActivitat(colla.fundacio,colla.desaparicio).inici+'%', 
-            width:calculActivitat(colla.fundacio,colla.desaparicio).activitat+'%',
-            
-            ...(colla.codi_color=='#ffffff'?
-            {backgroundColor:'#000000'}:
-            {backgroundColor:colla.codi_color})}">
-                <span  class="drop-shadow"
-               >{{ colla.nom }}</span>
-            </div>
-
-            <div class="absolute rounded-sm justify-right inline-flex items-start text-xs text-nowrap font-bold text-white gap-2" 
-            :style="{
-            left:calculActivitat( filtrarDades(cerca)[5].fundacio,filtrarDades(cerca)[5].desaparicio).inici+'%', 
-            width:calculActivitat(filtrarDades(cerca)[5].fundacio,filtrarDades(cerca)[5].desaparicio).activitat+'%',
-            
-            ...(filtrarDades(cerca)[1].codi_color=='#ffffff'?
-            {backgroundColor:'#000000'}:
-            {backgroundColor:filtrarDades(cerca)[5].codi_color})}">
-                <span  class="drop-shadow"
-               >{{ filtrarDades(cerca)[5].nom }}</span>
-            </div>
-            <tippy :key="colla.id" to="parent" content-tag="div" content-class="w-fit"> 
-                <TargetaInfo :colla="colla"/>
-            </tippy>
-        </div>-->
-           
-       </div> 
-       <input class="w-full appearance-none bg-gray-200 h-2 rounded-full mx-1 grow" type="range" min="1791" max="2024" v-model="origen" @change="calculActivitat">
-      
-    </div>
+        </div>
+    </template>
+</Suspense>
 </template>
 
 <script>
 import {onMounted, ref, inject} from 'vue'
-import Timeline from '@/components/TimelineMultiple.vue'
+import Timeline from '@/components/Timeline.vue'
 
 export default({
     components:{
@@ -199,6 +178,7 @@ export default({
         let origen=ref(1791)
         const actualitat=new Date().getFullYear()
 
+        let compacte=ref(false)
 
         const dades = inject('dades')
         const escutsSprite = inject('escutsSprite')
@@ -271,11 +251,11 @@ export default({
             function ordenarFundacio(){
                 for (let i=0;i<dades_ordenades.value.length;i++){
                     let colla = dades_ordenades.value[i]
-                colla.fundacio_real = Math.min(
+                colla.fundacio_original = Math.min(
                 colla.fundacio,
                 ...(colla.predecesores || []).map(c => c.fundacio)
                 )}
-                 dades_ordenades.value.sort((a,b)=>(Number(a.fundacio_real)||0) - (Number(b.fundacio_real)||0))
+                 dades_ordenades.value.sort((a,b)=>(Number(a.fundacio_original)||0) - (Number(b.fundacio_original)||0))
             }
 
             function ordenar(ordre){
@@ -360,7 +340,7 @@ export default({
         
         
 
-        onMounted(()=>{
+        onMounted( ()=>{
             ordenarFundacio()
         })
         return{
@@ -379,7 +359,9 @@ export default({
             tipus,
             estat,
             formatBotons,
-            toggleArray
+            toggleArray,
+
+            compacte
         }
     },
 })
