@@ -1,13 +1,13 @@
 <template>
-    <div class=" self-center mx-auto ">
-        <h1 class="mt-4 text-xl text-center">!! Secció en construcció !!</h1>
+    <table class=" self-center mx-auto overflow-x-auto max-w-screen-2xl">
+        <tbody>
         <tr>
-            <th class=" text-white px-4 bg-red-600" v-for="(key, index) in titols" :key="index">
+            <th class=" text-white px-4 bg-red-600 border-2 border-white text-center align-middle rounded-md" v-for="(key, index) in titols" :key="index">
                 {{ key }}
             </th>
         </tr>
-        <tr class="font-normal px-4 bg-red-100 " v-for="(item, index) in dades_ordenades" :key="index">
-               <td class="border border-red-600 text-center align-middle" 
+        <tr class="font-normal px-4" v-for="(item, index) in dades_ordenades" :key="index">
+               <td class="bg-gray-200 border-2 border-white text-center align-middle rounded-md text-wrap" 
                v-for="(value,key) in item " :key="key" 
                :style="key=='codi_color'?{backgroundColor:value}:
                 key==='color_rgb'?{ backgroundColor: `rgb(${value[0]}, ${value[1]}, ${value[2]})` }:
@@ -37,7 +37,8 @@
             </div>
                </td>
             </tr>
-        </div>
+        </tbody>
+        </table>
 </template>
 
 <script>

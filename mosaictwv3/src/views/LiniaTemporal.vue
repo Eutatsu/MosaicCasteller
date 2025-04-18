@@ -115,8 +115,6 @@
       
             </div>
     </div>
-    <Suspense>
-        <template #default>
     <div class="mx-auto px-2 max-w-screen-2xl h-[80vh] ">
         <div class="grid grid-cols-1 pr-4">
             <div class="cols-span-1 relative">
@@ -152,15 +150,11 @@
         <Timeline v-for="(colla,index) in filtrarDades(cerca)" :key="index" :colla="colla" :origen="parseInt(origen)" class="" :compacte=compacte />
             </div> 
         </div>
-    </template>
-    <template #fallback>
-        <div class="mx-auto px-2 max-w-screen-2xl ">
+        <!--<div class="mx-auto px-2 max-w-screen-2xl ">
             <div v-for="index in 20" :key="index" class="w-full animate-pulse bg-gray-300 rounded-sm">
 
             </div>
-        </div>
-    </template>
-</Suspense>
+        </div>-->
 </template>
 
 <script>

@@ -30,14 +30,11 @@
                     Població
                 </div>
         </div>
-        <FilaEnigma v-if="intents.length==0"/>
         <FilaEnigma  v-for="(colla,index) in intents" :key="index" :colla="colla" :solucio="solucio"/>
-
+        <FilaEnigma v-if="correcte()==false"/>
         <div v-if="correcte()==true" class="justify-center flex flex-col">
         <div class="text-lg text-red-600 text-center">Correcte!</div>
-        <button @click="reinicia()" class="bg-red-600 rounded-sm text-white px-3 mx-auto py-2 font-bold hover:bg-red-500 w-fit">
-                        Torna a jugar 
-                     </button></div>
+        </div>
         <div v-if="error==true" class="text-lg text-red-600 text-center">Selecciona una colla vàlida</div>
         <div class="inline-flex  m-2">
             <div class="grow group flex flex-col"
@@ -68,7 +65,8 @@
             </ul>
         </div>
         </div>
-        <button @click="endevina(seleccio)" class="bg-red-600 rounded-sm text-white px-3 mx-2 py-2 font-bold hover:bg-red-500">
+        <button @click="endevina(seleccio)" 
+        class="bg-red-600 rounded-sm text-white px-3 mx-2 py-2 font-bold hover:bg-red-500">
                         Endevina! 
                      </button></div>
                     </div>
@@ -77,7 +75,7 @@
 </template>
 
 <script>
-import {ref, inject} from 'vue'
+import {ref, inject, computed} from 'vue'
 import FilaEnigma from '@/components/FilaEnigma.vue'
 import IcoTipEst from '@/components/IcoTipEst.vue';
 import TrobaCollaLogo from '@/assets/TrobaColla-logo.svg'
@@ -90,13 +88,24 @@ export default{
     setup(){
 
         const dades = inject('dades')
-        let solucio = ref(dades[Math.floor(Math.random()*dades.length)])
+
+
+        const solucio = computed(()=>
+        {
+            const avui = new Date()
+            const seed = (avui.getFullYear() * avui.getMonth())*1000 + (avui.getDate() * 100) + (avui.getMonth())
+            const index = seed % dades.length
+            return dades[index]
+        })
+
         let seleccio=ref("")
         let cerca=ref("")
         let obreLlista=ref(false)
         let intents=ref([])
         let error=ref(false)
 
+
+        
         function selecciona(colla){
             
             cerca.value=colla.nom
@@ -106,6 +115,7 @@ export default{
         
 
         function endevina(colla){
+            if(correcte()==false){
             if(seleccio.value!==""){
             intents.value.push(colla)
             cerca.value=""
@@ -113,24 +123,26 @@ export default{
             error.value=false
         }
             else{
-                console.log(seleccio.value)
                 error.value=true
-            }
+            }}
         }
 
         function correcte(){
+            
+
             if(intents.value.length!==0){
             if(intents.value[intents.value.length-1].id==solucio.value.id){
+                console.log(intents.value[intents.value.length-1].id)
             return true}
             else{
+                console.log(intents.value[intents.value.length-1].id)
                 return false
             }}
-        }
-        function reinicia(){
+            else{
+                return false
+            }
             
-            solucio.value = dades[Math.floor(Math.random()*dades.length)]
-             intents.value = []
-    }
+        }
 
     function eliminarAccents(str){
             return String(str).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -163,8 +175,7 @@ export default{
             intents,
             error,
             TrobaCollaLogo,
-            correcte,
-            reinicia
+            correcte
         }
     }
 }

@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="flex flex-col w-full">
-    <nav class="bg-red-600 w-full drop-shadow fixed">
-      <div class="flex md:flex-row flex-col  md:items-center justify-between p-2 mx-auto max-w-screen-xl">
+    <nav class="bg-red-600 w-full drop-shadow fixed ">
+      <div class=" flex md:flex-row flex-col  md:items-center justify-between p-2 mx-auto max-w-screen-xl">
       <div class="flex items-center justify-between"><router-link to="/" alt="Pagina d'inici"><div class="flex items-center hover:bg-red-500 rounded-sm">
       <img src="./assets/Mosaic-Logo-SF.png" class="md:w-16 w-12" >
       <h1 class="text-white font-bold text-xl m-3 mr-5 text-nowrap">Mosaic Casteller</h1>
@@ -10,14 +10,15 @@
       <button @click="ObrirNav()" class="md:hidden text-3xl text-white justify-end px-4 py-2 hover:bg-red-500">
         <font-awesome-icon :icon="['fas', 'bars']" /> 
       </button></div>
-      <div  :class="open?'inline':'hidden'" class="md:inline transition-all">
+      <Transition name="dropdown" appear>
+      <div  v-if="open||isDesktop" class="md:inline overflow-hidden">
         <ul class="flex md:flex-row flex-col md:items-center text-base gap-1 font-bold text-white mt-3 md:mt-0">
         <router-link v-for="(page,index) in pages.slice(0, 4)" :key="index"  @click="ObrirNav()" :to="page.link" class="group hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm transition-all ">
           <li >
             <span class="group-hover:underline ">{{page.name}}</span></li>
           </router-link>
 
-          <button @click="desplegaJocs=!desplegaJocs" @mouseenter="desplegaJocs=true" @mouseleave="desplegaJocs=false" class="relative group">
+          <button @click="desplegaJocs=!desplegaJocs"  class="relative group">
             <div 
             class="hover:bg-red-500 py-2 px-3 text-nowrap rounded-sm bg-white hover:text-white text-red-600 drop-shadow ">
           <li class="flex w-full">
@@ -26,11 +27,15 @@
           </li>
           
           </div>
-          <div class="h-fit md:h-0" :class="desplegaJocs==false?'hidden':'block'">
-            <ul class="md:absolute bg-white drop-shadow-lg text-red-600 rounded-sm flex flex-col p-1 h-fit w-full md:w-fit">
+        
+          <div class="h-fit md:h-0 " >
+            
+      <Transition name="dropdown" appear>
+            <ul v-if="desplegaJocs" class="overflow-hidden md:fixed bg-white drop-shadow-lg text-red-600 rounded-sm flex flex-col p-1 h-fit w-full md:w-fit">
               <router-link @click="ObrirNav()" :to="jocs[0].link" class="bg-white py-1 px-3 hover:bg-red-500 rounded-sm hover:text-white hover:underline text-left"><li class="">{{jocs[0].name}}</li></router-link>
               <router-link @click="ObrirNav()" :to="jocs[1].link" class=" py-1 px-3 bg-gray-200 rounded-sm text-left text-gray-400"><li class="">{{jocs[1].name}}</li></router-link>
             </ul>
+          </Transition>
           </div>
           </button>
           
@@ -41,6 +46,7 @@
           </router-link>
       </ul>
     </div>
+  </Transition>
   </div>
     </nav>
     <div class="md:h-20 h-16"></div>
@@ -83,12 +89,33 @@
 </template>
 
 <script>
-import {ref} from '@vue/reactivity'
+import {ref, onMounted, onUnmounted } from 'vue'
 import LogoEutatsu from '@/assets/logo_eutatsu.png'
 
 export default{
   setup(){
     let open=ref(false)
+    function ObrirNav(){
+      open.value=!open.value
+    }
+
+    const isDesktop = ref(false)
+
+    function checkViewport() {
+      isDesktop.value = window.innerWidth >= 768 // md breakpoint
+      if (isDesktop.value) open.value = true
+    }
+
+    onMounted(() => {
+      checkViewport()
+      window.addEventListener('resize', checkViewport)
+    })
+
+    onUnmounted(() => {
+      window.removeEventListener('resize', checkViewport)
+    })
+
+
     let pages=[
       { name:'Mosaic',link:'/'},
       { name:'Colles',link:'/colles'},
@@ -100,16 +127,15 @@ export default{
       { name:'Trobacolla',link:'/jocs/trobacolla'},
       { name:'PicaCamises',link:'#'}]
 
-    function ObrirNav(){
-      open.value=!open.value
-    }
+    
 
     return{open,
       ObrirNav,
       pages,
       desplegaJocs,
       jocs,
-      LogoEutatsu
+      LogoEutatsu,
+      isDesktop
     }
   }
 }
@@ -150,6 +176,18 @@ input[type="range"]::-moz-range-thumb{
 }
 .tippy-content{
     padding: 0px;
+}
+
+.dropdown-enter-active,.dropdown-leave-active{
+  transition: max-height 0.3s ease
+}
+
+.dropdown-enter-from,.dropdown-leave-to{
+  max-height: 0
+}
+
+.dropdown-enter-to,.dropdown-leave-from{
+  max-height: 400px
 }
 
 </style>

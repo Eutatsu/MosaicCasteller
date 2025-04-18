@@ -2,7 +2,7 @@
     <div> 
         
         <div class="max-w-screen-lg mx-auto my-4 px-2 lg:px-0 flex flex-col gap-y-2">
-            <div  id="opcions-l1" class="md:inline-flex flex flex-col md:flex-row w-full gap-x-4 gap-y-2 grid-cols-12 items-left rounded-sm drop-shadow bg-white p-2">
+            <div  id="opcions-l1" class="md:inline-flex flex flex-col md:flex-row w-full gap-x-4 gap-y-2 grid-cols-12 items-left rounded-sm drop-shadow bg-white  p-2">
                     <input v-model="cerca" class="grow border-solid border-red-600 border-2 rounded-sm lg:col-span-4 md:col-span-5 col-span-12 p-1.5" placeholder="Cerca colles, colors o municipis...">
                     
                     <div class="flex items-center  justify-end lg:col-span-8 md:col-span-7 col-span-12  ">

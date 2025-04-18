@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import './assets/tailwind.css'; 
 
+import vueGtag from 'vue-gtag'
+
 import VueTippy from 'vue-tippy'
 import 'tippy.js/dist/tippy.css'
 import 'tippy.js/themes/light.css'
@@ -66,4 +68,10 @@ app.use(
     }
   )
 
+
+  app.use(vueGtag, {
+    appName: 'mosaic-casteller', // Optional: Customize this if you want
+    pageTrackerScreenviewEnabled: true, // Enable page tracking
+    config: { id: 'G-KX3YFYQ9YH' } // Replace with your Google Analytics ID
+  })
 app.mount('#app')
